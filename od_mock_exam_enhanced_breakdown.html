@@ -98,6 +98,13 @@
 </main>
 
 <script>
+// ===== CONFIG (paste your values) =====
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbylFRPHb9BvyVdDmm1ml6WOWhCkUzVldKo_doCaBZkt6Q1DeuT0bF5zcZKg8RE_J4WR/exec";
+const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z"; // must match Code.gs
+
+// (Optional) If you want a visible status line, add this span in your report header HTML:
+// <div><b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span></div>
+
 const DISCIPLINES = [
   "A. Anatomy",
   "B. Biochemistry / Physiology",
@@ -143,30 +150,28 @@ renderExam();
 
 // ===== Scoring =====
 function getCorrectChoice(q){ return q.choices.find(c=>c.trim().startsWith('*')).replace('*',''); }
-
 function scoreExam(){
   const perCond = {}; CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
   const perDisc = {}; DISCIPLINES.forEach(d=>perDisc[d]={correct:0,total:0});
   const perSub = {}; CONDITIONS.forEach(c=>perSub[c]={});
-
   let correctTotal=0;
+  const answers=[];
   QUESTIONS.forEach((q,i)=>{
     const chosen = Array.from(document.querySelectorAll(`input[name='q${i}']`)).find(r=>r.checked)?.value || null;
     const correct = getCorrectChoice(q);
     const ok = (chosen===correct);
     if(ok) correctTotal++;
-
     perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
     perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
     const submap = perSub[q.condition]; if(!submap[q.sub]) submap[q.sub]={correct:0,total:0};
     submap[q.sub].total++; if(ok) submap[q.sub].correct++;
-
     const rat = document.getElementById('rat'+i);
     rat.classList.remove('hide');
     rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + correct + "<br>" + q.rationale;
+    answers.push({index:i+1, discipline:q.discipline, condition:q.condition, sub:q.sub, chosen, correct, isCorrect:ok});
   });
   const pct = Math.round(100*correctTotal/QUESTIONS.length);
-  return {perCond, perDisc, perSub, correctTotal, total: QUESTIONS.length, pct};
+  return {perCond, perDisc, perSub, answers, correctTotal, total: QUESTIONS.length, pct};
 }
 
 // ===== Report rendering =====
@@ -181,7 +186,6 @@ function pctCell(pct){
   const cls = pct>=90?'ok':(pct>=75?'':'bad');
   return `<td class="${cls}">${pct}%</td>`;
 }
-
 function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent = new Date().toLocaleString();
@@ -226,25 +230,62 @@ function renderReport(res){
   document.getElementById('printBtn').disabled = false;
 }
 
-// ===== CSV export (discipline + condition) =====
-document.getElementById('csvBtn').addEventListener('click', ()=>{
-  const lines = [['Section','Name','Correct','Total','Percent']];
-  Array.from(discBody.querySelectorAll('tr')).forEach(tr=>{
-    lines.push(['Discipline', tr.children[1].textContent, tr.children[3].textContent.split(' / ')[0], tr.children[3].textContent.split(' / ')[1], tr.children[2].textContent]);
-  });
-  Array.from(condBody.querySelectorAll('tr')).forEach(tr=>{
-    lines.push(['Condition', tr.children[1].textContent, tr.children[3].textContent.split(' / ')[0], tr.children[3].textContent.split(' / ')[1], tr.children[2].textContent]);
-  });
-  const csv = lines.map(r=>r.join(',')).join('\n');
-  const blob = new Blob([csv], {type:'text/csv'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'OD_on_the_GO_Enhanced_Report.csv'; a.click();
-});
+// ===== Submit to Google Sheet =====
+async function submitToSheet(res){
+  const submitStatus = document.getElementById('submitStatus'); // optional
+  const name   = document.getElementById('s_name').value || 'Anonymous';
+  const school = document.getElementById('s_school').value || '';
 
-// Events
-document.getElementById('gradeBtn').addEventListener('click', ()=>{ const res = scoreExam(); renderReport(res); window.scrollTo({top: reportEl.offsetTop-20, behavior:'smooth'}); });
-document.getElementById('resetBtn').addEventListener('click', ()=>{ renderExam(); reportEl.classList.add('hide'); document.getElementById('csvBtn').disabled=true; document.getElementById('printBtn').disabled=true; window.scrollTo({top:0,behavior:'smooth'}); });
+  if (!SHEET_ENDPOINT || SHEET_ENDPOINT.includes('PASTE_YOUR_APPS_SCRIPT')) {
+    if (submitStatus){ submitStatus.textContent='Submission endpoint not configured'; submitStatus.className='bad'; }
+    return;
+  }
+  if (submitStatus){ submitStatus.textContent='Submitting…'; submitStatus.className='muted'; }
+
+  const disc = DISCIPLINES.map(d=>({name:d, ...(res.perDisc[d]||{correct:0,total:0})}));
+  const cond = CONDITIONS.map(c=>({name:c, ...(res.perCond[c]||{correct:0,total:0})}));
+
+  const payload = {
+    secret: SHARED_SECRET,
+    meta: { version: 'v2.0', timestamp: new Date().toISOString() },
+    student: { name, email: '', school },
+    overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
+    discipline: disc,
+    condition: cond,
+    answers: res.answers || []
+  };
+
+  try{
+    const r = await fetch(SHEET_ENDPOINT, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload),
+      mode:'cors'
+    });
+    if (r.ok) { if (submitStatus){ submitStatus.textContent='Submitted to OD on the GO'; submitStatus.className='ok'; } }
+    else { if (submitStatus){ submitStatus.textContent='Submit failed'; submitStatus.className='bad'; } }
+  }catch(e){
+    if (submitStatus){ submitStatus.textContent='Submit error (network)'; submitStatus.className='bad'; }
+    console.error(e);
+  }
+}
+
+// ===== Events =====
+document.getElementById('gradeBtn').addEventListener('click', async ()=>{
+  const res = scoreExam();
+  renderReport(res);
+  await submitToSheet(res); // <-- auto-send to your Sheet
+  window.scrollTo({top: reportEl.offsetTop-20, behavior:'smooth'});
+});
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  renderExam(); reportEl.classList.add('hide');
+  document.getElementById('csvBtn').disabled=true;
+  document.getElementById('printBtn').disabled=true;
+  const s = document.getElementById('submitStatus'); if (s){ s.textContent='Not sent'; s.className='muted'; }
+  window.scrollTo({top:0,behavior:'smooth'});
+});
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
-document.getElementById('s_school').addEventListener('change', (e)=>{ document.getElementById('gradeBtn').disabled = !e.target.value; });
+document.getElementById('s_school').addEventListener('change', (e)=>{
+  document.getElementById('gradeBtn').disabled = !e.target.value;
+});
 </script>
-</body>
-</html>
