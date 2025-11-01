@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OD on the GO — Enhanced Diagnostic (Report-only PDF)</title>
+<title>OD on the GO — Enhanced Diagnostic (Discipline + Condition + Sub)</title>
 <style>
   :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
   *{box-sizing:border-box}
@@ -34,7 +34,7 @@
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
 
-  /* Print = score report ONLY (hide questions, rationales, header, actions, meta, student box) */
+  /* Print = score report ONLY */
   @media print{
     header,.actions,.rationale,.meta,#studentBox,.question{display:none!important}
     body{background:#fff}
@@ -47,7 +47,7 @@
     <h1>OD on the GO — Enhanced Diagnostic</h1>
     <span class="pill">Discipline + Condition + Subcategory</span>
     <div style="flex:1"></div>
-    <small class="muted">Student view</small>
+    <small class="muted">Demo</small>
   </div>
 </header>
 
@@ -66,26 +66,26 @@
           <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
           <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
           <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
-          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo</option>
-          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal</option>
-          <option value="Florida — Nova Southeastern University (NSU)">Florida — NSU</option>
-          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — ICO</option>
-          <option value="Indiana — IU School of Optometry">Indiana — IU</option>
-          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO</option>
-          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — NECO</option>
-          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — MCO</option>
-          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL</option>
-          <option value="New York — SUNY College of Optometry">New York — SUNY</option>
-          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point</option>
-          <option value="Ohio — The Ohio State University College of Optometry">Ohio — OSU</option>
+          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
+          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
+          <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
+          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
+          <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
+          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
+          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
+          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
+          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
+          <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
+          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
+          <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
           <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSUOCO</option>
-          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific</option>
-          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — PCO</option>
+          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
+          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
           <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — IAUPR</option>
           <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIWRSO</option>
           <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — UHCO</option>
           <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV</option>
-          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain</option>
+          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
@@ -93,7 +93,7 @@
   </div>
 
   <div class="summary">
-    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate and submit your score report.</div>
+    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate the report.</div>
   </div>
 
   <div id="exam"></div>
@@ -102,10 +102,8 @@
     <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
     <button id="resetBtn">Reset</button>
     <button id="printBtn" disabled>Print / Save PDF</button>
-    <button id="pdfBtn" disabled>Download PDF</button>
   </div>
 
-  <!-- SCORE REPORT (this is the only section that prints/downloads) -->
   <section id="report" class="hide">
     <div class="summary">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
@@ -126,21 +124,19 @@
     <h3>Subcategory Breakdown (within each Condition)</h3>
     <div id="subcats"></div>
 
-    <div class="summary"><div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div></div>
+    <div class="summary">
+      <div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div>
+    </div>
   </section>
 </main>
 
-<!-- Libraries for generating a PDF of the report only -->
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-
 <script>
 // ===== CONFIG =====
-// Point to your live /exec URL and shared secret:
+// Your deployed Apps Script "web app" URL:
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw8Joe-TU8w50P36BTJPZJg3ONVKwoXypllCcEysx2c4VOj2q4MdIw-fYZIgJ1KLPycWw/exec";
+// Must match Code.gs SECRET:
 const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
 
-// Disciplines (A–E)
 const DISCIPLINES = [
   "A. Anatomy",
   "B. Biochemistry / Physiology",
@@ -149,7 +145,6 @@ const DISCIPLINES = [
   "E. Pharmacology"
 ];
 
-// Condition areas (17)
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -157,7 +152,7 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-// ——— Demo questions (you can replace/extend later) ———
+// Demo questions (replace/extend with your real bank)
 const QUESTIONS = [
   {text:"Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",choices:["*Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],discipline:"D. Optics",condition:"Ametropia",sub:"Vergence & Far Point",rationale:"Vergence = -1/0.50 m = -2.00 D → myopia."},
   {text:"Which spectacle change reduces spectacle magnification for same vertex power?",choices:["*Flatter front curve (plano front)","Steeper front curve","Increase center thickness","Lower index"],discipline:"D. Optics",condition:"Ophthalmic Optics / Spectacles",sub:"Spectacle Magnification",rationale:"Flatter base curve + thinner lens reduce SM."},
@@ -280,12 +275,10 @@ function renderReport(res){
   });
   subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
 
-  // Enable print & PDF buttons only after report exists
   document.getElementById('printBtn').disabled = false;
-  document.getElementById('pdfBtn').disabled = false;
 }
 
-// ===== SUBMIT TO SHEET (NO PREFLIGHT; FORM-ENCODED) =====
+// ===== SUBMIT TO SHEET (no CORS preflight) =====
 async function submitToSheet(res){
   const submitStatus = document.getElementById('submitStatus');
   const name   = document.getElementById('s_name').value || 'Anonymous';
@@ -295,7 +288,6 @@ async function submitToSheet(res){
     if (submitStatus){ submitStatus.textContent='School is required'; submitStatus.className='bad'; }
     return;
   }
-
   if (!SHEET_ENDPOINT) {
     if (submitStatus){ submitStatus.textContent='Submission endpoint not configured'; submitStatus.className='bad'; }
     return;
@@ -307,12 +299,12 @@ async function submitToSheet(res){
 
   const payload = {
     secret: SHARED_SECRET,
-    meta: { version: 'v2.1', origin: location.href, timestamp: new Date().toISOString() },
-    student: { name, email: '', school },
+    meta: { version:'v2.1', origin: location.href, timestamp: new Date().toISOString() },
+    student: { name, email:'', school },
     overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
     discipline: disc,
     condition: cond,
-    answers: res.answers || []   // dean-level detail captured in the Sheet only; not printable as questions
+    answers: res.answers || []
   };
 
   try{
@@ -322,70 +314,54 @@ async function submitToSheet(res){
       headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
       body
     });
-
-    // Update UI with status code / ok
     const text = await r.text();
-    let msg = `HTTP ${r.status}`;
-    try { const j = JSON.parse(text); msg += j.ok ? ' — ok' : ' — error'; } catch(e){}
     if (submitStatus){
-      submitStatus.textContent = (r.ok ? 'Submitted: ' : 'Submit failed: ') + msg;
+      submitStatus.textContent = r.ok ? 'Submitted to OD on the GO' : ('Submit failed: HTTP '+r.status);
       submitStatus.className = r.ok ? 'ok' : 'bad';
     }
+    console.log('Sheet response:', text);
   }catch(e){
     if (submitStatus){ submitStatus.textContent='Submit error (network)'; submitStatus.className='bad'; }
     console.error(e);
   }
 }
 
-// ===== REPORT → PDF (Report-only) =====
-async function downloadReportPDF(){
-  const report = document.getElementById('report');
-  if (report.classList.contains('hide')) return;
+// ===== ALSO: create PDF in Drive via Apps Script =====
+async function sendPdfToDrive(res){
+  const submitStatus = document.getElementById('submitStatus');
+  const name   = document.getElementById('s_name').value || 'Anonymous';
+  const school = document.getElementById('s_school').value || '';
 
-  // Ensure report is fully rendered
-  await new Promise(r => setTimeout(r, 50));
+  const disc = DISCIPLINES.map(d=>({name:d, ...(res.perDisc[d]||{correct:0,total:0})}));
+  const cond = CONDITIONS.map(c=>({name:c, ...(res.perCond[c]||{correct:0,total:0})}));
 
-  const canvas = await html2canvas(report, {scale:2, backgroundColor:'#ffffff'});
-  const imgData = canvas.toDataURL('image/png');
+  const payload = {
+    secret: SHARED_SECRET,
+    meta: { version:'v2.1', origin: location.href, timestamp: new Date().toISOString() },
+    student: { name, email:'', school },
+    overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
+    discipline: disc,
+    condition: cond,
+    answers: res.answers || []
+  };
 
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF({orientation:'p', unit:'pt', format:'a4'});
-
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  const imgWidth = pageWidth - 40;  // 20pt margins
-  const imgHeight = canvas.height * (imgWidth / canvas.width);
-
-  let y = 20;
-  if (imgHeight <= pageHeight - 40) {
-    pdf.addImage(imgData, 'PNG', 20, y, imgWidth, imgHeight);
-  } else {
-    // Multi-page add
-    let remaining = imgHeight;
-    let position = 0;
-    const pageCanvas = document.createElement('canvas');
-    const pageCtx = pageCanvas.getContext('2d');
-
-    const ratio = canvas.width / imgWidth;
-    const pageDrawHeight = pageHeight - 40; // drawable height per page
-    const sliceHeight = pageDrawHeight * ratio;
-
-    pageCanvas.width = canvas.width;
-    pageCanvas.height = sliceHeight;
-
-    while (remaining > 0) {
-      pageCtx.clearRect(0,0,pageCanvas.width,pageCanvas.height);
-      pageCtx.drawImage(canvas, 0, position, canvas.width, sliceHeight, 0, 0, pageCanvas.width, pageCanvas.height);
-      const pageImg = pageCanvas.toDataURL('image/png');
-      pdf.addImage(pageImg, 'PNG', 20, 20, imgWidth, pageDrawHeight);
-      remaining -= pageDrawHeight;
-      position += sliceHeight;
-      if (remaining > 0) pdf.addPage();
+  try{
+    const body = new URLSearchParams({ secret: SHARED_SECRET, action:'pdf', data: JSON.stringify(payload) });
+    const r = await fetch(SHEET_ENDPOINT, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+      body
+    });
+    const text = await r.text();
+    if (submitStatus){
+      submitStatus.textContent = r.ok ? 'PDF uploaded' : ('PDF failed: HTTP '+r.status);
+      submitStatus.className = r.ok ? 'ok' : 'bad';
     }
+    console.log('PDF response:', text);
+  }catch(e){
+    if (submitStatus){ submitStatus.textContent='PDF upload error (network)'; submitStatus.className='bad'; }
+    console.error(e);
   }
-
-  const student = (document.getElementById('s_name').value || 'Anonymous').replace(/[^\w\- ]+/g,'');
-  pdf.save(`OD_on_the_GO_Score_Report_${student}.pdf`);
 }
 
 // ===== EVENTS =====
@@ -398,7 +374,8 @@ document.getElementById('gradeBtn').addEventListener('click', async ()=>{
   const res = scoreExam();
   _lastResult = res;
   renderReport(res);
-  await submitToSheet(res);
+  await submitToSheet(res);   // writes to Sheets (and Sub/Disc/Cond/Subcat tabs)
+  await sendPdfToDrive(res);  // uploads a PDF into your Drive folder
   window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
 });
 
@@ -406,14 +383,12 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   renderExam();
   document.getElementById('report').classList.add('hide');
   document.getElementById('printBtn').disabled=true;
-  document.getElementById('pdfBtn').disabled=true;
   const s = document.getElementById('submitStatus');
   if (s){ s.textContent='Not sent'; s.className='muted'; }
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
-document.getElementById('pdfBtn').addEventListener('click', downloadReportPDF);
 
 // Mandatory school selection: disable Grade until selected
 (function initSchoolGate(){
