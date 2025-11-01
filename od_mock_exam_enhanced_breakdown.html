@@ -147,7 +147,12 @@ function renderExam(){
     examDiv.appendChild(wrap);
   });
 }
-renderExam();
+  // Render when DOM is ready (works whether script is in <head> or at the end)
+if (document.readyState !== 'loading') {
+  renderExam();
+} else {
+  document.addEventListener('DOMContentLoaded', renderExam);
+}
 
 // ===== Scoring =====
 function getCorrectChoice(q){ return q.choices.find(c=>c.trim().startsWith('*')).replace('*',''); }
