@@ -33,7 +33,13 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-  @media print{header,.actions,.rationale,.meta,#studentBox{display:none!important}}
+
+  /* Print = score report ONLY (hide questions, rationales, header, actions, meta, student box) */
+  @media print{
+    header,.actions,.rationale,.meta,#studentBox{display:none!important}
+    .question{display:none!important}   /* <— hides the entire question blocks on print */
+    body{background:#fff}
+  }
 </style>
 </head>
 <body>
@@ -73,14 +79,14 @@
           <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
           <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
           <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
-          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)</option>
+          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSUOCO</option>
           <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
           <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
-          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — Inter American University School of Optometry (IAUPR)</option>
-          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIW Rosenberg School of Optometry (UIWRSO)</option>
-          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — University of Houston College of Optometry (UHCO)</option>
-          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)</option>
-          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University College of Optometry</option>
+          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — IAUPR</option>
+          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIWRSO</option>
+          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — UHCO</option>
+          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV</option>
+          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
@@ -96,7 +102,6 @@
   <div class="actions">
     <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
     <button id="resetBtn">Reset</button>
-    <button id="csvBtn" disabled>Export CSV</button>
     <button id="printBtn" disabled>Print / Save PDF</button>
   </div>
 
@@ -128,12 +133,9 @@
 
 <script>
 // ===== CONFIG =====
-// Use your live /exec URL (you can keep yours as-is)
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw8Joe-TU8w50P36BTJPZJg3ONVKwoXypllCcEysx2c4VOj2q4MdIw-fYZIgJ1KLPycWw/exec";
-// Must match your Apps Script secret
 const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
 
-// NBEO disciplines
 const DISCIPLINES = [
   "A. Anatomy",
   "B. Biochemistry / Physiology",
@@ -142,7 +144,6 @@ const DISCIPLINES = [
   "E. Pharmacology"
 ];
 
-// NBEO condition areas (17)
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -150,7 +151,7 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-// Demo questions (replace/extend as needed)
+// Demo questions
 const QUESTIONS = [
   {text:"Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",choices:["*Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],discipline:"D. Optics",condition:"Ametropia",sub:"Vergence & Far Point",rationale:"Vergence = -1/0.50 m = -2.00 D → myopia."},
   {text:"Which spectacle change reduces spectacle magnification for same vertex power?",choices:["*Flatter front curve (plano front)","Steeper front curve","Increase center thickness","Lower index"],discipline:"D. Optics",condition:"Ophthalmic Optics / Spectacles",sub:"Spectacle Magnification",rationale:"Flatter base curve + thinner lens reduce SM."},
@@ -273,52 +274,8 @@ function renderReport(res){
   });
   subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
 
-  document.getElementById('csvBtn').disabled = false;
+  // Enable print button only (no CSV in this version)
   document.getElementById('printBtn').disabled = false;
-}
-
-// ===== CSV EXPORT =====
-function exportCSV(res){
-  const lines = [];
-  const push = (arr)=>lines.push(arr.join(','));
-
-  // Header meta
-  push(['Student', (document.getElementById('s_name').value || 'Anonymous')]);
-  push(['School', (document.getElementById('s_school').value || '')]);
-  push(['Date', new Date().toLocaleString()]);
-  push(['Overall', `${res.correctTotal} / ${res.total}`, `${res.pct}%`]);
-  lines.push([]);
-
-  // Disciplines
-  push(['Discipline','Correct','Total','Percent']);
-  DISCIPLINES.forEach(d=>{
-    const rec = res.perDisc[d]; if(!rec.total) return;
-    const pct = Math.round(100*rec.correct/rec.total);
-    push([d, rec.correct, rec.total, pct+'%']);
-  });
-  lines.push([]);
-
-  // Conditions
-  push(['Condition','Correct','Total','Percent']);
-  CONDITIONS.forEach(c=>{
-    const rec = res.perCond[c]; if(!rec.total) return;
-    const pct = Math.round(100*rec.correct/rec.total);
-    push([c, rec.correct, rec.total, pct+'%']);
-  });
-  lines.push([]);
-
-  // Answers (optional row-by-row)
-  push(['#','Discipline','Condition','Subcategory','Chosen','Correct','IsCorrect']);
-  (res.answers||[]).forEach(a=>{
-    push([a.index, a.discipline, a.condition, a.sub, (a.chosen||''), a.correct, a.isCorrect ? 'TRUE' : 'FALSE']);
-  });
-
-  const csv = lines.join('\n');
-  const blob = new Blob([csv], {type:'text/csv'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'OD_on_the_GO_Diagnostic.csv';
-  a.click();
 }
 
 // ===== SUBMIT (NO-PREFLIGHT, FORM-ENCODED) =====
@@ -327,7 +284,6 @@ async function submitToSheet(res){
   const name   = document.getElementById('s_name').value || 'Anonymous';
   const school = document.getElementById('s_school').value || '';
 
-  // Enforce school required (belt-and-suspenders)
   if (!school) {
     if (submitStatus){ submitStatus.textContent='School is required'; submitStatus.className='bad'; }
     return;
@@ -353,7 +309,6 @@ async function submitToSheet(res){
   };
 
   try{
-    // Form-encoded => "simple" request => no CORS preflight
     const body = new URLSearchParams({
       secret: SHARED_SECRET,
       data: JSON.stringify(payload)
@@ -393,7 +348,6 @@ document.getElementById('gradeBtn').addEventListener('click', async ()=>{
 document.getElementById('resetBtn').addEventListener('click', ()=>{
   renderExam();
   document.getElementById('report').classList.add('hide');
-  document.getElementById('csvBtn').disabled=true;
   document.getElementById('printBtn').disabled=true;
   const s = document.getElementById('submitStatus');
   if (s){ s.textContent='Not sent'; s.className='muted'; }
@@ -401,10 +355,6 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
 });
 
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
-
-document.getElementById('csvBtn').addEventListener('click', ()=>{
-  if (_lastResult) exportCSV(_lastResult);
-});
 
 // Mandatory school selection: disable Grade until selected
 (function initSchoolGate(){
