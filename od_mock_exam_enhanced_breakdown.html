@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OD on the GO — Enhanced Diagnostic (Working Version)</title>
+<title>OD on the GO — Enhanced Diagnostic (Discipline + Condition + Sub)</title>
 <style>
   :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
   *{box-sizing:border-box}
@@ -33,7 +33,13 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-  @media print{header,.actions,.rationale,.meta,#studentBox,.question{display:none!important}body{background:#fff}}
+
+  /* Print = score report ONLY (hide questions, rationales, header, actions, meta, student box) */
+  @media print{
+    header,.actions,.rationale,.meta,#studentBox{display:none!important}
+    .question{display:none!important}
+    body{background:#fff}
+  }
 </style>
 </head>
 <body>
@@ -41,10 +47,13 @@
   <div class="wrap">
     <h1>OD on the GO — Enhanced Diagnostic</h1>
     <span class="pill">Discipline + Condition + Subcategory</span>
+    <div style="flex:1"></div>
+    <small class="muted">Demo</small>
   </div>
 </header>
 
 <main>
+  <!-- Student metadata (school required) -->
   <div id="studentBox" class="summary">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
       <label>Student name
@@ -54,11 +63,38 @@
         <select id="s_school" required>
           <option value="" selected>Select your school…</option>
           <option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
+          <option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
+          <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
           <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
-          <option value="Texas — UHCO">Texas — UHCO</option>
+          <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
+          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
+          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
+          <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
+          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
+          <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
+          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
+          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
+          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
+          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
+          <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
+          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
+          <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
+          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSUOCO</option>
+          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
+          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
+          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — IAUPR</option>
+          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIWRSO</option>
+          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — UHCO</option>
+          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV</option>
+          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
+    <small class="muted">You must select a school before grading.</small>
+  </div>
+
+  <div class="summary">
+    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate the report.</div>
   </div>
 
   <div id="exam"></div>
@@ -66,82 +102,79 @@
   <div class="actions">
     <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
     <button id="resetBtn">Reset</button>
+    <button id="pdfBtn" disabled>Download PDF</button>
     <button id="printBtn" disabled>Print / Save PDF</button>
   </div>
 
   <section id="report" class="hide">
     <div class="summary">
-      <b>Student:</b> <span id="studentName">Anonymous</span> |
-      <b>School:</b> <span id="schoolName">—</span> |
-      <b>Score:</b> <span id="totalScore" class="brand"></span> |
-      <b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+        <div><b>Student:</b> <span id="studentName">Anonymous</span></div>
+        <div><b>School:</b> <span id="schoolName">—</span></div>
+        <div><b>Date:</b> <span id="dateStamp"></span></div>
+        <div><b>Total Score:</b> <span id="totalScore" class="brand"></span></div>
+        <div><b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span></div>
+      </div>
+    </div>
+
+    <h3>Discipline-Level Summary (NBEO-style A–E)</h3>
+    <table id="discSummary"><thead><tr><th>#</th><th>Discipline</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
+
+    <h3>Condition-Based (17 Areas)</h3>
+    <table id="condTable"><thead><tr><th>#</th><th>Condition Area</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
+
+    <h3>Subcategory Breakdown (within each Condition)</h3>
+    <div id="subcats"></div>
+
+    <div class="summary">
+      <div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div>
     </div>
   </section>
 </main>
 
+<!-- PDF libs (safe public CDNs) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNa5l1mWwq6ULm4r1YfF1VT0Zk3n1hWZqV4g+6+9mCkzQ2vV6YvHq7kco6r2O8qU3qkH3v5r5S4r3r8K3Q0CwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-NaWTH6Kq9rK8h8Yf0eY0sMEf6Cqg3Q3e0xDgS6pO7wGq2Tq3mH2Ck4kM3VwFZ0o6L2jKO3o5i3bL1cX6LxB/7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
+// ===== CONFIG (keep your current endpoint/secret) =====
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw8Joe-TU8w50P36BTJPZJg3ONVKwoXypllCcEysx2c4VOj2q4MdIw-fYZIgJ1KLPycWw/exec";
 const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
 
-const QUESTIONS = [
-  {text:"Which refractive state best describes a patient whose far point is at -50 cm?",choices:["*Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],rationale:"Vergence = -1/0.50 m = -2.00 D → myopia."},
-  {text:"Which spectacle change reduces magnification?",choices:["*Flatter front curve","Steeper front curve","Increase thickness","Lower index"],rationale:"Flatter base curve reduces SM."}
+const DISCIPLINES = [
+  "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
 ];
 
-const examDiv=document.getElementById('exam');
+const CONDITIONS = [
+  "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
+  "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
+  "Lids / Lashes / Lacrimal / Adnexa / Orbit","Conjunctiva / Cornea / Refractive Surgery","Lens / Cataract / IOL / Pre- & Post-Op Care",
+  "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
+];
+
+// Demo questions (keep your own set here)
+const QUESTIONS = [
+  {text:"Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",choices:["*Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],discipline:"D. Optics",condition:"Ametropia",sub:"Vergence & Far Point",rationale:"Vergence = -1/0.50 m = -2.00 D → myopia."},
+  {text:"Which spectacle change reduces spectacle magnification for same vertex power?",choices:["*Flatter front curve (plano front)","Steeper front curve","Increase center thickness","Lower index"],discipline:"D. Optics",condition:"Ophthalmic Optics / Spectacles",sub:"Spectacle Magnification",rationale:"Flatter base curve + thinner lens reduce SM."},
+  {text:"Most protein deposition occurs with which hydrogel class?",choices:["*Ionic high-water","Non-ionic low-water","Silicone hydrogel","PMMA"],discipline:"A. Anatomy",condition:"Contact Lenses",sub:"Materials & Deposits",rationale:"Ionic high-water hydrogels attract tear proteins."},
+  {text:"AC/A is best estimated clinically from?",choices:["*Gradient method","Crossed cylinder test","Worth 4-dot","Stereoacuity at near"],discipline:"A. Anatomy",condition:"Accommodation / Vergence / Oculomotor",sub:"AC/A Ratio",rationale:"Gradient AC/A uses lens changes and near phoria."},
+  {text:"Large constant ET with DVD and latent nystagmus suggests:",choices:["*Infantile esotropia","Accommodative ET","Intermittent XT","Decompensated phoria"],discipline:"A. Anatomy",condition:"Amblyopia / Strabismus",sub:"Infantile ET",rationale:"Classic triad for infantile ET."},
+  {text:"Which test screens congenital red–green defects?",choices:["*Ishihara","D-15 desaturated","Anomaloscope luminance match","HRR tritan pages only"],discipline:"A. Anatomy",condition:"Perceptual Function / Color Vision",sub:"Screening Tests",rationale:"Ishihara is a standard RG screen."},
+  {text:"Painful photophobic eye with ciliary flush and miotic pupil:",choices:["*Anterior uveitis","Bacterial conjunctivitis","Episcleritis","AACG"],discipline:"C. Immunology / Microbiology / Pathology",condition:"Episclera / Sclera / Anterior Uvea",sub:"Anterior Uveitis",rationale:"Findings fit anterior uveitis."},
+  {text:"Altitudinal field loss with crowded discs is typical for:",choices:["*NAION","LHON","Toxic neuropathy","Chiasmal compression"],discipline:"C. Immunology / Microbiology / Pathology",condition:"Optic Nerve / Neuro-Ophthalmic Pathways",sub:"Ischemic Optic Neuropathy",rationale:"NAION: altitudinal defect + disc-at-risk."},
+  {text:"Which presentation fits acute primary angle closure?",choices:["*Mid-dilated pupil, corneal edema, severe pain","Open angle with cupping","Sectoral redness only","Clear cornea with dendrites"],discipline:"E. Pharmacology",condition:"Glaucoma",sub:"Angle-Closure",rationale:"Classic AACG picture."},
+  {text:"In DKA the primary disturbance is:",choices:["*Metabolic acidosis","Respiratory acidosis","Metabolic alkalosis","Respiratory alkalosis"],discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Endocrine — Diabetes",rationale:"DKA = metabolic acidosis; respiratory compensation follows."}
+];
+
+// ===== RENDER EXAM =====
+const examDiv = document.getElementById('exam');
 function renderExam(){
-  examDiv.innerHTML='';
+  examDiv.innerHTML = '';
   QUESTIONS.forEach((q,i)=>{
-    const wrap=document.createElement('div');wrap.className='question';
-    wrap.innerHTML=`<h3>${i+1}. ${q.text}</h3>`+
-      `<div class="choices">${q.choices.map(c=>`<label class="choice"><input type="radio" name="q${i}" value="${c.replace('*','')}">${c.replace('*','')}</label>`).join('')}</div>`;
-    examDiv.appendChild(wrap);
-  });
-}
-renderExam();
-
-function getCorrectChoice(q){return q.choices.find(c=>c.trim().startsWith('*')).replace('*','');}
-function scoreExam(){
-  let correctTotal=0;
-  QUESTIONS.forEach((q,i)=>{
-    const chosen=Array.from(document.querySelectorAll(`input[name='q${i}']`)).find(r=>r.checked)?.value||null;
-    const correct=getCorrectChoice(q);
-    if(chosen===correct)correctTotal++;
-  });
-  return{correctTotal,total:QUESTIONS.length,pct:Math.round(100*correctTotal/QUESTIONS.length)};
-}
-
-function renderReport(res){
-  document.getElementById('report').classList.remove('hide');
-  document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
-  document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
-  document.getElementById('totalScore').textContent=`${res.pct}% (${res.correctTotal}/${res.total})`;
-  document.getElementById('printBtn').disabled=false;
-}
-
-async function submitToSheet(res){
-  const submitStatus=document.getElementById('submitStatus');
-  const name=document.getElementById('s_name').value||'Anonymous';
-  const school=document.getElementById('s_school').value||'';
-  if(!school){submitStatus.textContent='School required';submitStatus.className='bad';return;}
-  submitStatus.textContent='Submitting…';
-  const payload={secret:SHARED_SECRET,meta:{version:'v1.0',timestamp:new Date().toISOString()},student:{name,school},overall:res};
-  try{
-    const body=new URLSearchParams({secret:SHARED_SECRET,data:JSON.stringify(payload)});
-    const r=await fetch(SHEET_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
-    submitStatus.textContent=r.ok?'Submitted!':'Submit failed';
-    submitStatus.className=r.ok?'ok':'bad';
-  }catch(e){submitStatus.textContent='Network error';submitStatus.className='bad';}
-}
-
-document.getElementById('gradeBtn').addEventListener('click',async()=>{
-  const schoolSel=document.getElementById('s_school');
-  if(!schoolSel.value){alert('Please select your school');return;}
-  const res=scoreExam();renderReport(res);await submitToSheet(res);
-});
-document.getElementById('resetBtn').addEventListener('click',()=>{renderExam();document.getElementById('report').classList.add('hide');});
-document.getElementById('printBtn').addEventListener('click',()=>window.print());
-(function(){const s=document.getElementById('s_school'),b=document.getElementById('gradeBtn');b.disabled=!s.value;s.addEventListener('change',e=>b.disabled=!e.target.value);})();
-</script>
-</body>
-</html>
+    const wrap = document.createElement('div'); wrap.className='question';
+    wrap.innerHTML =
+      `<div class="qhead">
+         <h3>${i+1}. ${q.text}</h3>
+         <div class="meta">
+           <span class="pill">${q.discipline}</span>
+           <span class="pill">${q.condition
