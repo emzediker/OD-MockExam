@@ -6,57 +6,83 @@
 <title>OD on the GO — Enhanced Diagnostic (Discipline + Condition + Sub)</title>
 <style>
   :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
-  *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
   header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 16px;z-index:10}
   header .wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  h1{font-size:20px;margin:0} .pill{border:1px solid var(--border);border-radius:999px;padding:2px 8px;background:var(--card);font-size:12px;color:var(--muted)}
+  h1{font-size:20px;margin:0}
+  .pill{border:1px solid var(--border);border-radius:999px;padding:2px 8px;background:var(--card);font-size:12px;color:var(--muted)}
   main{max-width:1100px;margin:18px auto;padding:0 16px 40px}
   .question{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;margin:12px 0}
   .qhead{display:flex;justify-content:space-between;gap:10px;align-items:center}
-  .choices{display:grid;gap:8px;margin-top:8px} label.choice{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer}
+  .choices{display:grid;gap:8px;margin-top:8px}
+  label.choice{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer}
   .meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
   .summary{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;margin:14px 0}
   .actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
   button{border:1px solid var(--border);background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}
-  button.primary{background:var(--brand);border-color:var(--brand);color:#fff} button:disabled{opacity:.6;cursor:not-allowed}
-  th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left} th{background:#f6f8fb}
-  table{width:100%;border-collapse:collapse;margin-bottom:8px} .ok{color:var(--ok);font-weight:600} .bad{color:var(--bad);font-weight:600} .muted{color:var(--muted)}
-  .hide{display:none} .brand{font-weight:700} .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
+  button.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+  button:disabled{opacity:.6;cursor:not-allowed}
+  th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left}
+  th{background:#f6f8fb}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px}
+  .ok{color:var(--ok);font-weight:600}
+  .bad{color:var(--bad);font-weight:600}
+  .muted{color:var(--muted)}
+  .hide{display:none}
+  .brand{font-weight:700}
+  .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
   @media print{header,.actions,.rationale,.meta,#studentBox{display:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><h1>OD on the GO — Enhanced Diagnostic</h1><span class="pill">Discipline + Condition + Subcategory</span><div style="flex:1"></div><small class="muted">Demo</small></div></header>
+<header>
+  <div class="wrap">
+    <h1>OD on the GO — Enhanced Diagnostic</h1>
+    <span class="pill">Discipline + Condition + Subcategory</span>
+    <div style="flex:1"></div>
+    <small class="muted">Demo</small>
+  </div>
+</header>
+
 <main>
+  <!-- Student metadata (school required) -->
   <div id="studentBox" class="summary">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
-      <label>Student name<input id="s_name" type="text" placeholder="First Last"></label>
-      <label>School (required)<select id="s_school"><option value="" selected>Select your school…</option><option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
-<option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
-<option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
-<option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
-<option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
-<option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
-<option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
-<option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
-<option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
-<option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
-<option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
-<option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
-<option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
-<option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
-<option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
-<option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
-<option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
-<option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)</option>
-<option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
-<option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
-<option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — Inter American University School of Optometry (IAUPR)</option>
-<option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIW Rosenberg School of Optometry (UIWRSO)</option>
-<option value="Texas — University of Houston College of Optometry (UHCO)">Texas — University of Houston College of Optometry (UHCO)</option>
-<option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)</option>
-<option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University College of Optometry</option></select></label>
+      <label>Student name
+        <input id="s_name" type="text" placeholder="First Last">
+      </label>
+      <label>School (required)
+        <select id="s_school" required>
+          <option value="" selected>Select your school…</option>
+          <option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
+          <option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
+          <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
+          <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
+          <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
+          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
+          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
+          <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
+          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
+          <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
+          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
+          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
+          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
+          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
+          <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
+          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
+          <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
+          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)</option>
+          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
+          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
+          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — Inter American University School of Optometry (IAUPR)</option>
+          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIW Rosenberg School of Optometry (UIWRSO)</option>
+          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — University of Houston College of Optometry (UHCO)</option>
+          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)</option>
+          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University College of Optometry</option>
+        </select>
+      </label>
     </div>
     <small class="muted">You must select a school before grading.</small>
   </div>
@@ -94,18 +120,20 @@
     <h3>Subcategory Breakdown (within each Condition)</h3>
     <div id="subcats"></div>
 
-    <div class="summary"><div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div></div>
+    <div class="summary">
+      <div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div>
+    </div>
   </section>
 </main>
 
 <script>
-// ===== CONFIG (paste your values) =====
+// ===== CONFIG =====
+// Use your live /exec URL (you can keep yours as-is)
 const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzNrkDTx4j0cnC-YZvcBT5XigCqc_bRnw-nX_BuYX_FeUHovAw5Ud2cql4G3q9duB392A/exec";
-const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z"; // must match Code.gs
+// Must match your Apps Script secret
+const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
 
-// (Optional) If you want a visible status line, add this span in your report header HTML:
-// <div><b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span></div>
-
+// NBEO disciplines
 const DISCIPLINES = [
   "A. Anatomy",
   "B. Biochemistry / Physiology",
@@ -114,6 +142,7 @@ const DISCIPLINES = [
   "E. Pharmacology"
 ];
 
+// NBEO condition areas (17)
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -121,7 +150,7 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-// Demo questions tagged with discipline + condition + sub
+// Demo questions (replace/extend as needed)
 const QUESTIONS = [
   {text:"Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",choices:["*Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],discipline:"D. Optics",condition:"Ametropia",sub:"Vergence & Far Point",rationale:"Vergence = -1/0.50 m = -2.00 D → myopia."},
   {text:"Which spectacle change reduces spectacle magnification for same vertex power?",choices:["*Flatter front curve (plano front)","Steeper front curve","Increase center thickness","Lower index"],discipline:"D. Optics",condition:"Ophthalmic Optics / Spectacles",sub:"Spectacle Magnification",rationale:"Flatter base curve + thinner lens reduce SM."},
@@ -135,26 +164,31 @@ const QUESTIONS = [
   {text:"In DKA the primary disturbance is:",choices:["*Metabolic acidosis","Respiratory acidosis","Metabolic alkalosis","Respiratory alkalosis"],discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Endocrine — Diabetes",rationale:"DKA = metabolic acidosis; respiratory compensation follows."}
 ];
 
-// ===== Render exam =====
+// ===== RENDER EXAM =====
 const examDiv = document.getElementById('exam');
 function renderExam(){
-  examDiv.innerHTML='';
+  examDiv.innerHTML = '';
   QUESTIONS.forEach((q,i)=>{
     const wrap = document.createElement('div'); wrap.className='question';
-    wrap.innerHTML = `<div class="qhead"><h3>${i+1}. ${q.text}</h3><div class="meta"><span class="pill">${q.discipline}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div></div>` +
-      `<div class="choices">` + q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${c.replace('*','')}" />${c.replace('*','')}</label>`).join('') + `</div>` +
+    wrap.innerHTML =
+      `<div class="qhead">
+         <h3>${i+1}. ${q.text}</h3>
+         <div class="meta">
+           <span class="pill">${q.discipline}</span>
+           <span class="pill">${q.condition}</span>
+           <span class="pill">${q.sub}</span>
+         </div>
+       </div>` +
+      `<div class="choices">` +
+        q.choices.map((c)=>`<label class="choice"><input type="radio" name="q${i}" value="${c.replace('*','')}" />${c.replace('*','')}</label>`).join('') +
+      `</div>` +
       `<div id="rat${i}" class="rationale hide"></div>`;
     examDiv.appendChild(wrap);
   });
 }
-  // Render when DOM is ready (works whether script is in <head> or at the end)
-if (document.readyState !== 'loading') {
-  renderExam();
-} else {
-  document.addEventListener('DOMContentLoaded', renderExam);
-}
+if (document.readyState !== 'loading') renderExam(); else document.addEventListener('DOMContentLoaded', renderExam);
 
-// ===== Scoring =====
+// ===== SCORING =====
 function getCorrectChoice(q){ return q.choices.find(c=>c.trim().startsWith('*')).replace('*',''); }
 function scoreExam(){
   const perCond = {}; CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
@@ -162,25 +196,32 @@ function scoreExam(){
   const perSub = {}; CONDITIONS.forEach(c=>perSub[c]={});
   let correctTotal=0;
   const answers=[];
+
   QUESTIONS.forEach((q,i)=>{
     const chosen = Array.from(document.querySelectorAll(`input[name='q${i}']`)).find(r=>r.checked)?.value || null;
     const correct = getCorrectChoice(q);
     const ok = (chosen===correct);
     if(ok) correctTotal++;
+
     perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
     perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
-    const submap = perSub[q.condition]; if(!submap[q.sub]) submap[q.sub]={correct:0,total:0};
+
+    const submap = perSub[q.condition];
+    if(!submap[q.sub]) submap[q.sub]={correct:0,total:0};
     submap[q.sub].total++; if(ok) submap[q.sub].correct++;
+
     const rat = document.getElementById('rat'+i);
     rat.classList.remove('hide');
     rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + correct + "<br>" + q.rationale;
+
     answers.push({index:i+1, discipline:q.discipline, condition:q.condition, sub:q.sub, chosen, correct, isCorrect:ok});
   });
+
   const pct = Math.round(100*correctTotal/QUESTIONS.length);
   return {perCond, perDisc, perSub, answers, correctTotal, total: QUESTIONS.length, pct};
 }
 
-// ===== Report rendering =====
+// ===== REPORT RENDERING =====
 const reportEl = document.getElementById('report');
 const dateEl = document.getElementById('dateStamp');
 const totalEl = document.getElementById('totalScore');
@@ -236,11 +277,61 @@ function renderReport(res){
   document.getElementById('printBtn').disabled = false;
 }
 
-// ===== Submit to Google Sheet =====
+// ===== CSV EXPORT =====
+function exportCSV(res){
+  const lines = [];
+  const push = (arr)=>lines.push(arr.join(','));
+
+  // Header meta
+  push(['Student', (document.getElementById('s_name').value || 'Anonymous')]);
+  push(['School', (document.getElementById('s_school').value || '')]);
+  push(['Date', new Date().toLocaleString()]);
+  push(['Overall', `${res.correctTotal} / ${res.total}`, `${res.pct}%`]);
+  lines.push([]);
+
+  // Disciplines
+  push(['Discipline','Correct','Total','Percent']);
+  DISCIPLINES.forEach(d=>{
+    const rec = res.perDisc[d]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    push([d, rec.correct, rec.total, pct+'%']);
+  });
+  lines.push([]);
+
+  // Conditions
+  push(['Condition','Correct','Total','Percent']);
+  CONDITIONS.forEach(c=>{
+    const rec = res.perCond[c]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    push([c, rec.correct, rec.total, pct+'%']);
+  });
+  lines.push([]);
+
+  // Answers (optional row-by-row)
+  push(['#','Discipline','Condition','Subcategory','Chosen','Correct','IsCorrect']);
+  (res.answers||[]).forEach(a=>{
+    push([a.index, a.discipline, a.condition, a.sub, (a.chosen||''), a.correct, a.isCorrect ? 'TRUE' : 'FALSE']);
+  });
+
+  const csv = lines.join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'OD_on_the_GO_Diagnostic.csv';
+  a.click();
+}
+
+// ===== SUBMIT (NO-PREFLIGHT, FORM-ENCODED) =====
 async function submitToSheet(res){
-  const submitStatus = document.getElementById('submitStatus'); // optional
+  const submitStatus = document.getElementById('submitStatus');
   const name   = document.getElementById('s_name').value || 'Anonymous';
   const school = document.getElementById('s_school').value || '';
+
+  // Enforce school required (belt-and-suspenders)
+  if (!school) {
+    if (submitStatus){ submitStatus.textContent='School is required'; submitStatus.className='bad'; }
+    return;
+  }
 
   if (!SHEET_ENDPOINT || SHEET_ENDPOINT.includes('PASTE_YOUR_APPS_SCRIPT')) {
     if (submitStatus){ submitStatus.textContent='Submission endpoint not configured'; submitStatus.className='bad'; }
@@ -262,36 +353,66 @@ async function submitToSheet(res){
   };
 
   try{
+    // Form-encoded => "simple" request => no CORS preflight
+    const body = new URLSearchParams({
+      secret: SHARED_SECRET,
+      data: JSON.stringify(payload)
+    });
+
     const r = await fetch(SHEET_ENDPOINT, {
       method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify(payload),
-      mode:'cors'
+      headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+      body
     });
-    if (r.ok) { if (submitStatus){ submitStatus.textContent='Submitted to OD on the GO'; submitStatus.className='ok'; } }
-    else { if (submitStatus){ submitStatus.textContent='Submit failed'; submitStatus.className='bad'; } }
+
+    if (r.ok) {
+      if (submitStatus){ submitStatus.textContent='Submitted to OD on the GO'; submitStatus.className='ok'; }
+    } else {
+      if (submitStatus){ submitStatus.textContent='Submit failed ('+r.status+')'; submitStatus.className='bad'; }
+    }
   }catch(e){
     if (submitStatus){ submitStatus.textContent='Submit error (network)'; submitStatus.className='bad'; }
     console.error(e);
   }
 }
 
-// ===== Events =====
+// ===== EVENTS =====
+let _lastResult = null;
+
 document.getElementById('gradeBtn').addEventListener('click', async ()=>{
+  const schoolSel = document.getElementById('s_school');
+  if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
+
   const res = scoreExam();
+  _lastResult = res;
   renderReport(res);
-  await submitToSheet(res); // <-- auto-send to your Sheet
-  window.scrollTo({top: reportEl.offsetTop-20, behavior:'smooth'});
+  await submitToSheet(res);
+  window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
 });
+
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  renderExam(); reportEl.classList.add('hide');
+  renderExam();
+  document.getElementById('report').classList.add('hide');
   document.getElementById('csvBtn').disabled=true;
   document.getElementById('printBtn').disabled=true;
-  const s = document.getElementById('submitStatus'); if (s){ s.textContent='Not sent'; s.className='muted'; }
+  const s = document.getElementById('submitStatus');
+  if (s){ s.textContent='Not sent'; s.className='muted'; }
   window.scrollTo({top:0,behavior:'smooth'});
 });
+
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
-document.getElementById('s_school').addEventListener('change', (e)=>{
-  document.getElementById('gradeBtn').disabled = !e.target.value;
+
+document.getElementById('csvBtn').addEventListener('click', ()=>{
+  if (_lastResult) exportCSV(_lastResult);
 });
+
+// Mandatory school selection: disable Grade until selected
+(function initSchoolGate(){
+  const schoolSel = document.getElementById('s_school');
+  const gradeBtn  = document.getElementById('gradeBtn');
+  gradeBtn.disabled = !schoolSel.value;
+  schoolSel.addEventListener('change', e => { gradeBtn.disabled = !e.target.value; });
+})();
 </script>
+</body>
+</html>
