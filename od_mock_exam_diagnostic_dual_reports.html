@@ -272,15 +272,18 @@ const advancedBox = document.getElementById('advanced');
 const basicTitle = document.getElementById('basicTitle');
 
 function showBasic(){
-  tabBasic.classList.add('primary'); tabAdvanced.classList.remove('primary');
-  document.getElementById('diagTable').parentElement.classList.remove('hide');
-  advancedBox.classList.add('hide');
+  tabBasic.classList.add('primary'); 
+  tabAdvanced.classList.remove('primary');
+  document.querySelector('#diagTable').closest('div.report').querySelector('table').classList.remove('hide');
+  document.getElementById('advanced').classList.add('hide');
   basicTitle.classList.remove('hide');
 }
+
 function showAdvanced(){
-  tabAdvanced.classList.add('primary'); tabBasic.classList.remove('primary');
-  document.getElementById('diagTable').parentElement.classList.add('hide');
-  advancedBox.classList.remove('hide');
+  tabAdvanced.classList.add('primary'); 
+  tabBasic.classList.remove('primary');
+  document.querySelector('#diagTable').closest('div.report').querySelector('table').classList.add('hide');
+  document.getElementById('advanced').classList.remove('hide');
   basicTitle.classList.add('hide');
 }
 if(tabBasic && tabAdvanced){
