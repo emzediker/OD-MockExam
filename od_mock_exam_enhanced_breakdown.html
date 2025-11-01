@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OD on the GO — Enhanced Diagnostic (Discipline + Condition + Sub)</title>
+<title>OD on the GO — Score Report (Local Only)</title>
 <style>
   :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
   *{box-sizing:border-box}
@@ -33,16 +33,22 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-  @media print{header,.actions,.rationale,.meta,#studentBox{display:none!important}}
+
+  /* Print = score report ONLY (no questions/rationales/student box/buttons) */
+  @media print{
+    header,.actions,.meta,#studentBox{display:none!important}
+    .question{display:none!important}
+    body{background:#fff}
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <h1>OD on the GO — Enhanced Diagnostic</h1>
-    <span class="pill">Discipline + Condition + Subcategory</span>
+    <h1>OD on the GO — Mock Boards Diagnostic</h1>
+    <span class="pill">Score report (local only)</span>
     <div style="flex:1"></div>
-    <small class="muted">Demo</small>
+    <small class="muted">Secure student view</small>
   </div>
 </header>
 
@@ -79,7 +85,7 @@
           <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — Inter American University School of Optometry (IAUPR)</option>
           <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIW Rosenberg School of Optometry (UIWRSO)</option>
           <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — University of Houston College of Optometry (UHCO)</option>
-          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)</option>
+          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV School of Optometry</option>
           <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University College of Optometry</option>
         </select>
       </label>
@@ -88,7 +94,7 @@
   </div>
 
   <div class="summary">
-    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate the report.</div>
+    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate your score report. You can print/save the report; questions and answers are not downloadable.</div>
   </div>
 
   <div id="exam"></div>
@@ -96,8 +102,7 @@
   <div class="actions">
     <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
     <button id="resetBtn">Reset</button>
-    <button id="csvBtn" disabled>Export CSV</button>
-    <button id="printBtn" disabled>Print / Save PDF</button>
+    <button id="printBtn">Download Score Report (PDF)</button>
   </div>
 
   <section id="report" class="hide">
@@ -107,17 +112,20 @@
         <div><b>School:</b> <span id="schoolName">—</span></div>
         <div><b>Date:</b> <span id="dateStamp"></span></div>
         <div><b>Total Score:</b> <span id="totalScore" class="brand"></span></div>
-        <div><b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span></div>
+      </div>
+      <!-- Watermark (traceable PDF) -->
+      <div class="muted" style="opacity:.75;margin-top:8px">
+        Report issued to <b id="wmName">Anonymous</b> (<span id="wmSchool">—</span>) · <span id="wmTime"></span> · origin: <span id="wmOrigin"></span>
       </div>
     </div>
 
-    <h3>Discipline-Level Summary (NBEO-style A–E)</h3>
+    <h3>Discipline-Level Summary (A–E)</h3>
     <table id="discSummary"><thead><tr><th>#</th><th>Discipline</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
 
     <h3>Condition-Based (17 Areas)</h3>
     <table id="condTable"><thead><tr><th>#</th><th>Condition Area</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
 
-    <h3>Subcategory Breakdown (within each Condition)</h3>
+    <h3>Subcategory Breakdown</h3>
     <div id="subcats"></div>
 
     <div class="summary">
@@ -128,10 +136,10 @@
 
 <script>
 // ===== CONFIG =====
-// Use your live /exec URL (you can keep yours as-is)
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw8Joe-TU8w50P36BTJPZJg3ONVKwoXypllCcEysx2c4VOj2q4MdIw-fYZIgJ1KLPycWw/exec";
-// Must match your Apps Script secret
-const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
+// Submissions are disabled in this file. When you’re ready to re-enable,
+// you can add your Apps Script /exec URL and server scoring.
+const SHEET_ENDPOINT = ""; // intentionally blank (no uploads)
+const SHARED_SECRET  = ""; // not used in this locked student view
 
 // NBEO disciplines
 const DISCIPLINES = [
@@ -210,11 +218,12 @@ function scoreExam(){
     if(!submap[q.sub]) submap[q.sub]={correct:0,total:0};
     submap[q.sub].total++; if(ok) submap[q.sub].correct++;
 
+    // Student view: do NOT show correct answers or rationales
     const rat = document.getElementById('rat'+i);
     rat.classList.remove('hide');
-    rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + correct + "<br>" + q.rationale;
+    rat.textContent = ok ? '✅ Correct' : '❌ Incorrect';
 
-    answers.push({index:i+1, discipline:q.discipline, condition:q.condition, sub:q.sub, chosen, correct, isCorrect:ok});
+    answers.push({index:i+1, discipline:q.discipline, condition:q.condition, sub:q.sub, chosen, isCorrect:ok});
   });
 
   const pct = Math.round(100*correctTotal/QUESTIONS.length);
@@ -237,8 +246,16 @@ function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent = new Date().toLocaleString();
   totalEl.textContent = `${res.pct}% (${res.correctTotal} / ${res.total})`;
-  document.getElementById('studentName').textContent = document.getElementById('s_name').value || 'Anonymous';
-  document.getElementById('schoolName').textContent = document.getElementById('s_school').value || '—';
+  const name = document.getElementById('s_name').value || 'Anonymous';
+  const school = document.getElementById('s_school').value || '—';
+  document.getElementById('studentName').textContent = name;
+  document.getElementById('schoolName').textContent = school;
+
+  // Watermark
+  document.getElementById('wmName').textContent = name;
+  document.getElementById('wmSchool').textContent = school;
+  document.getElementById('wmTime').textContent = new Date().toLocaleString();
+  document.getElementById('wmOrigin').textContent = location.hostname;
 
   // Disciplines
   let rows=[]; let idx=1;
@@ -266,147 +283,36 @@ function renderReport(res){
     html += `<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
     html += '<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>';
     keys.sort().forEach(s=>{
-      const rec = subs[s]; const pct = Math.round(100*rec.correct/rec.total);
-      html += `<tr><td>${s}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`;
+      const r = subs[s]; const p = Math.round(100*r.correct/r.total);
+      html += `<tr><td>${s}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`;
     });
     html += '</tbody></table>'; cidx++;
   });
   subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
-
-  document.getElementById('csvBtn').disabled = false;
-  document.getElementById('printBtn').disabled = false;
 }
 
-// ===== CSV EXPORT =====
-function exportCSV(res){
-  const lines = [];
-  const push = (arr)=>lines.push(arr.join(','));
-
-  // Header meta
-  push(['Student', (document.getElementById('s_name').value || 'Anonymous')]);
-  push(['School', (document.getElementById('s_school').value || '')]);
-  push(['Date', new Date().toLocaleString()]);
-  push(['Overall', `${res.correctTotal} / ${res.total}`, `${res.pct}%`]);
-  lines.push([]);
-
-  // Disciplines
-  push(['Discipline','Correct','Total','Percent']);
-  DISCIPLINES.forEach(d=>{
-    const rec = res.perDisc[d]; if(!rec.total) return;
-    const pct = Math.round(100*rec.correct/rec.total);
-    push([d, rec.correct, rec.total, pct+'%']);
-  });
-  lines.push([]);
-
-  // Conditions
-  push(['Condition','Correct','Total','Percent']);
-  CONDITIONS.forEach(c=>{
-    const rec = res.perCond[c]; if(!rec.total) return;
-    const pct = Math.round(100*rec.correct/rec.total);
-    push([c, rec.correct, rec.total, pct+'%']);
-  });
-  lines.push([]);
-
-  // Answers (optional row-by-row)
-  push(['#','Discipline','Condition','Subcategory','Chosen','Correct','IsCorrect']);
-  (res.answers||[]).forEach(a=>{
-    push([a.index, a.discipline, a.condition, a.sub, (a.chosen||''), a.correct, a.isCorrect ? 'TRUE' : 'FALSE']);
-  });
-
-  const csv = lines.join('\n');
-  const blob = new Blob([csv], {type:'text/csv'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'OD_on_the_GO_Diagnostic.csv';
-  a.click();
-}
-
-// ===== SUBMIT (NO-PREFLIGHT, FORM-ENCODED) =====
-async function submitToSheet(res){
-  const submitStatus = document.getElementById('submitStatus');
-  const name   = document.getElementById('s_name').value || 'Anonymous';
-  const school = document.getElementById('s_school').value || '';
-
-  // Enforce school required (belt-and-suspenders)
-  if (!school) {
-    if (submitStatus){ submitStatus.textContent='School is required'; submitStatus.className='bad'; }
-    return;
-  }
-
-  if (!SHEET_ENDPOINT || SHEET_ENDPOINT.includes('PASTE_YOUR_APPS_SCRIPT')) {
-    if (submitStatus){ submitStatus.textContent='Submission endpoint not configured'; submitStatus.className='bad'; }
-    return;
-  }
-  if (submitStatus){ submitStatus.textContent='Submitting…'; submitStatus.className='muted'; }
-
-  const disc = DISCIPLINES.map(d=>({name:d, ...(res.perDisc[d]||{correct:0,total:0})}));
-  const cond = CONDITIONS.map(c=>({name:c, ...(res.perCond[c]||{correct:0,total:0})}));
-
-  const payload = {
-    secret: SHARED_SECRET,
-    meta: { version: 'v2.0', timestamp: new Date().toISOString() },
-    student: { name, email: '', school },
-    overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
-    discipline: disc,
-    condition: cond,
-    answers: res.answers || []
-  };
-
-  try{
-    // Form-encoded => "simple" request => no CORS preflight
-    const body = new URLSearchParams({
-      secret: SHARED_SECRET,
-      data: JSON.stringify(payload)
-    });
-
-    const r = await fetch(SHEET_ENDPOINT, {
-      method:'POST',
-      headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
-      body
-    });
-
-    if (r.ok) {
-      if (submitStatus){ submitStatus.textContent='Submitted to OD on the GO'; submitStatus.className='ok'; }
-    } else {
-      if (submitStatus){ submitStatus.textContent='Submit failed ('+r.status+')'; submitStatus.className='bad'; }
-    }
-  }catch(e){
-    if (submitStatus){ submitStatus.textContent='Submit error (network)'; submitStatus.className='bad'; }
-    console.error(e);
-  }
-}
+// ===== “Submission” is disabled in this secure student view =====
+async function submitToSheet(res){ return; } // no-op
 
 // ===== EVENTS =====
-let _lastResult = null;
-
 document.getElementById('gradeBtn').addEventListener('click', async ()=>{
   const schoolSel = document.getElementById('s_school');
   if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
 
   const res = scoreExam();
-  _lastResult = res;
   renderReport(res);
-  await submitToSheet(res);
   window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
 });
 
 document.getElementById('resetBtn').addEventListener('click', ()=>{
   renderExam();
   document.getElementById('report').classList.add('hide');
-  document.getElementById('csvBtn').disabled=true;
-  document.getElementById('printBtn').disabled=true;
-  const s = document.getElementById('submitStatus');
-  if (s){ s.textContent='Not sent'; s.className='muted'; }
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
 
-document.getElementById('csvBtn').addEventListener('click', ()=>{
-  if (_lastResult) exportCSV(_lastResult);
-});
-
-// Mandatory school selection: disable Grade until selected
+// Gate: disable Grade until a school is chosen
 (function initSchoolGate(){
   const schoolSel = document.getElementById('s_school');
   const gradeBtn  = document.getElementById('gradeBtn');
