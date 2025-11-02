@@ -1498,5 +1498,455 @@
     "condition": "Hypersensitivity & Autoimmunity",
     "sub": "Autoimmune Exocrinopathy",
     "rationale": "Lymphocytic infiltration of lacrimal and salivary glands causes keratoconjunctivitis sicca and xerostomia."
+  },
+  {
+    "id": 151,
+    "text": "The most common bacterial cause of hyperacute conjunctivitis is:",
+    "choices": ["Neisseria gonorrhoeae", "Staphylococcus aureus", "Haemophilus influenzae", "Moraxella catarrhalis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Conjunctivitis — Hyperacute",
+    "rationale": "N. gonorrhoeae can penetrate intact epithelium, causing copious purulent discharge."
+  },
+  {
+    "id": 152,
+    "text": "The leading cause of chronic follicular conjunctivitis worldwide is:",
+    "choices": ["Chlamydia trachomatis (serovars A–C)", "Adenovirus 8", "Herpes simplex virus type 1", "Moraxella lacunata"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Trachoma",
+    "rationale": "Ocular trachoma produces pannus and conjunctival scarring."
+  },
+  {
+    "id": 153,
+    "text": "The most common cause of bacterial keratitis in contact-lens wearers is:",
+    "choices": ["Pseudomonas aeruginosa", "Staphylococcus aureus", "Streptococcus pneumoniae", "Corynebacterium diphtheriae"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Bacterial Keratitis",
+    "rationale": "Pseudomonas thrives in lens cases/solutions and can rapidly melt cornea."
+  },
+  {
+    "id": 154,
+    "text": "Dendritic corneal ulcers with terminal bulbs are characteristic of:",
+    "choices": ["Herpes simplex virus type 1 (HSV-1)", "Varicella-zoster virus", "Adenovirus", "Epstein–Barr virus"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "HSV Keratitis",
+    "rationale": "HSV reactivation → branching dendrites with terminal bulbs staining with fluorescein and rose bengal."
+  },
+  {
+    "id": 155,
+    "text": "Pseudodendrites (without bulbs) are most associated with:",
+    "choices": ["Herpes zoster ophthalmicus", "HSV-1 keratitis", "Adenoviral keratoconjunctivitis", "Thygeson’s SPK"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "VZV Keratitis",
+    "rationale": "Zoster lesions are elevated with tapered ends and minimal staining."
+  },
+  {
+    "id": 156,
+    "text": "Epidemic keratoconjunctivitis (EKC) is caused by:",
+    "choices": ["Adenovirus serotypes 8, 19, 37", "HSV-1", "Enterovirus 70", "Coxsackie virus A24"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "EKC",
+    "rationale": "EKC often leads to subepithelial infiltrates and pseudomembranes after 10–14 days."
+  },
+  {
+    "id": 157,
+    "text": "Acanthamoeba keratitis is most strongly associated with:",
+    "choices": ["Contact-lens use with tap-water or homemade saline", "Post-LASIK infection", "Chronic uveitis", "Blepharitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Protozoal Keratitis",
+    "rationale": "Free-living amoebae in water/soil cause ring infiltrate and severe pain."
+  },
+  {
+    "id": 158,
+    "text": "Ocular toxoplasmosis is caused by:",
+    "choices": ["Toxoplasma gondii", "Toxocara canis", "Treponema pallidum", "Onchocerca volvulus"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Retinochoroiditis",
+    "rationale": "Reactivation leads to focal necrotizing retinochoroiditis with 'headlight in fog.'"
+  },
+  {
+    "id": 159,
+    "text": "Interstitial keratitis in a young adult suggests a history of:",
+    "choices": ["Congenital syphilis", "Lyme disease", "TB", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Microbiology & Ocular Infections",
+    "sub": "Syphilis",
+    "rationale": "Treponemal disease causes stromal scarring and ghost vessels."
+  },
+  {
+    "id": 160,
+    "text": "Cotton-wool spots represent:",
+    "choices": ["Focal retinal nerve fiber-layer infarcts", "Microaneurysms", "Drusen deposits", "Neovascularization"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Retina",
+    "sub": "Ischemic Signs",
+    "rationale": "Axoplasmic flow blockage causes swollen RNFL in ischemia."
+  },
+  {
+    "id": 161,
+    "text": "The first leukocyte to reach an acute inflammatory site is the:",
+    "choices": ["Neutrophil", "Macrophage", "Lymphocyte", "Eosinophil"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Inflammation",
+    "sub": "Acute Inflammation",
+    "rationale": "Neutrophils arrive within hours to phagocytose bacteria/debris."
+  },
+  {
+    "id": 162,
+    "text": "Chronic inflammation is characterized by:",
+    "choices": ["Mononuclear cell infiltrate and fibrosis", "Edema and neutrophils", "Serous exudate only", "Endothelial swelling alone"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Inflammation",
+    "sub": "Chronic Inflammation",
+    "rationale": "Lymphocytes and macrophages dominate with ongoing repair/fibrosis."
+  },
+  {
+    "id": 163,
+    "text": "Caseous necrosis is most typical of:",
+    "choices": ["Tuberculosis infection", "Ischemic infarct", "Abscess formation", "Pancreatitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Inflammation",
+    "sub": "Necrosis Patterns",
+    "rationale": "Cheese-like necrosis due to mycobacterial granulomas."
+  },
+  {
+    "id": 164,
+    "text": "Granulomatous inflammation is characterized by:",
+    "choices": ["Epithelioid macrophages and multinucleated giant cells", "Neutrophilic abscess", "Eosinophilic infiltrate", "Coagulative necrosis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Inflammation",
+    "sub": "Granulomas",
+    "rationale": "Seen in TB, sarcoid, some fungi, and phlyctenulosis."
+  },
+  {
+    "id": 165,
+    "text": "Lipid peroxidation is a major mechanism of:",
+    "choices": ["Free-radical cell injury", "Apoptosis", "Amyloid deposition", "Coagulation necrosis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "General Pathology & Inflammation",
+    "sub": "Oxidative Damage",
+    "rationale": "ROS attack membrane phospholipids, relevant to lens oxidative injury."
+  },
+  {
+    "id": 166,
+    "text": "Vergence (V) is defined as:",
+    "choices": ["Reciprocal of distance (in meters) from a wavefront to the focus", "Product of index and curvature", "Inverse of focal length in centimeters", "1 + n’/l’"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Geometric Optics & Vergence",
+    "sub": "Vergence Basics",
+    "rationale": "V = n/l (diopters); positive converging, negative diverging."
+  },
+  {
+    "id": 167,
+    "text": "Light entering a +5 D lens from infinity emerges focused at:",
+    "choices": ["0.20 m behind the lens", "0.50 m behind the lens", "0.10 m in front of the lens", "0.25 m in front of the lens"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Geometric Optics & Vergence",
+    "sub": "Focal Length",
+    "rationale": "f = 1/F = 1/5 = 0.20 m."
+  },
+  {
+    "id": 168,
+    "text": "For a +4 D lens placed 0.25 m from the eye, the effective power at the eye is closest to:",
+    "choices": ["+3.6 D", "+4.0 D", "+4.4 D", "+5.0 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Lens Systems & Vertex",
+    "sub": "Effective Power",
+    "rationale": "Using vertex conversion, F′ ≈ +3.6 D for a +4 D lens at 0.25 m in this setup."
+  },
+  {
+    "id": 169,
+    "text": "The secondary focal point of a –5 D lens lies:",
+    "choices": ["–0.20 m behind the lens (on same side as object)", "0.20 m behind the lens (opposite side)", "–0.50 m behind the lens", "At optical infinity"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Geometric Optics & Vergence",
+    "sub": "Negative Lenses",
+    "rationale": "Negative lenses have virtual foci on the object side; f = –0.20 m."
+  },
+  {
+    "id": 170,
+    "text": "If object is 25 cm in front of a +4 D lens, image position is:",
+    "choices": ["+0.167 m behind lens", "–0.167 m in front of lens", "+0.25 m behind lens", "+0.40 m behind lens"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Geometric Optics & Vergence",
+    "sub": "Thin Lens Equation",
+    "rationale": "1/f = 1/l + 1/l′ with f=0.25 m, l=0.25 m → l′ ≈ +0.167 m."
+  },
+  {
+    "id": 171,
+    "text": "A –2.00 D lens moved 5 mm closer to the eye changes effective power by approximately:",
+    "choices": ["+0.02 D", "–0.02 D", "+0.10 D", "0 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Lens Systems & Vertex",
+    "sub": "Vertex Change",
+    "rationale": "ΔF ≈ F² × Δd = 4 × 0.005 = 0.02 D (sign depends on direction; magnitude ≈ 0.02)."
+  },
+  {
+    "id": 172,
+    "text": "Back vertex power (BVP) is defined as:",
+    "choices": ["Vergence leaving rear surface when parallel rays enter front surface", "Mean front curve minus back curve", "Sum of principal powers", "Focal length reciprocal"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Lens Systems & Vertex",
+    "sub": "BVP",
+    "rationale": "BVP equals emerging vergence at the back surface for parallel incident light."
+  },
+  {
+    "id": 173,
+    "text": "An object at the first principal focus emerges as:",
+    "choices": ["Parallel rays", "Convergent rays", "Virtual image at infinity", "Reversed image"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Thick Lenses",
+    "sub": "Principal Foci",
+    "rationale": "At F₁, the emergent light is collimated (image at infinity)."
+  },
+  {
+    "id": 174,
+    "text": "The principal planes in a thick lens represent:",
+    "choices": ["Reference planes where refraction may be considered to occur", "Centers of curvature", "Pupillary planes", "Nodal points"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Thick Lenses",
+    "sub": "Principal Planes",
+    "rationale": "They’re reference planes simplifying ray tracing through thick systems."
+  },
+  {
+    "id": 175,
+    "text": "The angular magnification of a +4 D hand magnifier at 25 cm is approximately:",
+    "choices": ["+1 + (D/4) ≈ +2×", "+4×", "+3×", "+10×"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Low Vision Optics",
+    "sub": "Magnifiers",
+    "rationale": "M ≈ 1 + F/4 → 1 + 4/4 = 2×."
+  },
+  {
+    "id": 176,
+    "text": "A concave mirror with radius 40 cm has a focal length of:",
+    "choices": ["+20 cm", "+40 cm", "–20 cm", "–10 cm"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Mirrors & Reflection",
+    "sub": "Mirror Focal Length",
+    "rationale": "f = r/2 = 20 cm (sign convention varies; magnitude 20 cm)."
+  },
+  {
+    "id": 177,
+    "text": "An object 10 cm from a plane mirror has an image:",
+    "choices": ["10 cm behind the mirror", "20 cm behind mirror", "10 cm in front of mirror", "At focal point"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Mirrors & Reflection",
+    "sub": "Plane Mirror Imaging",
+    "rationale": "Plane mirrors form virtual images the same distance behind as the object in front."
+  },
+  {
+    "id": 178,
+    "text": "In a concave mirror, a real image is formed when:",
+    "choices": ["Object is beyond the center of curvature", "Object is between f and mirror", "Mirror is convex", "Light is diverging"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Mirrors & Reflection",
+    "sub": "Concave Mirror Imaging",
+    "rationale": "Object beyond C yields a real, inverted image between C and F."
+  },
+  {
+    "id": 179,
+    "text": "A convex mirror always forms:",
+    "choices": ["Virtual, erect, and reduced images", "Real and inverted", "Magnified images", "Variable sign images"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Mirrors & Reflection",
+    "sub": "Convex Mirror Imaging",
+    "rationale": "Negative mirror power gives virtual, upright, reduced images behind the surface."
+  },
+  {
+    "id": 180,
+    "text": "Snell’s law states that:",
+    "choices": ["n₁ sin θ₁ = n₂ sin θ₂", "n₁/n₂ = θ₂/θ₁", "V₁ = V₂", "r = θ – δ"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Refraction & Interfaces",
+    "sub": "Snell’s Law",
+    "rationale": "Relates incident and refracted angles across media of different indices."
+  },
+  {
+    "id": 181,
+    "text": "The critical angle occurs when:",
+    "choices": ["Light travels from denser to rarer medium and θ₂ = 90°", "Light travels from rarer to denser medium", "Refraction equals reflection", "Angle of incidence = 0°"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Refraction & Interfaces",
+    "sub": "Critical Angle",
+    "rationale": "Beyond θc, total internal reflection occurs."
+  },
+  {
+    "id": 182,
+    "text": "Total internal reflection is used in:",
+    "choices": ["Fiber optic illumination", "Spherical lens focusing", "Prism dispersion", "Polarizing filters"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Refraction & Interfaces",
+    "sub": "Applications",
+    "rationale": "Guides light in fiber optics (e.g., OCT/illumination systems)."
+  },
+  {
+    "id": 183,
+    "text": "In the eye, the surface causing greatest refraction is:",
+    "choices": ["Air–cornea interface", "Cornea–aqueous", "Lens–aqueous", "Lens–vitreous"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Ocular Interfaces",
+    "rationale": "Large index step 1.00→1.376 yields ~+43 D at the cornea."
+  },
+  {
+    "id": 184,
+    "text": "A hyperopic eye with a far point of –0.5 m requires:",
+    "choices": ["+2.00 D lens", "–2.00 D", "+0.50 D", "–0.50 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Refractive Error",
+    "rationale": "F = –1/l = –1/(–0.5) = +2.00 D."
+  },
+  {
+    "id": 185,
+    "text": "The equivalent power of +5 D and +3 D thin lenses separated by 20 mm is approximately:",
+    "choices": ["+8.3 D", "+8.0 D", "+7.9 D", "+9.0 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Compound Systems",
+    "sub": "Separated Thin Lenses",
+    "rationale": "F_eq = F1 + F2 – dF1F2 = 8 – 0.02×15 ≈ +8.3 D."
+  },
+  {
+    "id": 186,
+    "text": "Astigmatism occurs when:",
+    "choices": ["Different meridians have different powers", "Lens is tilted", "Optical center is decentered", "Prisms are introduced"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Astigmatism",
+    "sub": "Definition",
+    "rationale": "Differing meridional curvatures form two focal lines."
+  },
+  {
+    "id": 187,
+    "text": "Circle of least confusion lies:",
+    "choices": ["Midway between the two line foci", "At the retina", "At one line focus", "At infinity"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Astigmatism",
+    "sub": "CLoC",
+    "rationale": "Best spherical equivalent focus is at the midpoint of the interval of Sturm."
+  },
+  {
+    "id": 188,
+    "text": "With-the-rule astigmatism has the steepest curve:",
+    "choices": ["Vertically (≈ 90° meridian)", "Horizontally (≈ 180°)", "Oblique (45°)", "Uniformly"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Astigmatism",
+    "sub": "WTR",
+    "rationale": "Steep vertical meridian; correcting axis near 180°."
+  },
+  {
+    "id": 189,
+    "text": "Against-the-rule astigmatism has steepest curve:",
+    "choices": ["Horizontally (≈ 180° axis power)", "Vertically", "Oblique", "Same in all meridians"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Astigmatism",
+    "sub": "ATR",
+    "rationale": "Steep horizontal meridian; correcting axis near 90°."
+  },
+  {
+    "id": 190,
+    "text": "Axial length change of 1 mm alters refractive error by approximately:",
+    "choices": ["2.50 D", "1.00 D", "3.00 D", "0.50 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Axial Ametropia",
+    "rationale": "Rule of thumb: ~2.5 D per mm for a 24 mm eye."
+  },
+  {
+    "id": 191,
+    "text": "The reduced eye model has a total power of approximately:",
+    "choices": ["+60 D", "+43 D", "+70 D", "+48 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Model Eye",
+    "rationale": "Simplified model eye uses ~+60 D total power."
+  },
+  {
+    "id": 192,
+    "text": "The anterior chamber depth in the Gullstrand model eye is approximately:",
+    "choices": ["3 mm", "2 mm", "4 mm", "1.5 mm"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Model Eye",
+    "rationale": "Gullstrand exact model has ~3 mm aqueous depth."
+  },
+  {
+    "id": 193,
+    "text": "The retinal image size for a 1 cm object at 1 m in a +60 D eye is about:",
+    "choices": ["0.24 mm", "0.50 mm", "0.12 mm", "0.30 mm"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ocular Optics",
+    "sub": "Retinal Image Size",
+    "rationale": "Approximate image height ≈ 0.24 mm with +60 D ocular power."
+  },
+  {
+    "id": 194,
+    "text": "Spectacle magnification (SM) depends on:",
+    "choices": ["Shape factor and power factor", "Base curve only", "Index only", "Center thickness only"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Spectacle Optics",
+    "sub": "Magnification",
+    "rationale": "SM = (1/(1 − tF1/n)) × (1/(1 − hFv)); depends on thickness/base curve and vertex position."
+  },
+  {
+    "id": 195,
+    "text": "Reducing vertex distance in high myopia spectacles will:",
+    "choices": ["Reduce minification and improve field of view", "Increase minification", "Induce prismatic effect", "Increase aberrations"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Spectacle Optics",
+    "sub": "Vertex Effects",
+    "rationale": "Bringing a minus lens closer reduces its effective negative power, decreasing minification."
   }
 ]
