@@ -449,4 +449,384 @@
     "sub": "Optic nerve head drusen",
     "rationale": "Drusen are calcified deposits causing pseudopapilledema without true swelling; autofluorescence or B-scan reveals the calcified bodies."
   }
+  {
+    "id": 46,
+    "text": "The most common cause of flashes and floaters in middle age is:",
+    "choices": ["Posterior vitreous detachment", "Retinal tear", "Asteroid hyalosis", "Vitritis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Posterior vitreous detachment",
+    "rationale": "Vitreous liquefaction leads to posterior vitreous detachment, causing traction on the retina and symptoms of photopsia and floaters."
+  },
+  {
+    "id": 47,
+    "text": "A Weiss ring indicates detachment of the vitreous from:",
+    "choices": ["Optic disc margin", "Macula", "Ora serrata", "Equator"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Posterior vitreous detachment",
+    "rationale": "A circular opacity (Weiss ring) represents the glial tissue at the optic nerve head that separates from the disc during posterior vitreous detachment."
+  },
+  {
+    "id": 48,
+    "text": "Calcified spherical opacities suspended in the vitreous describe:",
+    "choices": ["Asteroid hyalosis", "Synchysis scintillans", "Amyloidosis", "Endophthalmitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Asteroid hyalosis",
+    "rationale": "Asteroid bodies are calcium–lipid complexes that float within the vitreous gel, seen as multiple small white spheres."
+  },
+  {
+    "id": 49,
+    "text": "Horseshoe-shaped retinal tears occur most often from:",
+    "choices": ["Vitreoretinal traction during posterior vitreous detachment", "Blunt trauma", "Lattice degeneration", "Retinoschisis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Retinal breaks",
+    "rationale": "Acute traction during posterior vitreous detachment can avulse a flap of retina, creating a horseshoe tear that predisposes to rhegmatogenous detachment."
+  },
+  {
+    "id": 50,
+    "text": "Which is the most common type of retinal detachment?",
+    "choices": ["Rhegmatogenous", "Tractional", "Exudative", "Serous"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Retinal detachments",
+    "rationale": "Rhegmatogenous detachments account for the majority of cases; they result from full-thickness retinal breaks allowing liquefied vitreous into the subretinal space."
+  },
+  {
+    "id": 51,
+    "text": "Subretinal fluid without retinal breaks suggests:",
+    "choices": ["Exudative (detachment from choroidal inflammation or tumor)", "Rhegmatogenous", "Tractional", "Schisis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Retinal detachments",
+    "rationale": "Exudative (serous) detachments occur when inflammatory, vascular or neoplastic processes leak fluid under the retina without a break."
+  },
+  {
+    "id": 52,
+    "text": "Retinoschisis differs from detachment because:",
+    "choices": ["It splits retinal layers and is non‑mobile", "It involves subretinal fluid", "It has pigment demarcation lines", "It requires laser barrier"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Retinal degenerations",
+    "rationale": "True retinoschisis is an intraretinal splitting—often at the outer plexiform layer—producing a smooth, immobile elevation rather than free‑floating neurosensory retina."
+  },
+  {
+    "id": 53,
+    "text": "“Berlin edema” describes:",
+    "choices": ["Commotio retinae after blunt trauma", "Retinal artery occlusion", "Vitreous hemorrhage", "Orbital fracture"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Emergencies / Trauma",
+    "sub": "Trauma",
+    "rationale": "Commotio retinae from blunt trauma causes transient photoreceptor disruption, producing a gray‑white, milky appearance sometimes called Berlin edema."
+  },
+  {
+    "id": 54,
+    "text": "A teardrop‑shaped pupil directed inferonasally suggests:",
+    "choices": ["Globe rupture", "Hyphema", "Angle recession", "Traumatic iritis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Emergencies / Trauma",
+    "sub": "Globe injury",
+    "rationale": "When the globe ruptures, the iris may prolapse toward the wound, creating a peaked or teardrop pupil directed toward the rupture site."
+  },
+  {
+    "id": 55,
+    "text": "Intraocular foreign bodies of metallic origin can cause:",
+    "choices": ["Siderosis bulbi", "Chalcosis", "Endophthalmitis", "Corneal tattooing"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Emergencies / Trauma",
+    "sub": "Foreign bodies",
+    "rationale": "Iron particles left in the eye undergo oxidative reactions that deposit hemosiderin, leading to siderosis with retinal and lens degeneration."
+  },
+  {
+    "id": 56,
+    "text": "“Vossius ring” on the anterior lens capsule results from:",
+    "choices": ["Pigment imprint of the pupil margin after blunt trauma", "Posterior subcapsular cataract", "Lens subluxation", "Uveitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Emergencies / Trauma",
+    "sub": "Trauma",
+    "rationale": "A circular pigment ring on the lens capsule (Vossius ring) forms when blunt trauma presses the iris margin against the lens, leaving a deposit of pigment."
+  },
+  {
+    "id": 57,
+    "text": "The most vision‑threatening complication of an open‑globe injury is:",
+    "choices": ["Endophthalmitis", "Hyphema", "Angle recession", "Iridodialysis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Emergencies / Trauma",
+    "sub": "Open globe injuries",
+    "rationale": "Microbial contamination of an open globe can lead to fulminant endophthalmitis and loss of the eye if not promptly treated."
+  },
+  {
+    "id": 58,
+    "text": "Proptosis with lid retraction and diplopia in a hyperthyroid patient indicates:",
+    "choices": ["Thyroid eye disease (Graves orbitopathy)", "Orbital cellulitis", "Cavernous sinus thrombosis", "Carotid‑cavernous fistula"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Thyroid eye disease",
+    "rationale": "Autoimmune orbital inflammation (Graves orbitopathy) causes extraocular muscle enlargement and fibrosis, leading to proptosis, eyelid retraction and diplopia in hyperthyroid patients."
+  },
+  {
+    "id": 59,
+    "text": "Painful ophthalmoplegia with normal thyroid tests suggests:",
+    "choices": ["Tolosa–Hunt syndrome", "Orbital pseudotumor", "Cavernous sinus thrombosis", "Myasthenia gravis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Cavernous sinus / orbital pathology",
+    "rationale": "Tolosa–Hunt syndrome is an idiopathic granulomatous inflammation of the cavernous sinus causing recurrent painful ophthalmoplegia without thyroid dysfunction."
+  },
+  {
+    "id": 60,
+    "text": "Which systemic autoimmune disease most commonly causes scleritis?",
+    "choices": ["Rheumatoid arthritis", "Lupus erythematosus", "Sarcoidosis", "Polyarteritis nodosa"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Episclera / Sclera / Anterior Uvea",
+    "sub": "Scleritis",
+    "rationale": "Scleritis is often associated with systemic autoimmune disease; rheumatoid arthritis is the most frequent culprit in necrotizing and diffuse forms."
+  },
+  {
+    "id": 61,
+    "text": "Episcleritis is distinguished from scleritis by:",
+    "choices": ["Bright‑red, mobile vessels that blanch with phenylephrine", "Deep violaceous hue and severe pain", "Association with systemic vasculitis", "Choroidal involvement"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Episclera / Sclera / Anterior Uvea",
+    "sub": "Episcleritis vs scleritis",
+    "rationale": "Superficial episcleral vessels move over the sclera and constrict with topical phenylephrine, whereas scleritis presents with deeper, purple vessels and significant pain."
+  },
+  {
+    "id": 62,
+    "text": "Bilateral lacrimal gland enlargement and dry eye symptoms are seen in:",
+    "choices": ["Sarcoidosis", "Graves disease", "Wegener granulomatosis", "Myasthenia gravis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Sarcoidosis",
+    "rationale": "Non‑caseating granulomas of sarcoidosis commonly infiltrate the lacrimal glands, leading to enlargement and keratoconjunctivitis sicca."
+  },
+  {
+    "id": 63,
+    "text": "Which cranial nerve controls the superior oblique muscle?",
+    "choices": ["CN IV (trochlear)", "CN III", "CN VI", "CN V"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Extraocular muscle innervation",
+    "rationale": "The trochlear nerve (cranial nerve IV) innervates the superior oblique, which intorts, depresses, and abducts the eye when adducted."
+  },
+  {
+    "id": 64,
+    "text": "A patient with a “down and out” eye and ptosis likely has a lesion of:",
+    "choices": ["Oculomotor nerve (CN III)", "Trochlear nerve", "Abducens nerve", "Sympathetic chain"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Cranial nerve III palsy",
+    "rationale": "Oculomotor nerve palsy paralyzes most extraocular muscles and the levator palpebrae, resulting in ptosis and a ‘down‑and‑out’ eye due to unopposed actions of CN IV and CN VI."
+  },
+  {
+    "id": 65,
+    "text": "Internuclear ophthalmoplegia is caused by a lesion in the:",
+    "choices": ["Medial longitudinal fasciculus", "Oculomotor nucleus", "Optic tract", "Frontal eye fields"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Internuclear ophthalmoplegia",
+    "rationale": "The medial longitudinal fasciculus links the abducens and oculomotor nuclei; damage prevents adduction of the ipsilateral eye and causes nystagmus of the abducting eye."
+  },
+  {
+    "id": 66,
+    "text": "Anisocoria greater in dark with ptosis and anhidrosis indicates:",
+    "choices": ["Horner syndrome", "Adie tonic pupil", "CN III palsy", "Argyll Robertson pupil"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Sympathetic lesions",
+    "rationale": "Horner syndrome results from loss of sympathetic innervation; miosis is more pronounced in dim light, often accompanied by ptosis and ipsilateral anhidrosis."
+  },
+  {
+    "id": 67,
+    "text": "A lesion of the optic chiasm typically produces:",
+    "choices": ["Bitemporal hemianopia", "Homonymous hemianopia", "Superior quadrantanopia", "Central scotoma"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Visual field defects",
+    "rationale": "Crossing nasal fibers are interrupted at the optic chiasm, leading to loss of temporal visual fields in both eyes—bitemporal hemianopia."
+  },
+  {
+    "id": 68,
+    "text": "A right occipital lobe lesion causes:",
+    "choices": ["Left homonymous hemianopia", "Bitemporal hemianopia", "Right nasal field defect", "Central scotoma"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Visual field defects",
+    "rationale": "The occipital cortex processes contralateral visual fields; a right occipital lesion leads to left homonymous hemianopia."
+  },
+  {
+    "id": 69,
+    "text": "Macular sparing with homonymous hemianopia is due to:",
+    "choices": ["Dual blood supply from posterior and middle cerebral arteries", "Optic chiasm compression", "Papilledema", "Pituitary adenoma"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Optic Nerve / Neuro‑Ophthalmic Pathways",
+    "sub": "Visual field defects",
+    "rationale": "Because the macular cortex receives collateral supply from both posterior and middle cerebral arteries, some central vision is preserved despite occipital lesions."
+  },
+  {
+    "id": 70,
+    "text": "Salt‑and‑pepper retinopathy is classically associated with:",
+    "choices": ["Congenital rubella", "CMV retinitis", "Toxoplasmosis", "Syphilis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Congenital infections",
+    "rationale": "Congenital rubella infection disrupts retinal pigment epithelium, producing diffuse mottling—a salt‑and‑pepper fundus."
+  },
+  {
+    "id": 71,
+    "text": "Cotton‑ball exudates near the optic disc in an immunocompromised patient suggest:",
+    "choices": ["CMV retinitis", "Toxoplasmosis", "HIV microangiopathy", "Candida endophthalmitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Opportunistic infections",
+    "rationale": "Cytomegalovirus causes necrotizing retinitis in AIDS patients, producing fluffy white exudates (‘cotton balls’) near the optic nerve and arcades."
+  },
+  {
+    "id": 72,
+    "text": "“Headlight in the fog” appearance describes:",
+    "choices": ["Toxoplasmosis retinochoroiditis", "CMV retinitis", "Sarcoid uveitis", "Candida retinitis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Opportunistic infections",
+    "rationale": "Toxoplasmosis retinochoroiditis causes a bright, necrotic lesion with intense vitritis, giving the impression of a headlight shining through fog."
+  },
+  {
+    "id": 73,
+    "text": "Subretinal “tunnel” lesions in infants born prematurely with oxygen therapy indicate:",
+    "choices": ["Retinopathy of prematurity", "Sickle cell retinopathy", "Coats disease", "Congenital toxoplasmosis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Pediatric retina",
+    "rationale": "Excess oxygen suppresses retinal vascular growth; subsequent hypoxia triggers neovascularization and fibrovascular proliferation characteristic of retinopathy of prematurity."
+  },
+  {
+    "id": 74,
+    "text": "The primary pathology in keratoconus occurs within the:",
+    "choices": ["Stromal collagen lamellae and Bowman’s layer", "Descemet’s membrane", "Epithelium only", "Endothelium only"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Keratoconus",
+    "rationale": "Keratoconus involves stromal thinning and breaks in Bowman’s layer, leading to progressive conical deformation of the cornea."
+  },
+  {
+    "id": 75,
+    "text": "Vogt’s striae are:",
+    "choices": ["Vertical stress lines in posterior stroma of keratoconus", "Pigment lines after trauma", "Lens vacuoles", "Corneal guttata"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Keratoconus signs",
+    "rationale": "Fine vertical lines in the posterior stroma and Descemet’s membrane (Vogt’s striae) appear in advanced keratoconus and disappear with gentle pressure."
+  },
+  {
+    "id": 76,
+    "text": "Band keratopathy represents deposition of:",
+    "choices": ["Calcium in Bowman’s layer", "Iron in epithelium", "Lipid in stroma", "Amyloid in Descemet’s"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Degenerations",
+    "rationale": "Chronic ocular inflammation or systemic hypercalcemia can cause calcium salt deposition in Bowman’s layer and superficial stroma, creating a horizontal band opacity."
+  },
+  {
+    "id": 77,
+    "text": "Fleischer ring in keratoconus is caused by:",
+    "choices": ["Iron deposition in basal epithelium", "Calcium deposit", "Lipid infiltration", "Stromal thinning"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Keratoconus signs",
+    "rationale": "A brownish ring (Fleischer ring) around the base of the cone is due to hemosiderin (iron) deposition in the basal epithelial cells of keratoconic corneas."
+  },
+  {
+    "id": 78,
+    "text": "The most common primary intraocular malignancy in adults is:",
+    "choices": ["Choroidal melanoma", "Retinoblastoma", "Metastatic breast lesion", "Optic glioma"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Tumors",
+    "rationale": "Choroidal melanoma arises from uveal melanocytes and is the leading primary intraocular malignancy in adults."
+  },
+  {
+    "id": 79,
+    "text": "Leukocoria in a child is most commonly due to:",
+    "choices": ["Retinoblastoma", "Congenital cataract", "Coats disease", "Retinopathy of prematurity"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Tumors",
+    "rationale": "Retinoblastoma often presents as leukocoria (white pupillary reflex) in children and is a life‑threatening malignant retinal tumor."
+  },
+  {
+    "id": 80,
+    "text": "“Flexner–Wintersteiner rosettes” are pathognomonic for:",
+    "choices": ["Retinoblastoma", "Medulloepithelioma", "Astrocytoma", "Melanoma"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Vitreous / Retina / Choroid",
+    "sub": "Tumors",
+    "rationale": "Histologic examination of retinoblastoma shows Flexner–Wintersteiner rosettes—arrangements of tumor cells surrounding a central lumen—indicating photoreceptor differentiation."
+  },
+  {
+    "id": 81,
+    "text": "Pinguecula differs from pterygium because it:",
+    "choices": ["Does not invade the cornea", "Is vascular and triangular", "Causes astigmatism", "Requires excision for vision loss"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Conjunctival degenerations",
+    "rationale": "Pinguecula is a benign elastotic degeneration confined to the bulbar conjunctiva and does not grow over the cornea like a pterygium."
+  },
+  {
+    "id": 82,
+    "text": "A wing‑shaped fibrovascular growth onto the cornea is a:",
+    "choices": ["Pterygium", "Pinguecula", "Conjunctival nevus", "Concretions"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Conjunctival degenerations",
+    "rationale": "Chronic UV exposure induces pterygium formation— a triangular fibrovascular growth crossing the limbus, often with an iron (Stocker) line at its head."
+  },
+  {
+    "id": 83,
+    "text": "Giant papillary conjunctivitis is commonly associated with:",
+    "choices": ["Contact lens wear", "Viral infection", "Vernal keratoconjunctivitis", "Chemical burn"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Conjunctiva / Cornea / Refractive Surgery",
+    "sub": "Inflammatory disorders",
+    "rationale": "Chronic mechanical irritation from contact lenses or sutures causes large, cobblestone‑like papillae on the tarsal conjunctiva—giant papillary conjunctivitis."
+  }
 ]
