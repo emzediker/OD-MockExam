@@ -33,7 +33,12 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-  @media print{header,.actions,.rationale,.meta,#studentBox,.question{display:none!important} body{background:#fff}}
+  /* Print only the report */
+  @media print{
+    header,.actions,#studentBox,#exam,.question,.rationale,.meta{display:none!important}
+    #report{display:block!important;border:none!important}
+    body{background:#fff}
+  }
 </style>
 </head>
 <body>
@@ -52,38 +57,38 @@
       <label>Student name
         <input id="s_name" type="text" placeholder="First Last">
       </label>
-      <label>School (required)
-        <select id="s_school" required>
-          <option value="" selected>Select your school…</option>
+      <label>School (optional)
+        <select id="s_school">
+          <option value="" selected>— Select your school (optional) —</option>
           <option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
           <option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
           <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
           <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
           <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
-          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
-          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
+          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo</option>
+          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal</option>
           <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
           <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
           <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
           <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
-          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
-          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
-          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
-          <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
-          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
-          <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
-          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSUOCO</option>
-          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
-          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
-          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — IAUPR</option>
-          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIWRSO</option>
-          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — UHCO</option>
-          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV</option>
+          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — NECO</option>
+          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — MCO (Ferris State)</option>
+          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL</option>
+          <option value="New York — SUNY College of Optometry">New York — SUNY</option>
+          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University</option>
+          <option value="Ohio — The Ohio State University College of Optometry">Ohio — OSU</option>
+          <option value="Oklahoma — NSUOCO">Oklahoma — NSUOCO</option>
+          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University</option>
+          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus (PCO)</option>
+          <option value="Puerto Rico — IAUPR">Puerto Rico — IAUPR</option>
+          <option value="Texas — UIWRSO">Texas — UIWRSO</option>
+          <option value="Texas — UHCO">Texas — UHCO</option>
+          <option value="Texas — UTRGV">Texas — UTRGV</option>
           <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
-    <small class="muted">You must select a school before grading.</small>
+    <small class="muted">Grading will work even if the School field is left blank.</small>
   </div>
 
   <div class="summary">
@@ -93,7 +98,7 @@
   <div id="exam"></div>
 
   <div class="actions">
-    <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
+    <button id="gradeBtn" class="primary">Grade Exam</button>
     <button id="resetBtn">Reset</button>
     <button id="printBtn" disabled>Print / Download PDF</button>
   </div>
@@ -128,7 +133,7 @@
 /* ====== CONFIG ====== */
 const QUESTIONS_URL = "./questions.json";
 
-/* Taxonomy lists (for reporting order) */
+/* Ordered taxonomy (for reporting) */
 const DISCIPLINES = [
   "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
 ];
@@ -142,6 +147,11 @@ const CONDITIONS = [
 /* ====== UTIL ====== */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
+function confirmNoSchool(){
+  const sel = document.getElementById('s_school').value;
+  if(sel) return true;
+  return confirm("No school selected. Continue grading anyway?");
+}
 
 /* ====== RENDER ====== */
 const examDiv = document.getElementById('exam');
@@ -153,7 +163,7 @@ const condBody = document.querySelector('#condTable tbody');
 const subHost = document.getElementById('subcats');
 
 let QUESTIONS = []; // loaded from JSON
-let SHUFFLED = [];  // copy of QUESTIONS with choice shuffles
+let SHUFFLED = [];  // deep-copied + shuffled questions with choice mapping
 
 function renderExam(){
   examDiv.innerHTML = '';
@@ -189,16 +199,22 @@ function scoreExam(){
     const ok = (chosenIdx === q.correctIndexAfterShuffle);
     if(ok) correctTotal++;
 
+    // per-area tallies
+    if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
+    if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
     perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
     perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
 
+    if(!perSub[q.condition]) perSub[q.condition]={};
     if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
     perSub[q.condition][q.sub].total++; if(ok) perSub[q.condition][q.sub].correct++;
 
+    // reveal rationale under each question
     const rat = document.getElementById('rat'+i);
     rat.classList.remove('hide');
     rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + q.choices[q.correctIndexAfterShuffle] +
                     (q.rationale ? ("<br>"+q.rationale) : "");
+
     answers.push({
       index: i+1,
       sourceId: q.id ?? null,
@@ -225,7 +241,7 @@ function renderReport(res){
   // Disciplines
   let rows=[]; let idx=1;
   DISCIPLINES.forEach(d=>{
-    const rec = res.perDisc[d]; if(!rec.total) return;
+    const rec = res.perDisc[d]; if(!rec || !rec.total) return;
     const pct = Math.round(100*rec.correct/rec.total);
     rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
   });
@@ -234,7 +250,7 @@ function renderReport(res){
   // Conditions
   rows=[]; idx=1;
   CONDITIONS.forEach(c=>{
-    const rec = res.perCond[c]; if(!rec.total) return;
+    const rec = res.perCond[c]; if(!rec || !rec.total) return;
     const pct = Math.round(100*rec.correct/rec.total);
     rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
   });
@@ -258,67 +274,12 @@ function renderReport(res){
   document.getElementById('printBtn').disabled = false;
 }
 
-/* ====== PRINT / PDF (opens clean report window) ====== */
-function openReportPrintWindow(){
-  const report = document.getElementById('report');
-  if (report.classList.contains('hide')) {
-    alert('Grade the exam first, then try printing.');
-    return;
-  }
-  const win = window.open('', '_blank', 'noopener,noreferrer');
-  const styles = `
-    <style>
-      :root{ --fg:#111; --muted:#667085; --border:#e6e8eb; --ok:#0a7f2e; --bad:#b00020; }
-      *{box-sizing:border-box} html,body{margin:0;padding:0;color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
-      h1,h2,h3{margin:0 0 10px}
-      .summary{border:1px solid var(--border);border-radius:12px;padding:12px;margin:14px 0}
-      table{width:100%;border-collapse:collapse;margin-bottom:8px}
-      th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left}
-      th{background:#f6f8fb}
-      .ok{color:var(--ok);font-weight:600}
-      .bad{color:var(--bad);font-weight:600}
-      .muted{color:var(--muted)}
-      @page { size: letter; margin: 18mm; }
-      @media print {
-        body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        a { text-decoration: none; color: inherit; }
-      }
-    </style>`;
-  const header = `
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-      <div>
-        <h2 style="margin:0">OD on the GO — Diagnostic Score Report</h2>
-        <div class="muted" style="font-size:12px">NBEO-weighted • Discipline → Condition → Subcategory</div>
-      </div>
-      <div style="text-align:right;font-size:12px;color:#667085;">
-        Generated: ${new Date().toLocaleString()}
-      </div>
-    </div>`;
-  const content = `
-    <!doctype html>
-    <html><head><meta charset="utf-8"><title>Score Report</title>${styles}</head>
-    <body>
-      <main>${header}${report.innerHTML}</main>
-      <script>
-        (function(){
-          const fire = () => { window.focus(); window.print(); };
-          if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(fire).catch(fire);
-          } else {
-            setTimeout(fire, 250);
-          }
-        })();
-      <\/script>
-    </body></html>`;
-  win.document.open(); win.document.write(content); win.document.close();
-}
-
 /* ====== EVENTS ====== */
 let _lastResult = null;
 
+// Always enabled; warn (but do not block) if school is blank
 document.getElementById('gradeBtn').addEventListener('click', ()=>{
-  const schoolSel = document.getElementById('s_school');
-  if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
+  if(!confirmNoSchool()) return;
   const res = scoreExam();
   _lastResult = res;
   renderReport(res);
@@ -334,61 +295,58 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
-document.getElementById('printBtn').addEventListener('click', openReportPrintWindow);
+document.getElementById('printBtn').addEventListener('click', ()=>{
+  // Make sure report is visible, then open print dialog (user can Save as PDF)
+  if(document.getElementById('report').classList.contains('hide')){
+    alert('Please grade the exam first to generate the report.');
+    return;
+  }
+  window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
+  setTimeout(()=>window.print(), 150);
+});
 
-(function initSchoolGate(){
-  const schoolSel = document.getElementById('s_school');
-  const gradeBtn  = document.getElementById('gradeBtn');
-  gradeBtn.disabled = !schoolSel.value;
-  schoolSel.addEventListener('change', e => { gradeBtn.disabled = !e.target.value; });
-})();
-
-/* ====== QUESTION LOADING, NORMALIZATION & SHUFFLING ====== */
+/* ====== QUESTION LOADING & SHUFFLING ====== */
 async function loadQuestions(){
   const r = await fetch(QUESTIONS_URL, {cache:'no-store'});
   if(!r.ok){ throw new Error('Failed to load questions.json'); }
   const bank = await r.json();
-
-  // Normalize: ensure id, text, choices[], correct(index), discipline/condition/sub, rationale
+  // Expect: array of {id,text,choices,correct,discipline,condition,sub,rationale}
+  // Ensure IDs and basic shape
   bank.forEach((q,i)=>{
-    if (typeof q.id !== 'number') q.id = i+1;
-    if (!Array.isArray(q.choices)) q.choices = [];
-    // Allow "correct" as index OR as exact answer text; convert to index
-    if (typeof q.correct === 'string') {
-      const idx = q.choices.indexOf(q.correct);
-      q.correct = idx >= 0 ? idx : 0; // fallback to 0 if mismatch
-    } else if (typeof q.correct !== 'number') {
-      q.correct = 0;
-    }
+    if(typeof q.id!=='number') q.id = i+1;
+    if(!Array.isArray(q.choices)) q.choices = [];
+    if(typeof q.correct!=='number') q.correct = 0;
+    if(typeof q.text!=='string') q.text = '';
+    if(typeof q.rationale!=='string') q.rationale = '';
   });
-
   QUESTIONS = bank;
 }
 
 function prepareShuffled(){
+  // deep copy + shuffle questions
   const qs = QUESTIONS.map(q => JSON.parse(JSON.stringify(q)));
   shuffle(qs);
-
+  // shuffle choices and compute new correct index (IMPORTANT: use findIndex)
   qs.forEach(q=>{
-    const originalChoices = q.choices.map((c,i)=>({text:c, idx:i}));
+    const originalChoices = q.choices.map((c,i)=>({text:c, originalIdx:i}));
     shuffle(originalChoices);
     q.choices = originalChoices.map(o=>o.text);
-    // IMPORTANT: correct index AFTER shuffle is the POSITION of the old-correct in the shuffled array
-    const pos = originalChoices.findIndex(o => o.idx === q.correct);
-    q.correctIndexAfterShuffle = (pos >= 0 ? pos : 0);
+    // where in the shuffled array is the original correct index?
+    const newIdx = originalChoices.findIndex(o=>o.originalIdx === q.correct);
+    q.correctIndexAfterShuffle = newIdx >= 0 ? newIdx : 0;
   });
-
   SHUFFLED = qs;
 }
 
+/* ====== BOOT ====== */
 (async function boot(){
   try{
     await loadQuestions();
     prepareShuffled();
     renderExam();
   }catch(e){
-    examDiv.innerHTML = `<div class="summary"><b>Error loading questions.</b> ${e.message}</div>`;
     console.error(e);
+    examDiv.innerHTML = `<div class="summary"><b>Error loading questions.</b> ${e.message}</div>`;
   }
 })();
 </script>
