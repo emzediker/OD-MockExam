@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OD on the GO — Enhanced Diagnostic (Discipline + Condition + Sub)</title>
+<style>
+  :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
+  header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 16px;z-index:10}
+  header .wrap{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  h1{font-size:20px;margin:0}
+  .pill{border:1px solid var(--border);border-radius:999px;padding:2px 8px;background:var(--card);font-size:12px;color:var(--muted)}
+  main{max-width:1100px;margin:18px auto;padding:0 16px 40px}
+  .question{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;margin:12px 0}
+  .qhead{display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .choices{display:grid;gap:8px;margin-top:8px}
+  label.choice{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer}
+  .meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+  .summary{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;margin:14px 0}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+  button{border:1px solid var(--border);background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}
+  button.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+  button:disabled{opacity:.6;cursor:not-allowed}
+  th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left}
+  th{background:#f6f8fb}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px}
+  .ok{color:var(--ok);font-weight:600}
+  .bad{color:var(--bad);font-weight:600}
+  .muted{color:var(--muted)}
+  .hide{display:none}
+  .brand{font-weight:700}
+  .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
+  input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
+
+  /* Print = score report ONLY */
+  @media print{
+    header,.actions,.rationale,.meta,#studentBox,.question{display:none!important}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>OD on the GO — Enhanced Diagnostic</h1>
+    <span class="pill">Discipline + Condition + Subcategory</span>
+    <div style="flex:1"></div>
+    <small class="muted">Demo</small>
+  </div>
+</header>
+
+<main>
+  <!-- Student metadata (school required) -->
+  <div id="studentBox" class="summary">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
+      <label>Student name
+        <input id="s_name" type="text" placeholder="First Last">
+      </label>
+      <label>School (required)
+        <select id="s_school" required>
+          <option value="" selected>Select your school…</option>
+          <option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
+          <option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
+          <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
+          <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
+          <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
+          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo (School of Optometry & Vision Science)</option>
+          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal (École d’optométrie)</option>
+          <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
+          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
+          <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
+          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
+          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — New England College of Optometry (NECO)</option>
+          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — Michigan College of Optometry (Ferris State)</option>
+          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL College of Optometry</option>
+          <option value="New York — SUNY College of Optometry">New York — SUNY College of Optometry</option>
+          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University School of Optometry</option>
+          <option value="Ohio — The Ohio State University College of Optometry">Ohio — The Ohio State University College of Optometry</option>
+          <option value="Oklahoma — NSU Oklahoma College of Optometry (NSUOCO)">Oklahoma — NSUOCO</option>
+          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University College of Optometry</option>
+          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus University (PCO)</option>
+          <option value="Puerto Rico — Inter American University School of Optometry (IAUPR)">Puerto Rico — IAUPR</option>
+          <option value="Texas — UIW Rosenberg School of Optometry (UIWRSO)">Texas — UIWRSO</option>
+          <option value="Texas — University of Houston College of Optometry (UHCO)">Texas — UHCO</option>
+          <option value="Texas — University of Texas Rio Grande Valley School of Optometry (UTRGV)">Texas — UTRGV</option>
+          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
+        </select>
+      </label>
+    </div>
+    <small class="muted">You must select a school before grading.</small>
+  </div>
+
+  <div class="summary">
+    <div><span class="brand">Instructions:</span> Select one answer per question. Click <b>Grade Exam</b> to generate the report.</div>
+  </div>
+
+  <div id="exam"></div>
+
+  <div class="actions">
+    <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
+    <button id="resetBtn">Reset</button>
+    <button id="printBtn" disabled>Print / Save PDF</button>
+  </div>
+
+  <section id="report" class="hide">
+    <div class="summary">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+        <div><b>Student:</b> <span id="studentName">Anonymous</span></div>
+        <div><b>School:</b> <span id="schoolName">—</span></div>
+        <div><b>Date:</b> <span id="dateStamp"></span></div>
+        <div><b>Total Score:</b> <span id="totalScore" class="brand"></span></div>
+        <div><b>Submission:</b> <span id="submitStatus" class="muted">Not sent</span></div>
+      </div>
+    </div>
+
+    <h3>Discipline-Level Summary (NBEO-style A–E)</h3>
+    <table id="discSummary"><thead><tr><th>#</th><th>Discipline</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
+
+    <h3>Condition-Based (17 Areas)</h3>
+    <table id="condTable"><thead><tr><th>#</th><th>Condition Area</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
+
+    <h3>Subcategory Breakdown (within each Condition)</h3>
+    <div id="subcats"></div>
+
+    <div class="summary">
+      <div><b>Legend:</b> <span class="ok">≥90% strong</span> · 75–89% steady · <span class="bad">≤74% needs review</span></div>
+    </div>
+  </section>
+</main>
+
+<script>
+// ===== CONFIG =====
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw8Joe-TU8w50P36BTJPZJg3ONVKwoXypllCcEysx2c4VOj2q4MdIw-fYZIgJ1KLPycWw/exec";
+const SHARED_SECRET  = "ODOTG_Secret_3bqK2t7G5f0w6y1L9d4pQ2v8r0m3n6z";
+
+const DISCIPLINES = [
+  "A. Anatomy",
+  "B. Biochemistry / Physiology",
+  "C. Immunology / Microbiology / Pathology",
+  "D. Optics",
+  "E. Pharmacology"
+];
+
+const CONDITIONS = [
+  "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
+  "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
+  "Lids / Lashes / Lacrimal / Adnexa / Orbit","Conjunctiva / Cornea / Refractive Surgery","Lens / Cataract / IOL / Pre- & Post-Op Care",
+  "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
+];
+
+// ===== UTIL: shuffle =====
+function shuffle(arr){
+  for (let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+function shuffleChoices(choices){ return shuffle([...choices]); }
+
+// ===== QUESTION BANK (same as previously given) =====
+const QUESTIONS = [
+  {text:"In diabetic ketoacidosis (DKA), which primary disturbance is present?",
+    choices:["*Metabolic acidosis","Respiratory acidosis","Metabolic alkalosis","Respiratory alkalosis"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Endocrine — Diabetes",
+    rationale:"DKA = high anion gap metabolic acidosis; respiratory compensation (Kussmaul) follows."},
+  {text:"Long-standing type 2 diabetes with microalbuminuria is best monitored with which lab trend?",
+    choices:["*Albumin-to-creatinine ratio (spot urine)","Serum amylase","Total bilirubin","D-dimer"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Renal — Diabetic Nephropathy",
+    rationale:"Urine ACR tracks microalbuminuria for early nephropathy."},
+  {text:"Graves disease is most directly associated with which antibody activity?",
+    choices:["*TSH receptor–stimulating autoantibodies","Anti-thyroid peroxidase blocking T3 formation","Anti-thyroglobulin causing hypothyroidism","Anti-insulin receptor causing DKA"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Endocrine — Thyroid",
+    rationale:"TSI activates TSH receptors → hyperthyroidism, ophthalmopathy risk."},
+  {text:"Primary adrenal insufficiency typically shows which lab triad?",
+    choices:["*Low cortisol, high ACTH, hyponatremia/hyperkalemia","High cortisol, high ACTH, hypernatremia","Low cortisol, low ACTH, hypernatremia","Normal cortisol, low ACTH, hyperkalemia"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Endocrine — Adrenal",
+    rationale:"Addison: adrenal failure → ↓cortisol/aldosterone → hypoNa⁺/hyperK⁺; ACTH rises."},
+  {text:"Which antihypertensive is most classically associated with a dry cough?",
+    choices:["*ACE inhibitor (e.g., lisinopril)","Thiazide diuretic","Beta-blocker","DHP calcium channel blocker"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Cardiovascular — Antihypertensives",
+    rationale:"ACEi increase bradykinin → dry cough; ARBs avoid it."},
+  {text:"A patient on warfarin has an elevated INR and major bleeding. The MOST appropriate reversal is:",
+    choices:["*4-factor PCC ± vitamin K","Fresh frozen plasma only","Protamine sulfate","No reversal; observe"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Hematology — Anticoagulation",
+    rationale:"PCC provides rapid factor repletion; vitamin K adds sustained reversal."},
+  {text:"Which arterial blood gas pattern best fits acute respiratory alkalosis?",
+    choices:["*High pH, low PaCO₂, near-normal HCO₃⁻","Low pH, low PaCO₂, low HCO₃⁻","Low pH, high PaCO₂, high HCO₃⁻","High pH, high PaCO₂, high HCO₃⁻"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Respiratory — Acid-Base",
+    rationale:"Hyperventilation → ↓PaCO₂ → ↑pH; renal HCO₃⁻ shift lags acutely."},
+  {text:"In asthma, which drug class provides the fastest relief of acute bronchospasm?",
+    choices:["*Short-acting β₂ agonist (SABA)","Leukotriene receptor antagonist","Inhaled corticosteroid (controller)","Anticholinergic only"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Respiratory — Pharmacology",
+    rationale:"SABA (albuterol) is first-line rescue."},
+  {text:"Which ECG/clinical pairing most strongly suggests hyperkalemia?",
+    choices:["*Peaked T waves with muscle weakness","U waves with polyuria","QT prolongation with tetany","Delta waves with palpitations"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Electrolytes — Potassium",
+    rationale:"Hyperkalemia → peaked T waves; severe cases risk arrhythmia."},
+  {text:"Which lab pattern suggests cholestatic liver injury?",
+    choices:["*Markedly elevated alkaline phosphatase and bilirubin","Isolated AST/ALT >1000 with normal bilirubin","Low GGT and low bilirubin","Elevated amylase with normal LFTs"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Hepatobiliary",
+    rationale:"Cholestasis: ↑ALP, ↑bilirubin; hepatocellular injury → very high AST/ALT."},
+  {text:"Which scenario most suggests iron-deficiency anemia?",
+    choices:["*Microcytosis, low ferritin, high TIBC","Macrocytosis, high ferritin, low TIBC","Normocytosis, high retic index","Microcytosis with high ferritin"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Hematology — IDA",
+    rationale:"IDA: low ferritin (stores), high TIBC, microcytosis."},
+  {text:"A patient with RA on methotrexate develops oral ulcers. Which rescue agent is indicated?",
+    choices:["*Leucovorin (folinic acid)","Folic acid only","Vitamin B12","Pyridoxine"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Rheum — DMARD Toxicity",
+    rationale:"Leucovorin bypasses DHFR to rescue folate pathways."},
+  {text:"First-line outpatient therapy for uncomplicated cystitis in a non-pregnant adult typically includes:",
+    choices:["*Nitrofurantoin (if CrCl adequate)","Vancomycin PO","Amphotericin B","Linezolid"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Infectious Disease — UTI",
+    rationale:"Nitrofurantoin or TMP-SMX commonly used; avoid nitrofurantoin if low CrCl."},
+  {text:"Which exposure history raises suspicion for toxoplasmosis?",
+    choices:["*Undercooked meat / cat feces","Mosquito travel","Raw freshwater fish","Tick in woods"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Protozoa — Toxoplasma",
+    rationale:"Transmission via tissue cysts (meat) or oocysts (cats)."},
+  {text:"A trauma patient is hypotensive, cool, clammy with narrow pulse pressure. Most likely shock:",
+    choices:["*Hypovolemic","Distributive (septic)","Cardiogenic (RV infarct)","Neurogenic"],
+    discipline:"B. Biochemistry / Physiology",condition:"Emergencies / Trauma",sub:"Shock — Classification",
+    rationale:"Hypovolemia → ↓preload, cool extremities, narrow pulse pressure."},
+  {text:"Which immediate intervention best treats anaphylaxis?",
+    choices:["*IM epinephrine (lateral thigh)","IV diphenhydramine first","Oral prednisone only","Albuterol alone"],
+    discipline:"E. Pharmacology",condition:"Emergencies / Trauma",sub:"Allergy / Anaphylaxis",
+    rationale:"IM epi is first-line; others are adjuncts."},
+  {text:"Acute unilateral facial paralysis sparing the forehead suggests:",
+    choices:["*Contralateral UMN lesion","Ipsilateral facial nerve (LMN)","NMJ disorder","Cerebellar vermis"],
+    discipline:"A. Anatomy",condition:"Systemic Health",sub:"Neuro — UMN vs LMN",
+    rationale:"Forehead sparing = UMN; LMN (Bell’s) does not spare the forehead."},
+  {text:"Which diabetes medication class can cause euglycemic DKA?",
+    choices:["*SGLT2 inhibitors","DPP-4 inhibitors","Sulfonylureas","Metformin"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Endocrine — Diabetes Pharm",
+    rationale:"SGLT2s ↑ urinary glucose excretion; rare euglycemic DKA risk."},
+  {text:"CAP with QT-prolongation risk: which alternative avoids QT prolongation?",
+    choices:["*Doxycycline","Azithromycin","Clarithromycin","Erythromycin"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Respiratory — CAP",
+    rationale:"Macrolides prolong QT; doxy is QT-neutral."},
+  {text:"Best therapy to heal H. pylori–positive peptic ulcer disease:",
+    choices:["*Bismuth-quadruple (PPI + bismuth + metronidazole + tetracycline)","High-dose PPI alone","Sucralfate monotherapy","H2 blocker only"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"GI — H. pylori",
+    rationale:"Eradication needs combo antibiotics + acid suppression."},
+  {text:"Which finding aligns with type II (antibody-mediated) hypersensitivity?",
+    choices:["*Autoantibody binding to cell-surface antigens → cytotoxicity","Immune complex deposition (type III)","T-cell–mediated delayed response (type IV)","IgE-mediated mast cell degranulation (type I)"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Immunology — Hypersensitivity",
+    rationale:"Type II: IgG/IgM against cell-bound targets → complement/cell lysis."},
+  {text:"Painless lymphadenopathy with Reed–Sternberg cells most suggests:",
+    choices:["*Hodgkin lymphoma","Follicular lymphoma","CLL","Multiple myeloma"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Heme/Onc",
+    rationale:"Reed–Sternberg (‘owl-eye’) is classic for Hodgkin."},
+  {text:"Which lipid abnormality is most associated with pancreatitis risk?",
+    choices:["*Severe hypertriglyceridemia","Isolated low HDL","Mild LDL elevation","Low VLDL"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Endocrine — Lipids",
+    rationale:"TG >~1000 mg/dL → pancreatitis risk."},
+  {text:"Winter’s formula estimates expected respiratory compensation for metabolic acidosis. Which is correct?",
+    choices:["*Expected PaCO₂ = 1.5(HCO₃⁻) + 8 ± 2","Expected HCO₃⁻ = (1.5 × PaCO₂) − 8","Anion gap = Na⁺ + Cl⁻ − HCO₃⁻","Osmolar gap = 2Na⁺ + glucose/18 + BUN/2.8"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Acid–Base",
+    rationale:"Mismatch from expected PaCO₂ implies mixed disorder."},
+  {text:"Which vaccine type uses a non-replicating antigen (e.g., tetanus toxoid)?",
+    choices:["*Toxoid/inactivated component vaccine","Live attenuated","Replication-competent vector","mRNA that produces toxin protein"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Vaccines",
+    rationale:"Toxoid = inactivated toxin to elicit protective antibodies."},
+  {text:"Which antibiotic should generally be avoided in late pregnancy due to gray baby syndrome risk?",
+    choices:["*Chloramphenicol","Penicillin","Cephalexin","Amoxicillin-clavulanate"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"OB — Pharm Safety",
+    rationale:"Chloramphenicol → gray baby syndrome from immature metabolism."},
+  {text:"Which statement about oxygen–hemoglobin dissociation is TRUE?",
+    choices:["*Right shift (↑2,3-BPG, ↑CO₂, ↑temp) favors unloading to tissues","Left shift enhances O₂ delivery to tissues","Fetal Hb shifts the curve right","Alkalosis shifts right"],
+    discipline:"B. Biochemistry / Physiology",condition:"Systemic Health",sub:"Respiratory — Hb Curve",
+    rationale:"Right shift ↓affinity → better tissue unloading; fetal Hb is left-shifted."},
+  {text:"Anti-centromere antibodies are most associated with:",
+    choices:["*Limited cutaneous systemic sclerosis (CREST)","Diffuse systemic sclerosis (anti-Scl-70)","Sjögren (anti-SSA/SSB)","SLE (anti-dsDNA)"],
+    discipline:"C. Immunology / Microbiology / Pathology",condition:"Systemic Health",sub:"Autoantibodies",
+    rationale:"Anti-centromere → CREST; diffuse often anti–Scl-70."},
+  {text:"Which regimen is standard for latent tuberculosis infection (LTBI)?",
+    choices:["*Isoniazid with pyridoxine or rifampin-based short course","No therapy if asymptomatic","Amoxicillin/clavulanate","IV vancomycin 2 weeks"],
+    discipline:"E. Pharmacology",condition:"Systemic Health",sub:"Infectious Disease — TB",
+    rationale:"INH (with B6) 6–9 mo or rifampin-based shorter regimens."},
+  {text:"Organophosphate poisoning with miosis, bronchorrhea, bradycardia: first-line antidotal therapy:",
+    choices:["*Atropine ± pralidoxime","Epinephrine IM","Naloxone","Physostigmine"],
+    discipline:"E. Pharmacology",condition:"Emergencies / Trauma",sub:"Toxicology",
+    rationale:"Atropine treats muscarinic excess; pralidoxime reactivates AChE if given early."}
+];
+
+// ===== STATE holds the CURRENT (shuffled) QUESTIONS =====
+let currentQuestions = [];
+
+// ===== RENDER EXAM (with question-order + answer-order shuffle) =====
+const examDiv = document.getElementById('exam');
+function renderExam(){
+  examDiv.innerHTML = '';
+  currentQuestions = shuffle([...QUESTIONS]); // shuffle question order each load
+  currentQuestions.forEach((q,i)=>{
+    const wrap = document.createElement('div'); 
+    wrap.className='question';
+    const shuffledChoices = shuffleChoices(q.choices);
+    wrap.innerHTML =
+      `<div class="qhead">
+         <h3>${i+1}. ${q.text}</h3>
+         <div class="meta">
+           <span class="pill">${q.discipline}</span>
+           <span class="pill">${q.condition}</span>
+           <span class="pill">${q.sub}</span>
+         </div>
+       </div>` +
+      `<div class="choices">` +
+        shuffledChoices.map((c)=>`<label class="choice"><input type="radio" name="q${i}" value="${c.replace('*','')}" />${c.replace('*','')}</label>`).join('') +
+      `</div>` +
+      `<div id="rat${i}" class="rationale hide"></div>`;
+    examDiv.appendChild(wrap);
+  });
+}
+if (document.readyState !== 'loading') renderExam(); else document.addEventListener('DOMContentLoaded', renderExam);
+
+// ===== SCORING (uses currentQuestions to match shuffled order) =====
+function getCorrectChoice(q){ return q.choices.find(c=>c.trim().startsWith('*')).replace('*',''); }
+function scoreExam(){
+  const perCond = {}; CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
+  const perDisc = {}; DISCIPLINES.forEach(d=>perDisc[d]={correct:0,total:0});
+  const perSub = {}; CONDITIONS.forEach(c=>perSub[c]={});
+  let correctTotal=0;
+  const answers=[];
+
+  currentQuestions.forEach((q,i)=>{
+    const chosen = Array.from(document.querySelectorAll(`input[name='q${i}']`)).find(r=>r.checked)?.value || null;
+    const correct = getCorrectChoice(q);
+    const ok = (chosen===correct);
+    if(ok) correctTotal++;
+
+    perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
+    perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
+
+    const submap = perSub[q.condition];
+    if(!submap[q.sub]) submap[q.sub]={correct:0,total:0};
+    submap[q.sub].total++; if(ok) submap[q.sub].correct++;
+
+    const rat = document.getElementById('rat'+i);
+    rat.classList.remove('hide');
+    rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + correct + "<br>" + q.rationale;
+
+    answers.push({index:i+1, discipline:q.discipline, condition:q.condition, sub:q.sub, chosen, correct, isCorrect:ok});
+  });
+
+  const pct = Math.round(100*correctTotal/currentQuestions.length);
+  return {perCond, perDisc, perSub, answers, correctTotal, total: currentQuestions.length, pct};
+}
+
+// ===== REPORT RENDERING =====
+const reportEl = document.getElementById('report');
+const dateEl = document.getElementById('dateStamp');
+const totalEl = document.getElementById('totalScore');
+const discBody = document.querySelector('#discSummary tbody');
+const condBody = document.querySelector('#condTable tbody');
+const subHost = document.getElementById('subcats');
+
+function pctCell(pct){
+  const cls = pct>=90?'ok':(pct>=75?'':'bad');
+  return `<td class="${cls}">${pct}%</td>`;
+}
+function renderReport(res){
+  reportEl.classList.remove('hide');
+  dateEl.textContent = new Date().toLocaleString();
+  totalEl.textContent = `${res.pct}% (${res.correctTotal} / ${res.total})`;
+  document.getElementById('studentName').textContent = document.getElementById('s_name').value || 'Anonymous';
+  document.getElementById('schoolName').textContent = document.getElementById('s_school').value || '—';
+
+  // Disciplines
+  let rows=[]; let idx=1;
+  DISCIPLINES.forEach(d=>{
+    const rec = res.perDisc[d]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+  });
+  discBody.innerHTML = rows.join('');
+
+  // Conditions
+  rows=[]; idx=1;
+  CONDITIONS.forEach(c=>{
+    const rec = res.perCond[c]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+  });
+  condBody.innerHTML = rows.join('');
+
+  // Subcategories
+  let html=''; let cidx=1;
+  CONDITIONS.forEach(c=>{
+    const subs = res.perSub[c]; const keys = Object.keys(subs||{});
+    if(!keys.length) return;
+    html += `<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
+    html += '<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>';
+    keys.sort().forEach(s=>{
+      const rec = subs[s]; const pct = Math.round(100*rec.correct/rec.total);
+      html += `<tr><td>${s}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`;
+    });
+    html += '</tbody></table>'; cidx++;
+  });
+  subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
+
+  document.getElementById('printBtn').disabled = false;
+}
+
+// ===== SUBMIT TO SHEET (no CORS preflight) =====
+async function submitToSheet(res){
+  const submitStatus = document.getElementById('submitStatus');
+  const name   = document.getElementById('s_name').value || 'Anonymous';
+  const school = document.getElementById('s_school').value || '';
+
+  if (!school) { if (submitStatus){ submitStatus.textContent='School is required'; submitStatus.className='bad'; } return; }
+  if (!SHEET_ENDPOINT) { if (submitStatus){ submitStatus.textContent='Submission endpoint not configured'; submitStatus.className='bad'; } return; }
+
+  if (submitStatus){ submitStatus.textContent='Submitting…'; submitStatus.className='muted'; }
+
+  const disc = DISCIPLINES.map(d=>({name:d, ...(res.perDisc[d]||{correct:0,total:0})}));
+  const cond = CONDITIONS.map(c=>({name:c, ...(res.perCond[c]||{correct:0,total:0})}));
+
+  const payload = {
+    secret: SHARED_SECRET,
+    meta: { version:'v2.1', origin: location.href, timestamp: new Date().toISOString() },
+    student: { name, email:'', school },
+    overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
+    discipline: disc,
+    condition: cond,
+    answers: res.answers || []
+  };
+
+  try{
+    const body = new URLSearchParams({ secret: SHARED_SECRET, data: JSON.stringify(payload) });
+    const r = await fetch(SHEET_ENDPOINT, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+      body
+    });
+    const text = await r.text();
+    if (submitStatus){
+      submitStatus.textContent = r.ok ? 'Submitted to OD on the GO' : ('Submit failed: HTTP '+r.status);
+      submitStatus.className = r.ok ? 'ok' : 'bad';
+    }
+    console.log('Sheet response:', text);
+  }catch(e){
+    if (submitStatus){ submitStatus.textContent='Submit error (network)'; submitStatus.className='bad'; }
+    console.error(e);
+  }
+}
+
+// ===== ALSO: create PDF in Drive via Apps Script =====
+async function sendPdfToDrive(res){
+  const submitStatus = document.getElementById('submitStatus');
+  const name   = document.getElementById('s_name').value || 'Anonymous';
+  const school = document.getElementById('s_school').value || '';
+
+  const disc = DISCIPLINES.map(d=>({name:d, ...(res.perDisc[d]||{correct:0,total:0})}));
+  const cond = CONDITIONS.map(c=>({name:c, ...(res.perCond[c]||{correct:0,total:0})}));
+
+  const payload = {
+    secret: SHARED_SECRET,
+    meta: { version:'v2.1', origin: location.href, timestamp: new Date().toISOString() },
+    student: { name, email:'', school },
+    overall: { correct: res.correctTotal, total: res.total, percent: res.pct },
+    discipline: disc,
+    condition: cond,
+    answers: res.answers || []
+  };
+
+  try{
+    const body = new URLSearchParams({ secret: SHARED_SECRET, action:'pdf', data: JSON.stringify(payload) });
+    const r = await fetch(SHEET_ENDPOINT, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+      body
+    });
+    const text = await r.text();
+    if (submitStatus){
+      submitStatus.textContent = r.ok ? 'PDF uploaded' : ('PDF failed: HTTP '+r.status);
+      submitStatus.className = r.ok ? 'ok' : 'bad';
+    }
+    console.log('PDF response:', text);
+  }catch(e){
+    if (submitStatus){ submitStatus.textContent='PDF upload error (network)'; submitStatus.className='bad'; }
+    console.error(e);
+  }
+}
+
+// ===== EVENTS =====
+let _lastResult = null;
+
+document.getElementById('gradeBtn').addEventListener('click', async ()=>{
+  const schoolSel = document.getElementById('s_school');
+  if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
+
+  const res = scoreExam();
+  _lastResult = res;
+  renderReport(res);
+  await submitToSheet(res);   // writes to Sheets
+  await sendPdfToDrive(res);  // uploads a PDF into Drive (Apps Script handles it)
+  window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
+});
+
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  renderExam();
+  document.getElementById('report').classList.add('hide');
+  document.getElementById('printBtn').disabled=true;
+  const s = document.getElementById('submitStatus');
+  if (s){ s.textContent='Not sent'; s.className='muted'; }
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+// Mandatory school selection: disable Grade until selected
+(function initSchoolGate(){
+  const schoolSel = document.getElementById('s_school');
+  const gradeBtn  = document.getElementById('gradeBtn');
+  gradeBtn.disabled = !schoolSel.value;
+  schoolSel.addEventListener('change', e => { gradeBtn.disabled = !e.target.value; });
+})();
+</script>
+</body>
+</html>
