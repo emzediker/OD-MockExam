@@ -828,5 +828,376 @@
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
     "sub": "Inflammatory disorders",
     "rationale": "Chronic mechanical irritation from contact lenses or sutures causes large, cobblestone‑like papillae on the tarsal conjunctiva—giant papillary conjunctivitis."
+  },
+  {
+    "id": 84,
+    "text": "A corneal ulcer with feathery borders and satellite infiltrates is most likely caused by:",
+    "choices": ["Fungal keratitis", "Bacterial keratitis", "Acanthamoeba keratitis", "Herpes simplex keratitis"],
+    "correct": "Fungal keratitis",
+    "discipline": "A. Anatomy",
+    "condition": "Infectious Keratitis & Ulcers",
+    "sub": "Fungal Keratitis",
+    "rationale": "Filamentous fungi such as Fusarium/Aspergillus produce branching feathery margins and satellite lesions."
+  },
+  {
+    "id": 85,
+    "text": "A ring‑shaped stromal infiltrate with severe pain out of proportion to findings suggests:",
+    "choices": ["Acanthamoeba keratitis", "Fungal keratitis", "Bacterial ulcer", "HSV keratitis"],
+    "correct": "Acanthamoeba keratitis",
+    "discipline": "A. Anatomy",
+    "condition": "Infectious Keratitis & Ulcers",
+    "sub": "Acanthamoeba Keratitis",
+    "rationale": "Acanthamoeba infection often follows tap‑water lens cleaning and causes a ring infiltrate and significant pain."
+  },
+  {
+    "id": 86,
+    "text": "The dendritic ulcer of HSV keratitis stains with:",
+    "choices": ["Fluorescein and rose bengal at the edges", "Fluorescein only", "Lissamine green only", "No vital staining"],
+    "correct": "Fluorescein and rose bengal at the edges",
+    "discipline": "A. Anatomy",
+    "condition": "Infectious Keratitis & Ulcers",
+    "sub": "Herpes Simplex Keratitis",
+    "rationale": "Active viral epithelium takes fluorescein centrally and rose bengal along infected borders."
+  },
+  {
+    "id": 87,
+    "text": "The most common indication for penetrating keratoplasty in the U.S. is:",
+    "choices": ["Keratoconus", "Fuchs endothelial dystrophy", "Corneal scar post‑infection", "Bullous keratopathy"],
+    "correct": "Keratoconus",
+    "discipline": "A. Anatomy",
+    "condition": "Corneal Graft & Transplant Topics",
+    "sub": "PK Indications",
+    "rationale": "Keratoconus accounts for the majority of full‑thickness grafts in younger patients."
+  },
+  {
+    "id": 88,
+    "text": "A Khoda ring (white circular infiltrate at the graft margin) indicates:",
+    "choices": ["Immunologic corneal graft rejection", "Infectious keratitis", "Epithelial ingrowth", "Graft failure due to edema"],
+    "correct": "Immunologic corneal graft rejection",
+    "discipline": "A. Anatomy",
+    "condition": "Corneal Graft & Transplant Topics",
+    "sub": "Graft Rejection",
+    "rationale": "A white ring of inflammatory cells at the host–graft junction is a classic sign of endothelial rejection."
+  },
+  {
+    "id": 89,
+    "text": "A slow‑growing, pearly ulcerated lesion on the lower lid is most consistent with:",
+    "choices": ["Basal cell carcinoma", "Squamous cell carcinoma", "Sebaceous carcinoma", "Melanoma"],
+    "correct": "Basal cell carcinoma",
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Tumors & Surface Misc.",
+    "sub": "Eyelid Tumors",
+    "rationale": "Basal cell carcinoma is the most common eyelid malignancy, typically on the lower lid and medial canthus."
+  },
+  {
+    "id": 90,
+    "text": "The most lethal primary eyelid tumor is:",
+    "choices": ["Sebaceous gland carcinoma", "Basal cell carcinoma", "Squamous cell carcinoma", "Merkel cell carcinoma"],
+    "correct": "Sebaceous gland carcinoma",
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Tumors & Surface Misc.",
+    "sub": "Eyelid Tumors",
+    "rationale": "Sebaceous carcinoma often arises from meibomian glands and metastasizes early."
+  },
+  {
+    "id": 91,
+    "text": "The Na⁺/K⁺ ATPase maintains:",
+    "choices": ["Low intracellular Na⁺ and high K⁺", "Equal Na⁺/K⁺ on both sides", "High intracellular Na⁺", "Passive Na⁺ efflux only"],
+    "correct": "Low intracellular Na⁺ and high K⁺",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Cell & Membrane Physiology",
+    "sub": "Sodium Potassium Pump",
+    "rationale": "The pump actively transports 3 Na⁺ out and 2 K⁺ in, preserving resting potential."
+  },
+  {
+    "id": 92,
+    "text": "Resting membrane potential primarily depends on permeability to:",
+    "choices": ["K⁺ ions", "Na⁺ ions", "Cl⁻ ions", "Ca²⁺ ions"],
+    "correct": "K⁺ ions",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Cell & Membrane Physiology",
+    "sub": "Resting Potential",
+    "rationale": "Potassium conductance dominates via leak channels, setting the resting potential."
+  },
+  {
+    "id": 93,
+    "text": "Depolarization occurs when:",
+    "choices": ["Na⁺ channels open allowing influx", "K⁺ channels open", "Na⁺ is pumped out", "Ca²⁺ is sequestered"],
+    "correct": "Na⁺ channels open allowing influx",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Cell & Membrane Physiology",
+    "sub": "Depolarization",
+    "rationale": "Rapid Na⁺ entry drives the upstroke of the action potential."
+  },
+  {
+    "id": 94,
+    "text": "Repolarization of a neuron is due to:",
+    "choices": ["Efflux of K⁺ through voltage‑gated channels", "Influx of Na⁺", "Influx of Ca²⁺", "Closure of all K⁺ channels"],
+    "correct": "Efflux of K⁺ through voltage‑gated channels",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Cell & Membrane Physiology",
+    "sub": "Repolarization",
+    "rationale": "Opening of K⁺ channels allows efflux and restores the negative potential."
+  },
+  {
+    "id": 95,
+    "text": "Myelin increases conduction velocity by:",
+    "choices": ["Saltatory conduction between nodes of Ranvier", "Continuous propagation", "Increasing axon capacitance", "Decreasing membrane resistance"],
+    "correct": "Saltatory conduction between nodes of Ranvier",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Cell & Membrane Physiology",
+    "sub": "Myelin Function",
+    "rationale": "Myelin insulates the axon; impulses jump from node to node, speeding conduction."
+  },
+  {
+    "id": 96,
+    "text": "The main excitatory neurotransmitter in the CNS is:",
+    "choices": ["Glutamate", "GABA", "Glycine", "Acetylcholine"],
+    "correct": "Glutamate",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurotransmission",
+    "sub": "Excitatory NTs",
+    "rationale": "Glutamate activates NMDA and AMPA receptors to excite neurons."
+  },
+  {
+    "id": 97,
+    "text": "The chief inhibitory transmitter in the brain is:",
+    "choices": ["GABA", "Glutamate", "Dopamine", "Serotonin"],
+    "correct": "GABA",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurotransmission",
+    "sub": "Inhibitory NTs",
+    "rationale": "GABA opens Cl⁻ channels, causing hyperpolarization and inhibition."
+  },
+  {
+    "id": 98,
+    "text": "Calcium influx at the nerve terminal triggers:",
+    "choices": ["Vesicular neurotransmitter release", "Reuptake of transmitter", "K⁺ efflux", "Na⁺ entry"],
+    "correct": "Vesicular neurotransmitter release",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurotransmission",
+    "sub": "Synaptic Transmission",
+    "rationale": "Ca²⁺ binds synaptotagmin and initiates exocytosis of synaptic vesicles."
+  },
+  {
+    "id": 99,
+    "text": "The refractory period occurs because:",
+    "choices": ["Na⁺ channels are inactivated", "K⁺ channels close", "Na⁺ channels are fully open", "Membrane is depolarized"],
+    "correct": "Na⁺ channels are inactivated",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurotransmission",
+    "sub": "Refractory Period",
+    "rationale": "Inactivation gates of Na⁺ channels prevent re‑excitation until channels reset."
+  },
+  {
+    "id": 100,
+    "text": "Rod photoreceptors hyperpolarize in response to:",
+    "choices": ["Light‑induced closure of Na⁺ channels", "Light‑induced Na⁺ influx", "Opening of Ca²⁺ channels", "Glutamate release increase"],
+    "correct": "Light‑induced closure of Na⁺ channels",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Phototransduction",
+    "rationale": "Light converts 11‑cis to all‑trans retinal; cGMP falls, closing Na⁺ channels and hyperpolarizing the cell."
+  },
+  {
+    "id": 101,
+    "text": "The dark current in photoreceptors results from:",
+    "choices": ["Na⁺ influx through cGMP‑gated channels", "K⁺ influx", "Ca²⁺ efflux", "Na⁺ pump failure"],
+    "correct": "Na⁺ influx through cGMP‑gated channels",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Phototransduction",
+    "rationale": "In darkness, cGMP keeps Na⁺ channels open, producing a depolarized ‘dark current’."
+  },
+  {
+    "id": 102,
+    "text": "Cone cells differ from rods by:",
+    "choices": ["Color sensitivity and faster recovery", "Greater light sensitivity", "Single pigment type", "Higher summation ratio"],
+    "correct": "Color sensitivity and faster recovery",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Photoreceptor Types",
+    "rationale": "Cones mediate photopic color vision and adapt quickly compared to rods."
+  },
+  {
+    "id": 103,
+    "text": "The Purkinje shift refers to:",
+    "choices": ["Sensitivity shift toward shorter wavelengths in dim light", "Improved red sensitivity", "Equal rod/cone output", "Loss of color vision"],
+    "correct": "Sensitivity shift toward shorter wavelengths in dim light",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Visual Adaptation",
+    "rationale": "Scotopic peak sensitivity is ~507 nm vs photopic peak ~555 nm; thus, the eye is more sensitive to blue‑green light under dark conditions."
+  },
+  {
+    "id": 104,
+    "text": "The normal critical flicker fusion frequency (CFF) under photopic conditions is about:",
+    "choices": ["60 Hz", "10 Hz", "30 Hz", "100 Hz"],
+    "correct": "60 Hz",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Temporal Resolution",
+    "rationale": "Temporal resolution increases with luminance up to about 60 Hz under photopic conditions."
+  },
+  {
+    "id": 105,
+    "text": "The visual evoked potential primarily reflects activity of the:",
+    "choices": ["Occipital cortex (V1)", "Optic nerve", "Lateral geniculate nucleus", "Retina"],
+    "correct": "Occipital cortex (V1)",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neurophysiology & Special Senses",
+    "sub": "Evoked Potentials",
+    "rationale": "VEP measures cortical response to pattern‑reversal stimuli, primarily from V1."
+  },
+  {
+    "id": 106,
+    "text": "The primary substrate for glycolysis is:",
+    "choices": ["Glucose", "Glycogen", "Pyruvate", "Fructose‑6‑phosphate"],
+    "correct": "Glucose",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Glycolysis",
+    "rationale": "Glucose is converted to pyruvate with net 2 ATP and 2 NADH during glycolysis."
+  },
+  {
+    "id": 107,
+    "text": "The rate‑limiting enzyme of glycolysis is:",
+    "choices": ["Phosphofructokinase‑1 (PFK‑1)", "Hexokinase", "Pyruvate kinase", "Glucose‑6‑phosphatase"],
+    "correct": "Phosphofructokinase‑1 (PFK‑1)",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Glycolysis",
+    "rationale": "PFK‑1 controls glycolytic flux via regulation by ATP and citrate."
+  },
+  {
+    "id": 108,
+    "text": "In anaerobic conditions, pyruvate is converted to:",
+    "choices": ["Lactate", "Acetyl‑CoA", "Oxaloacetate", "Alanine"],
+    "correct": "Lactate",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Fermentation",
+    "rationale": "Lactate dehydrogenase regenerates NAD⁺ allowing glycolysis to continue in the absence of oxygen."
+  },
+  {
+    "id": 109,
+    "text": "The main function of the pentose phosphate pathway is to produce:",
+    "choices": ["NADPH and ribose‑5‑phosphate", "ATP", "Acetyl‑CoA", "Pyruvate"],
+    "correct": "NADPH and ribose‑5‑phosphate",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Pentose Phosphate Pathway",
+    "rationale": "The PPP yields NADPH for biosynthesis and antioxidant defense, plus ribose‑5‑phosphate for nucleotide synthesis."
+  },
+  {
+    "id": 110,
+    "text": "The lens relies primarily on which pathway for energy production?",
+    "choices": ["Anaerobic glycolysis", "Aerobic respiration", "Pentose phosphate only", "β‑oxidation"],
+    "correct": "Anaerobic glycolysis",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Lens Metabolism",
+    "rationale": "Because it is avascular, the lens depends on glycolysis for ~70 % of its ATP."
+  },
+  {
+    "id": 111,
+    "text": "The Cori cycle links:",
+    "choices": ["Muscle lactate → liver glucose regeneration", "Fatty acid oxidation → ketone formation", "Gluconeogenesis → glycogen storage", "Ketone utilization → TCA cycle"],
+    "correct": "Muscle lactate → liver glucose regeneration",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Carbohydrate Metabolism",
+    "sub": "Cori Cycle",
+    "rationale": "Lactate produced by anaerobic muscle is converted back to glucose in the liver."
+  },
+  {
+    "id": 112,
+    "text": "The citric acid cycle occurs in the:",
+    "choices": ["Mitochondrial matrix", "Cytoplasm", "Endoplasmic reticulum", "Nucleus"],
+    "correct": "Mitochondrial matrix",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Aerobic Respiration",
+    "sub": "TCA Cycle Location",
+    "rationale": "All TCA enzymes (except succinate dehydrogenase) reside in the mitochondrial matrix."
+  },
+  {
+    "id": 113,
+    "text": "The rate‑limiting enzyme of the TCA cycle is:",
+    "choices": ["Isocitrate dehydrogenase", "Citrate synthase", "α‑ketoglutarate dehydrogenase", "Succinate dehydrogenase"],
+    "correct": "Isocitrate dehydrogenase",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Aerobic Respiration",
+    "sub": "TCA Cycle Regulation",
+    "rationale": "Isocitrate dehydrogenase controls NADH production and is regulated by ADP/ATP."
+  },
+  {
+    "id": 114,
+    "text": "The final electron acceptor in oxidative phosphorylation is:",
+    "choices": ["Oxygen", "NAD⁺", "Cytochrome c", "FAD"],
+    "correct": "Oxygen",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Aerobic Respiration",
+    "sub": "ETC",
+    "rationale": "Oxygen accepts electrons at Complex IV, forming water."
+  },
+  {
+    "id": 115,
+    "text": "Uncoupling of oxidative phosphorylation results in:",
+    "choices": ["Heat production without ATP synthesis", "Decreased oxygen consumption", "Increased ATP yield", "Accumulation of NADH"],
+    "correct": "Heat production without ATP synthesis",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Aerobic Respiration",
+    "sub": "OxPhos Uncoupling",
+    "rationale": "Uncouplers dissipate the proton gradient through UCP proteins, generating heat instead of ATP."
+  },
+  {
+    "id": 116,
+    "text": "β‑oxidation of fatty acids occurs in the:",
+    "choices": ["Mitochondria", "Cytoplasm", "Nucleus", "Ribosome"],
+    "correct": "Mitochondria",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Lipid & Protein Metabolism",
+    "sub": "β‑Oxidation",
+    "rationale": "Fatty acyl‑CoA enters mitochondria via the carnitine shuttle for sequential removal of 2‑carbon units."
+  },
+  {
+    "id": 117,
+    "text": "The carnitine shuttle is necessary for:",
+    "choices": ["Transport of long‑chain fatty acids into mitochondria", "Export of ATP", "Entry of acetyl‑CoA into cytosol", "Protein degradation"],
+    "correct": "Transport of long‑chain fatty acids into mitochondria",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Lipid & Protein Metabolism",
+    "sub": "Carnitine Shuttle",
+    "rationale": "Carnitine acyltransferase I regulates the entry step for β‑oxidation."
+  },
+  {
+    "id": 118,
+    "text": "The major energy source for corneal epithelium is:",
+    "choices": ["Glucose via aerobic glycolysis", "Free fatty acids", "Ketones", "Lactate oxidation"],
+    "correct": "Glucose via aerobic glycolysis",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Lipid & Protein Metabolism",
+    "sub": "Corneal Metabolism",
+    "rationale": "The corneal epithelium has oxygen access and uses both aerobic and anaerobic glycolysis, with glucose as the primary substrate."
+  },
+  {
+    "id": 119,
+    "text": "Amino acids undergo transamination mainly in the:",
+    "choices": ["Liver", "Kidney", "Muscle", "Brain"],
+    "correct": "Liver",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Lipid & Protein Metabolism",
+    "sub": "Amino Acid Metabolism",
+    "rationale": "Hepatic aminotransferases convert amino acids to ketoacids for metabolism."
+  },
+  {
+    "id": 120,
+    "text": "The urea cycle detoxifies:",
+    "choices": ["Ammonia (NH₃)", "Carbon dioxide", "Uric acid", "Bilirubin"],
+    "correct": "Ammonia (NH₃)",
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Lipid & Protein Metabolism",
+    "sub": "Urea Cycle",
+    "rationale": "The liver converts toxic ammonia to urea for renal excretion."
   }
-]
+
+  
