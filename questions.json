@@ -1198,5 +1198,305 @@
     "condition": "Lipid & Protein Metabolism",
     "sub": "Urea Cycle",
     "rationale": "The liver converts toxic ammonia to urea for renal excretion."
+  },
+  {
+    "id": 121,
+    "text": "The main extracellular cation is:",
+    "choices": ["Sodium (Na⁺)", "Potassium (K⁺)", "Calcium (Ca²⁺)", "Chloride (Cl⁻)"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Fluids, Electrolytes & Acid–Base",
+    "sub": "Electrolytes — ECF vs ICF",
+    "rationale": "Na⁺ predominates in extracellular fluid and largely determines osmotic balance."
+  },
+  {
+    "id": 122,
+    "text": "The main intracellular cation is:",
+    "choices": ["Potassium (K⁺)", "Sodium (Na⁺)", "Chloride (Cl⁻)", "Calcium (Ca²⁺)"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Fluids, Electrolytes & Acid–Base",
+    "sub": "Electrolytes — ECF vs ICF",
+    "rationale": "K⁺ is maintained inside cells by the Na⁺/K⁺-ATPase."
+  },
+  {
+    "id": 123,
+    "text": "An increase in ventilation that lowers arterial CO₂ leads to:",
+    "choices": ["Respiratory alkalosis", "Respiratory acidosis", "Metabolic acidosis", "Metabolic alkalosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Fluids, Electrolytes & Acid–Base",
+    "sub": "Acid–Base Physiology",
+    "rationale": "Lower PaCO₂ raises pH, producing respiratory alkalosis."
+  },
+  {
+    "id": 124,
+    "text": "Metabolic acidosis is characterized by:",
+    "choices": ["Decreased bicarbonate (HCO₃⁻)", "Increased CO₂", "Increased bicarbonate", "Low anion gap"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Fluids, Electrolytes & Acid–Base",
+    "sub": "Acid–Base Physiology",
+    "rationale": "HCO₃⁻ falls as it buffers excess acid."
+  },
+  {
+    "id": 125,
+    "text": "The kidney compensates for metabolic acidosis by:",
+    "choices": ["Excreting H⁺ and generating new HCO₃⁻", "Reabsorbing H⁺", "Decreasing ventilation", "Increasing CO₂ retention"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Fluids, Electrolytes & Acid–Base",
+    "sub": "Renal Compensation",
+    "rationale": "Renal tubular cells secrete H⁺ and produce new bicarbonate to restore pH."
+  },
+  {
+    "id": 126,
+    "text": "The anterior pituitary is derived embryologically from:",
+    "choices": ["Rathke’s pouch", "Neuroectoderm", "Optic vesicle", "Surface ectoderm"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Pituitary Embryology",
+    "rationale": "Adenohypophysis arises from oral ectoderm (Rathke’s pouch)."
+  },
+  {
+    "id": 127,
+    "text": "The posterior pituitary releases:",
+    "choices": ["ADH and oxytocin", "GH and prolactin", "ACTH and TSH", "LH and FSH"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Neurohypophysis",
+    "rationale": "Neurohypophysis stores and releases hypothalamic peptides ADH and oxytocin."
+  },
+  {
+    "id": 128,
+    "text": "Which hormone increases blood glucose by promoting gluconeogenesis and lipolysis?",
+    "choices": ["Cortisol", "Insulin", "Growth hormone", "Thyroxine"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Adrenal — Glucocorticoids",
+    "rationale": "Cortisol mobilizes substrates and antagonizes insulin."
+  },
+  {
+    "id": 129,
+    "text": "Which hormone lowers blood glucose by increasing cellular uptake?",
+    "choices": ["Insulin", "Glucagon", "Epinephrine", "Cortisol"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Pancreatic Hormones",
+    "rationale": "Insulin promotes GLUT4-mediated glucose uptake and glycogen synthesis."
+  },
+  {
+    "id": 130,
+    "text": "A deficiency of ADH causes:",
+    "choices": ["Diabetes insipidus", "Diabetes mellitus", "SIADH", "Hyperaldosteronism"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Posterior Pituitary",
+    "rationale": "Absent vasopressin prevents water reabsorption, causing dilute polyuria and polydipsia."
+  },
+  {
+    "id": 131,
+    "text": "Graves disease leads to hyperthyroidism through:",
+    "choices": ["Autoantibodies stimulating the TSH receptor", "Pituitary adenoma secretion of TSH", "Thyroid hormone resistance", "Iodine deficiency"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Endocrine Physiology",
+    "sub": "Thyroid — Autoimmunity",
+    "rationale": "TSI (thyroid-stimulating immunoglobulin) mimics TSH at the receptor."
+  },
+  {
+    "id": 132,
+    "text": "Aqueous humor formation depends primarily on:",
+    "choices": ["Active secretion by the nonpigmented ciliary epithelium", "Passive diffusion from iris vessels", "Ultrafiltration alone", "Leakage from Schlemm’s canal"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Ocular & Systemic Biochemistry Links",
+    "sub": "Aqueous Production",
+    "rationale": "Na⁺/K⁺-ATPase and carbonic anhydrase drive active secretion by the ciliary epithelium."
+  },
+  {
+    "id": 133,
+    "text": "Carbonic anhydrase inhibitors reduce intraocular pressure by:",
+    "choices": ["Decreasing bicarbonate formation in the ciliary processes", "Enhancing trabecular outflow", "Increasing uveoscleral flow", "Reducing episcleral venous pressure"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Ocular & Systemic Biochemistry Links",
+    "sub": "Glaucoma Pharmacology",
+    "rationale": "Less HCO₃⁻ formation reduces aqueous production."
+  },
+  {
+    "id": 134,
+    "text": "The main antioxidant protecting the cornea and lens is:",
+    "choices": ["Glutathione (GSH)", "Vitamin D", "Melanin", "Retinol"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Ocular & Systemic Biochemistry Links",
+    "sub": "Oxidative Defense",
+    "rationale": "Reduced glutathione scavenges reactive species and preserves lens clarity."
+  },
+  {
+    "id": 135,
+    "text": "The retina’s primary energy source is:",
+    "choices": ["Aerobic glycolysis (Warburg effect)", "Anaerobic glycolysis", "Fatty acid oxidation", "Ketone oxidation"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Ocular & Systemic Biochemistry Links",
+    "sub": "Retinal Metabolism",
+    "rationale": "Photoreceptors preferentially use glucose with high aerobic glycolytic flux to support rapid turnover."
+  },
+  {
+    "id": 136,
+    "text": "The first line of immune defense is the:",
+    "choices": ["Skin and mucosal barriers", "T cells", "B cells", "Complement system"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Innate Barriers",
+    "rationale": "Physical barriers and antimicrobial secretions prevent pathogen entry."
+  },
+  {
+    "id": 137,
+    "text": "The key cell type bridging innate and adaptive immunity is the:",
+    "choices": ["Dendritic cell", "Neutrophil", "Basophil", "Eosinophil"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Antigen Presentation",
+    "rationale": "Dendritic cells present antigen to naïve T cells and prime adaptive responses."
+  },
+  {
+    "id": 138,
+    "text": "The major histocompatibility complex (MHC) class I presents antigens to:",
+    "choices": ["CD8⁺ cytotoxic T cells", "CD4⁺ helper T cells", "B cells", "NK cells"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "MHC Pathways",
+    "rationale": "MHC I displays endogenous peptides to CD8⁺ T cells."
+  },
+  {
+    "id": 139,
+    "text": "MHC class II molecules present antigen to:",
+    "choices": ["CD4⁺ T helper cells", "CD8⁺ T cells", "NK cells", "Neutrophils"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "MHC Pathways",
+    "rationale": "MHC II on professional APCs activates CD4⁺ T helper cells."
+  },
+  {
+    "id": 140,
+    "text": "The primary antibody produced in a first exposure response is:",
+    "choices": ["IgM", "IgG", "IgA", "IgE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Humoral Immunity",
+    "rationale": "IgM is the first class secreted by activated B cells during primary response."
+  },
+  {
+    "id": 141,
+    "text": "The most abundant serum immunoglobulin is:",
+    "choices": ["IgG", "IgA", "IgM", "IgE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Humoral Immunity",
+    "rationale": "IgG constitutes the majority of circulating antibodies and crosses the placenta."
+  },
+  {
+    "id": 142,
+    "text": "The immunoglobulin found predominantly in tears and mucosal secretions is:",
+    "choices": ["IgA", "IgG", "IgE", "IgM"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Mucosal Immunity",
+    "rationale": "Secretory IgA prevents microbial adherence to ocular and other mucosal surfaces."
+  },
+  {
+    "id": 143,
+    "text": "Which cell type destroys virus-infected cells without prior sensitization?",
+    "choices": ["Natural killer (NK) cell", "B cell", "Neutrophil", "Eosinophil"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Innate Lymphocytes",
+    "rationale": "NK cells target cells with low MHC I expression and induce apoptosis."
+  },
+  {
+    "id": 144,
+    "text": "Complement activation by antigen-antibody complexes occurs via the:",
+    "choices": ["Classical pathway", "Alternative pathway", "Lectin pathway", "Opsonization cascade"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Immune System Fundamentals",
+    "sub": "Complement",
+    "rationale": "C1q binds IgM/IgG, triggering C3 cleavage and membrane attack complex formation."
+  },
+  {
+    "id": 145,
+    "text": "Type I hypersensitivity is mediated by:",
+    "choices": ["IgE and mast-cell degranulation", "IgG cytotoxicity", "Immune complex deposition", "T-cell delayed response"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Type I",
+    "rationale": "Immediate reactions result from IgE-mediated mast-cell histamine release."
+  },
+  {
+    "id": 146,
+    "text": "Type II hypersensitivity involves:",
+    "choices": ["Antibody-mediated cytotoxicity against cell surface antigens", "Immune complex deposition", "T-cell delayed response", "IgE cross-linking"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Type II",
+    "rationale": "IgG/IgM bind cellular antigens leading to complement-mediated lysis or opsonization."
+  },
+  {
+    "id": 147,
+    "text": "Type III hypersensitivity is caused by:",
+    "choices": ["Immune complex deposition in tissues", "Direct T-cell cytotoxicity", "IgE release", "Complement deficiency"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Type III",
+    "rationale": "Circulating antigen–antibody complexes deposit in tissues causing inflammation (e.g., SLE, vasculitis)."
+  },
+  {
+    "id": 148,
+    "text": "Type IV hypersensitivity is mediated by:",
+    "choices": ["T cells (Delayed type)", "IgE", "IgG", "Complement"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Type IV",
+    "rationale": "Delayed (24–48 h) response driven by sensitized T lymphocytes."
+  },
+  {
+    "id": 149,
+    "text": "An example of Type IV ocular reaction is:",
+    "choices": ["Phlyctenular keratoconjunctivitis", "Vernal keratoconjunctivitis", "Angioedema", "Urticaria"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Ocular Type IV",
+    "rationale": "Phlyctenular disease is a delayed T-cell–mediated response to microbial antigens."
+  },
+  {
+    "id": 150,
+    "text": "Autoimmune destruction of lacrimal and salivary glands is characteristic of:",
+    "choices": ["Sjögren syndrome", "Rheumatoid arthritis", "SLE", "Graves disease"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Hypersensitivity & Autoimmunity",
+    "sub": "Autoimmune Exocrinopathy",
+    "rationale": "Lymphocytic infiltration of lacrimal and salivary glands causes keratoconjunctivitis sicca and xerostomia."
   }
 ]
