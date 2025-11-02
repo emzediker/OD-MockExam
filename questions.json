@@ -1,34 +1,452 @@
 [
   {
     "id": 1,
-    "text": "Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",
-    "choices": ["Myopia of 2.00 D", "Hyperopia of 2.00 D", "Emmetropia", "Mixed astigmatism"],
-    "correct": 0,
-    "discipline": "D. Optics",
-    "condition": "Ametropia",
-    "sub": "Vergence & Far Point",
-    "rationale": "Vergence at far point = -1/0.50 m = -2.00 D → myopia."
+    "text": "Which gland is primarily responsible for the aqueous component of the tear film?",
+    "choices": ["Meibomian gland", "Lacrimal gland", "Goblet cells", "Krause accessory glands"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Tear film physiology",
+    "rationale": "The lacrimal gland produces the main aqueous layer; Meibomian glands secrete lipids."
   },
   {
     "id": 2,
-    "text": "Which spectacle change reduces spectacle magnification for the same vertex power?",
-    "choices": ["Flatter front curve (lower base)", "Steeper front curve", "Increase center thickness", "Lower index"],
-    "correct": 0,
-    "discipline": "D. Optics",
-    "condition": "Ophthalmic Optics / Spectacles",
-    "sub": "Spectacle Magnification",
-    "rationale": "Flatter base curve and thinner lens reduce SM."
+    "text": "A 4-year-old presents with chronic tearing and crusting at the inner canthus. Which is the most likely diagnosis?",
+    "choices": ["Acute dacryocystitis", "Congenital nasolacrimal duct obstruction", "Canaliculitis", "Blepharitis"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Nasolacrimal duct",
+    "rationale": "Persistent epiphora and discharge in infancy indicate incomplete nasolacrimal duct canalization."
   },
   {
     "id": 3,
-    "text": "High-water ionic hydrogels are most prone to which deposit?",
-    "choices": ["Protein", "Lipid", "Mucin", "Calcium"],
+    "text": "Which corneal layer serves as the main barrier to fluid influx from the anterior chamber?",
+    "choices": ["Stroma", "Epithelium", "Bowman’s layer", "Endothelium"],
+    "correct": 3,
+    "discipline": "A. Anatomy",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Corneal physiology",
+    "rationale": "The corneal endothelium maintains deturgescence via its Na+/K+ ATPase pump system."
+  },
+  {
+    "id": 4,
+    "text": "A contact lens wearer develops an oval peripheral stromal infiltrate with intact epithelium after sleeping in lenses. What is the most likely cause?",
+    "choices": ["Fungal keratitis", "Acanthamoeba keratitis", "Sterile inflammatory marginal ulcer", "HSV epithelial keratitis"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Keratitis & infiltrates",
+    "rationale": "Overnight lens wear may trigger a sterile peripheral infiltrate from localized immune response to bacterial antigens."
+  },
+  {
+    "id": 5,
+    "text": "Which type of cataract is most commonly associated with prolonged corticosteroid use?",
+    "choices": ["Nuclear sclerotic", "Cortical", "Posterior subcapsular", "Congenital lamellar"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Lens / Cataract / IOL / Pre- & Post-Operative Care",
+    "sub": "Cataract etiology",
+    "rationale": "Steroid exposure leads to posterior subcapsular lens opacification near the visual axis."
+  },
+  {
+    "id": 6,
+    "text": "Accommodation results primarily from contraction of which muscle?",
+    "choices": ["Sphincter pupillae", "Orbicularis oculi", "Ciliary muscle", "Superior oblique"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Lens / Cataract / IOL / Pre- & Post-Operative Care",
+    "sub": "Accommodation",
+    "rationale": "Ciliary muscle contraction relaxes zonules, allowing the lens to become more convex for near focus."
+  },
+  {
+    "id": 7,
+    "text": "Which structure forms the blood–aqueous barrier in the eye?",
+    "choices": ["Iris sphincter muscle", "Non-pigmented ciliary epithelium and iris capillary endothelium", "Trabecular meshwork", "Schlemm’s canal"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "Blood-ocular barriers",
+    "rationale": "Tight junctions of non-pigmented ciliary epithelium and iris vessels regulate entry of plasma components."
+  },
+  {
+    "id": 8,
+    "text": "A patient with photophobia, circumlimbal flush, and small pupil most likely has inflammation of which structure?",
+    "choices": ["Retina", "Anterior uvea (iris and ciliary body)", "Sclera", "Corneal endothelium"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "Anterior uveitis",
+    "rationale": "These signs indicate anterior uveitis affecting iris and ciliary body tissues."
+  },
+  {
+    "id": 9,
+    "text": "Which retinal layer contains the photoreceptor outer segments?",
+    "choices": ["Inner plexiform layer", "Ganglion cell layer", "Inner nuclear layer", "Outer segment layer (external to external limiting membrane)"],
+    "correct": 3,
+    "discipline": "A. Anatomy",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Retinal layers",
+    "rationale": "Outer segments contain discs with photopigments essential for phototransduction."
+  },
+  {
+    "id": 10,
+    "text": "A 30-year-old presents with punched-out chorioretinal scars and peripapillary atrophy. Which diagnosis best fits?",
+    "choices": ["Toxoplasmosis retinochoroiditis", "Presumed Ocular Histoplasmosis Syndrome", "Sarcoid choroiditis", "Multifocal choroiditis"],
+    "correct": 1,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Retinochoroiditis disorders",
+    "rationale": "Triad of peripapillary atrophy, punched-out scars, and absence of vitritis characterizes Presumed Ocular Histoplasmosis Syndrome."
+  },
+  {
+    "id": 11,
+    "text": "Which visual field defect is most typical of early glaucomatous damage?",
+    "choices": ["Central scotoma", "Nasal step or paracentral scotoma", "Bitemporal hemianopia", "Homonymous hemianopia"],
+    "correct": 1,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Early glaucoma field defects",
+    "rationale": "Localized arcuate and nasal step defects occur first due to selective ganglion cell loss at the lamina."
+  },
+  {
+    "id": 12,
+    "text": "A 70-year-old with sudden, painless unilateral vision loss and chalky white optic disc swelling likely has:",
+    "choices": ["Optic neuritis", "LHON", "Arteritic Anterior Ischemic Optic Neuropathy (Giant Cell Arteritis)", "Non-arteritic AION"],
+    "correct": 2,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Arteritic AION",
+    "rationale": "Arteritic AION presents with pallid swelling and profound vision loss; ESR/CRP should be checked immediately."
+  },
+  {
+    "id": 13,
+    "text": "A painless, firm nodule within the tarsal plate that has persisted for several weeks is most consistent with:",
+    "choices": ["Hordeolum internum", "Chalazion", "Sebaceous carcinoma", "Molluscum contagiosum"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Chalazion",
+    "rationale": "Chalazion is a sterile lipogranulomatous inflammation of a Meibomian gland."
+  },
+  {
+    "id": 14,
+    "text": "Chronic anterior blepharitis is most often associated with overgrowth of which organism?",
+    "choices": ["Candida albicans", "Pseudomonas aeruginosa", "Staphylococcus aureus", "Moraxella catarrhalis"],
+    "correct": 2,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Blepharitis",
+    "rationale": "Staphylococcal toxins chronically inflame the eyelid margin causing collarettes."
+  },
+  {
+    "id": 15,
+    "text": "The most common malignant eyelid tumor is:",
+    "choices": ["Squamous cell carcinoma", "Sebaceous carcinoma", "Basal cell carcinoma", "Merkel cell carcinoma"],
+    "correct": 2,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
+    "sub": "Lid tumors",
+    "rationale": "Basal cell carcinoma accounts for ~90% of eyelid malignancies, typically on the lower lid."
+  },
+  {
+    "id": 16,
+    "text": "Recurrent erosions and map-dot-fingerprint patterns describe:",
+    "choices": ["Lattice corneal dystrophy", "Epithelial basement membrane dystrophy (EBMD)", "Macular corneal dystrophy", "Fuchs endothelial dystrophy"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Corneal dystrophies",
+    "rationale": "EBMD affects the basal epithelial layer causing poor adhesion and irregular basement membrane."
+  },
+  {
+    "id": 17,
+    "text": "Guttata and stromal edema on slit-lamp indicate endothelial pump failure typical of:",
+    "choices": ["Keratoconus", "Terrien’s marginal degeneration", "Fuchs endothelial dystrophy", "Salzmann’s nodular degeneration"],
+    "correct": 2,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Endothelial dystrophy",
+    "rationale": "Fuchs causes Descemet thickening and endothelial loss, producing morning blur and glare."
+  },
+  {
+    "id": 18,
+    "text": "Dendritic epithelial ulcers stain with fluorescein and rose bengal. The likely cause is:",
+    "choices": ["Varicella-zoster virus", "Herpes simplex virus", "Adenovirus", "Cytomegalovirus"],
+    "correct": 1,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Viral keratitis",
+    "rationale": "HSV keratitis produces branching ulcers with terminal bulbs."
+  },
+  {
+    "id": 19,
+    "text": "A patient with a contact-lens–related corneal ulcer and hypopyon most likely has infection by:",
+    "choices": ["Pseudomonas aeruginosa", "Candida albicans", "Staphylococcus epidermidis", "Fusarium species"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Cornea / Conjunctiva / Refractive Surgery",
+    "sub": "Bacterial keratitis",
+    "rationale": "Pseudomonas is the most common cause of severe bacterial keratitis in lens wearers."
+  },
+  {
+    "id": 20,
+    "text": "Which systemic disease classically causes “snowflake” cataracts?",
+    "choices": ["Diabetes mellitus", "Atopic dermatitis", "Myotonic dystrophy", "Galactosemia"],
     "correct": 0,
     "discipline": "A. Anatomy",
-    "condition": "Contact Lenses",
-    "sub": "Materials & Deposits",
-    "rationale": "Ionic high-water hydrogels attract tear proteins."
+    "condition": "Lens / Cataract / IOL / Pre- & Post-Operative Care",
+    "sub": "Cataract metabolic diseases",
+    "rationale": "Chronic hyperglycemia leads to sorbitol accumulation and subcapsular opacities."
+  },
+  {
+    "id": 21,
+    "text": "A congenital cataract in an infant with cardiac defects and deafness suggests:",
+    "choices": ["Rubella embryopathy", "Toxoplasmosis", "Cytomegalovirus", "Herpes simplex"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Lens / Cataract / IOL / Pre- & Post-Operative Care",
+    "sub": "Congenital cataracts",
+    "rationale": "Rubella during first trimester interferes with lens fiber development."
+  },
+  {
+    "id": 22,
+    "text": "Brunescent discoloration and increased myopia with age indicate:",
+    "choices": ["Nuclear sclerotic cataract", "Posterior subcapsular cataract", "Cortical cataract", "Traumatic rosette cataract"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Lens / Cataract / IOL / Pre- & Post-Operative Care",
+    "sub": "Nuclear sclerosis",
+    "rationale": "Nuclear sclerosis increases refractive index, causing a myopic shift (“second sight”)."
+  },
+  {
+    "id": 23,
+    "text": "Bilateral granulomatous uveitis with mutton-fat keratic precipitates is typical of:",
+    "choices": ["HLA-B27 anterior uveitis", "Fuchs heterochromic iridocyclitis", "Sarcoidosis", "Viral uveitis"],
+    "correct": 2,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "Granulomatous uveitis",
+    "rationale": "Sarcoidosis causes granulomatous anterior uveitis with large greasy precipitates."
+  },
+  {
+    "id": 24,
+    "text": "Recurrent acute anterior uveitis in a young male with back pain most likely indicates:",
+    "choices": ["Behçet disease", "HLA-B27–associated spondyloarthropathy", "Syphilis", "Tuberculosis"],
+    "correct": 1,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "HLA-B27 anterior uveitis",
+    "rationale": "Ankylosing spondylitis and reactive arthritis produce HLA-B27–positive acute uveitis."
+  },
+  {
+    "id": 25,
+    "text": "A “snowbank” of exudate over the pars plana is characteristic of:",
+    "choices": ["Intermediate uveitis (pars planitis)", "Posterior uveitis", "Sarcoid uveitis", "Sympathetic ophthalmia"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "Pars planitis",
+    "rationale": "Inflammation localized to the vitreous base produces white exudates along the ora serrata."
+  },
+  {
+    "id": 26,
+    "text": "Posterior uveitis with placoid chorioretinitis and positive VDRL suggests:",
+    "choices": ["Ocular syphilis", "Viral retinitis", "Tubercular uveitis", "Vogt–Koyanagi–Harada disease"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Iris / Ciliary / Choroid",
+    "sub": "Ocular syphilis",
+    "rationale": "Treponemal infection can cause multifocal chorioretinitis and vasculitis."
+  },
+  {
+    "id": 27,
+    "text": "Sudden, painless monocular vision loss with a cherry-red spot on macula indicates:",
+    "choices": ["Central retinal artery occlusion", "Central retinal vein occlusion", "Diabetic macular edema", "Retinitis pigmentosa"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Central retinal artery occlusion",
+    "rationale": "Central retinal artery occlusion causes inner retinal ischemia leaving foveal choroidal flush."
+  },
+  {
+    "id": 28,
+    "text": "A patient presents with diffuse retinal hemorrhages, cotton-wool spots, and macular edema described as a “blood and thunder” fundus. What is the most likely diagnosis?",
+    "choices": ["Central Retinal Vein Occlusion", "Central Retinal Artery Occlusion", "Hypertensive retinopathy", "Diabetic macular edema"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Central retinal vein occlusion",
+    "rationale": "CRVO shows venous dilation and widespread intraretinal hemorrhages due to thrombotic occlusion."
+  },
+  {
+    "id": 29,
+    "text": "Sectoral hemorrhages confined to one quadrant of the retina are characteristic of:",
+    "choices": ["Branch Retinal Vein Occlusion", "Central Retinal Artery Occlusion", "Ocular ischemic syndrome", "Vitreous hemorrhage"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Branch retinal vein occlusion",
+    "rationale": "BRVO results from venous compression at arteriovenous crossings, often superotemporal."
+  },
+  {
+    "id": 30,
+    "text": "Which systemic disease is most strongly associated with retinal microaneurysms, dot-blot hemorrhages, and hard exudates?",
+    "choices": ["Diabetic retinopathy", "Hypertensive retinopathy", "Sickle cell retinopathy", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Diabetic retinopathy",
+    "rationale": "Capillary basement-membrane thickening and pericyte loss produce classic non-proliferative diabetic changes."
+  },
+  {
+    "id": 31,
+    "text": "Cotton-wool spots, arteriovenous nicking, and flame hemorrhages on fundus exam are most typical of:",
+    "choices": ["Hypertensive retinopathy", "Diabetic retinopathy", "CRVO", "Ocular ischemic syndrome"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Hypertensive retinopathy",
+    "rationale": "Chronic hypertension causes arteriolar narrowing, exudation, and superficial nerve-fiber hemorrhages."
+  },
+  {
+    "id": 32,
+    "text": "Sea-fan neovascularization with peripheral “salmon-patch” hemorrhages occurs in:",
+    "choices": ["Sickle cell retinopathy", "Ocular ischemic syndrome", "Eales disease", "Retinopathy of prematurity"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Sickle cell retinopathy",
+    "rationale": "Retinal ischemia from sickled erythrocytes leads to neovascular fronds resembling sea fans."
+  },
+  {
+    "id": 33,
+    "text": "The hallmark of exudative (wet) age-related macular degeneration is:",
+    "choices": ["Choroidal neovascular membrane", "Drusen accumulation beneath the RPE", "Geographic atrophy", "Pigment clumping at the macula"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Wet age-related macular degeneration",
+    "rationale": "Choroidal neovascular membrane formation under the RPE causes hemorrhage and exudation leading to rapid vision loss."
+  },
+  {
+    "id": 34,
+    "text": "Drusen located between the RPE and Bruch’s membrane are characteristic of:",
+    "choices": ["Non-exudative (\"dry\") age-related macular degeneration", "Central serous chorioretinopathy", "Macular hole", "Best vitelliform dystrophy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Dry age-related macular degeneration",
+    "rationale": "Hard and soft drusen mark dry AMD, the non-neovascular precursor stage."
+  },
+  {
+    "id": 35,
+    "text": "Which inherited macular dystrophy presents with an “egg-yolk” lesion in the fovea during childhood?",
+    "choices": ["Best vitelliform macular dystrophy", "Stargardt disease", "Pattern dystrophy", "Cone–rod dystrophy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Best disease",
+    "rationale": "Best disease (VMD2 gene) causes lipofuscin accumulation forming the vitelliform lesion."
+  },
+  {
+    "id": 36,
+    "text": "A young adult male with metamorphopsia and a serous detachment of the neurosensory retina most likely has:",
+    "choices": ["Central serous chorioretinopathy", "Wet AMD", "Polypoidal choroidal vasculopathy", "Diabetic macular edema"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Retina / Choroid / Vitreous",
+    "sub": "Central serous chorioretinopathy",
+    "rationale": "CSC occurs from choroidal hyperpermeability and RPE leakage, common in stressed males."
+  },
+  {
+    "id": 37,
+    "text": "The main site of resistance to aqueous outflow in primary open-angle glaucoma is the:",
+    "choices": ["Trabecular meshwork and juxtacanalicular tissue", "Schlemm’s canal", "Ciliary muscle scleral spur", "Iris root"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Primary open-angle glaucoma",
+    "rationale": "The juxtacanalicular portion of the trabecular meshwork offers the greatest outflow resistance."
+  },
+  {
+    "id": 38,
+    "text": "Secondary open-angle glaucoma due to red blood cells in the anterior chamber is termed:",
+    "choices": ["Ghost cell glaucoma", "Pigmentary glaucoma", "Pseudoexfoliative glaucoma", "Uveitic glaucoma"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Secondary glaucoma",
+    "rationale": "Degenerated erythrocytes obstruct the trabecular meshwork after vitreous hemorrhage."
+  },
+  {
+    "id": 39,
+    "text": "Which finding is most suggestive of normal-tension glaucoma?",
+    "choices": ["Disc hemorrhage and focal notching with IOP < 21 mm Hg", "Diffuse cupping with IOP > 35 mm Hg", "Corneal edema and mid-dilated pupil", "Shallow anterior chamber and angle closure"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Normal tension glaucoma",
+    "rationale": "Normal-tension glaucoma shows glaucomatous optic nerve damage despite statistically normal intraocular pressure."
+  },
+  {
+    "id": 40,
+    "text": "Krukenberg spindle, iris transillumination defects, and dense trabecular pigment characterize:",
+    "choices": ["Pigment dispersion syndrome / glaucoma", "Pseudoexfoliation glaucoma", "Uveitic glaucoma", "Steroid-induced glaucoma"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Pigment dispersion syndrome",
+    "rationale": "Reverse pupillary block causes posterior iris bowing and pigment release."
+  },
+  {
+    "id": 41,
+    "text": "Pseudoexfoliative glaucoma is caused by deposition of abnormal fibrillar material primarily on the:",
+    "choices": ["Lens capsule and anterior segment structures", "Retinal nerve fiber layer", "Ciliary processes only", "Corneal endothelium alone"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Pseudoexfoliative glaucoma",
+    "rationale": "Pseudoexfoliative material accumulates on the anterior lens surface and iris, clogging outflow pathways."
+  },
+  {
+    "id": 42,
+    "text": "Pallor of the temporal optic disc with central scotoma is most consistent with:",
+    "choices": ["Optic neuritis", "Non-arteritic ischemic optic neuropathy", "Glaucoma", "Papilledema"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Optic neuritis",
+    "rationale": "Demyelinating optic neuritis typically causes central visual loss and temporal pallor on recovery."
+  },
+  {
+    "id": 43,
+    "text": "Bilateral disc swelling with preserved visual acuity is most often due to:",
+    "choices": ["Papilledema from raised intracranial pressure", "Malignant hypertension", "Optic neuritis", "Toxic neuropathy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Papilledema",
+    "rationale": "Papilledema reflects elevated intracranial pressure transmitted via the optic nerve sheath."
+  },
+  {
+    "id": 44,
+    "text": "A central or cecocentral scotoma is typically seen in:",
+    "choices": ["Toxic / nutritional optic neuropathy", "Glaucoma", "AION", "Papilledema"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Toxic optic neuropathy",
+    "rationale": "Mitochondrial or nutritional damage to papillomacular bundle fibers produces central defects."
+  },
+  {
+    "id": 45,
+    "text": "Optic nerve head drusen can mimic papilledema but are differentiated by:",
+    "choices": ["Autofluorescence or B-scan showing calcified bodies", "Pain on eye movement", "Enlarged blind spot with normal imaging", "Elevated ESR/CRP"],
+    "correct": 0,
+    "discipline": "C. Immunology / Microbiology / Pathology",
+    "condition": "Optic Nerve / Glaucoma",
+    "sub": "Optic nerve head drusen",
+    "rationale": "Drusen are calcified deposits causing pseudopapilledema without true swelling; autofluorescence or B-scan reveals the calcified bodies."
   }
-
-
 ]
