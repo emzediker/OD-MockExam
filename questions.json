@@ -1948,5 +1948,455 @@
     "condition": "Spectacle Optics",
     "sub": "Vertex Effects",
     "rationale": "Bringing a minus lens closer reduces its effective negative power, decreasing minification."
+  },
+  {
+    "id": 196,
+    "text": "Which optical phenomenon most directly supports the wave theory of light?",
+    "choices": ["Reflection", "Interference", "Refraction", "Absorption"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Wave Theory of Light",
+    "rationale": "Interference results from the superposition of light waves and demonstrates their wave nature."
+  },
+  {
+    "id": 197,
+    "text": "In Young’s double-slit experiment, increasing the slit separation will:",
+    "choices": ["Increase fringe spacing", "Decrease fringe spacing", "Eliminate all interference", "Double the wavelength"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Interference",
+    "rationale": "Fringe spacing is inversely proportional to slit separation; wider spacing reduces the distance between fringes."
+  },
+  {
+    "id": 198,
+    "text": "Polarization of light can be achieved by all of the following except:",
+    "choices": ["Reflection", "Birefringence", "Dichroism", "Diffraction"],
+    "correct": 3,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Polarization Mechanisms",
+    "rationale": "Diffraction bends waves at apertures/edges; it does not polarize light."
+  },
+  {
+    "id": 199,
+    "text": "A Nicol prism functions primarily as a:",
+    "choices": ["Beam splitter", "Polarizer", "Prism spectrometer", "Reflector"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Polarization Devices",
+    "rationale": "Using calcite birefringence and total internal reflection, it passes one polarization state."
+  },
+  {
+    "id": 200,
+    "text": "Which type of interference results in increased reflected light intensity?",
+    "choices": ["Constructive interference", "Destructive interference", "Polarized reflection", "Scattering"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Interference",
+    "sub": "Thin-Film Interference",
+    "rationale": "In-phase waves add amplitudes, increasing brightness."
+  },
+  {
+    "id": 201,
+    "text": "An anti-reflective coating is based on which principle?",
+    "choices": ["Polarization", "Destructive interference", "Diffraction", "Reflection cancellation by absorption"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Interference Applications",
+    "rationale": "Reflections from coating/air and coating/substrate cancel when out of phase."
+  },
+  {
+    "id": 202,
+    "text": "Diffraction effects are more pronounced when:",
+    "choices": ["Aperture size is small compared to wavelength", "Aperture size is large", "Light intensity is low", "Monochromatic light is absent"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Diffraction",
+    "rationale": "Small apertures create spreading comparable to the wavelength."
+  },
+  {
+    "id": 203,
+    "text": "Which optical element most clearly demonstrates diffraction in the clinical setting?",
+    "choices": ["Prism", "Polarizer", "Pinhole occluder", "Convex lens"],
+    "correct": 2,
+    "discipline": "D. Optics",
+    "condition": "Physical Optics",
+    "sub": "Diffraction Phenomena",
+    "rationale": "Pinhole apertures generate diffraction patterns that can limit acuity."
+  },
+  {
+    "id": 204,
+    "text": "Which best describes Brewster’s angle?",
+    "choices": ["Angle of incidence that results in complete polarization of reflected light", "Angle of total internal reflection", "Critical angle for refraction", "Angle of minimum deviation"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Polarization",
+    "sub": "Brewster’s Law",
+    "rationale": "At this angle, reflected and refracted rays are orthogonal and reflection is fully polarized."
+  },
+  {
+    "id": 205,
+    "text": "The human eye’s peak spectral sensitivity under photopic conditions is approximately:",
+    "choices": ["450 nm", "500 nm", "555 nm", "600 nm"],
+    "correct": 2,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Photometry",
+    "rationale": "Cone-mediated luminance peaks near 555 nm (green–yellow)."
+  },
+  {
+    "id": 206,
+    "text": "Which law describes the inverse relationship between luminance threshold and stimulus area up to a critical size?",
+    "choices": ["Ricco’s law", "Bloch’s law", "Weber’s law", "Fechner’s law"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Spatial Summation",
+    "rationale": "Ricco’s law (L × A = constant) applies under complete spatial summation."
+  },
+  {
+    "id": 207,
+    "text": "Temporal summation is best described by which relationship?",
+    "choices": ["Threshold ∝ stimulus duration", "L × t = constant (for short durations)", "Log threshold vs. area", "None of the above"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Temporal Summation",
+    "rationale": "Bloch’s law: for brief stimuli (<~100 ms), detectability depends on total luminance energy."
+  },
+  {
+    "id": 208,
+    "text": "Weber’s law expresses the relationship between:",
+    "choices": ["Threshold duration and size", "Increment threshold and background luminance", "Cone and rod ratio", "Pupil size and luminance"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Contrast Sensitivity",
+    "rationale": "ΔI/I = k; sensitivity depends on relative luminance change."
+  },
+  {
+    "id": 209,
+    "text": "The Purkinje shift refers to:",
+    "choices": ["Shift of peak visual sensitivity toward shorter wavelengths under scotopic conditions", "Loss of contrast in bright light", "Temporal summation decrease", "Increase in luminance thresholds with adaptation"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Dark Adaptation",
+    "rationale": "Rod dominance shifts peak sensitivity to ~507 nm (blue–green)."
+  },
+  {
+    "id": 210,
+    "text": "Which mechanism contributes most to the Stiles–Crawford effect?",
+    "choices": ["Retinal ganglion cell adaptation", "Directional sensitivity of cone photoreceptors", "Iris pigment density", "Macular pigment orientation"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Visual Psychophysics",
+    "sub": "Photoreceptor Optics",
+    "rationale": "Cones act as waveguides; off-axis light is less effective."
+  },
+  {
+    "id": 211,
+    "text": "Which drug causes cycloplegia by blocking muscarinic receptors?",
+    "choices": ["Tropicamide", "Pilocarpine", "Phenylephrine", "Timolol"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Parasympatholytics",
+    "rationale": "Tropicamide blocks M3 receptors, producing mydriasis and cycloplegia."
+  },
+  {
+    "id": 212,
+    "text": "Which of the following is a direct-acting cholinergic agonist?",
+    "choices": ["Pilocarpine", "Physostigmine", "Echothiophate", "Timolol"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Parasympathomimetics",
+    "rationale": "Pilocarpine directly stimulates muscarinic receptors."
+  },
+  {
+    "id": 213,
+    "text": "Which drug decreases aqueous humor production via beta blockade?",
+    "choices": ["Brimonidine", "Timolol", "Latanoprost", "Acetazolamide"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Aqueous Suppressants",
+    "rationale": "Timolol reduces aqueous formation by the ciliary epithelium."
+  },
+  {
+    "id": 214,
+    "text": "A patient with asthma should avoid which glaucoma medication?",
+    "choices": ["Timolol", "Brimonidine", "Dorzolamide", "Latanoprost"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Contraindications",
+    "rationale": "Non-selective beta blockers can trigger bronchospasm."
+  },
+  {
+    "id": 215,
+    "text": "Which prostaglandin analog increases uveoscleral outflow?",
+    "choices": ["Timolol", "Brimonidine", "Latanoprost", "Dorzolamide"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Outflow Enhancers",
+    "rationale": "Latanoprost (PGF2α analog) enhances uveoscleral outflow."
+  },
+  {
+    "id": 216,
+    "text": "Which drug class is most associated with elevated IOP during chronic use?",
+    "choices": ["Corticosteroids", "Beta blockers", "Carbonic anhydrase inhibitors", "Miotics"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Side Effects",
+    "sub": "Steroid Response",
+    "rationale": "Steroids increase TM resistance and can raise IOP."
+  },
+  {
+    "id": 217,
+    "text": "Which antibiotic can cause gray-brown corneal deposits?",
+    "choices": ["Amiodarone", "Ciprofloxacin", "Hydroxychloroquine", "Ethambutol"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Corneal Changes",
+    "rationale": "Amiodarone can cause vortex keratopathy with gray-brown deposits."
+  },
+  {
+    "id": 218,
+    "text": "Which drug may cause optic neuropathy with prolonged use?",
+    "choices": ["Amiodarone", "Ethambutol", "Hydroxychloroquine", "Isotretinoin"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Optic Nerve Toxicity",
+    "rationale": "Ethambutol toxicity produces bilateral cecocentral scotomas."
+  },
+  {
+    "id": 219,
+    "text": "Which drug can cause bull’s-eye maculopathy?",
+    "choices": ["Tamoxifen", "Amiodarone", "Hydroxychloroquine", "Ethambutol"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Retinal Toxicity",
+    "rationale": "Hydroxychloroquine accumulates in the RPE and parafovea."
+  },
+  {
+    "id": 220,
+    "text": "Which systemic drug may cause blue scleral discoloration?",
+    "choices": ["Hydroxychloroquine", "Minocycline", "Amiodarone", "Tamoxifen"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Pigmentary Changes",
+    "rationale": "Minocycline can cause blue-gray pigmentation of sclera and skin."
+  },
+  {
+    "id": 221,
+    "text": "Which cycloplegic agent has the longest duration of action?",
+    "choices": ["Tropicamide", "Cyclopentolate", "Atropine", "Homatropine"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Parasympatholytics",
+    "rationale": "Atropine’s cycloplegia/mydriasis can persist 7–10 days."
+  },
+  {
+    "id": 222,
+    "text": "Which cycloplegic agent is best for routine refraction in children due to rapid onset and short duration?",
+    "choices": ["Cyclopentolate", "Atropine", "Homatropine", "Tropicamide"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Cycloplegics",
+    "rationale": "Cyclopentolate gives strong, short-lived cycloplegia ideal for pediatrics."
+  },
+  {
+    "id": 223,
+    "text": "Which topical adrenergic agonist is commonly used for diagnostic dilation?",
+    "choices": ["Tropicamide", "Phenylephrine 2.5%", "Brimonidine", "Homatropine"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Sympathomimetics",
+    "rationale": "Phenylephrine stimulates the iris dilator without cycloplegia."
+  },
+  {
+    "id": 224,
+    "text": "Which drug combination is contraindicated in narrow-angle glaucoma?",
+    "choices": ["Brimonidine + Timolol", "Phenylephrine + Tropicamide", "Dorzolamide + Latanoprost", "Timolol + Pilocarpine"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Autonomic Drugs",
+    "sub": "Contraindications",
+    "rationale": "Combined mydriasis can precipitate angle closure in narrow angles."
+  },
+  {
+    "id": 225,
+    "text": "Which beta blocker demonstrates intrinsic sympathomimetic activity (ISA)?",
+    "choices": ["Carteolol", "Timolol", "Levobunolol", "Betaxolol"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Aqueous Suppressants",
+    "rationale": "Carteolol’s partial agonism may reduce systemic side effects."
+  },
+  {
+    "id": 226,
+    "text": "Which carbonic anhydrase inhibitor is available as a topical formulation?",
+    "choices": ["Acetazolamide", "Methazolamide", "Dorzolamide", "Brinzolamide"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Aqueous Suppression",
+    "rationale": "Topical CAIs include dorzolamide (and brinzolamide); acetazolamide/methazolamide are systemic."
+  },
+  {
+    "id": 227,
+    "text": "Which alpha-2 agonist both decreases aqueous production and increases uveoscleral outflow?",
+    "choices": ["Brimonidine", "Timolol", "Latanoprost", "Pilocarpine"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Adrenergic Agents",
+    "rationale": "Brimonidine has a dual mechanism useful as adjunct therapy."
+  },
+  {
+    "id": 228,
+    "text": "Which of the following drugs can cause Stevens–Johnson syndrome (SJS)?",
+    "choices": ["Timolol", "Latanoprost", "Sulfonamides", "Brimonidine"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Adverse Drug Reactions",
+    "sub": "Systemic Toxicity",
+    "rationale": "Sulfa-based agents are linked to severe mucocutaneous reactions."
+  },
+  {
+    "id": 229,
+    "text": "Which topical antiviral is used for epithelial HSV keratitis?",
+    "choices": ["Ganciclovir IV", "Trifluridine (Viroptic)", "Ganciclovir (Zirgan)", "Valacyclovir oral"],
+    "correct": 2,
+    "discipline": "E. Pharmacology",
+    "condition": "Antivirals",
+    "sub": "Ocular Infections",
+    "rationale": "Ganciclovir 0.15% gel is preferred for HSV epithelial disease."
+  },
+  {
+    "id": 230,
+    "text": "Which systemic antiviral provides prophylaxis for recurrent HSV keratitis?",
+    "choices": ["Acyclovir topical", "Acyclovir oral", "Trifluridine", "Ganciclovir IV"],
+    "correct": 1,
+    "discipline": "E. Pharmacology",
+    "condition": "Antivirals",
+    "sub": "Prophylaxis",
+    "rationale": "Oral acyclovir suppresses recurrences by inhibiting viral DNA polymerase."
+  },
+  {
+    "id": 231,
+    "text": "Which antifungal is used topically for fungal keratitis?",
+    "choices": ["Natamycin 5 %", "Amphotericin B (IV)", "Fluconazole oral", "Nystatin ointment"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Antifungals",
+    "sub": "Ocular Infections",
+    "rationale": "Natamycin 5% is the only commercially available topical antifungal in the U.S."
+  },
+  {
+    "id": 232,
+    "text": "Which topical antibiotic is most effective against Pseudomonas in CL-related keratitis?",
+    "choices": ["Ciprofloxacin 0.3 %", "Bacitracin", "Erythromycin", "Polymyxin B"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Antibiotics",
+    "sub": "Fluoroquinolones",
+    "rationale": "Fluoroquinolones are first-line for contact-lens–related Pseudomonas ulcers."
+  },
+  {
+    "id": 233,
+    "text": "Which topical antibiotic is primarily Gram-positive coverage?",
+    "choices": ["Bacitracin", "Polymyxin B", "Gentamicin", "Ciprofloxacin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Antibiotics",
+    "sub": "Spectrum of Activity",
+    "rationale": "Bacitracin targets Gram-positive cocci; often paired with polymyxin B."
+  },
+  {
+    "id": 234,
+    "text": "Which systemic antibiotic can cause pseudotumor cerebri?",
+    "choices": ["Tetracycline", "Penicillin", "Azithromycin", "Cefalexin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Antibiotics",
+    "sub": "Neuro-ophthalmic Effects",
+    "rationale": "Tetracyclines (e.g., doxycycline) can elevate intracranial pressure."
+  },
+  {
+    "id": 235,
+    "text": "Which systemic medication is most associated with blue-yellow color vision defects?",
+    "choices": ["Digoxin", "Sildenafil", "Hydroxychloroquine", "Amiodarone"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Retinal Toxicity",
+    "rationale": "Digoxin toxicity causes xanthopsia and blue–yellow dyschromatopsia."
+  },
+  {
+    "id": 236,
+    "text": "Which systemic medication can cause NAION due to vasoconstriction and hypotension?",
+    "choices": ["Sildenafil", "Digoxin", "Ethambutol", "Hydroxychloroquine"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Optic Nerve Toxicity",
+    "rationale": "PDE-5 inhibitors have been linked to NAION in susceptible patients."
+  },
+  {
+    "id": 237,
+    "text": "Which medication may cause crystalline retinopathy with high cumulative dose?",
+    "choices": ["Tamoxifen", "Amiodarone", "Hydroxychloroquine", "Ethambutol"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Retinal Deposits",
+    "rationale": "Tamoxifen can produce intraretinal crystals and macular edema."
+  },
+  {
+    "id": 238,
+    "text": "Which medication is most associated with vortex keratopathy?",
+    "choices": ["Amiodarone", "Tamoxifen", "Hydroxychloroquine", "Indomethacin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Corneal Deposits",
+    "rationale": "Amiodarone accumulates in basal epithelium, forming whorl-like patterns."
+  },
+  {
+    "id": 239,
+    "text": "Which systemic medication is most associated with pigmentary retinopathy and nyctalopia?",
+    "choices": ["Thioridazine", "Digoxin", "Tamoxifen", "Amiodarone"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Retinal Toxicity",
+    "rationale": "High-dose thioridazine can damage RPE/photoreceptors causing night blindness."
+  },
+  {
+    "id": 240,
+    "text": "Which topical steroid has the lowest risk of raising IOP?",
+    "choices": ["Loteprednol 0.5 %", "Dexamethasone 0.1 %", "Prednisolone acetate 1 %", "Fluorometholone 0.25 %"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Ocular Steroids",
+    "sub": "Side Effects",
+    "rationale": "Loteprednol is ester-based and rapidly deactivated, minimizing IOP elevation."
   }
 ]
