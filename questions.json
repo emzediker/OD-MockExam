@@ -3600,8 +3600,7 @@
     "condition": "Developmental Vision",
     "sub": "Amblyopia",
     "rationale": "Dense congenital cataracts block form vision during the critical period, leading to amblyopia."
-  }
-[
+  },
   {
     "id": 241,
     "text": "Cotton-wool spots result from:",
@@ -4201,5 +4200,505 @@
     "condition": "Developmental Vision",
     "sub": "Amblyopia",
     "rationale": "Dense congenital cataracts block form vision during the critical period, leading to amblyopia."
+  },
+  {
+    "id": 301,
+    "text": "The most common cause of bacterial conjunctivitis in adults is:",
+    "choices": ["Staphylococcus aureus", "Haemophilus influenzae", "Neisseria gonorrhoeae", "Streptococcus pneumoniae"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Conjunctivitis",
+    "rationale": "S. aureus is the most frequent cause in adults; in children, H. influenzae and S. pneumoniae predominate."
+  },
+  {
+    "id": 302,
+    "text": "Which organism causes hyperacute purulent conjunctivitis with possible corneal perforation?",
+    "choices": ["Neisseria gonorrhoeae", "Chlamydia trachomatis", "Pseudomonas aeruginosa", "Staphylococcus epidermidis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Hyperacute Bacterial Conjunctivitis",
+    "rationale": "N. gonorrhoeae penetrates an intact cornea and can cause rapid ulceration—an ophthalmic emergency."
+  },
+  {
+    "id": 303,
+    "text": "Inclusion conjunctivitis is most often caused by:",
+    "choices": ["Chlamydia trachomatis (serotypes D–K)", "Adenovirus 8", "HSV type 1", "Staphylococcus aureus"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Inclusion Conjunctivitis",
+    "rationale": "Adult inclusion conjunctivitis results from sexually transmitted C. trachomatis D–K, often unilateral with follicles."
+  },
+  {
+    "id": 304,
+    "text": "Pannus formation and Herbert’s pits are characteristic of:",
+    "choices": ["Trachoma (C. trachomatis A–C)", "Phlyctenulosis", "Vernal keratoconjunctivitis", "Epidemic keratoconjunctivitis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Trachoma",
+    "rationale": "Chronic trachoma causes superior limbal scarring and Herbert’s pits at resolved follicles."
+  },
+  {
+    "id": 305,
+    "text": "Which adenoviral serotypes most commonly cause epidemic keratoconjunctivitis (EKC)?",
+    "choices": ["Serotypes 8, 19, 37", "3, 4, 7", "40, 41", "1, 2"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Adenoviral Keratoconjunctivitis",
+    "rationale": "EKC—highly contagious—shows subepithelial infiltrates; serotypes 8, 19, 37 predominate."
+  },
+  {
+    "id": 306,
+    "text": "Phlyctenulosis is a hypersensitivity reaction to:",
+    "choices": ["Staphylococcal antigen or TB protein", "HSV antigen", "Pollen", "Adenovirus"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Phlyctenulosis",
+    "rationale": "Type IV delayed hypersensitivity to bacterial proteins causes limbal nodules with tearing and photophobia."
+  },
+  {
+    "id": 307,
+    "text": "A dendritic ulcer with terminal bulbs stains best with:",
+    "choices": ["Fluorescein and rose bengal", "Lissamine green only", "Congo red", "Alcian blue"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "HSV Epithelial Keratitis",
+    "rationale": "HSV epithelial ulcers stain brightly with fluorescein and rose bengal at edges."
+  },
+  {
+    "id": 308,
+    "text": "The primary treatment for HSV epithelial keratitis is:",
+    "choices": ["Topical ganciclovir 0.15 % (Zirgan)", "Topical steroid", "Oral acyclovir 400 mg BID × 7 d", "Topical antibiotic alone"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Anterior Segment Disease",
+    "sub": "Antivirals",
+    "rationale": "Topical antivirals shorten duration; steroids are contraindicated in active epithelial disease."
+  },
+  {
+    "id": 309,
+    "text": "Recurrent HSV stromal keratitis is prevented by:",
+    "choices": ["Oral acyclovir 400 mg BID", "Topical ganciclovir", "Loteprednol taper", "Warm compresses"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Anterior Segment Disease",
+    "sub": "HSV Prophylaxis",
+    "rationale": "Prophylactic oral antivirals reduce recurrence by ~50%."
+  },
+  {
+    "id": 310,
+    "text": "A pseudodendrite with minimal staining is characteristic of:",
+    "choices": ["Varicella-zoster keratitis", "HSV epithelial keratitis", "Thygeson’s keratitis", "Adenoviral keratitis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Disease",
+    "sub": "VZV Keratitis",
+    "rationale": "VZV lesions have tapered ends and less staining, unlike HSV dendrites."
+  },
+  {
+    "id": 311,
+    "text": "Band keratopathy results from deposition of:",
+    "choices": ["Calcium in Bowman’s layer", "Iron in epithelium", "Copper in Descemet’s", "Lipid in stroma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Band Keratopathy",
+    "rationale": "Chronic uveitis or hypercalcemia causes calcium deposits in Bowman’s and anterior stroma."
+  },
+  {
+    "id": 312,
+    "text": "Kayser–Fleischer rings indicate accumulation of:",
+    "choices": ["Copper in Descemet’s membrane", "Iron in epithelium", "Calcium in Bowman’s", "Lipid in stroma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Wilson’s Disease",
+    "rationale": "Seen in Wilson’s disease; brown-green ring from copper deposition circumferentially."
+  },
+  {
+    "id": 313,
+    "text": "Fleischer ring and Vogt’s striae are associated with:",
+    "choices": ["Keratoconus", "Terrien’s degeneration", "Pellucid marginal degeneration", "Post-LASIK ectasia"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Ectatic Disease",
+    "rationale": "Fleischer = iron deposition at cone base; Vogt’s = stress lines."
+  },
+  {
+    "id": 314,
+    "text": "The most common corneal dystrophy affecting the epithelium is:",
+    "choices": ["Meesmann’s epithelial dystrophy", "Reis-Bücklers", "Lattice", "Fuchs’ endothelial"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Epithelial Dystrophy",
+    "rationale": "Meesmann’s presents with intraepithelial cysts and mild foreign-body sensation."
+  },
+  {
+    "id": 315,
+    "text": "A honeycomb pattern in Bowman’s layer indicates:",
+    "choices": ["Reis-Bücklers dystrophy", "Meesmann’s", "Lattice", "Macular"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Bowman’s Dystrophy",
+    "rationale": "Reis-Bücklers affects Bowman’s; recurrent erosions are common."
+  },
+  {
+    "id": 316,
+    "text": "Amyloid deposits with branching refractile lines on slit-lamp suggest:",
+    "choices": ["Lattice dystrophy", "Granular", "Macular", "Fuchs’"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Stromal Dystrophy",
+    "rationale": "Amyloid fibrils create lattice lines—autosomal-dominant stromal dystrophy."
+  },
+  {
+    "id": 317,
+    "text": "Guttae on specular microscopy indicate dysfunction of:",
+    "choices": ["Corneal endothelium", "Epithelium", "Stroma", "Descemet’s"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Fuchs’ Endothelial Dystrophy",
+    "rationale": "Fuchs’ dystrophy shows endothelial loss, corneal edema, and central guttae."
+  },
+  {
+    "id": 318,
+    "text": "The most common eyelid malignancy is:",
+    "choices": ["Basal cell carcinoma", "Squamous cell carcinoma", "Sebaceous gland carcinoma", "Melanoma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Eyelid Tumors",
+    "rationale": "BCC forms pearly borders with ulceration, usually lower lid."
+  },
+  {
+    "id": 319,
+    "text": "A yellow plaque on the tarsal conjunctiva in elderly patients is:",
+    "choices": ["Pinguecula", "Pterygium", "Xanthelasma", "Chalazion"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Conjunctival Degeneration",
+    "rationale": "Pinguecula is elastotic degeneration of conjunctiva due to UV exposure."
+  },
+  {
+    "id": 320,
+    "text": "A triangular fibrovascular growth extending onto the cornea is:",
+    "choices": ["Pterygium", "Pinguecula", "Salzmann’s degeneration", "Terrien’s degeneration"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Corneal & Adnexal Disorders",
+    "sub": "Pterygium",
+    "rationale": "Pterygium results from UV exposure and chronic irritation; may induce astigmatism."
+  },
+  {
+    "id": 321,
+    "text": "Flame-shaped hemorrhages localize to which retinal layer?",
+    "choices": ["Nerve fiber layer", "Inner nuclear layer", "Outer plexiform layer", "Ganglion cell layer"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Retinal Hemorrhages",
+    "rationale": "Flame hemorrhages follow the course of NFL fibers."
+  },
+  {
+    "id": 322,
+    "text": "Dot-blot hemorrhages occur in which retinal layer?",
+    "choices": ["Inner nuclear and outer plexiform layers", "NFL", "Outer nuclear", "Photoreceptor layer"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Retinal Hemorrhages",
+    "rationale": "Deep capillary leakage leads to dot-blot hemorrhages—classic for diabetic retinopathy."
+  },
+  {
+    "id": 323,
+    "text": "A cherry-red spot at the macula is seen in:",
+    "choices": ["CRAO", "CRVO", "BRAO", "OIS"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Arterial Occlusion",
+    "rationale": "CRAO infarcts inner retina leaving foveal choroidal reflection visible."
+  },
+  {
+    "id": 324,
+    "text": "“Blood and thunder” fundus refers to:",
+    "choices": ["Central retinal vein occlusion (CRVO)", "CRAO", "BRVO", "OIS"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Venous Occlusion",
+    "rationale": "Diffuse hemorrhages and dilated veins from venous stasis cause this classic appearance."
+  },
+  {
+    "id": 325,
+    "text": "Macular star exudates with neuroretinitis are characteristic of:",
+    "choices": ["Cat scratch disease (Bartonella henselae)", "Lyme disease", "Toxoplasmosis", "CMV retinitis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Neuroretinitis",
+    "rationale": "Optic disc edema with macular star is diagnostic of Bartonella neuroretinitis."
+  },
+  {
+    "id": 326,
+    "text": "Drusen between RPE and Bruch’s membrane indicate:",
+    "choices": ["Age-related macular degeneration (AMD)", "Diabetic macular edema", "CSR", "Macular hole"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "AMD",
+    "rationale": "Deposits cause RPE dysfunction and photoreceptor loss in AMD."
+  },
+  {
+    "id": 327,
+    "text": "Which finding distinguishes wet from dry AMD?",
+    "choices": ["Choroidal neovascular membrane (CNVM)", "Drusen", "RPE mottling", "Geographic atrophy"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "AMD",
+    "rationale": "Neovascular leakage defines the exudative (wet) form of AMD."
+  },
+  {
+    "id": 328,
+    "text": "Central serous chorioretinopathy (CSR) involves:",
+    "choices": ["Serous detachment of neurosensory retina", "CNVM", "Vitreous hemorrhage", "Cotton-wool spots"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "CSR",
+    "rationale": "CSR occurs in type A males, associated with stress and steroids."
+  },
+  {
+    "id": 329,
+    "text": "A well-defined yellow subretinal lesion with “orange pigment” and low internal reflectivity on B-scan is:",
+    "choices": ["Choroidal melanoma", "Metastasis", "Choroidal nevus", "Hemangioma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Intraocular Tumors",
+    "rationale": "Choroidal melanoma shows acoustic hollowness and lipofuscin pigment."
+  },
+  {
+    "id": 330,
+    "text": "Retinitis pigmentosa primarily affects which retinal cells?",
+    "choices": ["Rod photoreceptors", "Cones", "Bipolar cells", "Ganglion cells"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Posterior Segment Disease",
+    "sub": "Inherited Retinal Degeneration",
+    "rationale": "Rod degeneration leads to night blindness and peripheral field constriction."
+  },
+  {
+    "id": 331,
+    "text": "The hallmark of glaucomatous optic-nerve damage is:",
+    "choices": ["Progressive retinal nerve-fiber layer thinning and cupping", "Pallor exceeding cupping", "Sudden vision loss", "Segmental swelling"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Optic Neuropathy",
+    "rationale": "Glaucoma causes gradual loss of retinal ganglion cells, increasing cup-to-disc ratio and NFL defects."
+  },
+  {
+    "id": 332,
+    "text": "Which visual-field pattern is most specific for glaucoma?",
+    "choices": ["Nasal step and arcuate scotoma", "Central scotoma", "Altitudinal defect", "Central island"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Visual Fields",
+    "rationale": "NFL bundles respect the horizontal raphe, creating Bjerrum arcuate and nasal step patterns."
+  },
+  {
+    "id": 333,
+    "text": "The most important modifiable risk factor for glaucoma progression is:",
+    "choices": ["Intraocular pressure (IOP)", "Age", "Race", "Family history"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Risk Factors",
+    "rationale": "Lowering IOP slows progression in all glaucoma types."
+  },
+  {
+    "id": 334,
+    "text": "Which layer of the optic nerve head is primarily damaged in glaucoma?",
+    "choices": ["Lamina cribrosa", "NFL", "Ganglion cell layer", "Photoreceptor layer"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Biomechanics",
+    "rationale": "Axonal compression and posterior bowing at the lamina cribrosa lead to nerve-fiber loss."
+  },
+  {
+    "id": 335,
+    "text": "Which medication reduces aqueous production by beta-blockade?",
+    "choices": ["Timolol 0.25–0.5 %", "Latanoprost 0.005 %", "Brimonidine 0.2 %", "Acetazolamide"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Aqueous Suppressants",
+    "rationale": "Topical beta-blockers decrease aqueous formation via ciliary-epithelium beta-2 receptors."
+  },
+  {
+    "id": 336,
+    "text": "Which drug increases uveoscleral outflow by remodeling extracellular matrix?",
+    "choices": ["Latanoprost 0.005 %", "Timolol", "Brinzolamide", "Pilocarpine"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Outflow Enhancers",
+    "rationale": "Prostaglandin analogs enhance uveoscleral outflow and are first-line agents for POAG."
+  },
+  {
+    "id": 337,
+    "text": "Which glaucoma agent is contraindicated in asthma or COPD?",
+    "choices": ["Timolol", "Latanoprost", "Brimonidine", "Netarsudil"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Contraindications",
+    "rationale": "Systemic beta-blockade can exacerbate bronchospasm."
+  },
+  {
+    "id": 338,
+    "text": "Which drug is most likely to cause miosis and brow ache?",
+    "choices": ["Pilocarpine", "Timolol", "Brimonidine", "Latanoprost"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Miotics",
+    "rationale": "Cholinergic agonists stimulate ciliary muscle contraction → brow ache and miosis."
+  },
+  {
+    "id": 339,
+    "text": "Which finding suggests angle-closure glaucoma?",
+    "choices": ["Mid-dilated fixed pupil with shallow anterior chamber", "Deep AC and open angle", "Optic-disc pallor > cupping", "Bitemporal field loss"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Angle Closure",
+    "rationale": "Pupillary block causes iris bombé, shallow chamber, and painful IOP spike."
+  },
+  {
+    "id": 340,
+    "text": "The definitive treatment for pupillary-block angle closure is:",
+    "choices": ["Laser peripheral iridotomy (LPI)", "Trabeculectomy", "Goniosynechialysis", "Cyclophotocoagulation"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Procedures",
+    "rationale": "LPI creates an alternate aqueous pathway from posterior to anterior chamber."
+  },
+  {
+    "id": 341,
+    "text": "Which secondary glaucoma is associated with Krukenberg spindle and mid-peripheral iris transillumination defects?",
+    "choices": ["Pigment dispersion syndrome", "Pseudoexfoliation", "Uveitic glaucoma", "Steroid response"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Pigmentary Glaucoma",
+    "rationale": "Liberated pigment clogs the trabecular meshwork, elevating IOP."
+  },
+  {
+    "id": 342,
+    "text": "White flake-like material on the lens capsule and angle structures suggests:",
+    "choices": ["Pseudoexfoliation syndrome", "Pigment dispersion", "Fuchs’ dystrophy", "ICE syndrome"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "Pseudoexfoliation",
+    "rationale": "PXF is linked to systemic vascular disease and weak zonules."
+  },
+  {
+    "id": 343,
+    "text": "A unilateral glaucoma with corectopia and “hammered silver” endothelium describes:",
+    "choices": ["Iridocorneal endothelial (ICE) syndrome", "Pseudoexfoliation", "Uveitic glaucoma", "Traumatic angle recession"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Glaucoma",
+    "sub": "ICE Syndrome",
+    "rationale": "Abnormal endothelial membrane causes iris adhesions and secondary angle closure."
+  },
+  {
+    "id": 344,
+    "text": "Which optic-neuropathy shows pallor > cupping with disc swelling that resolves in weeks?",
+    "choices": ["Non-arteritic anterior ischemic optic neuropathy (NAION)", "Glaucoma", "Leber’s hereditary optic neuropathy", "Papilledema"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neuro-Ophthalmology",
+    "sub": "Ischemic Optic Neuropathy",
+    "rationale": "NAION is vascular, often altitudinal, and associated with a “disc at risk.”"
+  },
+  {
+    "id": 345,
+    "text": "Which feature distinguishes papilledema from optic neuritis?",
+    "choices": ["Bilateral disc swelling with preserved visual acuity (initially)", "Pain on eye movement", "Central vision loss and APD", "Color desaturation"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neuro-Ophthalmology",
+    "sub": "Papilledema vs ON",
+    "rationale": "Papilledema is due to raised intracranial pressure; vision initially normal until late stages."
+  },
+  {
+    "id": 346,
+    "text": "Which of the following drugs acts as a prostaglandin analog to increase uveoscleral outflow?",
+    "choices": ["Latanoprost 0.005 % (Xalatan)", "Timolol 0.5 %", "Brinzolamide 1 %", "Pilocarpine 2 %"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Prostaglandin Analogs",
+    "rationale": "Latanoprost, a PGF2α analog, enhances uveoscleral outflow via extracellular matrix remodeling."
+  },
+  {
+    "id": 347,
+    "text": "Which drug can cause irreversible brown pigmentation of the iris and eyelids with chronic use?",
+    "choices": ["Latanoprost", "Timolol", "Brimonidine", "Acetazolamide"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Glaucoma",
+    "sub": "Adverse Effects",
+    "rationale": "Prostaglandin analogs may cause increased melanin synthesis in iris melanocytes and periocular skin."
+  },
+  {
+    "id": 348,
+    "text": "Which systemic medication can cause optic neuritis and color vision changes?",
+    "choices": ["Ethambutol", "Digoxin", "Amiodarone", "Tamoxifen"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drug Toxicity",
+    "sub": "Optic Nerve Toxicity",
+    "rationale": "Ethambutol causes dose-related toxic optic neuropathy with central scotoma and red-green dyschromatopsia."
+  },
+  {
+    "id": 349,
+    "text": "Which ocular emergency requires immediate irrigation followed by cycloplegia and topical antibiotic?",
+    "choices": ["Chemical burn (alkali injury)", "Corneal abrasion", "Hyphema", "Iritis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Anterior Segment Trauma",
+    "sub": "Chemical Injury",
+    "rationale": "Alkali injuries rapidly penetrate cornea; copious irrigation and cycloplegia prevent synechiae."
+  },
+  {
+    "id": 350,
+    "text": "In public health, the leading cause of preventable blindness worldwide is:",
+    "choices": ["Cataract", "Glaucoma", "AMD", "Diabetic retinopathy"],
+    "correct": 0,
+    "discipline": "F. Public Health",
+    "condition": "Epidemiology",
+    "sub": "Global Blindness",
+    "rationale": "Cataract remains the top cause of reversible blindness; trachoma and glaucoma follow globally."
   }
-]
+  ]
