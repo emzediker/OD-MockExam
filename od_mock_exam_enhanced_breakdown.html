@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OD on the GO — Diagnostic (NBEO-Weighted, Categorized)</title>
+<title>OD on the GO — Diagnostic (NBEO-weighted, Categorized)</title>
 <style>
   :root{ --bg:#fff; --fg:#111; --muted:#667085; --brand:#0b6bcb; --ok:#0a7f2e; --bad:#b00020; --card:#f8fafc; --border:#e6e8eb; }
   *{box-sizing:border-box}
@@ -33,12 +33,7 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-
-  /* Print/PDF = score report ONLY (hide questions, rationales, header, actions, meta, student box) */
-  @media print{
-    header,.actions,.rationale,.meta,#studentBox,.question{display:none!important}
-    body{background:#fff}
-  }
+  @media print{header,.actions,.rationale,.meta,#studentBox,.question{display:none!important} body{background:#fff}}
 </style>
 </head>
 <body>
@@ -52,7 +47,6 @@
 </header>
 
 <main>
-  <!-- Student metadata (school required) -->
   <div id="studentBox" class="summary">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
       <label>Student name
@@ -111,7 +105,7 @@
         <div><b>School:</b> <span id="schoolName">—</span></div>
         <div><b>Date:</b> <span id="dateStamp"></span></div>
         <div><b>Total Score:</b> <span id="totalScore" class="brand"></span></div>
-        <div><b>Status:</b> <span id="submitStatus" class="muted">Not sent</span></div>
+        <div><b>Status:</b> <span id="submitStatus" class="muted">Local only</span></div>
       </div>
     </div>
 
@@ -131,32 +125,19 @@
 </main>
 
 <script>
-/* =========================
-   HELPERS
-========================= */
-function shuffle(arr){
-  for(let i=arr.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [arr[i],arr[j]]=[arr[j],arr[i]];
-  }
-  return arr;
-}
-function formatPct(correct,total){
-  if(!total) return 0;
-  return Math.round(100*correct/total);
-}
+/* ====== CONFIG ====== */
+/** Point this to your raw questions.json in the same repo.
+ *  Example: if HTML is at
+ *    https://emzediker.github.io/OD-MockExam/od_mock_exam_enhanced_breakdown.html
+ *  then put questions.json at
+ *    https://emzediker.github.io/OD-MockExam/questions.json
+ */
+const QUESTIONS_URL = "./questions.json";
 
-/* =========================
-   TAXONOMY
-========================= */
+/* Taxonomy lists (for reporting order) */
 const DISCIPLINES = [
-  "A. Anatomy",
-  "B. Biochemistry / Physiology",
-  "C. Immunology / Microbiology / Pathology",
-  "D. Optics",
-  "E. Pharmacology"
+  "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
 ];
-
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -164,102 +145,192 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-/* =========================
-   QUESTION BANK MODEL
-   Each question:
-   {
-     id: 196,                       // integer id (optional but recommended)
-     text: "Stem text...",
-     choices: ["A","B","C","D"],    // strings
-     correct: 0,                    // index in choices (0-based)
-     discipline: "D. Optics",
-     condition: "Ametropia",
-     sub: "Vergence & Far Point",
-     rationale: "Brief rationale..."
-   }
-========================= */
+/* ====== UTIL ====== */
+function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
+function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
 
-/* ---- STARTER SAMPLE (~20 Qs) ----
-   Add your remaining items below in the exact same format.
-   (No asterisks; the correct answer is by index via `correct`.)
-*/
-const QUESTIONS = [
-  // Geometric/clinical optics sample
-  {id:196, text:"Patient’s far point is -50 cm from principal plane. What’s the refractive state?",
-   choices:["Myopia of 2.00 D","Hyperopia of 2.00 D","Emmetropia","Mixed astigmatism"],
-   correct:0, discipline:"D. Optics", condition:"Ametropia", sub:"Vergence & Far Point",
-   rationale:"Vergence at far point = -1/0.50 m = -2.00 D → myopia."
-  },
-  {id:197, text:"Which change reduces spectacle magnification for same vertex power?",
-   choices:["Flatter front curve (lower base)","Steeper front curve","Increase center thickness","Lower index"],
-   correct:0, discipline:"D. Optics", condition:"Ophthalmic Optics / Spectacles", sub:"Spectacle Magnification",
-   rationale:"Flatter base curve and thinner lens reduce SM."
-  },
-  {id:198, text:"High-water ionic hydrogels are most prone to which deposit?",
-   choices:["Protein","Lipid","Mucin","Calcium"],
-   correct:0, discipline:"A. Anatomy", condition:"Contact Lenses", sub:"Materials & Deposits",
-   rationale:"Ionic high-water hydrogels attract tear proteins."
-  },
-  {id:199, text:"AC/A is best estimated clinically by which method?",
-   choices:["Gradient method","Crossed cylinder test","Worth 4-dot","Stereoacuity at near"],
-   correct:0, discipline:"A. Anatomy", condition:"Accommodation / Vergence / Oculomotor", sub:"AC/A Ratio",
-   rationale:"Gradient AC/A measures change in near phoria with added lenses."
-  },
-  {id:200, text:"Large constant ET with DVD and latent nystagmus suggests:",
-   choices:["Infantile esotropia","Accommodative ET","Intermittent XT","Decompensated phoria"],
-   correct:0, discipline:"A. Anatomy", condition:"Amblyopia / Strabismus", sub:"Infantile ET",
-   rationale:"Classic triad: constant ET, DVD, latent nystagmus."
-  },
-  {id:201, text:"Which test screens congenital red–green defects?",
-   choices:["Ishihara","D-15 desaturated","Anomaloscope luminance match","HRR tritan-only pages"],
-   correct:0, discipline:"A. Anatomy", condition:"Perceptual Function / Color Vision", sub:"Screening Tests",
-   rationale:"Ishihara is a standard screening for red–green anomalies."
-  },
-  {id:202, text:"Painful photophobic eye with ciliary flush and miotic pupil:",
-   choices:["Anterior uveitis","Bacterial conjunctivitis","Episcleritis","Acute angle closure"],
-   correct:0, discipline:"C. Immunology / Microbiology / Pathology", condition:"Episclera / Sclera / Anterior Uvea", sub:"Anterior Uveitis",
-   rationale:"Findings fit anterior uveitis."
-  },
-  {id:203, text:"Altitudinal field loss with a ‘disc-at-risk’ is typical for:",
-   choices:["NAION","LHON","Toxic neuropathy","Chiasmal compression"],
-   correct:0, discipline:"C. Immunology / Microbiology / Pathology", condition:"Optic Nerve / Neuro-Ophthalmic Pathways", sub:"Ischemic Optic Neuropathy",
-   rationale:"NAION: altitudinal defect + small crowded disc."
-  },
-  {id:204, text:"Which presentation fits acute primary angle closure?",
-   choices:["Mid-dilated pupil, corneal edema, severe pain","Open angle with cupping","Sectoral redness only","Clear cornea with dendrites"],
-   correct:0, discipline:"E. Pharmacology", condition:"Glaucoma", sub:"Angle-Closure",
-   rationale:"Classic AAC findings include mid-dilated pupil and corneal edema with pain."
-  },
-  {id:205, text:"In DKA the primary disturbance is:",
-   choices:["Metabolic acidosis","Respiratory acidosis","Metabolic alkalosis","Respiratory alkalosis"],
-   correct:0, discipline:"B. Biochemistry / Physiology", condition:"Systemic Health", sub:"Endocrine—Diabetes",
-   rationale:"DKA = metabolic acidosis; respiratory compensation via Kussmaul breathing."
-  },
+/* ====== RENDER ====== */
+const examDiv = document.getElementById('exam');
+const reportEl = document.getElementById('report');
+const dateEl = document.getElementById('dateStamp');
+const totalEl = document.getElementById('totalScore');
+const discBody = document.querySelector('#discSummary tbody');
+const condBody = document.querySelector('#condTable tbody');
+const subHost = document.getElementById('subcats');
 
-  // Add a few Physical Optics / Photometry samples
-  {id:206, text:"When light passes from lower to higher index at oblique incidence, which is TRUE?",
-   choices:["Angle of refraction < angle of incidence","Angle of refraction > angle of incidence","No refraction occurs","Critical angle is exceeded"],
-   correct:0, discipline:"D. Optics", condition:"Ophthalmic Optics / Spectacles", sub:"Snell’s Law",
-   rationale:"n2>n1 → ray bends toward normal → smaller refracted angle."
-  },
-  {id:207, text:"A polarizer transmits which component of light?",
-   choices:["Electric field component parallel to its axis","Component perpendicular to its axis","All components equally","Only circular polarization"],
-   correct:0, discipline:"D. Optics", condition:"Perceptual Function / Color Vision", sub:"Polarization Basics",
-   rationale:"Ideal linear polarizer passes the component parallel to its transmission axis."
-  },
-  {id:208, text:"A neutral density (ND) filter of OD = 1.0 transmits ~",
-   choices:["10%","1%","37%","50%"],
-   correct:0, discipline:"D. Optics", condition:"Perceptual Function / Color Vision", sub:"Photometry/ND",
-   rationale:"Optical density OD=1 → 10^(-1) = 10% transmittance."
-  },
-  {id:209, text:"Which increases diffraction effects for a circular aperture?",
-   choices:["Smaller pupil diameter","Larger pupil diameter","Higher luminance","Shorter wavelength blocked"],
-   correct:0, discipline:"D. Optics", condition:"Perceptual Function / Color Vision", sub:"Diffraction/Airy",
-   rationale:"Smaller aperture increases diffraction spread (Airy disk diameter ∝ λ / D)."
-  },
+let QUESTIONS = []; // loaded from JSON
+let SHUFFLED = [];  // copy of QUESTIONS with choice shuffles
 
-  // A couple more general items
-  {id:210, text:"Which drop is most likely to darken the iris color over time?",
-   choices:["Latanoprost","Timolol","Brimonidine","Acetazolamide"],
-   correct:0, discipline:"E. Pharmacology", condition:"Glaucoma", sub:"Prostaglandin AEs",
-   rationale:"PG analogs can increase
+function renderExam(){
+  examDiv.innerHTML = '';
+  // Display order numbering 1..N even after shuffle
+  SHUFFLED.forEach((q,i)=>{
+    const wrap = document.createElement('div'); wrap.className='question';
+    const meta = `
+      <div class="meta">
+        <span class="pill">${q.discipline}</span>
+        <span class="pill">${q.condition}</span>
+        <span class="pill">${q.sub}</span>
+      </div>`;
+    const choicesHtml = q.choices.map((c,idx)=>
+      `<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
+    wrap.innerHTML = `
+      <div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div>
+      <div class="choices">${choicesHtml}</div>
+      <div id="rat${i}" class="rationale hide"></div>`;
+    examDiv.appendChild(wrap);
+  });
+}
+
+function scoreExam(){
+  const perCond = {}; CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
+  const perDisc = {}; DISCIPLINES.forEach(d=>perDisc[d]={correct:0,total:0});
+  const perSub  = {}; CONDITIONS.forEach(c=>perSub[c]={});
+
+  let correctTotal=0;
+  const answers=[];
+
+  SHUFFLED.forEach((q,i)=>{
+    const picked = document.querySelector(`input[name='q${i}']:checked`);
+    const chosenIdx = picked ? parseInt(picked.value,10) : -1;
+    const ok = (chosenIdx === q.correctIndexAfterShuffle);
+    if(ok) correctTotal++;
+
+    perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
+    perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
+
+    if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
+    perSub[q.condition][q.sub].total++; if(ok) perSub[q.condition][q.sub].correct++;
+
+    const rat = document.getElementById('rat'+i);
+    rat.classList.remove('hide');
+    rat.innerHTML = (ok?'✅':'❌') + " <b>Correct:</b> " + q.choices[q.correctIndexAfterShuffle] +
+                    (q.rationale ? ("<br>"+q.rationale) : "");
+    answers.push({
+      index: i+1,
+      sourceId: q.id ?? null,
+      discipline: q.discipline, condition: q.condition, sub: q.sub,
+      chosenText: chosenIdx>=0 ? q.choices[chosenIdx] : "",
+      correctText: q.choices[q.correctIndexAfterShuffle],
+      isCorrect: ok
+    });
+  });
+
+  const pct = Math.round(100*correctTotal/SHUFFLED.length);
+  return {perCond, perDisc, perSub, answers, correctTotal, total: SHUFFLED.length, pct};
+}
+
+function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
+
+function renderReport(res){
+  reportEl.classList.remove('hide');
+  dateEl.textContent = new Date().toLocaleString();
+  totalEl.textContent = `${res.pct}% (${res.correctTotal} / ${res.total})`;
+  document.getElementById('studentName').textContent = document.getElementById('s_name').value || 'Anonymous';
+  document.getElementById('schoolName').textContent = document.getElementById('s_school').value || '—';
+
+  // Disciplines
+  let rows=[]; let idx=1;
+  DISCIPLINES.forEach(d=>{
+    const rec = res.perDisc[d]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+  });
+  discBody.innerHTML = rows.join('');
+
+  // Conditions
+  rows=[]; idx=1;
+  CONDITIONS.forEach(c=>{
+    const rec = res.perCond[c]; if(!rec.total) return;
+    const pct = Math.round(100*rec.correct/rec.total);
+    rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+  });
+  condBody.innerHTML = rows.join('');
+
+  // Subcategories
+  let html=''; let cidx=1;
+  CONDITIONS.forEach(c=>{
+    const subs = res.perSub[c]; const keys = Object.keys(subs||{});
+    if(!keys.length) return;
+    html += `<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
+    html += '<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>';
+    keys.sort().forEach(s=>{
+      const rec = subs[s]; const pct = Math.round(100*rec.correct/rec.total);
+      html += `<tr><td>${s}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`;
+    });
+    html += '</tbody></table>'; cidx++;
+  });
+  subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
+
+  document.getElementById('printBtn').disabled = false;
+}
+
+/* ====== EVENTS ====== */
+let _lastResult = null;
+
+document.getElementById('gradeBtn').addEventListener('click', ()=>{
+  const schoolSel = document.getElementById('s_school');
+  if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
+  const res = scoreExam();
+  _lastResult = res;
+  renderReport(res);
+  window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
+});
+
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  // re-shuffle questions and choices
+  prepareShuffled(); renderExam();
+  document.getElementById('report').classList.add('hide');
+  document.getElementById('printBtn').disabled=true;
+  const s = document.getElementById('submitStatus');
+  if (s){ s.textContent='Local only'; s.className='muted'; }
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+(function initSchoolGate(){
+  const schoolSel = document.getElementById('s_school');
+  const gradeBtn  = document.getElementById('gradeBtn');
+  gradeBtn.disabled = !schoolSel.value;
+  schoolSel.addEventListener('change', e => { gradeBtn.disabled = !e.target.value; });
+})();
+
+/* ====== QUESTION LOADING & SHUFFLING ====== */
+async function loadQuestions(){
+  const r = await fetch(QUESTIONS_URL, {cache:'no-store'});
+  if(!r.ok){ throw new Error('Failed to load questions.json'); }
+  const bank = await r.json();
+  // Expecting: array of {id,text,choices,correct,discipline,condition,sub,rationale}
+  // Force IDs to start at 1..N if missing:
+  bank.forEach((q,i)=>{ if(typeof q.id!=='number') q.id = i+1; });
+  QUESTIONS = bank;
+}
+
+function prepareShuffled(){
+  // deep copy + shuffle questions
+  const qs = QUESTIONS.map(q => JSON.parse(JSON.stringify(q)));
+  shuffle(qs);
+  // shuffle choices and carry correct index through
+  qs.forEach(q=>{
+    const originalChoices = q.choices.map((c,i)=>({text:c, idx:i}));
+    shuffle(originalChoices);
+    q.choices = originalChoices.map(o=>o.text);
+    q.correctIndexAfterShuffle = originalChoices.find(o=>o.idx===q.correct).idx; // re-indexed
+  });
+  SHUFFLED = qs;
+}
+
+(async function boot(){
+  try{
+    await loadQuestions();
+    prepareShuffled();
+    renderExam();
+  }catch(e){
+    examDiv.innerHTML = `<div class="summary"><b>Error loading questions.</b> ${e.message}</div>`;
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
