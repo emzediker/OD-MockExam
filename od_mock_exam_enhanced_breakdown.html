@@ -95,7 +95,7 @@
   <div class="actions">
     <button id="gradeBtn" class="primary" disabled>Grade Exam</button>
     <button id="resetBtn">Reset</button>
-    <button id="printBtn" disabled>Print / Save PDF</button>
+    <button id="printBtn" disabled>Print / Download PDF</button>
   </div>
 
   <section id="report" class="hide">
@@ -128,7 +128,7 @@
 /* ====== CONFIG ====== */
 const QUESTIONS_URL = "./questions.json";
 
-/* Reporting order (optional) */
+/* Taxonomy lists (for reporting order) */
 const DISCIPLINES = [
   "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
 ];
@@ -142,9 +142,8 @@ const CONDITIONS = [
 /* ====== UTIL ====== */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
-function normalize(s){ return String(s ?? '').replace(/\s+/g,' ').trim(); }
 
-/* ====== DOM ELTS ====== */
+/* ====== RENDER ====== */
 const examDiv = document.getElementById('exam');
 const reportEl = document.getElementById('report');
 const dateEl = document.getElementById('dateStamp');
@@ -153,19 +152,18 @@ const discBody = document.querySelector('#discSummary tbody');
 const condBody = document.querySelector('#condTable tbody');
 const subHost = document.getElementById('subcats');
 
-let QUESTIONS = [];
-let SHUFFLED = [];
+let QUESTIONS = []; // loaded from JSON
+let SHUFFLED = [];  // copy of QUESTIONS with choice shuffles
 
-/* ====== RENDER ====== */
 function renderExam(){
   examDiv.innerHTML = '';
   SHUFFLED.forEach((q,i)=>{
     const wrap = document.createElement('div'); wrap.className='question';
     const meta = `
       <div class="meta">
-        <span class="pill">${q.discipline || ''}</span>
-        <span class="pill">${q.condition || ''}</span>
-        <span class="pill">${q.sub || ''}</span>
+        <span class="pill">${q.discipline}</span>
+        <span class="pill">${q.condition}</span>
+        <span class="pill">${q.sub}</span>
       </div>`;
     const choicesHtml = q.choices.map((c,idx)=>
       `<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
@@ -191,13 +189,9 @@ function scoreExam(){
     const ok = (chosenIdx === q.correctIndexAfterShuffle);
     if(ok) correctTotal++;
 
-    if(perCond[q.condition]===undefined) perCond[q.condition]={correct:0,total:0};
-    if(perDisc[q.discipline]===undefined) perDisc[q.discipline]={correct:0,total:0};
-
     perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
     perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
 
-    if(!perSub[q.condition]) perSub[q.condition]={};
     if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
     perSub[q.condition][q.sub].total++; if(ok) perSub[q.condition][q.sub].correct++;
 
@@ -219,7 +213,7 @@ function scoreExam(){
   return {perCond, perDisc, perSub, answers, correctTotal, total: SHUFFLED.length, pct};
 }
 
-function pctCell(pct){ return `<td class="${pctClass(pct)}">${isFinite(pct)?pct:0}%</td>`; }
+function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
 
 function renderReport(res){
   reportEl.classList.remove('hide');
@@ -230,9 +224,8 @@ function renderReport(res){
 
   // Disciplines
   let rows=[]; let idx=1;
-  const haveDisc = Object.keys(res.perDisc).filter(k=>res.perDisc[k].total>0);
-  (haveDisc.length?DISCIPLINES:haveDisc).forEach(d=>{
-    const rec = res.perDisc[d]; if(!rec || !rec.total) return;
+  DISCIPLINES.forEach(d=>{
+    const rec = res.perDisc[d]; if(!rec.total) return;
     const pct = Math.round(100*rec.correct/rec.total);
     rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
   });
@@ -240,9 +233,8 @@ function renderReport(res){
 
   // Conditions
   rows=[]; idx=1;
-  const haveCond = Object.keys(res.perCond).filter(k=>res.perCond[k].total>0);
-  (haveCond.length?CONDITIONS:haveCond).forEach(c=>{
-    const rec = res.perCond[c]; if(!rec || !rec.total) return;
+  CONDITIONS.forEach(c=>{
+    const rec = res.perCond[c]; if(!rec.total) return;
     const pct = Math.round(100*rec.correct/rec.total);
     rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
   });
@@ -250,7 +242,7 @@ function renderReport(res){
 
   // Subcategories
   let html=''; let cidx=1;
-  (haveCond.length?CONDITIONS:haveCond).forEach(c=>{
+  CONDITIONS.forEach(c=>{
     const subs = res.perSub[c]; const keys = Object.keys(subs||{});
     if(!keys.length) return;
     html += `<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
@@ -266,11 +258,69 @@ function renderReport(res){
   document.getElementById('printBtn').disabled = false;
 }
 
+/* ====== PRINT / PDF (opens clean report window) ====== */
+function openReportPrintWindow(){
+  const report = document.getElementById('report');
+  if (report.classList.contains('hide')) {
+    alert('Grade the exam first, then try printing.');
+    return;
+  }
+  const win = window.open('', '_blank', 'noopener,noreferrer');
+  const styles = `
+    <style>
+      :root{ --fg:#111; --muted:#667085; --border:#e6e8eb; --ok:#0a7f2e; --bad:#b00020; }
+      *{box-sizing:border-box} html,body{margin:0;padding:0;color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
+      h1,h2,h3{margin:0 0 10px}
+      .summary{border:1px solid var(--border);border-radius:12px;padding:12px;margin:14px 0}
+      table{width:100%;border-collapse:collapse;margin-bottom:8px}
+      th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left}
+      th{background:#f6f8fb}
+      .ok{color:var(--ok);font-weight:600}
+      .bad{color:var(--bad);font-weight:600}
+      .muted{color:var(--muted)}
+      @page { size: letter; margin: 18mm; }
+      @media print {
+        body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        a { text-decoration: none; color: inherit; }
+      }
+    </style>`;
+  const header = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <h2 style="margin:0">OD on the GO — Diagnostic Score Report</h2>
+        <div class="muted" style="font-size:12px">NBEO-weighted • Discipline → Condition → Subcategory</div>
+      </div>
+      <div style="text-align:right;font-size:12px;color:#667085;">
+        Generated: ${new Date().toLocaleString()}
+      </div>
+    </div>`;
+  const content = `
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Score Report</title>${styles}</head>
+    <body>
+      <main>${header}${report.innerHTML}</main>
+      <script>
+        (function(){
+          const fire = () => { window.focus(); window.print(); };
+          if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(fire).catch(fire);
+          } else {
+            setTimeout(fire, 250);
+          }
+        })();
+      <\/script>
+    </body></html>`;
+  win.document.open(); win.document.write(content); win.document.close();
+}
+
 /* ====== EVENTS ====== */
+let _lastResult = null;
+
 document.getElementById('gradeBtn').addEventListener('click', ()=>{
   const schoolSel = document.getElementById('s_school');
   if (!schoolSel.value) { alert('Please select your school to continue.'); schoolSel.focus(); return; }
   const res = scoreExam();
+  _lastResult = res;
   renderReport(res);
   window.scrollTo({top: document.getElementById('report').offsetTop-20, behavior:'smooth'});
 });
@@ -284,6 +334,8 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
+document.getElementById('printBtn').addEventListener('click', openReportPrintWindow);
+
 (function initSchoolGate(){
   const schoolSel = document.getElementById('s_school');
   const gradeBtn  = document.getElementById('gradeBtn');
@@ -291,58 +343,39 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   schoolSel.addEventListener('change', e => { gradeBtn.disabled = !e.target.value; });
 })();
 
-/* ====== LOAD & PREP ====== */
+/* ====== QUESTION LOADING, NORMALIZATION & SHUFFLING ====== */
 async function loadQuestions(){
   const r = await fetch(QUESTIONS_URL, {cache:'no-store'});
   if(!r.ok){ throw new Error('Failed to load questions.json'); }
   const bank = await r.json();
-  bank.forEach((q,i)=>{ if(typeof q.id!=='number') q.id = i+1; });
+
+  // Normalize: ensure id, text, choices[], correct(index), discipline/condition/sub, rationale
+  bank.forEach((q,i)=>{
+    if (typeof q.id !== 'number') q.id = i+1;
+    if (!Array.isArray(q.choices)) q.choices = [];
+    // Allow "correct" as index OR as exact answer text; convert to index
+    if (typeof q.correct === 'string') {
+      const idx = q.choices.indexOf(q.correct);
+      q.correct = idx >= 0 ? idx : 0; // fallback to 0 if mismatch
+    } else if (typeof q.correct !== 'number') {
+      q.correct = 0;
+    }
+  });
+
   QUESTIONS = bank;
 }
 
-/* This version supports:
-   - q.correct as NUMBER (index into q.choices)
-   - q.correct as STRING (exact choice text)
-*/
 function prepareShuffled(){
   const qs = QUESTIONS.map(q => JSON.parse(JSON.stringify(q)));
-
-  // Validate & compute original correct index for each question
-  qs.forEach(q=>{
-    if(!Array.isArray(q.choices) || q.choices.length < 2){
-      throw new Error(`Question ${q.id}: needs at least 2 choices`);
-    }
-    let originalCorrectIdx = -1;
-
-    if (typeof q.correct === 'number' && Number.isInteger(q.correct)) {
-      originalCorrectIdx = q.correct;
-    } else if (typeof q.correct === 'string') {
-      const want = normalize(q.correct);
-      originalCorrectIdx = q.choices.findIndex(c => normalize(c) === want);
-    }
-
-    if (originalCorrectIdx < 0 || originalCorrectIdx >= q.choices.length) {
-      // Helpful error so you can spot the culprit quickly
-      const preview = q.choices.map((c,i)=>`${i}:${c}`).join(' | ');
-      throw new Error(`Question ${q.id} (${q.text.slice(0,60)}…): 'correct' not found in choices. correct="${q.correct}". Choices: ${preview}`);
-    }
-
-    q.__originalCorrectIdx = originalCorrectIdx;
-  });
-
-  // Shuffle question order
   shuffle(qs);
 
-  // Shuffle choices & remap correct index after shuffle
   qs.forEach(q=>{
-    const original = q.choices.map((text, idx) => ({ text, idx }));
-    shuffle(original);
-    q.choices = original.map(o => o.text);
-
-    // New position of the original correct answer
-    const newIdx = original.findIndex(o => o.idx === q.__originalCorrectIdx);
-    q.correctIndexAfterShuffle = newIdx;
-    delete q.__originalCorrectIdx;
+    const originalChoices = q.choices.map((c,i)=>({text:c, idx:i}));
+    shuffle(originalChoices);
+    q.choices = originalChoices.map(o=>o.text);
+    // IMPORTANT: correct index AFTER shuffle is the POSITION of the old-correct in the shuffled array
+    const pos = originalChoices.findIndex(o => o.idx === q.correct);
+    q.correctIndexAfterShuffle = (pos >= 0 ? pos : 0);
   });
 
   SHUFFLED = qs;
@@ -354,8 +387,8 @@ function prepareShuffled(){
     prepareShuffled();
     renderExam();
   }catch(e){
+    examDiv.innerHTML = `<div class="summary"><b>Error loading questions.</b> ${e.message}</div>`;
     console.error(e);
-    examDiv.innerHTML = `<div class="summary"><b>Error loading questions.</b><br><span class="muted">${e.message}</span></div>`;
   }
 })();
 </script>
