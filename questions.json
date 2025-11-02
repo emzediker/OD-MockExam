@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "text": "Which refractive state best describes a patient whose far point is at -50 cm from the principal plane?",
+    "choices": ["Myopia of 2.00 D", "Hyperopia of 2.00 D", "Emmetropia", "Mixed astigmatism"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Vergence & Far Point",
+    "rationale": "Vergence at far point = -1/0.50 m = -2.00 D → myopia."
+  },
+  {
+    "id": 2,
+    "text": "Which spectacle change reduces spectacle magnification for the same vertex power?",
+    "choices": ["Flatter front curve (lower base)", "Steeper front curve", "Increase center thickness", "Lower index"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ophthalmic Optics / Spectacles",
+    "sub": "Spectacle Magnification",
+    "rationale": "Flatter base curve and thinner lens reduce SM."
+  },
+  {
+    "id": 3,
+    "text": "High-water ionic hydrogels are most prone to which deposit?",
+    "choices": ["Protein", "Lipid", "Mucin", "Calcium"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Contact Lenses",
+    "sub": "Materials & Deposits",
+    "rationale": "Ionic high-water hydrogels attract tear proteins."
+  }
+
+  /* …continue through your full 350… */
+]
