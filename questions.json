@@ -2399,4 +2399,1807 @@
     "sub": "Side Effects",
     "rationale": "Loteprednol is ester-based and rapidly deactivated, minimizing IOP elevation."
   }
+[
+  {
+    "id": 241,
+    "text": "Cotton-wool spots result from:",
+    "choices": ["Leakage from retinal capillaries", "Axoplasmic flow stasis in retinal nerve fiber layer", "Vitreous traction", "Macular edema"],
+    "correct": 1,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetic / Hypertensive Retinopathy",
+    "rationale": "Cotton-wool spots represent focal ischemia of nerve fiber axons due to microvascular occlusion—common in diabetes and hypertension."
+  },
+  {
+    "id": 242,
+    "text": "Which retinal finding best distinguishes hypertensive retinopathy from diabetic retinopathy?",
+    "choices": ["Arteriovenous crossing changes (AV nicking)", "Dot-blot hemorrhages", "Cotton-wool spots", "Neovascularization"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Hypertension",
+    "rationale": "AV nicking is a hallmark of chronic arteriolar sclerosis and compression, specific to hypertensive retinopathy."
+  },
+  {
+    "id": 243,
+    "text": "Which endocrine disorder produces exophthalmos due to inflammatory orbital infiltration?",
+    "choices": ["Graves disease", "Addison’s disease", "Cushing’s syndrome", "Myasthenia gravis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Thyroid-Related Orbitopathy",
+    "rationale": "Graves ophthalmopathy involves autoimmune inflammation of extraocular muscles and orbital fat, producing proptosis."
+  },
+  {
+    "id": 244,
+    "text": "A patient with chronic dry eye, parotid swelling, and arthralgia most likely has:",
+    "choices": ["Sjögren’s syndrome", "Rheumatoid arthritis", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Lacrimal Gland Disease",
+    "rationale": "Sjögren’s involves autoimmune destruction of lacrimal and salivary glands, causing keratoconjunctivitis sicca."
+  },
+  {
+    "id": 245,
+    "text": "Sarcoidosis most often causes which ocular finding?",
+    "choices": ["Granulomatous anterior uveitis", "Filamentary keratitis", "Papilledema", "Lattice degeneration"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Granulomatous Disease",
+    "rationale": "Sarcoid uveitis typically presents with mutton-fat KPs and iris nodules due to granulomatous inflammation."
+  },
+  {
+    "id": 246,
+    "text": "A positive FTA-ABS test and Argyll Robertson pupils suggest:",
+    "choices": ["Neurosyphilis", "Tuberculosis", "Lyme disease", "HIV retinopathy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Syphilis",
+    "rationale": "Argyll Robertson pupils (light–near dissociation) are classic for neurosyphilis; FTA-ABS confirms diagnosis."
+  },
+  {
+    "id": 247,
+    "text": "Which infection causes chorioretinitis with congenital transmission?",
+    "choices": ["Toxoplasmosis", "Cytomegalovirus", "Herpes simplex", "Rubella"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Toxoplasmosis",
+    "rationale": "Congenital toxoplasmosis causes bilateral macular scars and active necrotizing retinitis in children."
+  },
+  {
+    "id": 248,
+    "text": "A patient with erythema migrans and cranial nerve palsy likely has:",
+    "choices": ["Lyme disease", "Syphilis", "TB", "HIV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Lyme",
+    "rationale": "Lyme disease (Borrelia burgdorferi) can cause uveitis and CN VI palsy; erythema migrans is a diagnostic clue."
+  },
+  {
+    "id": 249,
+    "text": "Retinal periphlebitis with “candle-wax drippings” is most associated with:",
+    "choices": ["Sarcoidosis", "SLE", "TB", "AIDS"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Vasculitis",
+    "rationale": "Segmental perivenous sheathing and exudation are classic retinal signs of sarcoid vasculitis."
+  },
+  {
+    "id": 250,
+    "text": "Which infectious disease produces granulomatous uveitis and a positive PPD test?",
+    "choices": ["Tuberculosis", "Sarcoidosis", "Syphilis", "HSV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "TB Uveitis",
+    "rationale": "Mycobacterium tuberculosis may cause anterior or posterior uveitis with caseating granulomas."
+  },
+  {
+    "id": 251,
+    "text": "Which autoimmune disorder may cause scleritis and peripheral ulcerative keratitis?",
+    "choices": ["Rheumatoid arthritis", "Sjögren’s", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Rheumatologic Disease",
+    "rationale": "RA can produce necrotizing scleritis and peripheral corneal melt due to immune-complex vasculitis."
+  },
+  {
+    "id": 252,
+    "text": "A lupus patient with blurry vision, cotton-wool spots, and vascular sheathing likely has:",
+    "choices": ["Lupus retinopathy", "Hypertensive retinopathy", "Sarcoidosis", "CMV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "SLE Retinopathy",
+    "rationale": "Immune-complex deposition in SLE causes retinal ischemia mimicking hypertensive retinopathy."
+  },
+  {
+    "id": 253,
+    "text": "Which finding suggests ocular involvement in HIV?",
+    "choices": ["Cotton-wool spots with minimal hemorrhage (HIV retinopathy)", "Flame hemorrhages with exudates", "Disc swelling and papillitis", "Serous macular detachment"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "HIV",
+    "rationale": "HIV retinopathy causes microangiopathy with CWS and microaneurysms, often asymptomatic."
+  },
+  {
+    "id": 254,
+    "text": "Cytomegalovirus retinitis typically occurs when CD4 counts fall below:",
+    "choices": ["500 cells/µL", "250 cells/µL", "50 cells/µL", "10 cells/µL"],
+    "correct": 2,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "CMV",
+    "rationale": "CMV retinitis appears in advanced AIDS with CD4 < 50; presents as necrotizing retinitis with hemorrhage."
+  },
+  {
+    "id": 255,
+    "text": "A Hollenhorst plaque at the retinal arteriole suggests:",
+    "choices": ["Carotid artery embolus", "Cardiac myxoma", "Venous occlusion", "Hypertensive crisis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular Disease",
+    "sub": "Embolic Events",
+    "rationale": "Cholesterol emboli originate from carotid atheroma, commonly detected at branch points."
+  },
+  {
+    "id": 256,
+    "text": "Which systemic condition increases risk for central retinal vein occlusion (CRVO)?",
+    "choices": ["Hypertension", "Hypotension", "Diabetes insipidus", "Asthma"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Venous Occlusion",
+    "rationale": "Chronic hypertension causes venous compression at AV crossings, predisposing to CRVO."
+  },
+  {
+    "id": 257,
+    "text": "Cherry-red spot at the macula indicates:",
+    "choices": ["Central retinal artery occlusion (CRAO)", "CRVO", "OIS", "BRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Arterial Occlusion",
+    "rationale": "CRAO causes inner retinal infarction, leaving the foveal choroidal background as a red spot."
+  },
+  {
+    "id": 258,
+    "text": "Which systemic disease commonly causes ocular ischemic syndrome (OIS)?",
+    "choices": ["Carotid artery stenosis", "Diabetes mellitus", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Ocular Ischemic Syndrome",
+    "rationale": "OIS results from ≥90% carotid occlusion, reducing ophthalmic artery perfusion; mid-peripheral hemorrhages are classic."
+  },
+  {
+    "id": 259,
+    "text": "Which malignancy most often metastasizes to the choroid?",
+    "choices": ["Breast carcinoma", "Prostate carcinoma", "Lung adenocarcinoma", "Colon carcinoma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neoplastic",
+    "sub": "Metastasis",
+    "rationale": "Breast cancer is the leading source of ocular metastases, usually to the choroid."
+  },
+  {
+    "id": 260,
+    "text": "A 60-year-old smoker with painless monocular vision loss and pale optic disc likely has:",
+    "choices": ["Arteritic anterior ischemic optic neuropathy (AION)", "NAION", "CRAO", "Optic neuritis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Arteritic AION (GCA) presents with chalky-white disc and systemic inflammatory signs."
+  },
+  {
+    "id": 261,
+    "text": "Which laboratory tests confirm diagnosis of GCA?",
+    "choices": ["ESR, CRP, and temporal artery biopsy", "ANA and RF", "ACE and lysozyme", "FTA-ABS"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Temporal artery biopsy with elevated ESR/CRP confirms GCA; treat urgently with systemic steroids."
+  },
+  {
+    "id": 262,
+    "text": "Which autoimmune condition produces episcleritis with nodular tenderness but no vision loss?",
+    "choices": ["Rheumatoid arthritis", "Sarcoidosis", "SLE", "GPA (Wegener’s)"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Autoimmune",
+    "sub": "Episcleritis",
+    "rationale": "RA-associated episcleritis is typically benign and self-limiting; scleritis indicates more severe disease."
+  },
+  {
+    "id": 263,
+    "text": "Which systemic condition is most associated with bilateral optic disc edema and normal MRI?",
+    "choices": ["Idiopathic intracranial hypertension (IIH)", "MS", "GCA", "CRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neuro / Systemic",
+    "sub": "Intracranial Pressure Disorders",
+    "rationale": "IIH presents with papilledema, normal neuroimaging, and elevated LP opening pressure."
+  },
+  {
+    "id": 264,
+    "text": "Which systemic drug causes pseudotumor cerebri?",
+    "choices": ["Tetracycline", "Corticosteroids", "Hydroxychloroquine", "Methotrexate"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Neuro Effects",
+    "rationale": "Tetracyclines, vitamin A, and isotretinoin are associated with intracranial hypertension."
+  },
+  {
+    "id": 265,
+    "text": "Which vitamin deficiency produces night blindness and Bitot’s spots?",
+    "choices": ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin E"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Nutritional",
+    "sub": "Vitamin Deficiency",
+    "rationale": "Vitamin A is required for rhodopsin regeneration; deficiency causes xerophthalmia and nyctalopia."
+  },
+  {
+    "id": 266,
+    "text": "Which systemic medication can cause whorl keratopathy and anterior subcapsular cataract?",
+    "choices": ["Amiodarone", "Tamoxifen", "Hydroxychloroquine", "Isotretinoin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Corneal / Lens Changes",
+    "rationale": "Amiodarone may deposit in corneal epithelium (vortex pattern) and lens epithelium with long use."
+  },
+  {
+    "id": 267,
+    "text": "Which disease causes optic neuritis with bilateral vision loss and longitudinally extensive MRI lesions?",
+    "choices": ["Neuromyelitis optica (Devic’s disease)", "Multiple sclerosis", "Sarcoidosis", "GCA"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neuro / Autoimmune",
+    "sub": "Demyelinating Disease",
+    "rationale": "NMO presents with severe bilateral ON and spinal lesions; aquaporin-4 antibody positive."
+  },
+  {
+    "id": 268,
+    "text": "Which systemic condition can cause microaneurysms, dot hemorrhages, and macular edema?",
+    "choices": ["Diabetes mellitus", "Hypertension", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetes",
+    "rationale": "Diabetic retinopathy results from microvascular pericyte loss and capillary leakage."
+  },
+  {
+    "id": 269,
+    "text": "Which systemic condition may cause Roth spots?",
+    "choices": ["Bacterial endocarditis", "Hypertension", "Diabetes", "Sickle cell disease"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Infectious",
+    "sub": "Embolic Phenomena",
+    "rationale": "Roth spots (hemorrhage with white center) occur from septic emboli in bacterial endocarditis."
+  },
+  {
+    "id": 270,
+    "text": "Which autoimmune disease causes bilateral parotid enlargement and positive anti-Ro/SSA antibodies?",
+    "choices": ["Sjögren’s syndrome", "SLE", "Sarcoidosis", "RA"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Sjögren’s",
+    "rationale": "Anti-Ro/SSA and anti-La/SSB are diagnostic of Sjögren’s; affects salivary and lacrimal glands."
+  },
+  {
+    "id": 271,
+    "text": "Which extraocular muscle is innervated by cranial nerve IV?",
+    "choices": ["Superior oblique", "Lateral rectus", "Inferior oblique", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Cranial Nerve Innervation",
+    "rationale": "The superior oblique is the only muscle supplied by the trochlear nerve (CN IV)."
+  },
+  {
+    "id": 272,
+    "text": "A lesion at the right optic tract produces which field defect?",
+    "choices": ["Left homonymous hemianopia", "Right homonymous hemianopia", "Left bitemporal hemianopia", "Right nasal field defect"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Post-chiasmal lesions cause contralateral homonymous field loss."
+  },
+  {
+    "id": 273,
+    "text": "A right oculomotor nerve palsy presents with all of the following except:",
+    "choices": ["Ptosis", "Mydriasis", "Abduction deficit", "Down-and-out eye position"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Cranial Nerves",
+    "sub": "Oculomotor Palsy",
+    "rationale": "CN III palsy causes ptosis, mydriasis, and 'down-and-out' position; abduction deficit suggests CN VI palsy."
+  },
+  {
+    "id": 274,
+    "text": "Which muscle is primarily responsible for depression when the eye is adducted?",
+    "choices": ["Superior oblique", "Inferior rectus", "Inferior oblique", "Lateral rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Actions",
+    "rationale": "Superior oblique depresses the adducted eye most effectively."
+  },
+  {
+    "id": 275,
+    "text": "The afferent pupillary pathway terminates in which midbrain structure?",
+    "choices": ["Pretectal nucleus", "Edinger–Westphal nucleus", "Superior colliculus", "Lateral geniculate nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Reflexes",
+    "rationale": "The pretectal nucleus relays light information bilaterally to EW nuclei for pupillary constriction."
+  },
+  {
+    "id": 276,
+    "text": "Damage to the right optic nerve before the chiasm will cause:",
+    "choices": ["Right monocular blindness", "Left monocular blindness", "Bitemporal hemianopia", "Left homonymous hemianopia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Pre-chiasmal lesions affect the ipsilateral eye only."
+  },
+  {
+    "id": 277,
+    "text": "Which extraocular muscle originates from the annulus of Zinn and inserts farthest from the limbus?",
+    "choices": ["Superior rectus", "Lateral rectus", "Inferior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Muscles",
+    "sub": "Insertions",
+    "rationale": "The superior rectus inserts ~7.7 mm from the limbus—farthest among the recti."
+  },
+  {
+    "id": 278,
+    "text": "The optic radiations pass through which cerebral lobe to reach the visual cortex?",
+    "choices": ["Temporal and parietal lobes", "Frontal lobe", "Occipital lobe only", "Insula"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Optic Radiations",
+    "rationale": "Inferior fibers (Meyer’s loop) travel through temporal lobe; superior fibers via parietal lobe to V1."
+  },
+  {
+    "id": 279,
+    "text": "A lesion of the right parietal lobe causes:",
+    "choices": ["Left inferior quadrantanopia", "Left superior quadrantanopia", "Right inferior quadrantanopia", "Bilateral temporal defects"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Visual Fields",
+    "sub": "Quadrantanopias",
+    "rationale": "Parietal lesions affect superior optic radiations, producing contralateral inferior field loss."
+  },
+  {
+    "id": 280,
+    "text": "Which fibers decussate in the optic chiasm?",
+    "choices": ["Nasal retinal fibers", "Temporal retinal fibers", "Foveal fibers", "All fibers"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Anatomy",
+    "rationale": "Nasal fibers cross to the opposite side; temporal remain uncrossed."
+  },
+  {
+    "id": 281,
+    "text": "A pituitary adenoma most likely produces which field defect?",
+    "choices": ["Bitemporal hemianopia", "Binocular inferior field loss", "Homonymous hemianopia", "Nasal step"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Lesions",
+    "rationale": "Chiasmal compression affects crossing nasal fibers, producing temporal field loss."
+  },
+  {
+    "id": 282,
+    "text": "Which artery supplies the inner retinal layers?",
+    "choices": ["Central retinal artery", "Short posterior ciliary arteries", "Long posterior ciliary arteries", "Choroidal artery"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Retinal Circulation",
+    "rationale": "The central retinal artery branches supply the inner two-thirds of the retina."
+  },
+  {
+    "id": 283,
+    "text": "Which vessel primarily supplies the outer retina and photoreceptors?",
+    "choices": ["Choriocapillaris", "Central retinal artery", "Long posterior ciliary arteries", "Retinal vein"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Choroidal Circulation",
+    "rationale": "The choriocapillaris, from the short posterior ciliary arteries, nourishes the outer retina."
+  },
+  {
+    "id": 284,
+    "text": "Which cranial nerve mediates the corneal blink reflex (afferent limb)?",
+    "choices": ["CN V1 (nasociliary branch)", "CN VII", "CN III", "CN VI"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "The nasociliary branch of V1 senses corneal touch; CN VII executes the blink."
+  },
+  {
+    "id": 285,
+    "text": "The efferent limb of the corneal blink reflex is mediated by:",
+    "choices": ["CN V1", "CN VII", "CN III", "CN VI"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "Facial nerve innervates orbicularis oculi, producing eyelid closure."
+  },
+  {
+    "id": 286,
+    "text": "Which EOM passes through the trochlea before inserting on the globe?",
+    "choices": ["Superior oblique", "Inferior oblique", "Superior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Pathways",
+    "rationale": "The superior oblique passes through a fibrocartilaginous pulley (trochlea) before inserting posteriorly."
+  },
+  {
+    "id": 287,
+    "text": "Which pupillary abnormality is associated with dorsal midbrain syndrome?",
+    "choices": ["Light-near dissociation with upgaze palsy", "Dilated pupil with ptosis", "Miotic pupils with Horner’s", "RAPD"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Abnormalities",
+    "rationale": "Dorsal midbrain (Parinaud’s) causes impaired upgaze and light-near dissociation due to pretectal injury."
+  },
+  {
+    "id": 288,
+    "text": "Which condition shows a tonic dilated pupil with absent light reaction but near constriction?",
+    "choices": ["Adie’s tonic pupil", "Argyll Robertson pupil", "CN III palsy", "Pharmacologic mydriasis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Syndromes",
+    "rationale": "Adie’s pupil results from postganglionic parasympathetic damage; light reaction lost, near response slow."
+  },
+  {
+    "id": 289,
+    "text": "Which pupillary pattern is pathognomonic for optic nerve disease?",
+    "choices": ["Relative afferent pupillary defect (RAPD)", "Light-near dissociation", "Tonic constriction", "Anisocoria > light"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "RAPD",
+    "rationale": "RAPD occurs with asymmetric optic nerve function due to decreased afferent input."
+  },
+  {
+    "id": 290,
+    "text": "A lesion in the left lateral geniculate nucleus will cause:",
+    "choices": ["Right homonymous hemianopia", "Left homonymous hemianopia", "Right superior quadrantanopia", "Bilateral altitudinal loss"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Fields",
+    "rationale": "The left LGN carries right visual field information; lesion → right homonymous hemianopia."
+  },
+  {
+    "id": 291,
+    "text": "A patient with left internuclear ophthalmoplegia has a lesion in the:",
+    "choices": ["Left medial longitudinal fasciculus (MLF)", "Right MLF", "Left CN VI nucleus", "Right CN III nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Internuclear Lesions",
+    "rationale": "The MLF links contralateral abducens to ipsilateral oculomotor; a left MLF lesion impairs left adduction."
+  },
+  {
+    "id": 292,
+    "text": "Which structure serves as the major relay for visual input to the primary visual cortex?",
+    "choices": ["Lateral geniculate nucleus (LGN)", "Superior colliculus", "Inferior colliculus", "Pretectal nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Processing",
+    "rationale": "The LGN receives retinal input and projects to V1 via the optic radiations."
+  },
+  {
+    "id": 293,
+    "text": "Which visual pathway structure is part of the midbrain?",
+    "choices": ["Superior colliculus", "LGN", "Optic radiation", "Visual cortex"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Reflexes",
+    "rationale": "The superior colliculus is a midbrain structure involved in eye movements and saccades."
+  },
+  {
+    "id": 294,
+    "text": "Which embryologic layer gives rise to the retina and optic nerve?",
+    "choices": ["Neuroectoderm", "Surface ectoderm", "Mesoderm", "Endoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Development",
+    "rationale": "The optic cup and stalk develop from neuroectoderm of the diencephalon."
+  },
+  {
+    "id": 295,
+    "text": "The corneal epithelium originates from which embryonic layer?",
+    "choices": ["Surface ectoderm", "Neural crest", "Neuroectoderm", "Mesoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Corneal Development",
+    "rationale": "The corneal epithelium develops from surface ectoderm; endothelium derives from neural crest."
+  },
+  {
+    "id": 296,
+    "text": "Neural crest cells contribute to all of the following except:",
+    "choices": ["Corneal endothelium", "Iris stroma", "Lens fibers", "Trabecular meshwork"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Derivatives",
+    "rationale": "The lens arises from surface ectoderm, not neural crest."
+  },
+  {
+    "id": 297,
+    "text": "At birth, which ocular structure is anatomically immature?",
+    "choices": ["Macula", "Cornea", "Iris", "Optic nerve"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Foveal Development",
+    "rationale": "The macula/fovea mature postnatally, reaching adult structure by ~4 years."
+  },
+  {
+    "id": 298,
+    "text": "Which is the most likely cause of congenital nasolacrimal duct obstruction?",
+    "choices": ["Membrane persistence at the valve of Hasner", "Absence of puncta", "Dacryocystitis", "Cystic dilation of canaliculi"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental / Lids & Lacrimal",
+    "sub": "NLD Obstruction",
+    "rationale": "Failure of canalization at the valve of Hasner leads to epiphora in infants."
+  },
+  {
+    "id": 299,
+    "text": "Which developmental anomaly presents with a small cornea and iris-to-cornea adhesions?",
+    "choices": ["Axenfeld–Rieger anomaly", "Peters anomaly", "Aniridia", "Microphakia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Anomalies",
+    "sub": "Anterior Segment Dysgenesis",
+    "rationale": "Axenfeld–Rieger involves anterior segment dysgenesis from abnormal neural crest migration."
+  },
+  {
+    "id": 300,
+    "text": "Which ocular condition most commonly causes sensory deprivation amblyopia in infants?",
+    "choices": ["Congenital cataract", "Strabismus", "Uncorrected anisometropia", "Ptosis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Amblyopia",
+    "rationale": "Dense congenital cataracts block form vision during the critical period, leading to amblyopia."
+  }
+][
+  {
+    "id": 241,
+    "text": "Cotton-wool spots result from:",
+    "choices": ["Leakage from retinal capillaries", "Axoplasmic flow stasis in retinal nerve fiber layer", "Vitreous traction", "Macular edema"],
+    "correct": 1,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetic / Hypertensive Retinopathy",
+    "rationale": "Cotton-wool spots represent focal ischemia of nerve fiber axons due to microvascular occlusion—common in diabetes and hypertension."
+  },
+  {
+    "id": 242,
+    "text": "Which retinal finding best distinguishes hypertensive retinopathy from diabetic retinopathy?",
+    "choices": ["Arteriovenous crossing changes (AV nicking)", "Dot-blot hemorrhages", "Cotton-wool spots", "Neovascularization"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Hypertension",
+    "rationale": "AV nicking is a hallmark of chronic arteriolar sclerosis and compression, specific to hypertensive retinopathy."
+  },
+  {
+    "id": 243,
+    "text": "Which endocrine disorder produces exophthalmos due to inflammatory orbital infiltration?",
+    "choices": ["Graves disease", "Addison’s disease", "Cushing’s syndrome", "Myasthenia gravis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Thyroid-Related Orbitopathy",
+    "rationale": "Graves ophthalmopathy involves autoimmune inflammation of extraocular muscles and orbital fat, producing proptosis."
+  },
+  {
+    "id": 244,
+    "text": "A patient with chronic dry eye, parotid swelling, and arthralgia most likely has:",
+    "choices": ["Sjögren’s syndrome", "Rheumatoid arthritis", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Lacrimal Gland Disease",
+    "rationale": "Sjögren’s involves autoimmune destruction of lacrimal and salivary glands, causing keratoconjunctivitis sicca."
+  },
+  {
+    "id": 245,
+    "text": "Sarcoidosis most often causes which ocular finding?",
+    "choices": ["Granulomatous anterior uveitis", "Filamentary keratitis", "Papilledema", "Lattice degeneration"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Granulomatous Disease",
+    "rationale": "Sarcoid uveitis typically presents with mutton-fat KPs and iris nodules due to granulomatous inflammation."
+  },
+  {
+    "id": 246,
+    "text": "A positive FTA-ABS test and Argyll Robertson pupils suggest:",
+    "choices": ["Neurosyphilis", "Tuberculosis", "Lyme disease", "HIV retinopathy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Syphilis",
+    "rationale": "Argyll Robertson pupils (light–near dissociation) are classic for neurosyphilis; FTA-ABS confirms diagnosis."
+  },
+  {
+    "id": 247,
+    "text": "Which infection causes chorioretinitis with congenital transmission?",
+    "choices": ["Toxoplasmosis", "Cytomegalovirus", "Herpes simplex", "Rubella"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Toxoplasmosis",
+    "rationale": "Congenital toxoplasmosis causes bilateral macular scars and active necrotizing retinitis in children."
+  },
+  {
+    "id": 248,
+    "text": "A patient with erythema migrans and cranial nerve palsy likely has:",
+    "choices": ["Lyme disease", "Syphilis", "TB", "HIV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Lyme",
+    "rationale": "Lyme disease (Borrelia burgdorferi) can cause uveitis and CN VI palsy; erythema migrans is a diagnostic clue."
+  },
+  {
+    "id": 249,
+    "text": "Retinal periphlebitis with “candle-wax drippings” is most associated with:",
+    "choices": ["Sarcoidosis", "SLE", "TB", "AIDS"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Vasculitis",
+    "rationale": "Segmental perivenous sheathing and exudation are classic retinal signs of sarcoid vasculitis."
+  },
+  {
+    "id": 250,
+    "text": "Which infectious disease produces granulomatous uveitis and a positive PPD test?",
+    "choices": ["Tuberculosis", "Sarcoidosis", "Syphilis", "HSV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "TB Uveitis",
+    "rationale": "Mycobacterium tuberculosis may cause anterior or posterior uveitis with caseating granulomas."
+  },
+  {
+    "id": 251,
+    "text": "Which autoimmune disorder may cause scleritis and peripheral ulcerative keratitis?",
+    "choices": ["Rheumatoid arthritis", "Sjögren’s", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Rheumatologic Disease",
+    "rationale": "RA can produce necrotizing scleritis and peripheral corneal melt due to immune-complex vasculitis."
+  },
+  {
+    "id": 252,
+    "text": "A lupus patient with blurry vision, cotton-wool spots, and vascular sheathing likely has:",
+    "choices": ["Lupus retinopathy", "Hypertensive retinopathy", "Sarcoidosis", "CMV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "SLE Retinopathy",
+    "rationale": "Immune-complex deposition in SLE causes retinal ischemia mimicking hypertensive retinopathy."
+  },
+  {
+    "id": 253,
+    "text": "Which finding suggests ocular involvement in HIV?",
+    "choices": ["Cotton-wool spots with minimal hemorrhage (HIV retinopathy)", "Flame hemorrhages with exudates", "Disc swelling and papillitis", "Serous macular detachment"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "HIV",
+    "rationale": "HIV retinopathy causes microangiopathy with CWS and microaneurysms, often asymptomatic."
+  },
+  {
+    "id": 254,
+    "text": "Cytomegalovirus retinitis typically occurs when CD4 counts fall below:",
+    "choices": ["500 cells/µL", "250 cells/µL", "50 cells/µL", "10 cells/µL"],
+    "correct": 2,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "CMV",
+    "rationale": "CMV retinitis appears in advanced AIDS with CD4 < 50; presents as necrotizing retinitis with hemorrhage."
+  },
+  {
+    "id": 255,
+    "text": "A Hollenhorst plaque at the retinal arteriole suggests:",
+    "choices": ["Carotid artery embolus", "Cardiac myxoma", "Venous occlusion", "Hypertensive crisis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular Disease",
+    "sub": "Embolic Events",
+    "rationale": "Cholesterol emboli originate from carotid atheroma, commonly detected at branch points."
+  },
+  {
+    "id": 256,
+    "text": "Which systemic condition increases risk for central retinal vein occlusion (CRVO)?",
+    "choices": ["Hypertension", "Hypotension", "Diabetes insipidus", "Asthma"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Venous Occlusion",
+    "rationale": "Chronic hypertension causes venous compression at AV crossings, predisposing to CRVO."
+  },
+  {
+    "id": 257,
+    "text": "Cherry-red spot at the macula indicates:",
+    "choices": ["Central retinal artery occlusion (CRAO)", "CRVO", "OIS", "BRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Arterial Occlusion",
+    "rationale": "CRAO causes inner retinal infarction, leaving the foveal choroidal background as a red spot."
+  },
+  {
+    "id": 258,
+    "text": "Which systemic disease commonly causes ocular ischemic syndrome (OIS)?",
+    "choices": ["Carotid artery stenosis", "Diabetes mellitus", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Ocular Ischemic Syndrome",
+    "rationale": "OIS results from ≥90% carotid occlusion, reducing ophthalmic artery perfusion; mid-peripheral hemorrhages are classic."
+  },
+  {
+    "id": 259,
+    "text": "Which malignancy most often metastasizes to the choroid?",
+    "choices": ["Breast carcinoma", "Prostate carcinoma", "Lung adenocarcinoma", "Colon carcinoma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neoplastic",
+    "sub": "Metastasis",
+    "rationale": "Breast cancer is the leading source of ocular metastases, usually to the choroid."
+  },
+  {
+    "id": 260,
+    "text": "A 60-year-old smoker with painless monocular vision loss and pale optic disc likely has:",
+    "choices": ["Arteritic anterior ischemic optic neuropathy (AION)", "NAION", "CRAO", "Optic neuritis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Arteritic AION (GCA) presents with chalky-white disc and systemic inflammatory signs."
+  },
+  {
+    "id": 261,
+    "text": "Which laboratory tests confirm diagnosis of GCA?",
+    "choices": ["ESR, CRP, and temporal artery biopsy", "ANA and RF", "ACE and lysozyme", "FTA-ABS"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Temporal artery biopsy with elevated ESR/CRP confirms GCA; treat urgently with systemic steroids."
+  },
+  {
+    "id": 262,
+    "text": "Which autoimmune condition produces episcleritis with nodular tenderness but no vision loss?",
+    "choices": ["Rheumatoid arthritis", "Sarcoidosis", "SLE", "GPA (Wegener’s)"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Autoimmune",
+    "sub": "Episcleritis",
+    "rationale": "RA-associated episcleritis is typically benign and self-limiting; scleritis indicates more severe disease."
+  },
+  {
+    "id": 263,
+    "text": "Which systemic condition is most associated with bilateral optic disc edema and normal MRI?",
+    "choices": ["Idiopathic intracranial hypertension (IIH)", "MS", "GCA", "CRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neuro / Systemic",
+    "sub": "Intracranial Pressure Disorders",
+    "rationale": "IIH presents with papilledema, normal neuroimaging, and elevated LP opening pressure."
+  },
+  {
+    "id": 264,
+    "text": "Which systemic drug causes pseudotumor cerebri?",
+    "choices": ["Tetracycline", "Corticosteroids", "Hydroxychloroquine", "Methotrexate"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Neuro Effects",
+    "rationale": "Tetracyclines, vitamin A, and isotretinoin are associated with intracranial hypertension."
+  },
+  {
+    "id": 265,
+    "text": "Which vitamin deficiency produces night blindness and Bitot’s spots?",
+    "choices": ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin E"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Nutritional",
+    "sub": "Vitamin Deficiency",
+    "rationale": "Vitamin A is required for rhodopsin regeneration; deficiency causes xerophthalmia and nyctalopia."
+  },
+  {
+    "id": 266,
+    "text": "Which systemic medication can cause whorl keratopathy and anterior subcapsular cataract?",
+    "choices": ["Amiodarone", "Tamoxifen", "Hydroxychloroquine", "Isotretinoin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Corneal / Lens Changes",
+    "rationale": "Amiodarone may deposit in corneal epithelium (vortex pattern) and lens epithelium with long use."
+  },
+  {
+    "id": 267,
+    "text": "Which disease causes optic neuritis with bilateral vision loss and longitudinally extensive MRI lesions?",
+    "choices": ["Neuromyelitis optica (Devic’s disease)", "Multiple sclerosis", "Sarcoidosis", "GCA"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neuro / Autoimmune",
+    "sub": "Demyelinating Disease",
+    "rationale": "NMO presents with severe bilateral ON and spinal lesions; aquaporin-4 antibody positive."
+  },
+  {
+    "id": 268,
+    "text": "Which systemic condition can cause microaneurysms, dot hemorrhages, and macular edema?",
+    "choices": ["Diabetes mellitus", "Hypertension", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetes",
+    "rationale": "Diabetic retinopathy results from microvascular pericyte loss and capillary leakage."
+  },
+  {
+    "id": 269,
+    "text": "Which systemic condition may cause Roth spots?",
+    "choices": ["Bacterial endocarditis", "Hypertension", "Diabetes", "Sickle cell disease"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Infectious",
+    "sub": "Embolic Phenomena",
+    "rationale": "Roth spots (hemorrhage with white center) occur from septic emboli in bacterial endocarditis."
+  },
+  {
+    "id": 270,
+    "text": "Which autoimmune disease causes bilateral parotid enlargement and positive anti-Ro/SSA antibodies?",
+    "choices": ["Sjögren’s syndrome", "SLE", "Sarcoidosis", "RA"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Sjögren’s",
+    "rationale": "Anti-Ro/SSA and anti-La/SSB are diagnostic of Sjögren’s; affects salivary and lacrimal glands."
+  },
+  {
+    "id": 271,
+    "text": "Which extraocular muscle is innervated by cranial nerve IV?",
+    "choices": ["Superior oblique", "Lateral rectus", "Inferior oblique", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Cranial Nerve Innervation",
+    "rationale": "The superior oblique is the only muscle supplied by the trochlear nerve (CN IV)."
+  },
+  {
+    "id": 272,
+    "text": "A lesion at the right optic tract produces which field defect?",
+    "choices": ["Left homonymous hemianopia", "Right homonymous hemianopia", "Left bitemporal hemianopia", "Right nasal field defect"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Post-chiasmal lesions cause contralateral homonymous field loss."
+  },
+  {
+    "id": 273,
+    "text": "A right oculomotor nerve palsy presents with all of the following except:",
+    "choices": ["Ptosis", "Mydriasis", "Abduction deficit", "Down-and-out eye position"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Cranial Nerves",
+    "sub": "Oculomotor Palsy",
+    "rationale": "CN III palsy causes ptosis, mydriasis, and 'down-and-out' position; abduction deficit suggests CN VI palsy."
+  },
+  {
+    "id": 274,
+    "text": "Which muscle is primarily responsible for depression when the eye is adducted?",
+    "choices": ["Superior oblique", "Inferior rectus", "Inferior oblique", "Lateral rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Actions",
+    "rationale": "Superior oblique depresses the adducted eye most effectively."
+  },
+  {
+    "id": 275,
+    "text": "The afferent pupillary pathway terminates in which midbrain structure?",
+    "choices": ["Pretectal nucleus", "Edinger–Westphal nucleus", "Superior colliculus", "Lateral geniculate nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Reflexes",
+    "rationale": "The pretectal nucleus relays light information bilaterally to EW nuclei for pupillary constriction."
+  },
+  {
+    "id": 276,
+    "text": "Damage to the right optic nerve before the chiasm will cause:",
+    "choices": ["Right monocular blindness", "Left monocular blindness", "Bitemporal hemianopia", "Left homonymous hemianopia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Pre-chiasmal lesions affect the ipsilateral eye only."
+  },
+  {
+    "id": 277,
+    "text": "Which extraocular muscle originates from the annulus of Zinn and inserts farthest from the limbus?",
+    "choices": ["Superior rectus", "Lateral rectus", "Inferior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Muscles",
+    "sub": "Insertions",
+    "rationale": "The superior rectus inserts ~7.7 mm from the limbus—farthest among the recti."
+  },
+  {
+    "id": 278,
+    "text": "The optic radiations pass through which cerebral lobe to reach the visual cortex?",
+    "choices": ["Temporal and parietal lobes", "Frontal lobe", "Occipital lobe only", "Insula"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Optic Radiations",
+    "rationale": "Inferior fibers (Meyer’s loop) travel through temporal lobe; superior fibers via parietal lobe to V1."
+  },
+  {
+    "id": 279,
+    "text": "A lesion of the right parietal lobe causes:",
+    "choices": ["Left inferior quadrantanopia", "Left superior quadrantanopia", "Right inferior quadrantanopia", "Bilateral temporal defects"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Visual Fields",
+    "sub": "Quadrantanopias",
+    "rationale": "Parietal lesions affect superior optic radiations, producing contralateral inferior field loss."
+  },
+  {
+    "id": 280,
+    "text": "Which fibers decussate in the optic chiasm?",
+    "choices": ["Nasal retinal fibers", "Temporal retinal fibers", "Foveal fibers", "All fibers"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Anatomy",
+    "rationale": "Nasal fibers cross to the opposite side; temporal remain uncrossed."
+  },
+  {
+    "id": 281,
+    "text": "A pituitary adenoma most likely produces which field defect?",
+    "choices": ["Bitemporal hemianopia", "Binocular inferior field loss", "Homonymous hemianopia", "Nasal step"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Lesions",
+    "rationale": "Chiasmal compression affects crossing nasal fibers, producing temporal field loss."
+  },
+  {
+    "id": 282,
+    "text": "Which artery supplies the inner retinal layers?",
+    "choices": ["Central retinal artery", "Short posterior ciliary arteries", "Long posterior ciliary arteries", "Choroidal artery"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Retinal Circulation",
+    "rationale": "The central retinal artery branches supply the inner two-thirds of the retina."
+  },
+  {
+    "id": 283,
+    "text": "Which vessel primarily supplies the outer retina and photoreceptors?",
+    "choices": ["Choriocapillaris", "Central retinal artery", "Long posterior ciliary arteries", "Retinal vein"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Choroidal Circulation",
+    "rationale": "The choriocapillaris, from the short posterior ciliary arteries, nourishes the outer retina."
+  },
+  {
+    "id": 284,
+    "text": "Which cranial nerve mediates the corneal blink reflex (afferent limb)?",
+    "choices": ["CN V1 (nasociliary branch)", "CN VII", "CN III", "CN VI"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "The nasociliary branch of V1 senses corneal touch; CN VII executes the blink."
+  },
+  {
+    "id": 285,
+    "text": "The efferent limb of the corneal blink reflex is mediated by:",
+    "choices": ["CN V1", "CN VII", "CN III", "CN VI"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "Facial nerve innervates orbicularis oculi, producing eyelid closure."
+  },
+  {
+    "id": 286,
+    "text": "Which EOM passes through the trochlea before inserting on the globe?",
+    "choices": ["Superior oblique", "Inferior oblique", "Superior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Pathways",
+    "rationale": "The superior oblique passes through a fibrocartilaginous pulley (trochlea) before inserting posteriorly."
+  },
+  {
+    "id": 287,
+    "text": "Which pupillary abnormality is associated with dorsal midbrain syndrome?",
+    "choices": ["Light-near dissociation with upgaze palsy", "Dilated pupil with ptosis", "Miotic pupils with Horner’s", "RAPD"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Abnormalities",
+    "rationale": "Dorsal midbrain (Parinaud’s) causes impaired upgaze and light-near dissociation due to pretectal injury."
+  },
+  {
+    "id": 288,
+    "text": "Which condition shows a tonic dilated pupil with absent light reaction but near constriction?",
+    "choices": ["Adie’s tonic pupil", "Argyll Robertson pupil", "CN III palsy", "Pharmacologic mydriasis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Syndromes",
+    "rationale": "Adie’s pupil results from postganglionic parasympathetic damage; light reaction lost, near response slow."
+  },
+  {
+    "id": 289,
+    "text": "Which pupillary pattern is pathognomonic for optic nerve disease?",
+    "choices": ["Relative afferent pupillary defect (RAPD)", "Light-near dissociation", "Tonic constriction", "Anisocoria > light"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "RAPD",
+    "rationale": "RAPD occurs with asymmetric optic nerve function due to decreased afferent input."
+  },
+  {
+    "id": 290,
+    "text": "A lesion in the left lateral geniculate nucleus will cause:",
+    "choices": ["Right homonymous hemianopia", "Left homonymous hemianopia", "Right superior quadrantanopia", "Bilateral altitudinal loss"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Fields",
+    "rationale": "The left LGN carries right visual field information; lesion → right homonymous hemianopia."
+  },
+  {
+    "id": 291,
+    "text": "A patient with left internuclear ophthalmoplegia has a lesion in the:",
+    "choices": ["Left medial longitudinal fasciculus (MLF)", "Right MLF", "Left CN VI nucleus", "Right CN III nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Internuclear Lesions",
+    "rationale": "The MLF links contralateral abducens to ipsilateral oculomotor; a left MLF lesion impairs left adduction."
+  },
+  {
+    "id": 292,
+    "text": "Which structure serves as the major relay for visual input to the primary visual cortex?",
+    "choices": ["Lateral geniculate nucleus (LGN)", "Superior colliculus", "Inferior colliculus", "Pretectal nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Processing",
+    "rationale": "The LGN receives retinal input and projects to V1 via the optic radiations."
+  },
+  {
+    "id": 293,
+    "text": "Which visual pathway structure is part of the midbrain?",
+    "choices": ["Superior colliculus", "LGN", "Optic radiation", "Visual cortex"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Reflexes",
+    "rationale": "The superior colliculus is a midbrain structure involved in eye movements and saccades."
+  },
+  {
+    "id": 294,
+    "text": "Which embryologic layer gives rise to the retina and optic nerve?",
+    "choices": ["Neuroectoderm", "Surface ectoderm", "Mesoderm", "Endoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Development",
+    "rationale": "The optic cup and stalk develop from neuroectoderm of the diencephalon."
+  },
+  {
+    "id": 295,
+    "text": "The corneal epithelium originates from which embryonic layer?",
+    "choices": ["Surface ectoderm", "Neural crest", "Neuroectoderm", "Mesoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Corneal Development",
+    "rationale": "The corneal epithelium develops from surface ectoderm; endothelium derives from neural crest."
+  },
+  {
+    "id": 296,
+    "text": "Neural crest cells contribute to all of the following except:",
+    "choices": ["Corneal endothelium", "Iris stroma", "Lens fibers", "Trabecular meshwork"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Derivatives",
+    "rationale": "The lens arises from surface ectoderm, not neural crest."
+  },
+  {
+    "id": 297,
+    "text": "At birth, which ocular structure is anatomically immature?",
+    "choices": ["Macula", "Cornea", "Iris", "Optic nerve"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Foveal Development",
+    "rationale": "The macula/fovea mature postnatally, reaching adult structure by ~4 years."
+  },
+  {
+    "id": 298,
+    "text": "Which is the most likely cause of congenital nasolacrimal duct obstruction?",
+    "choices": ["Membrane persistence at the valve of Hasner", "Absence of puncta", "Dacryocystitis", "Cystic dilation of canaliculi"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental / Lids & Lacrimal",
+    "sub": "NLD Obstruction",
+    "rationale": "Failure of canalization at the valve of Hasner leads to epiphora in infants."
+  },
+  {
+    "id": 299,
+    "text": "Which developmental anomaly presents with a small cornea and iris-to-cornea adhesions?",
+    "choices": ["Axenfeld–Rieger anomaly", "Peters anomaly", "Aniridia", "Microphakia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Anomalies",
+    "sub": "Anterior Segment Dysgenesis",
+    "rationale": "Axenfeld–Rieger involves anterior segment dysgenesis from abnormal neural crest migration."
+  },
+  {
+    "id": 300,
+    "text": "Which ocular condition most commonly causes sensory deprivation amblyopia in infants?",
+    "choices": ["Congenital cataract", "Strabismus", "Uncorrected anisometropia", "Ptosis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Amblyopia",
+    "rationale": "Dense congenital cataracts block form vision during the critical period, leading to amblyopia."
+  }
+[
+  {
+    "id": 241,
+    "text": "Cotton-wool spots result from:",
+    "choices": ["Leakage from retinal capillaries", "Axoplasmic flow stasis in retinal nerve fiber layer", "Vitreous traction", "Macular edema"],
+    "correct": 1,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetic / Hypertensive Retinopathy",
+    "rationale": "Cotton-wool spots represent focal ischemia of nerve fiber axons due to microvascular occlusion—common in diabetes and hypertension."
+  },
+  {
+    "id": 242,
+    "text": "Which retinal finding best distinguishes hypertensive retinopathy from diabetic retinopathy?",
+    "choices": ["Arteriovenous crossing changes (AV nicking)", "Dot-blot hemorrhages", "Cotton-wool spots", "Neovascularization"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Hypertension",
+    "rationale": "AV nicking is a hallmark of chronic arteriolar sclerosis and compression, specific to hypertensive retinopathy."
+  },
+  {
+    "id": 243,
+    "text": "Which endocrine disorder produces exophthalmos due to inflammatory orbital infiltration?",
+    "choices": ["Graves disease", "Addison’s disease", "Cushing’s syndrome", "Myasthenia gravis"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Systemic Health",
+    "sub": "Thyroid-Related Orbitopathy",
+    "rationale": "Graves ophthalmopathy involves autoimmune inflammation of extraocular muscles and orbital fat, producing proptosis."
+  },
+  {
+    "id": 244,
+    "text": "A patient with chronic dry eye, parotid swelling, and arthralgia most likely has:",
+    "choices": ["Sjögren’s syndrome", "Rheumatoid arthritis", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Lacrimal Gland Disease",
+    "rationale": "Sjögren’s involves autoimmune destruction of lacrimal and salivary glands, causing keratoconjunctivitis sicca."
+  },
+  {
+    "id": 245,
+    "text": "Sarcoidosis most often causes which ocular finding?",
+    "choices": ["Granulomatous anterior uveitis", "Filamentary keratitis", "Papilledema", "Lattice degeneration"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Granulomatous Disease",
+    "rationale": "Sarcoid uveitis typically presents with mutton-fat KPs and iris nodules due to granulomatous inflammation."
+  },
+  {
+    "id": 246,
+    "text": "A positive FTA-ABS test and Argyll Robertson pupils suggest:",
+    "choices": ["Neurosyphilis", "Tuberculosis", "Lyme disease", "HIV retinopathy"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Syphilis",
+    "rationale": "Argyll Robertson pupils (light–near dissociation) are classic for neurosyphilis; FTA-ABS confirms diagnosis."
+  },
+  {
+    "id": 247,
+    "text": "Which infection causes chorioretinitis with congenital transmission?",
+    "choices": ["Toxoplasmosis", "Cytomegalovirus", "Herpes simplex", "Rubella"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Toxoplasmosis",
+    "rationale": "Congenital toxoplasmosis causes bilateral macular scars and active necrotizing retinitis in children."
+  },
+  {
+    "id": 248,
+    "text": "A patient with erythema migrans and cranial nerve palsy likely has:",
+    "choices": ["Lyme disease", "Syphilis", "TB", "HIV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "Lyme",
+    "rationale": "Lyme disease (Borrelia burgdorferi) can cause uveitis and CN VI palsy; erythema migrans is a diagnostic clue."
+  },
+  {
+    "id": 249,
+    "text": "Retinal periphlebitis with “candle-wax drippings” is most associated with:",
+    "choices": ["Sarcoidosis", "SLE", "TB", "AIDS"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune / Inflammatory",
+    "sub": "Vasculitis",
+    "rationale": "Segmental perivenous sheathing and exudation are classic retinal signs of sarcoid vasculitis."
+  },
+  {
+    "id": 250,
+    "text": "Which infectious disease produces granulomatous uveitis and a positive PPD test?",
+    "choices": ["Tuberculosis", "Sarcoidosis", "Syphilis", "HSV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "TB Uveitis",
+    "rationale": "Mycobacterium tuberculosis may cause anterior or posterior uveitis with caseating granulomas."
+  },
+  {
+    "id": 251,
+    "text": "Which autoimmune disorder may cause scleritis and peripheral ulcerative keratitis?",
+    "choices": ["Rheumatoid arthritis", "Sjögren’s", "Sarcoidosis", "SLE"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Rheumatologic Disease",
+    "rationale": "RA can produce necrotizing scleritis and peripheral corneal melt due to immune-complex vasculitis."
+  },
+  {
+    "id": 252,
+    "text": "A lupus patient with blurry vision, cotton-wool spots, and vascular sheathing likely has:",
+    "choices": ["Lupus retinopathy", "Hypertensive retinopathy", "Sarcoidosis", "CMV"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "SLE Retinopathy",
+    "rationale": "Immune-complex deposition in SLE causes retinal ischemia mimicking hypertensive retinopathy."
+  },
+  {
+    "id": 253,
+    "text": "Which finding suggests ocular involvement in HIV?",
+    "choices": ["Cotton-wool spots with minimal hemorrhage (HIV retinopathy)", "Flame hemorrhages with exudates", "Disc swelling and papillitis", "Serous macular detachment"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "HIV",
+    "rationale": "HIV retinopathy causes microangiopathy with CWS and microaneurysms, often asymptomatic."
+  },
+  {
+    "id": 254,
+    "text": "Cytomegalovirus retinitis typically occurs when CD4 counts fall below:",
+    "choices": ["500 cells/µL", "250 cells/µL", "50 cells/µL", "10 cells/µL"],
+    "correct": 2,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Infectious Disease",
+    "sub": "CMV",
+    "rationale": "CMV retinitis appears in advanced AIDS with CD4 < 50; presents as necrotizing retinitis with hemorrhage."
+  },
+  {
+    "id": 255,
+    "text": "A Hollenhorst plaque at the retinal arteriole suggests:",
+    "choices": ["Carotid artery embolus", "Cardiac myxoma", "Venous occlusion", "Hypertensive crisis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular Disease",
+    "sub": "Embolic Events",
+    "rationale": "Cholesterol emboli originate from carotid atheroma, commonly detected at branch points."
+  },
+  {
+    "id": 256,
+    "text": "Which systemic condition increases risk for central retinal vein occlusion (CRVO)?",
+    "choices": ["Hypertension", "Hypotension", "Diabetes insipidus", "Asthma"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Venous Occlusion",
+    "rationale": "Chronic hypertension causes venous compression at AV crossings, predisposing to CRVO."
+  },
+  {
+    "id": 257,
+    "text": "Cherry-red spot at the macula indicates:",
+    "choices": ["Central retinal artery occlusion (CRAO)", "CRVO", "OIS", "BRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Arterial Occlusion",
+    "rationale": "CRAO causes inner retinal infarction, leaving the foveal choroidal background as a red spot."
+  },
+  {
+    "id": 258,
+    "text": "Which systemic disease commonly causes ocular ischemic syndrome (OIS)?",
+    "choices": ["Carotid artery stenosis", "Diabetes mellitus", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Vascular",
+    "sub": "Ocular Ischemic Syndrome",
+    "rationale": "OIS results from ≥90% carotid occlusion, reducing ophthalmic artery perfusion; mid-peripheral hemorrhages are classic."
+  },
+  {
+    "id": 259,
+    "text": "Which malignancy most often metastasizes to the choroid?",
+    "choices": ["Breast carcinoma", "Prostate carcinoma", "Lung adenocarcinoma", "Colon carcinoma"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neoplastic",
+    "sub": "Metastasis",
+    "rationale": "Breast cancer is the leading source of ocular metastases, usually to the choroid."
+  },
+  {
+    "id": 260,
+    "text": "A 60-year-old smoker with painless monocular vision loss and pale optic disc likely has:",
+    "choices": ["Arteritic anterior ischemic optic neuropathy (AION)", "NAION", "CRAO", "Optic neuritis"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Arteritic AION (GCA) presents with chalky-white disc and systemic inflammatory signs."
+  },
+  {
+    "id": 261,
+    "text": "Which laboratory tests confirm diagnosis of GCA?",
+    "choices": ["ESR, CRP, and temporal artery biopsy", "ANA and RF", "ACE and lysozyme", "FTA-ABS"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Inflammatory",
+    "sub": "Giant Cell Arteritis",
+    "rationale": "Temporal artery biopsy with elevated ESR/CRP confirms GCA; treat urgently with systemic steroids."
+  },
+  {
+    "id": 262,
+    "text": "Which autoimmune condition produces episcleritis with nodular tenderness but no vision loss?",
+    "choices": ["Rheumatoid arthritis", "Sarcoidosis", "SLE", "GPA (Wegener’s)"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Autoimmune",
+    "sub": "Episcleritis",
+    "rationale": "RA-associated episcleritis is typically benign and self-limiting; scleritis indicates more severe disease."
+  },
+  {
+    "id": 263,
+    "text": "Which systemic condition is most associated with bilateral optic disc edema and normal MRI?",
+    "choices": ["Idiopathic intracranial hypertension (IIH)", "MS", "GCA", "CRVO"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Neuro / Systemic",
+    "sub": "Intracranial Pressure Disorders",
+    "rationale": "IIH presents with papilledema, normal neuroimaging, and elevated LP opening pressure."
+  },
+  {
+    "id": 264,
+    "text": "Which systemic drug causes pseudotumor cerebri?",
+    "choices": ["Tetracycline", "Corticosteroids", "Hydroxychloroquine", "Methotrexate"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Neuro Effects",
+    "rationale": "Tetracyclines, vitamin A, and isotretinoin are associated with intracranial hypertension."
+  },
+  {
+    "id": 265,
+    "text": "Which vitamin deficiency produces night blindness and Bitot’s spots?",
+    "choices": ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin E"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Nutritional",
+    "sub": "Vitamin Deficiency",
+    "rationale": "Vitamin A is required for rhodopsin regeneration; deficiency causes xerophthalmia and nyctalopia."
+  },
+  {
+    "id": 266,
+    "text": "Which systemic medication can cause whorl keratopathy and anterior subcapsular cataract?",
+    "choices": ["Amiodarone", "Tamoxifen", "Hydroxychloroquine", "Isotretinoin"],
+    "correct": 0,
+    "discipline": "E. Pharmacology",
+    "condition": "Systemic Drugs",
+    "sub": "Corneal / Lens Changes",
+    "rationale": "Amiodarone may deposit in corneal epithelium (vortex pattern) and lens epithelium with long use."
+  },
+  {
+    "id": 267,
+    "text": "Which disease causes optic neuritis with bilateral vision loss and longitudinally extensive MRI lesions?",
+    "choices": ["Neuromyelitis optica (Devic’s disease)", "Multiple sclerosis", "Sarcoidosis", "GCA"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Neuro / Autoimmune",
+    "sub": "Demyelinating Disease",
+    "rationale": "NMO presents with severe bilateral ON and spinal lesions; aquaporin-4 antibody positive."
+  },
+  {
+    "id": 268,
+    "text": "Which systemic condition can cause microaneurysms, dot hemorrhages, and macular edema?",
+    "choices": ["Diabetes mellitus", "Hypertension", "SLE", "Sarcoidosis"],
+    "correct": 0,
+    "discipline": "B. Biochemistry / Physiology",
+    "condition": "Systemic Health",
+    "sub": "Diabetes",
+    "rationale": "Diabetic retinopathy results from microvascular pericyte loss and capillary leakage."
+  },
+  {
+    "id": 269,
+    "text": "Which systemic condition may cause Roth spots?",
+    "choices": ["Bacterial endocarditis", "Hypertension", "Diabetes", "Sickle cell disease"],
+    "correct": 0,
+    "discipline": "C. Pathology",
+    "condition": "Vascular / Infectious",
+    "sub": "Embolic Phenomena",
+    "rationale": "Roth spots (hemorrhage with white center) occur from septic emboli in bacterial endocarditis."
+  },
+  {
+    "id": 270,
+    "text": "Which autoimmune disease causes bilateral parotid enlargement and positive anti-Ro/SSA antibodies?",
+    "choices": ["Sjögren’s syndrome", "SLE", "Sarcoidosis", "RA"],
+    "correct": 0,
+    "discipline": "C. Immunology / Pathology",
+    "condition": "Autoimmune",
+    "sub": "Sjögren’s",
+    "rationale": "Anti-Ro/SSA and anti-La/SSB are diagnostic of Sjögren’s; affects salivary and lacrimal glands."
+  },
+  {
+    "id": 271,
+    "text": "Which extraocular muscle is innervated by cranial nerve IV?",
+    "choices": ["Superior oblique", "Lateral rectus", "Inferior oblique", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Cranial Nerve Innervation",
+    "rationale": "The superior oblique is the only muscle supplied by the trochlear nerve (CN IV)."
+  },
+  {
+    "id": 272,
+    "text": "A lesion at the right optic tract produces which field defect?",
+    "choices": ["Left homonymous hemianopia", "Right homonymous hemianopia", "Left bitemporal hemianopia", "Right nasal field defect"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Post-chiasmal lesions cause contralateral homonymous field loss."
+  },
+  {
+    "id": 273,
+    "text": "A right oculomotor nerve palsy presents with all of the following except:",
+    "choices": ["Ptosis", "Mydriasis", "Abduction deficit", "Down-and-out eye position"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Cranial Nerves",
+    "sub": "Oculomotor Palsy",
+    "rationale": "CN III palsy causes ptosis, mydriasis, and 'down-and-out' position; abduction deficit suggests CN VI palsy."
+  },
+  {
+    "id": 274,
+    "text": "Which muscle is primarily responsible for depression when the eye is adducted?",
+    "choices": ["Superior oblique", "Inferior rectus", "Inferior oblique", "Lateral rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Actions",
+    "rationale": "Superior oblique depresses the adducted eye most effectively."
+  },
+  {
+    "id": 275,
+    "text": "The afferent pupillary pathway terminates in which midbrain structure?",
+    "choices": ["Pretectal nucleus", "Edinger–Westphal nucleus", "Superior colliculus", "Lateral geniculate nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Reflexes",
+    "rationale": "The pretectal nucleus relays light information bilaterally to EW nuclei for pupillary constriction."
+  },
+  {
+    "id": 276,
+    "text": "Damage to the right optic nerve before the chiasm will cause:",
+    "choices": ["Right monocular blindness", "Left monocular blindness", "Bitemporal hemianopia", "Left homonymous hemianopia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Field Defects",
+    "rationale": "Pre-chiasmal lesions affect the ipsilateral eye only."
+  },
+  {
+    "id": 277,
+    "text": "Which extraocular muscle originates from the annulus of Zinn and inserts farthest from the limbus?",
+    "choices": ["Superior rectus", "Lateral rectus", "Inferior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Muscles",
+    "sub": "Insertions",
+    "rationale": "The superior rectus inserts ~7.7 mm from the limbus—farthest among the recti."
+  },
+  {
+    "id": 278,
+    "text": "The optic radiations pass through which cerebral lobe to reach the visual cortex?",
+    "choices": ["Temporal and parietal lobes", "Frontal lobe", "Occipital lobe only", "Insula"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Optic Radiations",
+    "rationale": "Inferior fibers (Meyer’s loop) travel through temporal lobe; superior fibers via parietal lobe to V1."
+  },
+  {
+    "id": 279,
+    "text": "A lesion of the right parietal lobe causes:",
+    "choices": ["Left inferior quadrantanopia", "Left superior quadrantanopia", "Right inferior quadrantanopia", "Bilateral temporal defects"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Visual Fields",
+    "sub": "Quadrantanopias",
+    "rationale": "Parietal lesions affect superior optic radiations, producing contralateral inferior field loss."
+  },
+  {
+    "id": 280,
+    "text": "Which fibers decussate in the optic chiasm?",
+    "choices": ["Nasal retinal fibers", "Temporal retinal fibers", "Foveal fibers", "All fibers"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Anatomy",
+    "rationale": "Nasal fibers cross to the opposite side; temporal remain uncrossed."
+  },
+  {
+    "id": 281,
+    "text": "A pituitary adenoma most likely produces which field defect?",
+    "choices": ["Bitemporal hemianopia", "Binocular inferior field loss", "Homonymous hemianopia", "Nasal step"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Chiasmal Lesions",
+    "rationale": "Chiasmal compression affects crossing nasal fibers, producing temporal field loss."
+  },
+  {
+    "id": 282,
+    "text": "Which artery supplies the inner retinal layers?",
+    "choices": ["Central retinal artery", "Short posterior ciliary arteries", "Long posterior ciliary arteries", "Choroidal artery"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Retinal Circulation",
+    "rationale": "The central retinal artery branches supply the inner two-thirds of the retina."
+  },
+  {
+    "id": 283,
+    "text": "Which vessel primarily supplies the outer retina and photoreceptors?",
+    "choices": ["Choriocapillaris", "Central retinal artery", "Long posterior ciliary arteries", "Retinal vein"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Vasculature",
+    "sub": "Choroidal Circulation",
+    "rationale": "The choriocapillaris, from the short posterior ciliary arteries, nourishes the outer retina."
+  },
+  {
+    "id": 284,
+    "text": "Which cranial nerve mediates the corneal blink reflex (afferent limb)?",
+    "choices": ["CN V1 (nasociliary branch)", "CN VII", "CN III", "CN VI"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "The nasociliary branch of V1 senses corneal touch; CN VII executes the blink."
+  },
+  {
+    "id": 285,
+    "text": "The efferent limb of the corneal blink reflex is mediated by:",
+    "choices": ["CN V1", "CN VII", "CN III", "CN VI"],
+    "correct": 1,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Reflex Arcs",
+    "rationale": "Facial nerve innervates orbicularis oculi, producing eyelid closure."
+  },
+  {
+    "id": 286,
+    "text": "Which EOM passes through the trochlea before inserting on the globe?",
+    "choices": ["Superior oblique", "Inferior oblique", "Superior rectus", "Medial rectus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Ocular Motility",
+    "sub": "Muscle Pathways",
+    "rationale": "The superior oblique passes through a fibrocartilaginous pulley (trochlea) before inserting posteriorly."
+  },
+  {
+    "id": 287,
+    "text": "Which pupillary abnormality is associated with dorsal midbrain syndrome?",
+    "choices": ["Light-near dissociation with upgaze palsy", "Dilated pupil with ptosis", "Miotic pupils with Horner’s", "RAPD"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Abnormalities",
+    "rationale": "Dorsal midbrain (Parinaud’s) causes impaired upgaze and light-near dissociation due to pretectal injury."
+  },
+  {
+    "id": 288,
+    "text": "Which condition shows a tonic dilated pupil with absent light reaction but near constriction?",
+    "choices": ["Adie’s tonic pupil", "Argyll Robertson pupil", "CN III palsy", "Pharmacologic mydriasis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Pupillary Syndromes",
+    "rationale": "Adie’s pupil results from postganglionic parasympathetic damage; light reaction lost, near response slow."
+  },
+  {
+    "id": 289,
+    "text": "Which pupillary pattern is pathognomonic for optic nerve disease?",
+    "choices": ["Relative afferent pupillary defect (RAPD)", "Light-near dissociation", "Tonic constriction", "Anisocoria > light"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "RAPD",
+    "rationale": "RAPD occurs with asymmetric optic nerve function due to decreased afferent input."
+  },
+  {
+    "id": 290,
+    "text": "A lesion in the left lateral geniculate nucleus will cause:",
+    "choices": ["Right homonymous hemianopia", "Left homonymous hemianopia", "Right superior quadrantanopia", "Bilateral altitudinal loss"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Fields",
+    "rationale": "The left LGN carries right visual field information; lesion → right homonymous hemianopia."
+  },
+  {
+    "id": 291,
+    "text": "A patient with left internuclear ophthalmoplegia has a lesion in the:",
+    "choices": ["Left medial longitudinal fasciculus (MLF)", "Right MLF", "Left CN VI nucleus", "Right CN III nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Internuclear Lesions",
+    "rationale": "The MLF links contralateral abducens to ipsilateral oculomotor; a left MLF lesion impairs left adduction."
+  },
+  {
+    "id": 292,
+    "text": "Which structure serves as the major relay for visual input to the primary visual cortex?",
+    "choices": ["Lateral geniculate nucleus (LGN)", "Superior colliculus", "Inferior colliculus", "Pretectal nucleus"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Processing",
+    "rationale": "The LGN receives retinal input and projects to V1 via the optic radiations."
+  },
+  {
+    "id": 293,
+    "text": "Which visual pathway structure is part of the midbrain?",
+    "choices": ["Superior colliculus", "LGN", "Optic radiation", "Visual cortex"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Neuro-Ophthalmic Pathways",
+    "sub": "Visual Reflexes",
+    "rationale": "The superior colliculus is a midbrain structure involved in eye movements and saccades."
+  },
+  {
+    "id": 294,
+    "text": "Which embryologic layer gives rise to the retina and optic nerve?",
+    "choices": ["Neuroectoderm", "Surface ectoderm", "Mesoderm", "Endoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Development",
+    "rationale": "The optic cup and stalk develop from neuroectoderm of the diencephalon."
+  },
+  {
+    "id": 295,
+    "text": "The corneal epithelium originates from which embryonic layer?",
+    "choices": ["Surface ectoderm", "Neural crest", "Neuroectoderm", "Mesoderm"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Corneal Development",
+    "rationale": "The corneal epithelium develops from surface ectoderm; endothelium derives from neural crest."
+  },
+  {
+    "id": 296,
+    "text": "Neural crest cells contribute to all of the following except:",
+    "choices": ["Corneal endothelium", "Iris stroma", "Lens fibers", "Trabecular meshwork"],
+    "correct": 2,
+    "discipline": "A. Anatomy",
+    "condition": "Embryology",
+    "sub": "Ocular Derivatives",
+    "rationale": "The lens arises from surface ectoderm, not neural crest."
+  },
+  {
+    "id": 297,
+    "text": "At birth, which ocular structure is anatomically immature?",
+    "choices": ["Macula", "Cornea", "Iris", "Optic nerve"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Foveal Development",
+    "rationale": "The macula/fovea mature postnatally, reaching adult structure by ~4 years."
+  },
+  {
+    "id": 298,
+    "text": "Which is the most likely cause of congenital nasolacrimal duct obstruction?",
+    "choices": ["Membrane persistence at the valve of Hasner", "Absence of puncta", "Dacryocystitis", "Cystic dilation of canaliculi"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental / Lids & Lacrimal",
+    "sub": "NLD Obstruction",
+    "rationale": "Failure of canalization at the valve of Hasner leads to epiphora in infants."
+  },
+  {
+    "id": 299,
+    "text": "Which developmental anomaly presents with a small cornea and iris-to-cornea adhesions?",
+    "choices": ["Axenfeld–Rieger anomaly", "Peters anomaly", "Aniridia", "Microphakia"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Anomalies",
+    "sub": "Anterior Segment Dysgenesis",
+    "rationale": "Axenfeld–Rieger involves anterior segment dysgenesis from abnormal neural crest migration."
+  },
+  {
+    "id": 300,
+    "text": "Which ocular condition most commonly causes sensory deprivation amblyopia in infants?",
+    "choices": ["Congenital cataract", "Strabismus", "Uncorrected anisometropia", "Ptosis"],
+    "correct": 0,
+    "discipline": "A. Anatomy",
+    "condition": "Developmental Vision",
+    "sub": "Amblyopia",
+    "rationale": "Dense congenital cataracts block form vision during the critical period, leading to amblyopia."
+  }
 ]
