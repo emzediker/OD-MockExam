@@ -1,0 +1,432 @@
+[
+  {
+    "id": null,
+    "text": "A myope’s far point is 25 cm in front of the cornea. What single-vision spectacle power (at the cornea) neutralizes distance blur?",
+    "choices": ["−4.00 D", "−3.50 D", "−2.50 D", "−5.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Myopia / Far Point",
+    "rationale": "F = −1/l = −1/0.25 m = −4.00 D (at the principal plane)."
+  },
+  {
+    "id": null,
+    "text": "Hyperopia is most accurately described as:",
+    "choices": ["The far point is a virtual point behind the eye", "The far point lies in front of the eye", "Light focuses on the retina without accommodation", "Corneal power is always too steep"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Hyperopia / Far Point",
+    "rationale": "In hyperopia, parallel light would focus behind the retina; the far point is virtual and posterior."
+  },
+  {
+    "id": null,
+    "text": "An axial length increase of ~1.0 mm changes refractive error by approximately:",
+    "choices": ["−2.50 D (more myopic)", "−1.00 D", "−0.50 D", "−3.50 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Axial Ametropia",
+    "rationale": "Rule of thumb: ≈ 2.5 D per mm around the 24-mm eye."
+  },
+  {
+    "id": null,
+    "text": "A −3.00 D myope looking at 33 cm without correction requires how much accommodation?",
+    "choices": ["0.00 D", "1.00 D", "3.00 D", "−3.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Accommodation in Myopia",
+    "rationale": "Object demand at 33 cm is 3.00 D; the myope’s far point provides a “head start,” so no additional accommodation is needed."
+  },
+  {
+    "id": null,
+    "text": "Uncorrected hyperopes at optical infinity must:",
+    "choices": ["Accommodate equal to their hyperopia", "Relax accommodation fully", "Use negative accommodation", "Accommodate only at near"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Accommodation in Hyperopia",
+    "rationale": "Distance clarity requires accommodation to overcome latent/manifest hyperopia."
+  },
+  {
+    "id": null,
+    "text": "The spherical equivalent (SE) of −2.50 −1.50 × 180 is:",
+    "choices": ["−3.25 D", "−2.50 D", "−1.75 D", "−3.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spherical Equivalent",
+    "rationale": "SE = sphere + (cyl/2) = −2.50 + (−1.50/2) = −3.25 D."
+  },
+  {
+    "id": null,
+    "text": "With-the-rule corneal astigmatism typically shows the steepest curvature:",
+    "choices": ["Near 90° meridian (vertical)", "Near 180° meridian (horizontal)", "At 45°", "Uniform in all meridians"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism Patterns",
+    "rationale": "WTR = steeper vertically; correcting axis near 180°."
+  },
+  {
+    "id": null,
+    "text": "The circle of least confusion (CLoC) is located:",
+    "choices": ["Midway between the two focal lines", "At the anterior focal line", "At the posterior focal line", "At the retina in all astigmats"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Interval of Sturm",
+    "rationale": "CLoC lies at the midpoint of the interval of Sturm and corresponds to the spherical equivalent focus."
+  },
+  {
+    "id": null,
+    "text": "A patient’s habitual Rx is −10.00 D in spectacles worn at 15 mm. What is the approximate contact-lens power (at the cornea)?",
+    "choices": ["−8.50 D", "−9.00 D", "−10.00 D", "−11.50 D"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Vertex Distance",
+    "rationale": "Fglasses = FCL/(1 − d·FCL) → solving backward gives ≈ −9.00 D for the contact lens."
+  },
+  {
+    "id": null,
+    "text": "Reducing vertex distance for high minus spectacles generally:",
+    "choices": ["Reduces effective minus and minification", "Increases effective minus and minification", "Has no effect on effective power", "Increases aberrations only"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spectacle Optics / Vertex",
+    "rationale": "Bringing a minus lens closer decreases its effective negative power and minification."
+  },
+  {
+    "id": null,
+    "text": "Presbyopic near add is commonly estimated with:",
+    "choices": ["Add ≈ (Demand − AA)/2", "Add ≈ AA − Demand", "Add ≈ Demand + AA", "Add ≈ half the distance Rx"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Presbyopia / Add Determination",
+    "rationale": "Book formula for balanced comfort near work."
+  },
+  {
+    "id": null,
+    "text": "Which procedure most directly flattens the central cornea to correct myopia?",
+    "choices": ["LASIK/PRK", "Conductive keratoplasty", "Refractive lens exchange", "Piggyback IOLs"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Surgical Options",
+    "rationale": "Excimer ablation reduces central corneal curvature to decrease power."
+  },
+  {
+    "id": null,
+    "text": "Conductive keratoplasty (CK) is primarily used for:",
+    "choices": ["Low hyperopia/presbyopia", "High myopia", "Keratoconus cross-linking", "Astigmatism only"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Surgical Options",
+    "rationale": "Peripheral collagen shrinkage steepens the center—useful for low hyperopia; regression can occur."
+  },
+  {
+    "id": null,
+    "text": "SMILE differs from LASIK mainly by:",
+    "choices": ["Creating/removing a lenticule without a flap", "Adding a flap and no lenticule", "Thermal peripheral burns", "Use of intraocular lens"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Surgical Options",
+    "rationale": "SMILE removes a corneal lenticule via small incision; flapless."
+  },
+  {
+    "id": null,
+    "text": "Refractive lens exchange for presbyopia/hyperopia trades improved focus for which drawback?",
+    "choices": ["Loss of accommodation", "Higher corneal edema risk than LASIK", "Irreversible corneal ectasia", "No effect on depth of field"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Presbyopia / Surgery",
+    "rationale": "Removing the crystalline lens eliminates natural accommodation."
+  },
+  {
+    "id": null,
+    "text": "Best definition of anisometropia:",
+    "choices": ["Significant inter-ocular difference in refractive power", "Difference in PDs between eyes", "Different K readings with same SE", "Vertical prism imbalance at near"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Anisometropia",
+    "rationale": "Clinically relevant size or power differences can disrupt fusion and induce aniseikonia."
+  },
+  {
+    "id": null,
+    "text": "Aniseikonia greater than ~5–7% often leads to:",
+    "choices": ["Fusion breakdown and symptoms", "Better stereopsis", "Suppression reversal", "Reduced diplopia complaints"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Aniseikonia",
+    "rationale": "Size disparity above tolerance causes discomfort, distortions, and loss of fusion."
+  },
+  {
+    "id": null,
+    "text": "According to Knapp’s law, which correction minimizes image-size difference in axial anisometropia?",
+    "choices": ["Spectacles at the anterior focal plane", "Contact lenses on the cornea", "Either spectacles or contacts (no difference)", "Prisms with contacts"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Knapp’s Law",
+    "rationale": "For axial anisometropia, spectacle lenses placed at the principal plane reduce aniseikonia vs. contacts."
+  },
+  {
+    "id": null,
+    "text": "For refractive anisometropia, which correction tends to minimize aniseikonia?",
+    "choices": ["Contact lenses", "High-vertex spectacles", "Iseikonic spectacles only", "Any correction yields the same size"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Knapp’s Law / Clinical",
+    "rationale": "Refractive anisometropes usually experience less size difference with CLs."
+  },
+  {
+    "id": null,
+    "text": "A patient is −8.00 D OD and −2.00 D OS in spectacles at 12 mm. Which statement is true about spectacle magnification?",
+    "choices": ["OD image is more minified than OS", "OS image is more minified than OD", "Equal image sizes", "Spectacle minification is independent of power"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spectacle Magnification",
+    "rationale": "Higher minus power produces greater spectacle minification at a given vertex distance."
+  },
+  {
+    "id": null,
+    "text": "Which change most effectively reduces spectacle minification in a high myope?",
+    "choices": ["Decrease vertex distance", "Increase center thickness", "Increase base curve", "Switch to lower index"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spectacle Optics",
+    "rationale": "Decreasing vertex distance reduces effective minus power and minification."
+  },
+  {
+    "id": null,
+    "text": "The interval of Sturm is defined as the distance between:",
+    "choices": ["The two line foci in astigmatism", "The retina and CLoC", "The anterior focal line and retina", "The posterior focal line and retina"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism Optics",
+    "rationale": "Astigmatic systems create two perpendicular line foci."
+  },
+  {
+    "id": null,
+    "text": "Oblique astigmatism correction often causes which initial patient complaint?",
+    "choices": ["Tilted floors/walls (geometric distortion)", "Central scotoma", "Blue-yellow dyschromatopsia", "Binocular diplopia in primary gaze only"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism / Perception",
+    "rationale": "Meridional magnification changes can make planes appear tilted until adaptation occurs."
+  },
+  {
+    "id": null,
+    "text": "You refract −2.00 −2.00 × 180 to 20/20. What single-vision SE would place the CLoC on the retina?",
+    "choices": ["−3.00 D", "−2.00 D", "−4.00 D", "−1.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spherical Equivalent",
+    "rationale": "SE = −2.00 + (−2.00/2) = −3.00 D."
+  },
+  {
+    "id": null,
+    "text": "A patient’s amplitude of accommodation is 4.00 D. For 40-cm work, a comfortable add by the (Demand − AA)/2 rule is:",
+    "choices": ["+0.50 D", "+1.00 D", "+1.50 D", "+2.00 D"],
+    "correct": 1,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Presbyopia / Add",
+    "rationale": "Demand at 40 cm = 2.50 D; (2.50 − 4.00) is negative so the minimal + add for comfort ≈ +1.00 D (clinical rounding)."
+  },
+  {
+    "id": null,
+    "text": "Compared with spectacles, high myopes wearing contact lenses typically experience:",
+    "choices": ["Less minification and wider field of view", "More minification and narrower field", "More chromatic aberration", "Greater base-down prism in downgaze"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Contacts vs Spectacles",
+    "rationale": "Eliminating vertex distance reduces effective minus and increases field of view."
+  },
+  {
+    "id": null,
+    "text": "A +3.00 D hyperope fitted with contact lenses will, compared with spectacles, experience:",
+    "choices": ["Less magnification at distance", "More magnification at distance", "Identical image size", "Greater field narrowing than spectacles"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Contacts vs Spectacles",
+    "rationale": "Moving plus power from spectacle plane to the cornea reduces spectacle magnification."
+  },
+  {
+    "id": null,
+    "text": "Spherical equivalent is most useful clinically to:",
+    "choices": ["Place the CLoC on the retina for initial trial lenses", "Replace cylinder fully", "Determine PD", "Compute add power directly"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Refraction Strategy",
+    "rationale": "SE helps center the blur distribution when full cylinder is being fine-tuned."
+  },
+  {
+    "id": null,
+    "text": "A −6.00 D spectacle lens at 12 mm is switched to 0 mm (contact lens). The contact lens power will be:",
+    "choices": ["Less minus (e.g., around −5.50 D)", "The same (−6.00 D)", "More minus (e.g., −6.50 D)", "Indeterminate without K readings"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Vertex Distance Conversion",
+    "rationale": "Minus lens moved closer loses effective minus power; convert using Fcl ≈ Fsp / (1 + d·Fsp)."
+  },
+  {
+    "id": null,
+    "text": "Which is TRUE about axial vs refractive myopia?",
+    "choices": ["Axial myopia increases risk of retinal detachment more than purely refractive myopia", "Refractive myopia is always due to lens changes", "Axial myopia has a virtual far point", "Refractive myopia results from a short eye"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Clinical Insights",
+    "rationale": "Axial elongation stretches the retina and is linked with higher detachment risk."
+  },
+  {
+    "id": null,
+    "text": "Which single change most increases spectacle magnification for a given plus Rx?",
+    "choices": ["Increasing front surface (base) curve", "Reducing center thickness", "Reducing vertex distance", "Lowering index with same design"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spectacle Magnification",
+    "rationale": "Magnification rises with increased shape factor (base curve/thickness)."
+  },
+  {
+    "id": null,
+    "text": "A plano −2.00 × 090 cylinder lens produces focal lines oriented:",
+    "choices": ["Horizontal and vertical, with the more minus power at 180°", "Along the cylinder axis only", "Obliquely at 45° and 135°", "At the circle of least confusion only"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism Orientation",
+    "rationale": "Minus cylinder adds power 90° from its axis—here, most minus at 180° (horizontal meridian)."
+  },
+  {
+    "id": null,
+    "text": "Immediately after prescribing first-time high cylinder, which counseling point is MOST appropriate?",
+    "choices": ["Temporary tilt/warp sensation that improves with adaptation", "Permanent distortion that requires Rx reduction", "Color shift due to chromatic aberration", "Immediate perfect clarity without adaptation"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism / Adaptation",
+    "rationale": "Meridional magnification can make floors/walls look tilted; most patients adapt."
+  },
+  {
+    "id": null,
+    "text": "A 50-year-old with 2.00 D of hyperopia has an AA of 2.00 D. Approximate add at 40 cm for comfort is:",
+    "choices": ["+2.25 D", "+1.00 D", "+0.50 D", "+3.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Hyperopia & Presbyopia",
+    "rationale": "Distance correction removes the hyperopic burden; near demand 2.50 D with 2.00 D AA → add about +2.25 D (clinical rounding)."
+  },
+  {
+    "id": null,
+    "text": "For a high hyperope in spectacles, moving the lens closer to the eye generally:",
+    "choices": ["Reduces spectacle magnification", "Increases spectacle magnification", "Induces base-in prism in primary gaze", "Has no effect on field of view"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Spectacle Optics / Plus Lenses",
+    "rationale": "Reducing vertex distance lowers effective plus power and reduces magnification."
+  },
+  {
+    "id": null,
+    "text": "A patient has −5.00 −1.00 × 180. Which change best reduces perceived horizontal line tilt on first-wear?",
+    "choices": ["Slightly reduce cylinder while maintaining SE initially", "Flip to plus-cylinder form", "Increase base curve substantially", "Move optical center nasally"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism / Adaptation",
+    "rationale": "Small cyl reduction (with SE preserved) can ease meridional magnification symptoms during adaptation."
+  },
+  {
+    "id": null,
+    "text": "Which statement about presbyopic depth of field is TRUE after cataract surgery (monofocal IOL)?",
+    "choices": ["Patients rely more on depth of field since accommodation is lost", "Accommodation increases with IOL", "Depth of field decreases to zero", "Near vision becomes independent of pupil size"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Presbyopia / Depth of Field",
+    "rationale": "Loss of accommodation makes patients depend on depth of field; smaller pupils help at the cost of diffraction."
+  },
+  {
+    "id": null,
+    "text": "Which best describes the far point for a +2.00 D uncorrected hyperope?",
+    "choices": ["A virtual point 0.5 m behind the cornea", "A real point 0.5 m in front of the cornea", "Infinity", "A real point 2.0 m behind the cornea"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Hyperopia / Far Point",
+    "rationale": "F = +2.00 D corresponds to a virtual far point at −0.5 m (posterior to the eye)."
+  },
+  {
+    "id": null,
+    "text": "The most appropriate first-line correction to minimize aniseikonia in a refractive anisometrope (−8.00 D OD, −1.00 D OS) is:",
+    "choices": ["Contact lenses", "High-index spectacles with higher base curve OD", "Iseikonic spectacles only", "Balance lens OS"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Aniseikonia Management",
+    "rationale": "Contacts reduce vertex-related size differences compared with spectacles."
+  },
+  {
+    "id": null,
+    "text": "In simple myopic astigmatism, the retinal image at best focus is:",
+    "choices": ["A line focus with one focal line on the retina", "A point image on the retina", "Two point images equidistant from the retina", "A circle at the retina"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Astigmatism Types",
+    "rationale": "One focal line falls on the retina while the other lies in front of it."
+  },
+  {
+    "id": null,
+    "text": "Primary optical change in LASIK for myopia is to:",
+    "choices": ["Decrease central corneal curvature (power)", "Increase central curvature", "Shorten axial length", "Increase lens power"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Surgical Optics",
+    "rationale": "Central flattening reduces system power so parallel rays focus on the retina."
+  },
+  {
+    "id": null,
+    "text": "A −5.00 D myope is over-minused by 1.00 D in trial frame at distance. What happens to accommodation demand for distance targets?",
+    "choices": ["They must accommodate about 1.00 D for distance", "Accommodation becomes zero", "Accommodation becomes negative", "Demand becomes 5.00 D"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Over-Minus Effects",
+    "rationale": "Over-minus effectively makes the patient hyperopic by 1.00 D for distance, requiring accommodation."
+  },
+  {
+    "id": null,
+    "text": "Which is MOST consistent with symptomatic latent hyperopia in a young adult?",
+    "choices": ["Distance asthenopia relieved by cycloplegia", "Central scotoma and RAPD", "Red-green xanthopsia", "Sudden painless monocular blur and cherry-red spot"],
+    "correct": 0,
+    "discipline": "D. Optics",
+    "condition": "Ametropia",
+    "sub": "Latent Hyperopia",
+    "rationale": "Cycloplegia unmasks the full hyperopic error and relieves accommodative spasm symptoms."
+  }
+]
