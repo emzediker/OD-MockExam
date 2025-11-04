@@ -64,26 +64,26 @@
           <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
           <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
           <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
-          <option value="Canada — University of Waterloo (School of Optometry & Vision Science)">Canada — University of Waterloo</option>
-          <option value="Canada — Université de Montréal (École d’optométrie)">Canada — Université de Montréal</option>
-          <option value="Florida — Nova Southeastern University (NSU)">Florida — Nova Southeastern University (NSU)</option>
-          <option value="Illinois — Illinois College of Optometry (ICO)">Illinois — Illinois College of Optometry (ICO)</option>
+          <option value="Canada — University of Waterloo">Canada — University of Waterloo</option>
+          <option value="Canada — Université de Montréal">Canada — Université de Montréal</option>
+          <option value="Florida — Nova Southeastern University">Florida — Nova Southeastern University</option>
+          <option value="Illinois — Illinois College of Optometry">Illinois — Illinois College of Optometry</option>
           <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
-          <option value="Kentucky — KYCO (University of Pikeville)">Kentucky — KYCO (University of Pikeville)</option>
-          <option value="Massachusetts — New England College of Optometry (NECO)">Massachusetts — NECO</option>
-          <option value="Michigan — Michigan College of Optometry (Ferris State)">Michigan — MCO (Ferris State)</option>
-          <option value="Missouri — UMSL College of Optometry">Missouri — UMSL</option>
-          <option value="New York — SUNY College of Optometry">New York — SUNY</option>
-          <option value="North Carolina — High Point University School of Optometry">North Carolina — High Point University</option>
-          <option value="Ohio — The Ohio State University College of Optometry">Ohio — OSU</option>
+          <option value="Kentucky — KYCO">Kentucky — KYCO</option>
+          <option value="Massachusetts — NECO">Massachusetts — NECO</option>
+          <option value="Michigan — MCO">Michigan — MCO</option>
+          <option value="Missouri — UMSL">Missouri — UMSL</option>
+          <option value="New York — SUNY">New York — SUNY</option>
+          <option value="North Carolina — High Point University">North Carolina — High Point University</option>
+          <option value="Ohio — OSU">Ohio — OSU</option>
           <option value="Oklahoma — NSUOCO">Oklahoma — NSUOCO</option>
-          <option value="Oregon — Pacific University College of Optometry">Oregon — Pacific University</option>
-          <option value="Pennsylvania — Salus University (PCO)">Pennsylvania — Salus (PCO)</option>
+          <option value="Oregon — Pacific University">Oregon — Pacific University</option>
+          <option value="Pennsylvania — PCO">Pennsylvania — PCO</option>
           <option value="Puerto Rico — IAUPR">Puerto Rico — IAUPR</option>
           <option value="Texas — UIWRSO">Texas — UIWRSO</option>
           <option value="Texas — UHCO">Texas — UHCO</option>
           <option value="Texas — UTRGV">Texas — UTRGV</option>
-          <option value="Utah — Rocky Mountain University College of Optometry">Utah — Rocky Mountain University</option>
+          <option value="Utah — Rocky Mountain University">Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
@@ -129,10 +129,7 @@
 </main>
 
 <script>
-/* ====== CONFIG ====== */
 const QUESTIONS_URL = "./questions.json";
-
-/* Ordered taxonomy (for reporting) */
 const DISCIPLINES = [
   "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
 ];
@@ -142,18 +139,21 @@ const CONDITIONS = [
   "Lids / Lashes / Lacrimal / Adnexa / Orbit","Conjunctiva / Cornea / Refractive Surgery","Lens / Cataract / IOL / Pre- & Post-Op Care",
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
-
-/* ====== UTIL ====== */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
-
-/* ✅ School is now optional */
-function confirmNoSchool(){
-  return true; // Always allow grading, even if no school is selected
-}
-
-/* ====== RENDER ====== */
-... (rest of your script remains identical) ...
+function confirmNoSchool(){ return true; }
+const examDiv=document.getElementById('exam'),reportEl=document.getElementById('report'),dateEl=document.getElementById('dateStamp'),totalEl=document.getElementById('totalScore'),discBody=document.querySelector('#discSummary tbody'),condBody=document.querySelector('#condTable tbody'),subHost=document.getElementById('subcats');
+let QUESTIONS=[],SHUFFLED=[];
+function renderExam(){ examDiv.innerHTML=''; SHUFFLED.forEach((q,i)=>{ const wrap=document.createElement('div'); wrap.className='question'; const meta=`<div class="meta"><span class="pill">${q.discipline}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`; const choicesHtml=q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join(''); wrap.innerHTML=`<div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div>`; examDiv.appendChild(wrap); }); }
+function scoreExam(){ const perCond={},perDisc={},perSub={}; CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0}); DISCIPLINES.forEach(d=>perDisc[d]={correct:0,total:0}); CONDITIONS.forEach(c=>perSub[c]={}); let correctTotal=0; SHUFFLED.forEach((q,i)=>{ const picked=document.querySelector(`input[name='q${i}']:checked`); const chosenIdx=picked?parseInt(picked.value,10):-1; const ok=(chosenIdx===q.correctIndexAfterShuffle); if(ok)correctTotal++; perCond[q.condition].total++; if(ok)perCond[q.condition].correct++; perDisc[q.discipline].total++; if(ok)perDisc[q.discipline].correct++; if(!perSub[q.condition][q.sub])perSub[q.condition][q.sub]={correct:0,total:0}; perSub[q.condition][q.sub].total++; if(ok)perSub[q.condition][q.sub].correct++; const rat=document.getElementById('rat'+i); rat.classList.remove('hide'); rat.innerHTML=(ok?'✅':'❌')+" <b>Correct:</b> "+q.choices[q.correctIndexAfterShuffle]+(q.rationale?("<br>"+q.rationale):""); }); const pct=Math.round(100*correctTotal/SHUFFLED.length); return {perCond,perDisc,perSub,correctTotal,total:SHUFFLED.length,pct}; }
+function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
+function renderReport(res){ reportEl.classList.remove('hide'); dateEl.textContent=new Date().toLocaleString(); totalEl.textContent=`${res.pct}% (${res.correctTotal} / ${res.total})`; document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous'; document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—'; let rows=[],idx=1; DISCIPLINES.forEach(d=>{ const rec=res.perDisc[d]; if(!rec||!rec.total)return; const pct=Math.round(100*rec.correct/rec.total); rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`); }); discBody.innerHTML=rows.join(''); rows=[]; idx=1; CONDITIONS.forEach(c=>{ const rec=res.perCond[c]; if(!rec||!rec.total)return; const pct=Math.round(100*rec.correct/rec.total); rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`); }); condBody.innerHTML=rows.join(''); let html='',cidx=1; CONDITIONS.forEach(c=>{ const subs=res.perSub[c]; const keys=Object.keys(subs||{}); if(!keys.length)return; html+=`<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`; html+='<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>'; keys.sort().forEach(s=>{ const rec=subs[s]; const pct=Math.round(100*rec.correct/rec.total); html+=`<tr><td>${s}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`; }); html+='</tbody></table>'; cidx++; }); subHost.innerHTML=html||'<div class="muted">No subcategory data.</div>'; document.getElementById('printBtn').disabled=false; }
+document.getElementById('gradeBtn').addEventListener('click',()=>{ const res=scoreExam(); renderReport(res); window.scrollTo({top:document.getElementById('report').offsetTop-20,behavior:'smooth'}); });
+document.getElementById('resetBtn').addEventListener('click',()=>{ prepareShuffled(); renderExam(); document.getElementById('report').classList.add('hide'); document.getElementById('printBtn').disabled=true; window.scrollTo({top:0,behavior:'smooth'}); });
+document.getElementById('printBtn').addEventListener('click',()=>{ if(document.getElementById('report').classList.contains('hide')){ alert('Please grade the exam first.'); return; } window.scrollTo({top:document.getElementById('report').offsetTop-20,behavior:'smooth'}); setTimeout(()=>window.print(),150); });
+async function loadQuestions(){ const r=await fetch(QUESTIONS_URL,{cache:'no-store'}); if(!r.ok)throw new Error('Failed to load questions.json'); const bank=await r.json(); bank.forEach((q,i)=>{ if(typeof q.id!=='number')q.id=i+1; if(!Array.isArray(q.choices))q.choices=[]; if(typeof q.correct!=='number')q.correct=0; if(typeof q.text!=='string')q.text=''; if(typeof q.rationale!=='string')q.rationale=''; }); QUESTIONS=bank; }
+function prepareShuffled(){ const qs=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q))); shuffle(qs); qs.forEach(q=>{ const orig=q.choices.map((c,i)=>({text:c,originalIdx:i})); shuffle(orig); q.choices=orig.map(o=>o.text); const newIdx=orig.findIndex(o=>o.originalIdx===q.correct); q.correctIndexAfterShuffle=newIdx>=0?newIdx:0; }); SHUFFLED=qs; }
+(async function boot(){ try{ await loadQuestions(); prepareShuffled(); renderExam(); }catch(e){ console.error(e); examDiv.innerHTML=`<div class='summary'><b>Error:</b> ${e.message}</div>`; }})();
 </script>
 </body>
 </html>
