@@ -33,6 +33,8 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
+
+  /* Print only the report */
   @media print{
     header,.actions,#studentBox,#exam,.question,.rationale,.meta{display:none!important}
     #report{display:block!important;border:none!important}
@@ -129,7 +131,7 @@
 </main>
 
 <script>
-/* ===== Config ===== */
+/* ---------------- CONFIG ---------------- */
 const QUESTIONS_URL = "./questions.json";
 const DISCIPLINES = [
   "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
@@ -141,12 +143,11 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-/* ===== Utils ===== */
+/* ---------------- UTILS ---------------- */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
-function confirmNoSchool(){ return true; } // school is optional
 
-/* ===== DOM Refs ===== */
+/* ---------------- DOM ---------------- */
 const examDiv=document.getElementById('exam'),
       reportEl=document.getElementById('report'),
       dateEl=document.getElementById('dateStamp'),
@@ -157,22 +158,19 @@ const examDiv=document.getElementById('exam'),
 
 let QUESTIONS=[], SHUFFLED=[];
 
-/* ===== Render Exam ===== */
+/* ---------------- RENDER EXAM ---------------- */
 function renderExam(){
   examDiv.innerHTML='';
   SHUFFLED.forEach((q,i)=>{
     const wrap=document.createElement('div'); wrap.className='question';
     const meta=`<div class="meta"><span class="pill">${q.discipline}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
     const choicesHtml=q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
-    wrap.innerHTML=`
-      <div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div>
-      <div class="choices">${choicesHtml}</div>
-      <div id="rat${i}" class="rationale hide"></div>`;
+    wrap.innerHTML=`<div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div>`;
     examDiv.appendChild(wrap);
   });
 }
 
-/* ===== Score Exam ===== */
+/* ---------------- SCORE ---------------- */
 function scoreExam(){
   const perCond={}, perDisc={}, perSub={};
   CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
@@ -180,7 +178,6 @@ function scoreExam(){
   CONDITIONS.forEach(c=>perSub[c]={});
 
   let correctTotal=0;
-
   SHUFFLED.forEach((q,i)=>{
     if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
     if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
@@ -188,7 +185,7 @@ function scoreExam(){
     if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
 
     const picked=document.querySelector(`input[name='q${i}']:checked`);
-    const chosenIdx=picked ? parseInt(picked.value,10) : -1;
+    const chosenIdx=picked?parseInt(picked.value,10):-1;
     const ok=(chosenIdx===q.correctIndexAfterShuffle);
     if(ok) correctTotal++;
 
@@ -202,140 +199,135 @@ function scoreExam(){
   });
 
   const pct=Math.round(100*correctTotal/SHUFFLED.length);
-  return {perCond, perDisc, perSub, correctTotal, total: SHUFFLED.length, pct};
+  return {perCond, perDisc, perSub, correctTotal, total:SHUFFLED.length, pct};
 }
 
-/* ===== Report Rendering ===== */
+/* ---------------- REPORT ---------------- */
 function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
 
 function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
   totalEl.textContent=`${res.pct}% (${res.correctTotal} / ${res.total})`;
-  document.getElementById('studentName').textContent=document.getElementById('s_name').value || 'Anonymous';
-  document.getElementById('schoolName').textContent=document.getElementById('s_school').value || '—';
+  document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
+  document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
-  // Disciplines
-  let rows=[], idx=1;
+  let rows=[],idx=1;
   DISCIPLINES.forEach(d=>{
-    const rec=res.perDisc[d]; if(!rec||!rec.total) return;
-    const pct=Math.round(100*rec.correct/rec.total);
-    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+    const r=res.perDisc[d]; if(!r||!r.total) return;
+    const p=Math.round(100*r.correct/r.total);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
   discBody.innerHTML=rows.join('');
 
-  // Conditions
   rows=[]; idx=1;
   CONDITIONS.forEach(c=>{
-    const rec=res.perCond[c]; if(!rec||!rec.total) return;
-    const pct=Math.round(100*rec.correct/rec.total);
-    rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`);
+    const r=res.perCond[c]; if(!r||!r.total) return;
+    const p=Math.round(100*r.correct/r.total);
+    rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
   condBody.innerHTML=rows.join('');
 
-  // Subcategories
-  let html='', cidx=1;
+  let html='',cidx=1;
   CONDITIONS.forEach(c=>{
     const subs=res.perSub[c]; const keys=Object.keys(subs||{});
     if(!keys.length) return;
-    html += `<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
-    html += '<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>';
+    html+=`<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
+    html+='<table><thead><tr><th style="width:55%">Subcategory</th><th style="width:20%">% Correct</th><th>Correct / Total</th></tr></thead><tbody>';
     keys.sort().forEach(s=>{
-      const rec=subs[s]; const pct=Math.round(100*rec.correct/rec.total);
-      html += `<tr><td>${s}</td>${pctCell(pct)}<td>${rec.correct} / ${rec.total}</td></tr>`;
+      const r=subs[s]; const p=Math.round(100*r.correct/r.total);
+      html+=`<tr><td>${s}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`;
     });
-    html += '</tbody></table>'; cidx++;
+    html+='</tbody></table>'; cidx++;
   });
-  subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
+  subHost.innerHTML=html||'<div class="muted">No subcategory data.</div>';
 
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ===== Robust Print (hidden iframe; iOS/Thinkific safe) ===== */
+/* ---------------- PERSISTENT PRINT (works multiple times) ---------------- */
 function printReportInHiddenFrame(){
-  const report = document.getElementById('report');
-  if (!report || report.classList.contains('hide')) {
-    alert('Please grade the exam first to generate the report.');
-    return;
-  }
+  const report=document.getElementById('report');
+  if(!report||report.classList.contains('hide')){ alert('Please grade first.'); return; }
 
-  // Clone the live report (ensure visibility)
-  const clone = report.cloneNode(true);
-  clone.id = 'reportPrint';
+  // Clone the visible report
+  const clone=report.cloneNode(true);
+  clone.id='reportPrint';
   clone.classList.remove('hide');
-  clone.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+  clone.querySelectorAll('.hide').forEach(el=>el.classList.remove('hide'));
 
-  // Inline all page styles + a small print patch
-  let inlineStyles = '';
-  document.querySelectorAll('style').forEach(s => { inlineStyles += s.innerHTML + '\n'; });
-  const patchCSS = `
+  // Inline styles + small print patch
+  let styles=''; document.querySelectorAll('style').forEach(s=>styles+=s.innerHTML+'\n');
+  const patch=`
     @media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
     @page{size:auto;margin:12mm}
   `;
+  const html=`<!doctype html><html><head><meta charset="utf-8"><title>OD on the GO — Score Report</title><style>${styles}\n${patch}</style></head><body></body></html>`;
 
-  const html = `<!doctype html><html><head><meta charset="utf-8">
-    <title>OD on the GO — Score Report</title>
-    <style>${inlineStyles}\n${patchCSS}</style>
-  </head><body></body></html>`;
+  // Create or reuse a single hidden iframe
+  let frame=document.getElementById('odgPrintFrame');
+  if(!frame){
+    frame=document.createElement('iframe');
+    frame.id='odgPrintFrame';
+    frame.style.position='fixed';
+    frame.style.right='0';
+    frame.style.bottom='0';
+    frame.style.width='1px';
+    frame.style.height='1px';
+    frame.style.border='0';
+    frame.setAttribute('aria-hidden','true');
+    document.body.appendChild(frame);
+  }
 
-  // Hidden (but nonzero) iframe for iOS layout
-  const frame = document.createElement('iframe');
-  frame.style.position='fixed'; frame.style.right='0'; frame.style.bottom='0';
-  frame.style.width='1px'; frame.style.height='1px'; frame.style.border='0';
-  frame.setAttribute('aria-hidden','true');
-  document.body.appendChild(frame);
-
-  const doc = frame.contentDocument || frame.contentWindow.document;
+  const doc=frame.contentDocument||frame.contentWindow.document;
   doc.open(); doc.write(html); doc.close();
 
-  const mountAndPrint = () => {
-    try {
-      doc.body.innerHTML = '';
+  const mount=()=>{
+    try{
+      doc.body.innerHTML='';
       doc.body.appendChild(clone);
-      // wait 2 frames for layout before printing (prevents blank page on iOS)
+      const w=frame.contentWindow;
+
+      // Reset frame content after print closes (keep iframe for next time)
+      w.onafterprint=()=>{ try{ doc.body.innerHTML=''; }catch(_){} };
+
+      // Two RAFs to avoid blank preview on iOS
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
-        frame.contentWindow.focus();
-        frame.contentWindow.print();
-        setTimeout(()=>{ if(frame.parentNode) frame.parentNode.removeChild(frame); }, 1200);
+        w.focus();
+        w.print();
       }));
-    } catch (e) {
-      setTimeout(mountAndPrint, 150);
+    }catch(_){
+      setTimeout(mount,150);
     }
   };
-  frame.onload = mountAndPrint;
-  setTimeout(mountAndPrint, 150);
+
+  frame.onload=mount;
+  setTimeout(mount,150); // backup trigger
 }
 
-/* ===== Events ===== */
+/* ---------------- EVENTS ---------------- */
 document.getElementById('gradeBtn').addEventListener('click', ()=>{
-  try{
-    const res=scoreExam();
-    renderReport(res);
-    window.scrollTo({top:document.getElementById('report').offsetTop-20,behavior:'smooth'});
-  }catch(e){
-    console.error(e);
-    examDiv.insertAdjacentHTML('afterbegin', `<div class="summary"><b>Error during grading:</b> ${e.message}</div>`);
-  }
+  const res=scoreExam();
+  renderReport(res);
+  window.scrollTo({top:reportEl.offsetTop-20,behavior:'smooth'});
 });
 
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  prepareShuffled(); renderExam();
-  document.getElementById('report').classList.add('hide');
+  prepareShuffled();
+  renderExam();
+  reportEl.classList.add('hide');
   document.getElementById('printBtn').disabled=true;
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
-// New print handler
-document.getElementById('printBtn').addEventListener('click', ()=>{
-  printReportInHiddenFrame();
-});
+document.getElementById('printBtn').addEventListener('click', printReportInHiddenFrame);
 
-/* ===== Load & Shuffle ===== */
+/* ---------------- DATA LOAD & SHUFFLE ---------------- */
 async function loadQuestions(){
-  const r = await fetch(QUESTIONS_URL, {cache:'no-store'});
+  const r=await fetch(QUESTIONS_URL,{cache:'no-store'});
   if(!r.ok) throw new Error('Failed to load questions.json');
-  const bank = await r.json();
+  const bank=await r.json();
   bank.forEach((q,i)=>{
     if(typeof q.id!=='number') q.id=i+1;
     if(!Array.isArray(q.choices)) q.choices=[];
@@ -346,23 +338,23 @@ async function loadQuestions(){
     if(typeof q.condition!=='string') q.condition='';
     if(typeof q.sub!=='string') q.sub='';
   });
-  QUESTIONS = bank;
+  QUESTIONS=bank;
 }
 
 function prepareShuffled(){
-  const qs = QUESTIONS.map(q => JSON.parse(JSON.stringify(q)));
+  const qs=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q)));
   shuffle(qs);
   qs.forEach(q=>{
-    const orig = q.choices.map((c,i)=>({text:c,originalIdx:i}));
+    const orig=q.choices.map((c,i)=>({text:c, originalIdx:i}));
     shuffle(orig);
-    q.choices = orig.map(o=>o.text);
-    const newIdx = orig.findIndex(o=>o.originalIdx === q.correct);
-    q.correctIndexAfterShuffle = newIdx >= 0 ? newIdx : 0;
+    q.choices=orig.map(o=>o.text);
+    const newIdx=orig.findIndex(o=>o.originalIdx===q.correct);
+    q.correctIndexAfterShuffle = newIdx>=0?newIdx:0;
   });
-  SHUFFLED = qs;
+  SHUFFLED=qs;
 }
 
-/* ===== Boot ===== */
+/* ---------------- BOOT ---------------- */
 (async function boot(){
   try{
     await loadQuestions();
@@ -370,7 +362,7 @@ function prepareShuffled(){
     renderExam();
   }catch(e){
     console.error(e);
-    examDiv.innerHTML = `<div class="summary"><b>Error:</b> ${e.message}</div>`;
+    examDiv.innerHTML=`<div class="summary"><b>Error:</b> ${e.message}</div>`;
   }
 })();
 </script>
