@@ -129,6 +129,7 @@
 </main>
 
 <script>
+/* ===== Config ===== */
 const QUESTIONS_URL = "./questions.json";
 const DISCIPLINES = [
   "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
@@ -140,10 +141,12 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
+/* ===== Utils ===== */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
-function confirmNoSchool(){ return true; }
+function confirmNoSchool(){ return true; } // school is optional
 
+/* ===== DOM Refs ===== */
 const examDiv=document.getElementById('exam'),
       reportEl=document.getElementById('report'),
       dateEl=document.getElementById('dateStamp'),
@@ -154,6 +157,7 @@ const examDiv=document.getElementById('exam'),
 
 let QUESTIONS=[], SHUFFLED=[];
 
+/* ===== Render Exam ===== */
 function renderExam(){
   examDiv.innerHTML='';
   SHUFFLED.forEach((q,i)=>{
@@ -168,6 +172,7 @@ function renderExam(){
   });
 }
 
+/* ===== Score Exam ===== */
 function scoreExam(){
   const perCond={}, perDisc={}, perSub={};
   CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
@@ -200,6 +205,7 @@ function scoreExam(){
   return {perCond, perDisc, perSub, correctTotal, total: SHUFFLED.length, pct};
 }
 
+/* ===== Report Rendering ===== */
 function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
 
 function renderReport(res){
@@ -245,52 +251,60 @@ function renderReport(res){
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ===== Print via hidden iframe (Thinkific-friendly) ===== */
+/* ===== Robust Print (hidden iframe; iOS/Thinkific safe) ===== */
 function printReportInHiddenFrame(){
   const report = document.getElementById('report');
   if (!report || report.classList.contains('hide')) {
     alert('Please grade the exam first to generate the report.');
     return;
   }
-  const html = `
-  <!doctype html>
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <title>OD on the GO — Score Report</title>
-    <style>
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
-      table{width:100%;border-collapse:collapse}
-      th,td{border-bottom:1px solid #e6e8eb;padding:8px;text-align:left}
-      th{background:#f6f8fb}
-      .summary{background:#f8fafc;border:1px solid #e6e8eb;border-radius:12px;padding:12px;margin:14px 0}
-      .brand{font-weight:700}
-      .ok{color:#0a7f2e;font-weight:600}
-      .bad{color:#b00020;font-weight:600}
-      @page { size:auto; margin:12mm; }
-    </style>
-  </head>
-  <body>${report.innerHTML}</body>
-  </html>`;
 
+  // Clone the live report (ensure visibility)
+  const clone = report.cloneNode(true);
+  clone.id = 'reportPrint';
+  clone.classList.remove('hide');
+  clone.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+
+  // Inline all page styles + a small print patch
+  let inlineStyles = '';
+  document.querySelectorAll('style').forEach(s => { inlineStyles += s.innerHTML + '\n'; });
+  const patchCSS = `
+    @media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
+    @page{size:auto;margin:12mm}
+  `;
+
+  const html = `<!doctype html><html><head><meta charset="utf-8">
+    <title>OD on the GO — Score Report</title>
+    <style>${inlineStyles}\n${patchCSS}</style>
+  </head><body></body></html>`;
+
+  // Hidden (but nonzero) iframe for iOS layout
   const frame = document.createElement('iframe');
   frame.style.position='fixed'; frame.style.right='0'; frame.style.bottom='0';
-  frame.style.width='0'; frame.style.height='0'; frame.style.border='0';
+  frame.style.width='1px'; frame.style.height='1px'; frame.style.border='0';
   frame.setAttribute('aria-hidden','true');
   document.body.appendChild(frame);
 
   const doc = frame.contentDocument || frame.contentWindow.document;
   doc.open(); doc.write(html); doc.close();
 
-  const tryPrint = () => {
-    try{
-      frame.contentWindow.focus();
-      frame.contentWindow.print();
-      setTimeout(()=> document.body.removeChild(frame), 1000);
-    }catch(_){ setTimeout(tryPrint, 200); }
+  const mountAndPrint = () => {
+    try {
+      doc.body.innerHTML = '';
+      doc.body.appendChild(clone);
+      // wait 2 frames for layout before printing (prevents blank page on iOS)
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        frame.contentWindow.focus();
+        frame.contentWindow.print();
+        setTimeout(()=>{ if(frame.parentNode) frame.parentNode.removeChild(frame); }, 1200);
+      }));
+    } catch (e) {
+      setTimeout(mountAndPrint, 150);
+    }
   };
-  frame.onload = tryPrint;
-  setTimeout(tryPrint, 300);
+  frame.onload = mountAndPrint;
+  setTimeout(mountAndPrint, 150);
 }
 
 /* ===== Events ===== */
@@ -312,12 +326,12 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
-// ✅ New print handler (replaces window.print)
+// New print handler
 document.getElementById('printBtn').addEventListener('click', ()=>{
   printReportInHiddenFrame();
 });
 
-// Load & shuffle
+/* ===== Load & Shuffle ===== */
 async function loadQuestions(){
   const r = await fetch(QUESTIONS_URL, {cache:'no-store'});
   if(!r.ok) throw new Error('Failed to load questions.json');
@@ -348,7 +362,7 @@ function prepareShuffled(){
   SHUFFLED = qs;
 }
 
-// Boot
+/* ===== Boot ===== */
 (async function boot(){
   try{
     await loadQuestions();
