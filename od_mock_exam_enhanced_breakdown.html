@@ -115,7 +115,7 @@
     </div>
 
     <h3>Discipline-Level Summary</h3>
-    <!-- NOTE: % only (no Correct/Total) to allow overlaps -->
+    <!-- % only (no Correct/Total) to allow overlaps -->
     <table id="discSummary">
       <thead><tr><th>#</th><th>Discipline</th><th>% Correct</th></tr></thead>
       <tbody></tbody>
@@ -151,6 +151,7 @@ const CONDITIONS = [
 ];
 
 /* ---------------- UTILS ---------------- */
+const normDisc = s => (s||'').replace(/^[A-E]\.\s*/, ''); // strip "A. " etc
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
 function pctCell(p){ return `<td class="${pctClass(p)}">${p}%</td>`; }
@@ -170,8 +171,10 @@ let QUESTIONS=[], SHUFFLED=[];
 function renderExam(){
   examDiv.innerHTML='';
   SHUFFLED.forEach((q,i)=>{
+    const ds = Array.isArray(q.disciplines) ? q.disciplines.map(normDisc)
+             : [normDisc(q.discipline)].filter(Boolean);
     const wrap=document.createElement('div'); wrap.className='question';
-    const meta=`<div class="meta"><span class="pill">${(q.disciplines||[q.discipline]).join(' • ')}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
+    const meta=`<div class="meta"><span class="pill">${ds.join(' • ')}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
     const choicesHtml=q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
     wrap.innerHTML=`<div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div>`;
     examDiv.appendChild(wrap);
@@ -193,8 +196,10 @@ function scoreExam(){
     const ok=(chosenIdx===q.correctIndexAfterShuffle);
     if(ok) correctTotal++;
 
-    // discipline(s) — allow multi-tag
-    const ds = Array.isArray(q.disciplines) && q.disciplines.length ? q.disciplines : [q.discipline].filter(Boolean);
+    // discipline(s) — normalize labels so “D. Optics” == “Optics”
+    const ds = Array.isArray(q.disciplines) && q.disciplines.length
+      ? q.disciplines.map(normDisc)
+      : [normDisc(q.discipline)].filter(Boolean);
     ds.forEach(d=>{
       if(!perDisc[d]) perDisc[d]={correct:0,total:0};
       perDisc[d].total++; if(ok) perDisc[d].correct++;
@@ -226,16 +231,15 @@ function renderReport(res){
   document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
   document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
-  // Disciplines: % only (allows overlaps without confusing totals)
+  // Disciplines: % only
   let rows=[], idx=1;
   DISCIPLINES.forEach(d=>{
-  const cleanName = d.replace(/^[A-E]\.\s*/, ''); // remove A. B. etc.
-  const r=res.perDisc[d];
-  if(!r || !r.total) return;
-  const p=Math.round(100*r.correct/r.total);
-  rows.push(`<tr><td>${idx++}</td><td>${cleanName}</td>${pctCell(p)}</tr>`);
-});
-  // Plus any ad-hoc disciplines that appeared in data but weren't pre-listed
+    const r=res.perDisc[d];
+    if(!r || !r.total) return;
+    const p=Math.round(100*r.correct/r.total);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}</tr>`);
+  });
+  // Any extra discipline tags not in the canonical list
   Object.keys(res.perDisc).forEach(d=>{
     if(DISCIPLINES.includes(d)) return;
     const r=res.perDisc[d]; if(!r || !r.total) return;
@@ -271,7 +275,7 @@ function renderReport(res){
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ---------------- PERSISTENT PRINT (works in Thinkific, multiple times) ---------------- */
+/* ---------------- PERSISTENT PRINT (Thinkific-safe) ---------------- */
 function printReportInHiddenFrame(){
   const report=document.getElementById('report');
   if(!report||report.classList.contains('hide')){
@@ -345,6 +349,7 @@ async function loadQuestions(){
     if(typeof q.correct!=='number') q.correct=0;
     if(typeof q.text!=='string') q.text='';
     if(typeof q.rationale!=='string') q.rationale='';
+    // accept either discipline:"..." or disciplines:["...","..."]
     if(!Array.isArray(q.disciplines) && typeof q.discipline!=='string') q.discipline='';
     if(typeof q.condition!=='string') q.condition='';
     if(typeof q.sub!=='string') q.sub='';
