@@ -21,14 +21,14 @@
   .summary{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;margin:14px 0}
   .actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
   button{border:1px solid var(--border);background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}
-  button.primary{background:#0b6bcb;border-color:#0b6bcb;color:#fff}
+  button.primary{background:var(--brand);border-color:var(--brand);color:#fff}
   button:disabled{opacity:.6;cursor:not-allowed}
   th,td{border-bottom:1px solid var(--border);padding:8px;text-align:left}
   th{background:#f6f8fb}
   table{width:100%;border-collapse:collapse;margin-bottom:8px}
-  .ok{color:#0a7f2e;font-weight:600}
-  .bad{color:#b00020;font-weight:600}
-  .muted{color:#667085}
+  .ok{color:var(--ok);font-weight:600}
+  .bad{color:var(--bad);font-weight:600}
+  .muted{color:var(--muted)}
   .hide{display:none}
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
@@ -88,7 +88,7 @@
         </select>
       </label>
     </div>
-    <small class="muted">Grading will work even if the School field is left blank.</small>
+    <small class="muted">Grading works even if School is blank.</small>
   </div>
 
   <div class="summary">
@@ -115,7 +115,11 @@
     </div>
 
     <h3>Discipline-Level Summary</h3>
-    <table id="discSummary"><thead><tr><th>#</th><th>Discipline</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
+    <!-- NOTE: % only (no Correct/Total) to allow overlaps -->
+    <table id="discSummary">
+      <thead><tr><th>#</th><th>Discipline</th><th>% Correct</th></tr></thead>
+      <tbody></tbody>
+    </table>
 
     <h3>Condition Breakdown</h3>
     <table id="condTable"><thead><tr><th>#</th><th>Condition Area</th><th>% Correct</th><th>Correct / Total</th></tr></thead><tbody></tbody></table>
@@ -132,12 +136,13 @@
 <script>
 /* ---------------- CONFIG ---------------- */
 const QUESTIONS_URL = "./questions.json";
-
-/* canonical names WITHOUT A/B/C/D/E prefixes */
 const DISCIPLINES = [
-  "Anatomy","Biochemistry / Physiology","Immunology / Microbiology / Pathology","Optics","Pharmacology"
+  "Anatomy",
+  "Biochemistry / Physiology",
+  "Immunology / Microbiology / Pathology",
+  "Optics",
+  "Pharmacology"
 ];
-
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -145,56 +150,10 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-/* ---------------- NORMALIZATION HELPERS ---------------- */
-const CANON_DISC = {
-  "Anatomy":"Anatomy",
-  "Biochemistry / Physiology":"Biochemistry / Physiology",
-  "Immunology / Microbiology / Pathology":"Immunology / Microbiology / Pathology",
-  "Optics":"Optics",
-  "Pharmacology":"Pharmacology"
-};
-
-const CANON_COND = Object.fromEntries(CONDITIONS.map(c=>[c,c]));
-
-const DISC_ALIASES = {
-  "a anatomy":"Anatomy","anatomy":"Anatomy",
-  "b biochemistry / physiology":"Biochemistry / Physiology","biochemistry / physiology":"Biochemistry / Physiology",
-  "c immunology / microbiology / pathology":"Immunology / Microbiology / Pathology","immunology / microbiology / pathology":"Immunology / Microbiology / Pathology",
-  "d optics":"Optics","optics":"Optics",
-  "e pharmacology":"Pharmacology","pharmacology":"Pharmacology"
-};
-
-const COND_ALIASES = {
-  "ophthalmic optics/spectacles":"Ophthalmic Optics / Spectacles",
-  "conjunctiva/cornea/refractive surgery":"Conjunctiva / Cornea / Refractive Surgery",
-  "lens/cataract/iol/pre & post-op care":"Lens / Cataract / IOL / Pre- & Post-Op Care",
-  "lens / cataract / iol / pre and post op care":"Lens / Cataract / IOL / Pre- & Post-Op Care",
-  "episclera/sclera/anterior uvea":"Episclera / Sclera / Anterior Uvea",
-  "optic nerve/neuro ophthalmic pathways":"Optic Nerve / Neuro-Ophthalmic Pathways",
-  "neuro-ophthalmic pathways":"Optic Nerve / Neuro-Ophthalmic Pathways",
-  "systemic health / pathology / pharmacology":"Systemic Health",
-  "ocular adnexa / orbit":"Lids / Lashes / Lacrimal / Adnexa / Orbit"
-};
-
-function normKey(s){
-  return String(s||"")
-    .toLowerCase()
-    .replace(/\./g,"")
-    .replace(/\s*\/\s*/g,"/")   // tighten slashes
-    .replace(/\s*&\s*/g," & ")
-    .replace(/\s+/g," ")
-    .trim();
-}
-function canonize(label, canonMap, aliasMap){
-  const k = normKey(label);
-  for(const canon in canonMap){ if(normKey(canon)===k) return canonMap[canon]; }
-  if(aliasMap[k]) return aliasMap[k];
-  return String(label||"").trim();
-}
-
 /* ---------------- UTILS ---------------- */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
+function pctCell(p){ return `<td class="${pctClass(p)}">${p}%</td>`; }
 
 /* ---------------- DOM ---------------- */
 const examDiv=document.getElementById('exam'),
@@ -212,7 +171,7 @@ function renderExam(){
   examDiv.innerHTML='';
   SHUFFLED.forEach((q,i)=>{
     const wrap=document.createElement('div'); wrap.className='question';
-    const meta=`<div class="meta"><span class="pill">${q.discipline}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
+    const meta=`<div class="meta"><span class="pill">${(q.disciplines||[q.discipline]).join(' • ')}</span><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
     const choicesHtml=q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
     wrap.innerHTML=`<div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div>`;
     examDiv.appendChild(wrap);
@@ -227,21 +186,29 @@ function scoreExam(){
   CONDITIONS.forEach(c=>perSub[c]={});
 
   let correctTotal=0;
-  SHUFFLED.forEach((q,i)=>{
-    if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
-    if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
-    if(!perSub[q.condition]) perSub[q.condition]={};
-    if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
 
+  SHUFFLED.forEach((q,i)=>{
     const picked=document.querySelector(`input[name='q${i}']:checked`);
     const chosenIdx=picked?parseInt(picked.value,10):-1;
     const ok=(chosenIdx===q.correctIndexAfterShuffle);
     if(ok) correctTotal++;
 
+    // discipline(s) — allow multi-tag
+    const ds = Array.isArray(q.disciplines) && q.disciplines.length ? q.disciplines : [q.discipline].filter(Boolean);
+    ds.forEach(d=>{
+      if(!perDisc[d]) perDisc[d]={correct:0,total:0};
+      perDisc[d].total++; if(ok) perDisc[d].correct++;
+    });
+
+    // condition & sub
+    if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
     perCond[q.condition].total++; if(ok) perCond[q.condition].correct++;
-    perDisc[q.discipline].total++; if(ok) perDisc[q.discipline].correct++;
+
+    if(!perSub[q.condition]) perSub[q.condition]={};
+    if(!perSub[q.condition][q.sub]) perSub[q.condition][q.sub]={correct:0,total:0};
     perSub[q.condition][q.sub].total++; if(ok) perSub[q.condition][q.sub].correct++;
 
+    // rationale reveal
     const rat=document.getElementById('rat'+i);
     rat.classList.remove('hide');
     rat.innerHTML=(ok?'✅':'❌')+" <b>Correct:</b> "+q.choices[q.correctIndexAfterShuffle]+(q.rationale?("<br>"+q.rationale):"");
@@ -252,8 +219,6 @@ function scoreExam(){
 }
 
 /* ---------------- REPORT ---------------- */
-function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
-
 function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
@@ -261,23 +226,31 @@ function renderReport(res){
   document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
   document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
-  // Disciplines (no A/B/C/D/E shown)
+  // Disciplines: % only (allows overlaps without confusing totals)
   let rows=[], idx=1;
   DISCIPLINES.forEach(d=>{
-    const r=res.perDisc[d]; if(!r||!r.total) return;
+    const r=res.perDisc[d];
+    if(!r || !r.total) return;
     const p=Math.round(100*r.correct/r.total);
-    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}</tr>`);
   });
-  discBody.innerHTML=rows.join('');
+  // Plus any ad-hoc disciplines that appeared in data but weren't pre-listed
+  Object.keys(res.perDisc).forEach(d=>{
+    if(DISCIPLINES.includes(d)) return;
+    const r=res.perDisc[d]; if(!r || !r.total) return;
+    const p=Math.round(100*r.correct/r.total);
+    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}</tr>`);
+  });
+  discBody.innerHTML = rows.join('') || '<tr><td colspan="3" class="muted">No discipline data.</td></tr>';
 
-  // Conditions
+  // Conditions (keep Correct / Total)
   rows=[]; idx=1;
   CONDITIONS.forEach(c=>{
     const r=res.perCond[c]; if(!r||!r.total) return;
     const p=Math.round(100*r.correct/r.total);
     rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
-  condBody.innerHTML=rows.join('');
+  condBody.innerHTML = rows.join('') || '<tr><td colspan="4" class="muted">No condition data.</td></tr>';
 
   // Subcategories
   let html='',cidx=1;
@@ -292,16 +265,18 @@ function renderReport(res){
     });
     html+='</tbody></table>'; cidx++;
   });
-  subHost.innerHTML=html||'<div class="muted">No subcategory data.</div>';
+  subHost.innerHTML = html || '<div class="muted">No subcategory data.</div>';
 
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ---------------- RELIABLE PRINT (multi-use, Thinkific-safe) ---------------- */
+/* ---------------- PERSISTENT PRINT (works in Thinkific, multiple times) ---------------- */
 function printReportInHiddenFrame(){
   const report=document.getElementById('report');
-  if(!report||report.classList.contains('hide')){ alert('Please grade first.'); return; }
-
+  if(!report||report.classList.contains('hide')){
+    alert('Please grade the exam first to generate the report.');
+    return;
+  }
   const clone=report.cloneNode(true);
   clone.id='reportPrint';
   clone.classList.remove('hide');
@@ -309,7 +284,7 @@ function printReportInHiddenFrame(){
 
   let styles=''; document.querySelectorAll('style').forEach(s=>styles+=s.innerHTML+'\n');
   const patch=`
-    @media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
+    @media print { #reportPrint{display:block!important} header,.actions,#studentBox{display:none!important} }
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
     @page{size:auto;margin:12mm}
   `;
@@ -320,11 +295,8 @@ function printReportInHiddenFrame(){
     frame=document.createElement('iframe');
     frame.id='odgPrintFrame';
     frame.style.position='fixed';
-    frame.style.right='0';
-    frame.style.bottom='0';
-    frame.style.width='1px';
-    frame.style.height='1px';
-    frame.style.border='0';
+    frame.style.right='0'; frame.style.bottom='0';
+    frame.style.width='1px'; frame.style.height='1px'; frame.style.border='0';
     frame.setAttribute('aria-hidden','true');
     document.body.appendChild(frame);
   }
@@ -341,9 +313,7 @@ function printReportInHiddenFrame(){
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
         w.focus(); w.print();
       }));
-    }catch(_){
-      setTimeout(mount,150);
-    }
+    }catch(_){ setTimeout(mount,150); }
   };
   frame.onload=mount;
   setTimeout(mount,150);
@@ -356,8 +326,7 @@ document.getElementById('gradeBtn').addEventListener('click', ()=>{
   window.scrollTo({top:reportEl.offsetTop-20,behavior:'smooth'});
 });
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  prepareShuffled();
-  renderExam();
+  prepareShuffled(); renderExam();
   reportEl.classList.add('hide');
   document.getElementById('printBtn').disabled=true;
   window.scrollTo({top:0,behavior:'smooth'});
@@ -375,35 +344,22 @@ async function loadQuestions(){
     if(typeof q.correct!=='number') q.correct=0;
     if(typeof q.text!=='string') q.text='';
     if(typeof q.rationale!=='string') q.rationale='';
-
-    // normalize labels to canonical (disciplines without A/B/C/D/E)
-    q.discipline = canonize(q.discipline, CANON_DISC, DISC_ALIASES);
-    q.condition  = canonize(q.condition,  CANON_COND, COND_ALIASES);
-    q.sub        = (typeof q.sub==='string') ? q.sub.trim() : '';
+    if(!Array.isArray(q.disciplines) && typeof q.discipline!=='string') q.discipline='';
+    if(typeof q.condition!=='string') q.condition='';
+    if(typeof q.sub!=='string') q.sub='';
   });
-
-  // optional console tallies for quick verification during build
-  try{
-    const dTally={}, cTally={};
-    bank.forEach(q=>{
-      dTally[q.discipline] = (dTally[q.discipline]||0)+1;
-      cTally[q.condition]  = (cTally[q.condition]||0)+1;
-    });
-    console.table(dTally);
-    console.table(cTally);
-  }catch(_){}
-
   QUESTIONS=bank;
 }
+
 function prepareShuffled(){
   const qs=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q)));
   shuffle(qs);
   qs.forEach(q=>{
-    const orig=q.choices.map((c,i)=>({text:c,originalIdx:i}));
+    const orig=q.choices.map((c,i)=>({text:c, originalIdx:i}));
     shuffle(orig);
     q.choices=orig.map(o=>o.text);
     const newIdx=orig.findIndex(o=>o.originalIdx===q.correct);
-    q.correctIndexAfterShuffle=newIdx>=0?newIdx:0;
+    q.correctIndexAfterShuffle = newIdx>=0?newIdx:0;
   });
   SHUFFLED=qs;
 }
