@@ -169,7 +169,6 @@ function renderExam(){
 }
 
 function scoreExam(){
-  // Seed with known lists; also allow dynamic buckets when labels differ
   const perCond={}, perDisc={}, perSub={};
   CONDITIONS.forEach(c=>perCond[c]={correct:0,total:0});
   DISCIPLINES.forEach(d=>perDisc[d]={correct:0,total:0});
@@ -178,7 +177,6 @@ function scoreExam(){
   let correctTotal=0;
 
   SHUFFLED.forEach((q,i)=>{
-    // Guard buckets (handles unexpected/mismatched labels)
     if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
     if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
     if(!perSub[q.condition]) perSub[q.condition]={};
@@ -247,7 +245,55 @@ function renderReport(res){
   document.getElementById('printBtn').disabled=false;
 }
 
-// Events
+/* ===== Print via hidden iframe (Thinkific-friendly) ===== */
+function printReportInHiddenFrame(){
+  const report = document.getElementById('report');
+  if (!report || report.classList.contains('hide')) {
+    alert('Please grade the exam first to generate the report.');
+    return;
+  }
+  const html = `
+  <!doctype html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>OD on the GO — Score Report</title>
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
+      table{width:100%;border-collapse:collapse}
+      th,td{border-bottom:1px solid #e6e8eb;padding:8px;text-align:left}
+      th{background:#f6f8fb}
+      .summary{background:#f8fafc;border:1px solid #e6e8eb;border-radius:12px;padding:12px;margin:14px 0}
+      .brand{font-weight:700}
+      .ok{color:#0a7f2e;font-weight:600}
+      .bad{color:#b00020;font-weight:600}
+      @page { size:auto; margin:12mm; }
+    </style>
+  </head>
+  <body>${report.innerHTML}</body>
+  </html>`;
+
+  const frame = document.createElement('iframe');
+  frame.style.position='fixed'; frame.style.right='0'; frame.style.bottom='0';
+  frame.style.width='0'; frame.style.height='0'; frame.style.border='0';
+  frame.setAttribute('aria-hidden','true');
+  document.body.appendChild(frame);
+
+  const doc = frame.contentDocument || frame.contentWindow.document;
+  doc.open(); doc.write(html); doc.close();
+
+  const tryPrint = () => {
+    try{
+      frame.contentWindow.focus();
+      frame.contentWindow.print();
+      setTimeout(()=> document.body.removeChild(frame), 1000);
+    }catch(_){ setTimeout(tryPrint, 200); }
+  };
+  frame.onload = tryPrint;
+  setTimeout(tryPrint, 300);
+}
+
+/* ===== Events ===== */
 document.getElementById('gradeBtn').addEventListener('click', ()=>{
   try{
     const res=scoreExam();
@@ -266,13 +312,9 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
+// ✅ New print handler (replaces window.print)
 document.getElementById('printBtn').addEventListener('click', ()=>{
-  if(document.getElementById('report').classList.contains('hide')){
-    alert('Please grade the exam first to generate the report.');
-    return;
-  }
-  window.scrollTo({top:document.getElementById('report').offsetTop-20,behavior:'smooth'});
-  setTimeout(()=>window.print(),150);
+  printReportInHiddenFrame();
 });
 
 // Load & shuffle
