@@ -229,11 +229,12 @@ function renderReport(res){
   // Disciplines: % only (allows overlaps without confusing totals)
   let rows=[], idx=1;
   DISCIPLINES.forEach(d=>{
-    const r=res.perDisc[d];
-    if(!r || !r.total) return;
-    const p=Math.round(100*r.correct/r.total);
-    rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}</tr>`);
-  });
+  const cleanName = d.replace(/^[A-E]\.\s*/, ''); // remove A. B. etc.
+  const r=res.perDisc[d];
+  if(!r || !r.total) return;
+  const p=Math.round(100*r.correct/r.total);
+  rows.push(`<tr><td>${idx++}</td><td>${cleanName}</td>${pctCell(p)}</tr>`);
+});
   // Plus any ad-hoc disciplines that appeared in data but weren't pre-listed
   Object.keys(res.perDisc).forEach(d=>{
     if(DISCIPLINES.includes(d)) return;
