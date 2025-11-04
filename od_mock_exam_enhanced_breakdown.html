@@ -33,7 +33,6 @@
   .brand{font-weight:700}
   .rationale{margin-top:8px;font-size:13px;border-left:3px solid var(--border);padding-left:10px}
   input[type="text"],select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px}
-
   /* Print only the report */
   @media print{
     header,.actions,#studentBox,#exam,.question,.rationale,.meta{display:none!important}
@@ -61,31 +60,31 @@
       <label>School (optional)
         <select id="s_school">
           <option value="" selected>— Select your school (optional) —</option>
-          <option value="Alabama — UAB School of Optometry">Alabama — UAB School of Optometry</option>
-          <option value="Arizona — Midwestern University AZCOPT">Arizona — Midwestern University AZCOPT</option>
-          <option value="California — SCCO at Marshall B. Ketchum University">California — SCCO at Marshall B. Ketchum University</option>
-          <option value="California — UC Berkeley School of Optometry">California — UC Berkeley School of Optometry</option>
-          <option value="California — WesternU College of Optometry">California — WesternU College of Optometry</option>
-          <option value="Canada — University of Waterloo">Canada — University of Waterloo</option>
-          <option value="Canada — Université de Montréal">Canada — Université de Montréal</option>
-          <option value="Florida — Nova Southeastern University">Florida — Nova Southeastern University</option>
-          <option value="Illinois — Illinois College of Optometry">Illinois — Illinois College of Optometry</option>
-          <option value="Indiana — IU School of Optometry">Indiana — IU School of Optometry</option>
-          <option value="Kentucky — KYCO">Kentucky — KYCO</option>
-          <option value="Massachusetts — NECO">Massachusetts — NECO</option>
-          <option value="Michigan — MCO">Michigan — MCO</option>
-          <option value="Missouri — UMSL">Missouri — UMSL</option>
-          <option value="New York — SUNY">New York — SUNY</option>
-          <option value="North Carolina — High Point University">North Carolina — High Point University</option>
-          <option value="Ohio — OSU">Ohio — OSU</option>
-          <option value="Oklahoma — NSUOCO">Oklahoma — NSUOCO</option>
-          <option value="Oregon — Pacific University">Oregon — Pacific University</option>
-          <option value="Pennsylvania — PCO">Pennsylvania — PCO</option>
-          <option value="Puerto Rico — IAUPR">Puerto Rico — IAUPR</option>
-          <option value="Texas — UIWRSO">Texas — UIWRSO</option>
-          <option value="Texas — UHCO">Texas — UHCO</option>
-          <option value="Texas — UTRGV">Texas — UTRGV</option>
-          <option value="Utah — Rocky Mountain University">Utah — Rocky Mountain University</option>
+          <option>Alabama — UAB School of Optometry</option>
+          <option>Arizona — Midwestern University AZCOPT</option>
+          <option>California — SCCO at Marshall B. Ketchum University</option>
+          <option>California — UC Berkeley School of Optometry</option>
+          <option>California — WesternU College of Optometry</option>
+          <option>Canada — University of Waterloo</option>
+          <option>Canada — Université de Montréal</option>
+          <option>Florida — Nova Southeastern University</option>
+          <option>Illinois — Illinois College of Optometry</option>
+          <option>Indiana — IU School of Optometry</option>
+          <option>Kentucky — KYCO</option>
+          <option>Massachusetts — NECO</option>
+          <option>Michigan — MCO</option>
+          <option>Missouri — UMSL</option>
+          <option>New York — SUNY</option>
+          <option>North Carolina — High Point University</option>
+          <option>Ohio — OSU</option>
+          <option>Oklahoma — NSUOCO</option>
+          <option>Oregon — Pacific University</option>
+          <option>Pennsylvania — PCO</option>
+          <option>Puerto Rico — IAUPR</option>
+          <option>Texas — UIWRSO</option>
+          <option>Texas — UHCO</option>
+          <option>Texas — UTRGV</option>
+          <option>Utah — Rocky Mountain University</option>
         </select>
       </label>
     </div>
@@ -133,9 +132,12 @@
 <script>
 /* ---------------- CONFIG ---------------- */
 const QUESTIONS_URL = "./questions.json";
+
+/* canonical names WITHOUT A/B/C/D/E prefixes */
 const DISCIPLINES = [
-  "A. Anatomy","B. Biochemistry / Physiology","C. Immunology / Microbiology / Pathology","D. Optics","E. Pharmacology"
+  "Anatomy","Biochemistry / Physiology","Immunology / Microbiology / Pathology","Optics","Pharmacology"
 ];
+
 const CONDITIONS = [
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
@@ -143,18 +145,56 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
+/* ---------------- NORMALIZATION HELPERS ---------------- */
+const CANON_DISC = {
+  "Anatomy":"Anatomy",
+  "Biochemistry / Physiology":"Biochemistry / Physiology",
+  "Immunology / Microbiology / Pathology":"Immunology / Microbiology / Pathology",
+  "Optics":"Optics",
+  "Pharmacology":"Pharmacology"
+};
+
+const CANON_COND = Object.fromEntries(CONDITIONS.map(c=>[c,c]));
+
+const DISC_ALIASES = {
+  "a anatomy":"Anatomy","anatomy":"Anatomy",
+  "b biochemistry / physiology":"Biochemistry / Physiology","biochemistry / physiology":"Biochemistry / Physiology",
+  "c immunology / microbiology / pathology":"Immunology / Microbiology / Pathology","immunology / microbiology / pathology":"Immunology / Microbiology / Pathology",
+  "d optics":"Optics","optics":"Optics",
+  "e pharmacology":"Pharmacology","pharmacology":"Pharmacology"
+};
+
+const COND_ALIASES = {
+  "ophthalmic optics/spectacles":"Ophthalmic Optics / Spectacles",
+  "conjunctiva/cornea/refractive surgery":"Conjunctiva / Cornea / Refractive Surgery",
+  "lens/cataract/iol/pre & post-op care":"Lens / Cataract / IOL / Pre- & Post-Op Care",
+  "lens / cataract / iol / pre and post op care":"Lens / Cataract / IOL / Pre- & Post-Op Care",
+  "episclera/sclera/anterior uvea":"Episclera / Sclera / Anterior Uvea",
+  "optic nerve/neuro ophthalmic pathways":"Optic Nerve / Neuro-Ophthalmic Pathways",
+  "neuro-ophthalmic pathways":"Optic Nerve / Neuro-Ophthalmic Pathways",
+  "systemic health / pathology / pharmacology":"Systemic Health",
+  "ocular adnexa / orbit":"Lids / Lashes / Lacrimal / Adnexa / Orbit"
+};
+
+function normKey(s){
+  return String(s||"")
+    .toLowerCase()
+    .replace(/\./g,"")
+    .replace(/\s*\/\s*/g,"/")   // tighten slashes
+    .replace(/\s*&\s*/g," & ")
+    .replace(/\s+/g," ")
+    .trim();
+}
+function canonize(label, canonMap, aliasMap){
+  const k = normKey(label);
+  for(const canon in canonMap){ if(normKey(canon)===k) return canonMap[canon]; }
+  if(aliasMap[k]) return aliasMap[k];
+  return String(label||"").trim();
+}
+
 /* ---------------- UTILS ---------------- */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
-function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
-
-/* Merge preferred order with any actually-seen keys */
-function mergedKeys(preferred, dict){
-  const out=[], seen=new Set();
-  preferred.forEach(k=>{ const rec=dict[k]; if(rec && rec.total){ out.push(k); seen.add(k); }});
-  Object.keys(dict).forEach(k=>{ const rec=dict[k]; if(!seen.has(k) && rec && rec.total){ out.push(k); }});
-  return out;
-}
 
 /* ---------------- DOM ---------------- */
 const examDiv=document.getElementById('exam'),
@@ -188,7 +228,6 @@ function scoreExam(){
 
   let correctTotal=0;
   SHUFFLED.forEach((q,i)=>{
-    // guard buckets
     if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
     if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
     if(!perSub[q.condition]) perSub[q.condition]={};
@@ -213,6 +252,8 @@ function scoreExam(){
 }
 
 /* ---------------- REPORT ---------------- */
+function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
+
 function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
@@ -220,28 +261,27 @@ function renderReport(res){
   document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
   document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
-  // Disciplines
+  // Disciplines (no A/B/C/D/E shown)
   let rows=[], idx=1;
-  mergedKeys(DISCIPLINES, res.perDisc).forEach(d=>{
+  DISCIPLINES.forEach(d=>{
     const r=res.perDisc[d]; if(!r||!r.total) return;
     const p=Math.round(100*r.correct/r.total);
     rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
-  discBody.innerHTML=rows.join('') || '<tr><td colspan="4" class="muted">No discipline data.</td></tr>';
+  discBody.innerHTML=rows.join('');
 
   // Conditions
   rows=[]; idx=1;
-  const condKeys = mergedKeys(CONDITIONS, res.perCond);
-  condKeys.forEach(c=>{
+  CONDITIONS.forEach(c=>{
     const r=res.perCond[c]; if(!r||!r.total) return;
     const p=Math.round(100*r.correct/r.total);
     rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
-  condBody.innerHTML=rows.join('') || '<tr><td colspan="4" class="muted">No condition data.</td></tr>';
+  condBody.innerHTML=rows.join('');
 
   // Subcategories
-  let html='', cidx=1;
-  condKeys.forEach(c=>{
+  let html='',cidx=1;
+  CONDITIONS.forEach(c=>{
     const subs=res.perSub[c]; const keys=Object.keys(subs||{});
     if(!keys.length) return;
     html+=`<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
@@ -257,7 +297,7 @@ function renderReport(res){
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ---------------- PERSISTENT PRINT (Thinkific-safe) ---------------- */
+/* ---------------- RELIABLE PRINT (multi-use, Thinkific-safe) ---------------- */
 function printReportInHiddenFrame(){
   const report=document.getElementById('report');
   if(!report||report.classList.contains('hide')){ alert('Please grade first.'); return; }
@@ -268,17 +308,23 @@ function printReportInHiddenFrame(){
   clone.querySelectorAll('.hide').forEach(el=>el.classList.remove('hide'));
 
   let styles=''; document.querySelectorAll('style').forEach(s=>styles+=s.innerHTML+'\n');
-  const patch=`@media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
-               body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
-               @page{size:auto;margin:12mm}`;
+  const patch=`
+    @media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
+    @page{size:auto;margin:12mm}
+  `;
   const html=`<!doctype html><html><head><meta charset="utf-8"><title>OD on the GO — Score Report</title><style>${styles}\n${patch}</style></head><body></body></html>`;
 
   let frame=document.getElementById('odgPrintFrame');
   if(!frame){
     frame=document.createElement('iframe');
     frame.id='odgPrintFrame';
-    frame.style.position='fixed'; frame.style.right='0'; frame.style.bottom='0';
-    frame.style.width='1px'; frame.style.height='1px'; frame.style.border='0';
+    frame.style.position='fixed';
+    frame.style.right='0';
+    frame.style.bottom='0';
+    frame.style.width='1px';
+    frame.style.height='1px';
+    frame.style.border='0';
     frame.setAttribute('aria-hidden','true');
     document.body.appendChild(frame);
   }
@@ -288,13 +334,17 @@ function printReportInHiddenFrame(){
 
   const mount=()=>{
     try{
-      doc.body.innerHTML=''; doc.body.appendChild(clone);
+      doc.body.innerHTML='';
+      doc.body.appendChild(clone);
       const w=frame.contentWindow;
       w.onafterprint=()=>{ try{ doc.body.innerHTML=''; }catch(_){} };
-      requestAnimationFrame(()=>requestAnimationFrame(()=>{ w.focus(); w.print(); }));
-    }catch(_){ setTimeout(mount,150); }
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        w.focus(); w.print();
+      }));
+    }catch(_){
+      setTimeout(mount,150);
+    }
   };
-
   frame.onload=mount;
   setTimeout(mount,150);
 }
@@ -306,7 +356,8 @@ document.getElementById('gradeBtn').addEventListener('click', ()=>{
   window.scrollTo({top:reportEl.offsetTop-20,behavior:'smooth'});
 });
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  prepareShuffled(); renderExam();
+  prepareShuffled();
+  renderExam();
   reportEl.classList.add('hide');
   document.getElementById('printBtn').disabled=true;
   window.scrollTo({top:0,behavior:'smooth'});
@@ -325,23 +376,34 @@ async function loadQuestions(){
     if(typeof q.text!=='string') q.text='';
     if(typeof q.rationale!=='string') q.rationale='';
 
-    // normalize labels to avoid fragmented buckets
-    q.discipline = (typeof q.discipline==='string'? q.discipline.trim() : '');
-    q.condition  = (typeof q.condition==='string' ? q.condition.trim()  : '');
-    q.sub        = (typeof q.sub==='string'       ? q.sub.trim()        : '');
+    // normalize labels to canonical (disciplines without A/B/C/D/E)
+    q.discipline = canonize(q.discipline, CANON_DISC, DISC_ALIASES);
+    q.condition  = canonize(q.condition,  CANON_COND, COND_ALIASES);
+    q.sub        = (typeof q.sub==='string') ? q.sub.trim() : '';
   });
+
+  // optional console tallies for quick verification during build
+  try{
+    const dTally={}, cTally={};
+    bank.forEach(q=>{
+      dTally[q.discipline] = (dTally[q.discipline]||0)+1;
+      cTally[q.condition]  = (cTally[q.condition]||0)+1;
+    });
+    console.table(dTally);
+    console.table(cTally);
+  }catch(_){}
+
   QUESTIONS=bank;
 }
-
 function prepareShuffled(){
   const qs=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q)));
   shuffle(qs);
   qs.forEach(q=>{
-    const orig=q.choices.map((c,i)=>({text:c, originalIdx:i}));
+    const orig=q.choices.map((c,i)=>({text:c,originalIdx:i}));
     shuffle(orig);
     q.choices=orig.map(o=>o.text);
     const newIdx=orig.findIndex(o=>o.originalIdx===q.correct);
-    q.correctIndexAfterShuffle = newIdx>=0?newIdx:0;
+    q.correctIndexAfterShuffle=newIdx>=0?newIdx:0;
   });
   SHUFFLED=qs;
 }
