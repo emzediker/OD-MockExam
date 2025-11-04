@@ -146,6 +146,15 @@ const CONDITIONS = [
 /* ---------------- UTILS ---------------- */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function pctClass(p){ return p>=90?'ok':(p>=75?'':'bad'); }
+function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
+
+/* Merge preferred order with any actually-seen keys */
+function mergedKeys(preferred, dict){
+  const out=[], seen=new Set();
+  preferred.forEach(k=>{ const rec=dict[k]; if(rec && rec.total){ out.push(k); seen.add(k); }});
+  Object.keys(dict).forEach(k=>{ const rec=dict[k]; if(!seen.has(k) && rec && rec.total){ out.push(k); }});
+  return out;
+}
 
 /* ---------------- DOM ---------------- */
 const examDiv=document.getElementById('exam'),
@@ -179,6 +188,7 @@ function scoreExam(){
 
   let correctTotal=0;
   SHUFFLED.forEach((q,i)=>{
+    // guard buckets
     if(!perCond[q.condition]) perCond[q.condition]={correct:0,total:0};
     if(!perDisc[q.discipline]) perDisc[q.discipline]={correct:0,total:0};
     if(!perSub[q.condition]) perSub[q.condition]={};
@@ -203,8 +213,6 @@ function scoreExam(){
 }
 
 /* ---------------- REPORT ---------------- */
-function pctCell(pct){ return `<td class="${pctClass(pct)}">${pct}%</td>`; }
-
 function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
@@ -212,24 +220,28 @@ function renderReport(res){
   document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
   document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
-  let rows=[],idx=1;
-  DISCIPLINES.forEach(d=>{
+  // Disciplines
+  let rows=[], idx=1;
+  mergedKeys(DISCIPLINES, res.perDisc).forEach(d=>{
     const r=res.perDisc[d]; if(!r||!r.total) return;
     const p=Math.round(100*r.correct/r.total);
     rows.push(`<tr><td>${idx++}</td><td>${d}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
-  discBody.innerHTML=rows.join('');
+  discBody.innerHTML=rows.join('') || '<tr><td colspan="4" class="muted">No discipline data.</td></tr>';
 
+  // Conditions
   rows=[]; idx=1;
-  CONDITIONS.forEach(c=>{
+  const condKeys = mergedKeys(CONDITIONS, res.perCond);
+  condKeys.forEach(c=>{
     const r=res.perCond[c]; if(!r||!r.total) return;
     const p=Math.round(100*r.correct/r.total);
     rows.push(`<tr><td>${idx++}</td><td>${c}</td>${pctCell(p)}<td>${r.correct} / ${r.total}</td></tr>`);
   });
-  condBody.innerHTML=rows.join('');
+  condBody.innerHTML=rows.join('') || '<tr><td colspan="4" class="muted">No condition data.</td></tr>';
 
-  let html='',cidx=1;
-  CONDITIONS.forEach(c=>{
+  // Subcategories
+  let html='', cidx=1;
+  condKeys.forEach(c=>{
     const subs=res.perSub[c]; const keys=Object.keys(subs||{});
     if(!keys.length) return;
     html+=`<div class="summary" style="margin:10px 0 6px 0"><div class="brand">${cidx}. ${c}</div></div>`;
@@ -245,37 +257,28 @@ function renderReport(res){
   document.getElementById('printBtn').disabled=false;
 }
 
-/* ---------------- PERSISTENT PRINT (works multiple times) ---------------- */
+/* ---------------- PERSISTENT PRINT (Thinkific-safe) ---------------- */
 function printReportInHiddenFrame(){
   const report=document.getElementById('report');
   if(!report||report.classList.contains('hide')){ alert('Please grade first.'); return; }
 
-  // Clone the visible report
   const clone=report.cloneNode(true);
   clone.id='reportPrint';
   clone.classList.remove('hide');
   clone.querySelectorAll('.hide').forEach(el=>el.classList.remove('hide'));
 
-  // Inline styles + small print patch
   let styles=''; document.querySelectorAll('style').forEach(s=>styles+=s.innerHTML+'\n');
-  const patch=`
-    @media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
-    @page{size:auto;margin:12mm}
-  `;
+  const patch=`@media print { #reportPrint{display:block!important} .question, header, .actions, #studentBox{display:none!important} }
+               body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;margin:20px}
+               @page{size:auto;margin:12mm}`;
   const html=`<!doctype html><html><head><meta charset="utf-8"><title>OD on the GO — Score Report</title><style>${styles}\n${patch}</style></head><body></body></html>`;
 
-  // Create or reuse a single hidden iframe
   let frame=document.getElementById('odgPrintFrame');
   if(!frame){
     frame=document.createElement('iframe');
     frame.id='odgPrintFrame';
-    frame.style.position='fixed';
-    frame.style.right='0';
-    frame.style.bottom='0';
-    frame.style.width='1px';
-    frame.style.height='1px';
-    frame.style.border='0';
+    frame.style.position='fixed'; frame.style.right='0'; frame.style.bottom='0';
+    frame.style.width='1px'; frame.style.height='1px'; frame.style.border='0';
     frame.setAttribute('aria-hidden','true');
     document.body.appendChild(frame);
   }
@@ -285,25 +288,15 @@ function printReportInHiddenFrame(){
 
   const mount=()=>{
     try{
-      doc.body.innerHTML='';
-      doc.body.appendChild(clone);
+      doc.body.innerHTML=''; doc.body.appendChild(clone);
       const w=frame.contentWindow;
-
-      // Reset frame content after print closes (keep iframe for next time)
       w.onafterprint=()=>{ try{ doc.body.innerHTML=''; }catch(_){} };
-
-      // Two RAFs to avoid blank preview on iOS
-      requestAnimationFrame(()=>requestAnimationFrame(()=>{
-        w.focus();
-        w.print();
-      }));
-    }catch(_){
-      setTimeout(mount,150);
-    }
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{ w.focus(); w.print(); }));
+    }catch(_){ setTimeout(mount,150); }
   };
 
   frame.onload=mount;
-  setTimeout(mount,150); // backup trigger
+  setTimeout(mount,150);
 }
 
 /* ---------------- EVENTS ---------------- */
@@ -312,15 +305,12 @@ document.getElementById('gradeBtn').addEventListener('click', ()=>{
   renderReport(res);
   window.scrollTo({top:reportEl.offsetTop-20,behavior:'smooth'});
 });
-
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  prepareShuffled();
-  renderExam();
+  prepareShuffled(); renderExam();
   reportEl.classList.add('hide');
   document.getElementById('printBtn').disabled=true;
   window.scrollTo({top:0,behavior:'smooth'});
 });
-
 document.getElementById('printBtn').addEventListener('click', printReportInHiddenFrame);
 
 /* ---------------- DATA LOAD & SHUFFLE ---------------- */
@@ -334,9 +324,11 @@ async function loadQuestions(){
     if(typeof q.correct!=='number') q.correct=0;
     if(typeof q.text!=='string') q.text='';
     if(typeof q.rationale!=='string') q.rationale='';
-    if(typeof q.discipline!=='string') q.discipline='';
-    if(typeof q.condition!=='string') q.condition='';
-    if(typeof q.sub!=='string') q.sub='';
+
+    // normalize labels to avoid fragmented buckets
+    q.discipline = (typeof q.discipline==='string'? q.discipline.trim() : '');
+    q.condition  = (typeof q.condition==='string' ? q.condition.trim()  : '');
+    q.sub        = (typeof q.sub==='string'       ? q.sub.trim()        : '');
   });
   QUESTIONS=bank;
 }
