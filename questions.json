@@ -604,7 +604,7 @@
     "text": "The purpose of slab-off prism is to:",
     "choices": [
       "Correct vertical imbalance at near",
-      "Minimize image just through a bifocal",
+      "Minimize image jump through a bifocal",
       "Correct aniseikonia at near",
       "Minimize spherical abberation of high plus lenses"
     ],
@@ -635,8 +635,8 @@
     "choices": [
       "Cylinder with axis 180°",
       "Cylinder with axis 90°",
-      "Oblique astigmatism",
-      "No optical change"
+      "Oblique astigmatism with axis 135° or 45°",
+      "Irregular astigmatism off axis"
     ],
     "correct": 1,
     "discipline": "D. Optics",
@@ -665,8 +665,8 @@
     "choices": [
       "Reduce peripheral spherical aberration",
       "Increase lens magnification",
-      "Create more distortion",
-      "Reduce Abbe value"
+      "Decrease more barrel distortion",
+      "Reduce Abbe value for chromatic abberation"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -680,7 +680,7 @@
     "choices": [
       "Be thinner and lighter",
       "Increase magnification",
-      "Cause more coma",
+      "Cause more coma off axis",
       "Require higher Abbe number materials"
     ],
     "correct": 0,
@@ -725,8 +725,8 @@
     "choices": [
       "Blur for off-axis gaze due to different focal planes",
       "Color fringes from dispersion",
-      "Image distortion near periphery",
-      "Pupil constriction at near"
+      "Image distortion near periphery of focal planes",
+      "Diplopia and shadowing under binocular viewing conditions"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -741,7 +741,7 @@
       "A curved image plane",
       "Unequal magnification",
       "Color fringes",
-      "Central blur only"
+      "Cortical magnification"
     ],
     "correct": 0,
     "discipline": "D. Optics",
