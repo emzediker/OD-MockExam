@@ -754,9 +754,9 @@
     "text": "Distortion occurs primarily due to:",
     "choices": [
       "Magnification changes across the field",
-      "Chromatic dispersion",
-      "Abnormal lens tilt",
-      "Surface irregularities"
+      "Chromatic dispersion changes across the field",
+      "Focal point vergence changes across the field",
+      "Spherical aberrations change across the the field"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -769,9 +769,9 @@
     "text": "Chromatic aberration results from:",
     "choices": [
       "Different wavelengths refracting by different amounts",
-      "Unequal curvature between meridians",
-      "Excessive pantoscopic tilt",
-      "Peripheral spherical aberration"
+      "Unequal curvature between meridians restuling in scatter",
+      "Excessive pantoscopic tilt inducing astigmatism",
+      "Peripheral spherical aberration changing magnification"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -783,10 +783,10 @@
     "id": null,
     "text": "A higher Abbe number indicates:",
     "choices": [
-      "Less chromatic aberration",
-      "More dispersion",
-      "Lower optical quality",
-      "Greater color fringing"
+      "Less chromatic aberration and less dispersion",
+      "More chromatic aberration and more dispersion",
+      "More chromatic aberration and less dispersion",
+      "Less chromatic aberration and more dispersion"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -800,7 +800,7 @@
     "choices": [
       "CR-39",
       "Polycarbonate",
-      "High-index plastic (1.67)",
+      "High-index plastic",
       "Trivex"
     ],
     "correct": 0,
@@ -814,9 +814,9 @@
     "text": "Anti-reflective coatings function by:",
     "choices": [
       "Destructive interference of reflected light",
-      "Absorbing all wavelengths",
-      "Increasing surface curvature",
-      "Reducing lens index"
+      "Absorbance of light at all wavelengths",
+      "Reflectance of light at all wavelengths",
+      "Constructive interference of reflected light"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -828,9 +828,9 @@
     "id": null,
     "text": "Mirror coatings increase reflection by:",
     "choices": [
-      "Constructive interference of reflected light",
-      "Polarizing incoming light",
-      "Changing Abbe number",
+      "Constructive interference of light",
+      "Polarization of incoming light",
+      "Refraction of light",
       "Reducing refractive index"
     ],
     "correct": 0,
@@ -845,8 +845,8 @@
     "choices": [
       "Accommodation in low luminance overshoots target vergence",
       "Chromatic aberration increases with pupil size",
-      "Spectacle magnification increases at night",
-      "Abbe number decreases in dark conditions"
+      "Spectacle magnification increases in dim illumination",
+      "Abbe number decreases in dim illumination"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -858,10 +858,10 @@
     "id": null,
     "text": "The specific gravity (SG) of a contact lens determines its:",
     "choices": [
-      "Lens movement on the eye",
-      "Optical power",
-      "Refractive index",
-      "Tear exchange rate"
+      "Movement on the eye",
+      "Optical power on the eye",
+      "Refractive index on the eye",
+      "Tear exchange rate on the eye"
     ],
     "correct": 0,
     "discipline": "D. Optics",
