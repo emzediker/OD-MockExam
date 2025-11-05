@@ -150,6 +150,11 @@ const CONDITIONS = [
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
+// ---------------------------------------------------------------------------
+// Toggle visibility of the Discipline-Level Summary in the score report
+// ---------------------------------------------------------------------------
+const SHOW_DISCIPLINE = false; // set true to show, false to hide
+  
 /* ---------------- UTILS ---------------- */
 const normDisc = s => (s||'').replace(/^[A-E]\.\s*/, ''); // strip "A. " etc
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
@@ -224,7 +229,15 @@ function scoreExam(){
 }
 
 /* ---------------- REPORT ---------------- */
-function renderReport(res){
+function renderReport(res){  // Hide the Discipline block entirely when SHOW_DISCIPLINE=false
+  if (!SHOW_DISCIPLINE) {
+    const discTable = document.getElementById('discSummary');
+    if (discTable) {
+      discTable.style.display = 'none';
+      const h3 = discTable.previousElementSibling;
+      if (h3 && h3.tagName === 'H3') h3.style.display = 'none';
+    }
+  }
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
   totalEl.textContent=`${res.pct}% (${res.correctTotal} / ${res.total})`;
