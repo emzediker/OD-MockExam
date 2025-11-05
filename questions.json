@@ -21,7 +21,7 @@
       "20 cm in front of the eye",
       "50 cm in front of the eye",
       "1 m behind the eye",
-      "Infinity"
+      "20 cm behind the eye"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -35,8 +35,8 @@
     "choices": [
       "Minus lenses decrease corneal power",
       "Plus lenses increase corneal power",
-      "Cylinder lenses neutralize astigmatism only",
-      "Plano lenses restore accommodation"
+      "Minus lenses increase corneal power",
+      "Plus lenses decrease corneal power"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -51,7 +51,7 @@
       "An eye that is too long",
       "An eye that is too short",
       "A cornea that is too flat",
-      "A lens with reduced power"
+      "A cornea that is too steep"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -81,7 +81,7 @@
       "Behind the retina",
       "In front of the retina",
       "On the retina",
-      "In the vitreous near the lens"
+      "On multiple focal lines"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -93,10 +93,10 @@
     "id": null,
     "text": "Axial hyperopia results from:",
     "choices": [
-      "A shorter than normal axial length",
-      "A longer than normal axial length",
+      "An eye that is too short in length",
+      "An eye that is too long in the length",
       "A steeper than normal cornea",
-      "Increased lens power"
+      "A flatter than normal cornea"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -108,10 +108,10 @@
     "id": null,
     "text": "The far point of a +2.50 D hyperope is:",
     "choices": [
-      "Virtual and located behind the eye",
-      "20 cm in front of the eye",
-      "At optical infinity",
-      "On the corneal plane"
+      "Virtual and located behind the cornea",
+      "Real and located behind the cornea",
+      "Real and located in front of the cornea",
+      "Virtual and located in front of the cornea"
     ],
     "correct": 0,
     "discipline": "D. Optics",
