@@ -1,9 +1,3 @@
-Here’s the complete, ready-to-use HTML with your requested condition fixes, normalization logic, and everything working in Thinkific (including the print/download button and optional school field).
-It’s exactly like your last working version, but now it automatically handles slight condition name differences (so every category shows up correctly in your score report).
-
-⸻
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +44,7 @@ It’s exactly like your last working version, but now it automatically handles 
 <header>
   <div class="wrap">
     <h1>OD on the GO — Diagnostic</h1>
-    <span class="pill">NBEO-weighted • Discipline → Condition → Subcategory</span>
+    <span class="pill">NBEO-weighted • Condition → Subcategory</span>
     <div style="flex:1"></div>
     <small class="muted">Student-facing</small>
   </div>
@@ -115,7 +109,6 @@ It’s exactly like your last working version, but now it automatically handles 
         <div><b>School:</b> <span id="schoolName">—</span></div>
         <div><b>Date:</b> <span id="dateStamp"></span></div>
         <div><b>Total Score:</b> <span id="totalScore" class="brand"></span></div>
-        <div><b>Status:</b> <span id="submitStatus" class="muted">Local only</span></div>
       </div>
     </div>
 
@@ -132,21 +125,20 @@ It’s exactly like your last working version, but now it automatically handles 
 </main>
 
 <script>
-const QUESTIONS_URL = "./questions.json";
-const CONDITIONS = [
+const QUESTIONS_URL="./questions.json";
+const CONDITIONS=[
   "Ametropia","Ophthalmic Optics / Spectacles","Contact Lenses","Low Vision",
   "Accommodation / Vergence / Oculomotor","Amblyopia / Strabismus","Perceptual Function / Color Vision","Visual & Human Development",
   "Lids / Lashes / Lacrimal / Adnexa / Orbit","Conjunctiva / Cornea / Refractive Surgery","Lens / Cataract / IOL / Pre- & Post-Op Care",
   "Episclera / Sclera / Anterior Uvea","Vitreous / Retina / Choroid","Optic Nerve / Neuro-Ophthalmic Pathways","Glaucoma","Emergencies / Trauma","Systemic Health"
 ];
 
-function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]];} return arr;}
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
 function pctClass(p){return p>=90?'ok':(p>=75?'':'bad');}
 function pctCell(p){return `<td class="${pctClass(p)}">${p}%</td>`;}
 function normCond(s){
-  if(!s) return "";
-  let t=s.trim();
-  t=t.replace(/&/g,'/');
+  if(!s)return"";
+  let t=s.trim().replace(/&/g,'/').replace(/\s*\/\s*/g,' / ');
   const map={
     "Ophthalmic Optics & Spectacles":"Ophthalmic Optics / Spectacles",
     "Visual and Human Development":"Visual & Human Development",
@@ -162,17 +154,14 @@ const examDiv=document.getElementById('exam'),
       totalEl=document.getElementById('totalScore'),
       condBody=document.querySelector('#condTable tbody'),
       subHost=document.getElementById('subcats');
-
 let QUESTIONS=[],SHUFFLED=[];
 
 function renderExam(){
   examDiv.innerHTML='';
   SHUFFLED.forEach((q,i)=>{
-    const wrap=document.createElement('div');wrap.className='question';
     const meta=`<div class="meta"><span class="pill">${q.condition}</span><span class="pill">${q.sub}</span></div>`;
     const choicesHtml=q.choices.map((c,idx)=>`<label class="choice"><input type="radio" name="q${i}" value="${idx}" />${c}</label>`).join('');
-    wrap.innerHTML=`<div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div>`;
-    examDiv.appendChild(wrap);
+    examDiv.innerHTML+=`<div class="question"><div class="qhead"><h3>${i+1}. ${q.text}</h3>${meta}</div><div class="choices">${choicesHtml}</div><div id="rat${i}" class="rationale hide"></div></div>`;
   });
 }
 
@@ -209,6 +198,8 @@ function renderReport(res){
   reportEl.classList.remove('hide');
   dateEl.textContent=new Date().toLocaleString();
   totalEl.textContent=`${res.pct}% (${res.correctTotal} / ${res.total})`;
+  document.getElementById('studentName').textContent=document.getElementById('s_name').value||'Anonymous';
+  document.getElementById('schoolName').textContent=document.getElementById('s_school').value||'—';
 
   let rows=[],idx=1;
   CONDITIONS.forEach(c=>{
@@ -243,22 +234,15 @@ function renderReport(res){
 
 function printReportInHiddenFrame(){
   const report=document.getElementById('report');
-  if(!report||report.classList.contains('hide')){
-    alert('Please grade the exam first to generate the report.');
-    return;
-  }
-  const clone=report.cloneNode(true);
-  clone.id='reportPrint';
-  clone.classList.remove('hide');
-  clone.querySelectorAll('.hide').forEach(el=>el.classList.remove('hide'));
+  if(!report||report.classList.contains('hide')){alert('Please grade the exam first.');return;}
+  const clone=report.cloneNode(true);clone.classList.remove('hide');
   let styles='';document.querySelectorAll('style').forEach(s=>styles+=s.innerHTML+'\n');
-  const patch=`@media print { #reportPrint{display:block!important} header,.actions,#studentBox{display:none!important} } body{font-family:system-ui;}`;
-  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Score Report</title><style>${styles}\n${patch}</style></head><body></body></html>`;
+  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Score Report</title><style>${styles}</style></head><body></body></html>`;
   let frame=document.getElementById('odgPrintFrame');
   if(!frame){frame=document.createElement('iframe');frame.id='odgPrintFrame';frame.style.position='fixed';frame.style.width='1px';frame.style.height='1px';frame.style.border='0';document.body.appendChild(frame);}
   const doc=frame.contentDocument||frame.contentWindow.document;
   doc.open();doc.write(html);doc.close();
-  const mount=()=>{try{doc.body.innerHTML='';doc.body.appendChild(clone);const w=frame.contentWindow;w.onafterprint=()=>{doc.body.innerHTML='';};requestAnimationFrame(()=>w.print());}catch(_){setTimeout(mount,150);}};
+  const mount=()=>{try{doc.body.innerHTML='';doc.body.appendChild(clone);frame.contentWindow.print();}catch(_){setTimeout(mount,150);}};
   frame.onload=mount;setTimeout(mount,150);
 }
 
@@ -272,29 +256,35 @@ document.getElementById('printBtn').addEventListener('click',printReportInHidden
 
 async function loadQuestions(){
   const r=await fetch(QUESTIONS_URL,{cache:'no-store'});
-  if(!r.ok) throw new Error('Failed to load questions.json');
+  if(!r.ok)throw new Error('Failed to load questions.json');
   const bank=await r.json();
   bank.forEach((q,i)=>{
-    if(typeof q.id!=='number') q.id=i+1;
-    if(!Array.isArray(q.choices)) q.choices=[];
-    if(typeof q.correct!=='number') q.correct=0;
-    if(typeof q.text!=='string') q.text='';
-    if(typeof q.rationale!=='string') q.rationale='';
-    if(typeof q.condition!=='string') q.condition='';
-    if(typeof q.sub!=='string') q.sub='';
+    if(typeof q.id!=='number')q.id=i+1;
+    if(!Array.isArray(q.choices))q.choices=[];
+    if(typeof q.correct!=='number')q.correct=0;
+    if(typeof q.text!=='string')q.text='';
+    if(typeof q.rationale!=='string')q.rationale='';
+    if(typeof q.condition!=='string')q.condition='';
+    if(typeof q.sub!=='string')q.sub='';
   });
   QUESTIONS=bank;
 }
-
 function prepareShuffled(){
   const qs=QUESTIONS.map(q=>JSON.parse(JSON.stringify(q)));
   shuffle(qs);
   qs.forEach(q=>{
     const orig=q.choices.map((c,i)=>({text:c,originalIdx:i}));
-    shuffle(orig);
-    q.choices=orig.map(o=>o.text);
+    shuffle(orig);q.choices=orig.map(o=>o.text);
     const newIdx=orig.findIndex(o=>o.originalIdx===q.correct);
     q.correctIndexAfterShuffle=newIdx>=0?newIdx:0;
   });
   SHUFFLED=qs;
 }
+
+(async function boot(){
+  try{await loadQuestions();prepareShuffled();renderExam();}
+  catch(e){examDiv.innerHTML=`<div class="summary"><b>Error:</b> ${e.message}</div>`;}
+})();
+</script>
+</body>
+</html>
