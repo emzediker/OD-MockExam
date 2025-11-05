@@ -124,9 +124,9 @@
     "text": "Hyperopes viewing at infinity must accommodate:",
     "choices": [
       "An amount equal to their uncorrected hyperopia",
-      "No accommodation at all",
-      "Half their refractive error",
-      "An additional 2.00 D beyond their prescription"
+      "No accommodation is needed at all",
+      "An amount equal to half their refractive error",
+      "An additional amount beyond their distance prescription"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -154,9 +154,9 @@
     "text": "Astigmatism is defined as:",
     "choices": [
       "Unequal curvature between principal meridians",
-      "Loss of lens elasticity",
-      "Uneven retinal contour",
-      "Excessive lens accommodation"
+      "A focal point that lies anteior to its target",
+      "A principal meridian that is too curves for its target",
+      "A condition associated with corneal thinning"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -170,7 +170,7 @@
     "choices": [
       "The distance between the two focal lines",
       "The width of the entrance pupil",
-      "The distance between nodal points",
+      "The midpoint between two focal lines",
       "The power difference between meridians"
     ],
     "correct": 0,
@@ -185,8 +185,8 @@
     "choices": [
       "At the spherical equivalent focus",
       "Halfway between the retina and anterior focal line",
-      "At the anterior focal line",
-      "Behind both focal lines"
+      "At the focal line of a myopic patient",
+      "Halfway between the cornea and the anerior focal line"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -228,10 +228,10 @@
     "id": null,
     "text": "Vertex distance changes are most significant for:",
     "choices": [
-      "High refractive errors (±7.00 D or greater)",
-      "Low myopes (−1.00 D)",
-      "Plano lenses",
-      "Bifocal adds only"
+      "High refractive errors (±5.00 D or greater)",
+      "Latent hyperopes with emerging presbyopia",
+      "New corneal rigid gas permeable contact lenses for former soft contact lens patients ",
+      "Bifocal adds greater than +2.50"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -244,7 +244,7 @@
     "text": "Which formula calculates the effective power of a lens when moved from contact lens plane to spectacle plane?",
     "choices": [
       "Fglasses = Fcontacts / (1 − d·Fcontacts)",
-      "Fglasses = Fcontacts × d",
+      "Fglasses = Fcontacts / (1 + d·Fcontacts)",
       "Fglasses = Fcontacts + d",
       "Fglasses = Fcontacts − d"
     ],
@@ -304,8 +304,8 @@
     "text": "LASIK primarily corrects myopia by:",
     "choices": [
       "Flattening the central cornea",
-      "Steepening the cornea",
-      "Changing axial length",
+      "Steepening the central cornea",
+      "Decreasing axial length",
       "Replacing the crystalline lens"
     ],
     "correct": 0,
@@ -319,9 +319,9 @@
     "text": "Conductive keratoplasty corrects hyperopia by:",
     "choices": [
       "Steepening the peripheral cornea with thermal burns",
-      "Flattening the cornea",
-      "Removing a lenticule",
-      "Implanting an intraocular lens"
+      "Flattening the peripheral cornea with thermal burns",
+      "Steepening the peripheral cornea with laser ablation",
+      "Flattening the peripheral cornea with laser ablation"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -334,8 +334,8 @@
     "text": "SMILE differs from LASIK because it:",
     "choices": [
       "Removes a lenticule without creating a flap",
-      "Uses a blade to cut a corneal flap",
-      "Is only for hyperopia",
+      "Removes a lenticule after creating a replaceable flap",
+      "Does not require any corneal incisions",
       "Involves replacing the natural lens"
     ],
     "correct": 0,
@@ -348,10 +348,10 @@
     "id": null,
     "text": "Implantable collamer lenses (ICL) are typically used for:",
     "choices": [
-      "High myopia",
-      "Low hyperopia",
-      "Presbyopia",
-      "Regular astigmatism only"
+      "High myopia such as that >6.00D",
+      "Low Astigmatism such as that <1.25D",
+      "Presbyopia for a patient without a cataract",
+      "Vision correction after cataract surgery"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -364,9 +364,9 @@
     "text": "Refractive lens exchange is most appropriate for:",
     "choices": [
       "Presbyopia and high hyperopia",
-      "Low myopia",
-      "Astigmatism <1.00 D",
-      "Anisometropia only"
+      "Low myopia such as that <5.00D",
+      "Low Astigmatism such as taht <1.00 D",
+      "Diplopia due to esotropia"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -395,8 +395,8 @@
     "choices": [
       "(Accommodative Demand − Amplitude of Accommodation)/2",
       "Amplitude of Accommodation × 2",
-      "(Amplitude − Demand)/2",
-      "(1/Object Distance) × 2"
+      "(Amplitude of Accommodation − Accommodative Demand)/2",
+      "(1/Object Distance) / 2"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -410,8 +410,8 @@
     "choices": [
       "Myopes without correction",
       "Hyperopes without correction",
-      "Emmetropes",
-      "Presbyopes with bifocals"
+      "Emmetropes without correction",
+      "Presbyopes with distance vision only correction"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -501,7 +501,7 @@
       "+2.50 D",
       "+1.50 D",
       "−2.50 D",
-      "Plano"
+      "+1.50 D"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -545,7 +545,7 @@
     "choices": [
       "Require less accommodative effort",
       "Require greater accommodative effort",
-      "Have identical accommodative demand",
+      "Have identical accommodative effort",
       "Be unable to accommodate"
     ],
     "correct": 0,
@@ -574,9 +574,9 @@
     "text": "Prentice’s Rule is primarily used to determine:",
     "choices": [
       "Induced prism from lens decentration",
-      "Base curve of a spectacle lens",
-      "Effective power at different distances",
-      "Axial length of the eye"
+      "Effective power of astigmatism at different distances",
+      "Effective power of prism at different distances",
+      "Induced astigmatism from lens decentration"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -588,8 +588,8 @@
     "id": null,
     "text": "A +3.00 D lens is decentered 3 mm inward. What base direction of prism is induced?",
     "choices": [
-      "Base out",
       "Base in",
+      "Base out",
       "Base up",
       "Base down"
     ],
@@ -604,9 +604,9 @@
     "text": "The purpose of slab-off prism is to:",
     "choices": [
       "Correct vertical imbalance at near",
-      "Reduce chromatic aberration",
-      "Control spherical aberration",
-      "Minimize reflection at the corneal interface"
+      "Minimize image just through a bifocal",
+      "Correct aniseikonia at near",
+      "Minimize spherical abberation of high plus lenses"
     ],
     "correct": 0,
     "discipline": "D. Optics",
