@@ -2674,7 +2674,7 @@
     "text": "Which preservative is most toxic to the corneal epithelium with chronic use?",
     "choices": [
       "Benzalkonium chloride",
-      "EDTA",
+      "Ethylenediaminetetraacetic acid",
       "Thimerosal",
       "Chlorobutanol"
     ],
@@ -2776,11 +2776,11 @@
   },
   {
     "id": null,
-    "text": "Which layer is primarily altered during PRK and LASEK procedures?",
+    "text": "Which layer is primarily altered during PRK and LASEK procedures to allow for refractive correction?",
     "choices": [
       "Anterior stroma",
-      "Entire corneal stroma",
-      "Endothelium only",
+      "Epithelium",
+      "Endothelium",
       "Descemet’s membrane"
     ],
     "correct": 0,
@@ -3003,7 +3003,7 @@
     "id": null,
     "text": "The sclera is primarily composed of which type of tissue?",
     "choices": [
-      "Dense irregular connective tissue rich in collagen",
+      "Dense irregular connective tissue",
       "Elastic connective tissue",
       "Smooth muscle fibers",
       "Adipose and vascular tissue"
@@ -3021,7 +3021,7 @@
       "Episcleritis is mild and self-limited, while scleritis is painful and often associated with systemic disease",
       "Episcleritis is always bilateral, scleritis is always unilateral",
       "Scleritis blanches with phenylephrine, episcleritis does not",
-      "Both are benign and painless"
+      "Episcleritis is vision threatening and associated with anterior uveitis, scleritis is not"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3048,7 +3048,7 @@
     "id": null,
     "text": "Phenylephrine blanching is used to help distinguish:",
     "choices": [
-      "Episcleritis (blanches) from scleritis (does not blanch)",
+      "Episcleritis from scleritis",
       "Anterior from posterior uveitis",
       "Iritis from keratitis",
       "Allergic from viral conjunctivitis"
@@ -3111,7 +3111,7 @@
       "Pain, photophobia, and perilimbal flush",
       "Tearing, discharge, and itching",
       "Halos, glare, and blurred vision",
-      "Sudden painless vision loss"
+      "Painless, transient, monocular vision loss"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3123,7 +3123,7 @@
     "id": null,
     "text": "Cells and flare in the anterior chamber represent:",
     "choices": [
-      "WBCs and protein leakage from inflamed iris vessels",
+      "Leukocytes and protein",
       "Pigment dispersion",
       "Endothelial dropout",
       "Aqueous deficiency"
@@ -3141,7 +3141,7 @@
       "Pupillary margin",
       "Mid-iris stroma",
       "Anterior chamber angle",
-      "Posterior synechiae"
+      "Posterior iris"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3154,8 +3154,8 @@
     "text": "Posterior synechiae form between which two structures?",
     "choices": [
       "Posterior iris and anterior lens capsule",
-      "Corneal endothelium and iris",
-      "Iris and trabecular meshwork",
+      "Corneal endothelium and anterior iris",
+      "Anterior iris and trabecular meshwork",
       "Ciliary body and retina"
     ],
     "correct": 0,
@@ -3168,7 +3168,7 @@
     "id": null,
     "text": "In anterior uveitis, intraocular pressure may:",
     "choices": [
-      "Increase or decrease depending on trabecular involvement",
+      "Increase or decrease",
       "Always increase",
       "Always decrease",
       "Remain unchanged"
@@ -3200,8 +3200,8 @@
     "choices": [
       "Topical corticosteroids and cycloplegics",
       "Miotics and prostaglandin analogs",
-      "Oral antivirals only",
-      "Topical beta-blockers"
+      "Oral antivirals and topical steroids",
+      "Topical beta-blockers and cycloplegics"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3214,7 +3214,7 @@
     "text": "Cycloplegic therapy in anterior uveitis serves primarily to:",
     "choices": [
       "Prevent posterior synechiae and reduce ciliary spasm pain",
-      "Constrict the pupil and lower IOP",
+      "Dilate the pupil and lower IOP",
       "Dilate vessels for increased drug absorption",
       "Block sympathetic input to the iris sphincter"
     ],
@@ -3243,7 +3243,7 @@
     "id": null,
     "text": "Which autoimmune condition commonly presents with recurrent non-granulomatous anterior uveitis?",
     "choices": [
-      "HLA-B27 spondyloarthropathy",
+      "Spondyloarthropathy",
       "Graves’ orbitopathy",
       "Diabetic retinopathy",
       "Sjögren syndrome"
@@ -3259,9 +3259,9 @@
     "text": "Which lab tests are most appropriate for systemic uveitis evaluation?",
     "choices": [
       "ACE, ANA, RF, RPR/FTA-ABS, Quantiferon",
-      "CBC only",
+      "CBC/ESR/CRP",
       "LFTs and lipid panel",
-      "Thyroid function tests"
+      "TSH/TRH/Thyroxine"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3274,9 +3274,9 @@
     "text": "Which of the following is a potential vision-threatening complication of chronic anterior uveitis?",
     "choices": [
       "Cataract and glaucoma",
-      "Corneal arcus",
-      "Conjunctival cyst",
-      "Vitreous floaters only"
+      "Corneal arcus and band keratopathy",
+      "Conjunctival cyst and follicular reaction",
+      "Vitreous floaters and retinal detachment"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3306,7 +3306,7 @@
       "Age-related liquefaction and vitreoretinal separation",
       "Inflammatory breakdown of the retina",
       "Intraocular pressure elevation",
-      "Corneal dehydration"
+      "Neovascularization into the vitreous"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3379,9 +3379,9 @@
     "text": "The 4-2-1 rule defines severe nonproliferative diabetic retinopathy as:",
     "choices": [
       "4 quadrants of hemorrhages, 2 quadrants of venous beading, 1 quadrant of IRMA",
-      "4 cotton-wool spots, 2 areas of exudates, 1 microaneurysm",
-      "4 areas of leakage, 2 hemorrhages, 1 macular edema",
-      "4 drusen, 2 pigment changes, 1 geographic atrophy"
+      "4 quadarants of cotton-wool spots, 2 quadrants areas of exudates, 1 quadrants of microaneurysm",
+      "4 quadrants of leakage, 2 quadrants of hemorrhages, 1 quadrant of macular edema",
+      "4 quadrants of drusen, 2 quadrants of pigment changes, 1  quadrant of geographic atrophy"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3394,9 +3394,9 @@
     "text": "Clinically significant macular edema (CSME) is defined by:",
     "choices": [
       "Retinal thickening or hard exudates within 500 µm of the fovea",
-      "Hemorrhages in all quadrants",
-      "Optic-disc swelling",
-      "Presence of neovascularization"
+      "Hemorrhages within 500 µm of the fovea",
+      "Retinal thickening or hard exudates within 500 µm of the optic nerve",
+      "Presence of neovascularization within 500 µm of the optic nerve"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3409,9 +3409,9 @@
     "text": "Stage 3 hypertensive retinopathy is characterized by:",
     "choices": [
       "Macular star formation",
-      "AV nicking only",
+      "AV nicking",
       "Papilledema",
-      "Cotton-wool spots without edema"
+      "Cotton-wool spots"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3424,7 +3424,7 @@
     "text": "Macroaneurysms typically occur in which systemic condition?",
     "choices": [
       "Hypertension",
-      "Diabetes mellitus",
+      "Graves Disease",
       "Sarcoidosis",
       "Multiple sclerosis"
     ],
@@ -3441,7 +3441,7 @@
       ">125 µm",
       "63–125 µm",
       "<63 µm",
-      ">200 µm only if confluent"
+      ">200 µm"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3456,7 +3456,7 @@
       "Multiple soft drusen, hypertension, smoking",
       "Diabetes, low protein diet, hyperopia",
       "Myopia, UV exposure, low HDL",
-      "High vitamin intake, astigmatism"
+      "High vitamin intake, UV exposure, astigmatism"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3466,7 +3466,7 @@
   },
   {
     "id": null,
-    "text": "Choroidal neovascular membranes are associated with which conditions (CHAPS mnemonic)?",
+    "text": "Choroidal neovascular membranes are associated with which conditions?",
     "choices": [
       "Choroidal rupture, Histoplasmosis, AMD, Pathologic myopia, Best disease",
       "Central serous, Hypertension, AMD, Papilledema, Stargardt",
@@ -3484,8 +3484,8 @@
     "choices": [
       "Bone spicules, arteriolar attenuation, waxy optic disc pallor",
       "Microaneurysms, macular edema, venous beading",
-      "Drusen, pigment clumping, CNV",
-      "Cotton-wool spots, flame hemorrhages, papilledema"
+      "Drusen, pigment clumping, choroidal neovascularization",
+      "Punched-out chorioretinal lesions, peripapillary atrophy, choroidal neovascularization"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3497,10 +3497,10 @@
     "id": null,
     "text": "Rhegmatogenous retinal detachment occurs due to:",
     "choices": [
-      "Retinal break or tear allowing fluid into subretinal space",
+      "Fluid entering a retinal break or tear",
       "Exudation from inflamed choroid",
       "Traction from neovascularization",
-      "Vitreous syneresis without tear"
+      "Vitreous syneresis and posterior vitreous detachment"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3512,7 +3512,7 @@
     "id": null,
     "text": "Exudative retinal detachment is typically caused by:",
     "choices": [
-      "Fluid accumulation secondary to tumor or inflammation",
+      "Fluid accumulation",
       "Vitreoretinal traction",
       "Peripheral retinal break",
       "Retinoschisis"
@@ -3542,8 +3542,8 @@
     "id": null,
     "text": "Purtscher retinopathy is most often associated with:",
     "choices": [
-      "Chest compression or trauma",
-      "Diabetes mellitus",
+      "Chest compression trauma",
+      "Lupus",
       "Retinal detachment",
       "Hypertension"
     ],
@@ -3557,8 +3557,8 @@
     "id": null,
     "text": "Leukocoria in a child may indicate which of the following?",
     "choices": [
-      "Retinoblastoma, Coats disease, or Retinopathy of Prematurity",
-      "Congenital cataract only",
+      "Retinoblastoma",
+      "Toxoplasmosis",
       "Vitreous hemorrhage",
       "Optic nerve drusen"
     ],
@@ -3589,7 +3589,7 @@
     "choices": [
       "Anti-VEGF intravitreal injections",
       "Topical corticosteroids",
-      "Photocoagulation alone",
+      "Photocoagulation",
       "Systemic antibiotics"
     ],
     "correct": 0,
@@ -3603,7 +3603,7 @@
     "text": "Which OCT finding is typical of diabetic macular edema?",
     "choices": [
       "Cystoid intraretinal spaces and increased retinal thickness",
-      "Subretinal fluid only",
+      "Subretinal fluid and drusenoid formations",
       "Retinal thinning and atrophy",
       "Foveal detachment with pigment epithelial tear"
     ],
@@ -3724,8 +3724,8 @@
     "choices": [
       "Motion and temporal resolution",
       "Fine color and detail",
-      "Binocular fusion",
-      "Light adaptation"
+      "Binocular fusion and stereopsis",
+      "Light adaptation and shape recognition"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3739,8 +3739,8 @@
     "choices": [
       "Color and spatial resolution",
       "Motion and flicker",
-      "Night vision",
-      "Peripheral vision"
+      "Night vision and steropsis",
+      "Peripheral vision and contrast"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3754,8 +3754,8 @@
     "choices": [
       "Compressive CN III palsy",
       "Ischemic CN III palsy",
-      "CN VI palsy",
-      "CN IV palsy"
+      "Compressive CN IV palsy",
+      "Ischemic CN IV palsy"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3769,8 +3769,8 @@
     "choices": [
       "Ischemic CN III palsy",
       "Compressive CN III palsy",
-      "CN IV palsy",
-      "Myasthenia gravis"
+      "Ischemic CN IV palsy",
+      "Compressive CN IV palsy"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3842,10 +3842,10 @@
     "id": null,
     "text": "Which visual-field defect pattern 'respects the vertical midline' and indicates a neurological cause?",
     "choices": [
-      "Homonymous hemianopia",
-      "Altitudinal defect",
-      "Central scotoma",
-      "Paracentral scotoma"
+      "Insult posterior to the optic chiasm",
+      "Insult anterior to the optic chiasm",
+      "Insult at the optic chiasm",
+      "Insult at the optic nerve"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -3857,8 +3857,8 @@
     "id": null,
     "text": "Which structure corresponds to cortical magnification of foveal input?",
     "choices": [
-      "Primary visual cortex (V1)",
-      "LGN",
+      "Primary visual cortex",
+      "Lateral geniculate nucleus",
       "Superior colliculus",
       "Pretectal nucleus"
     ],
@@ -3887,7 +3887,7 @@
     "id": null,
     "text": "Primary open-angle glaucoma (POAG) is characterized by:",
     "choices": [
-      "Normal-appearing anterior chamber angle with reduced trabecular outflow",
+      "Normal-appearing anterior chamber angle",
       "Iris bowing forward and angle closure",
       "Elevated IOP secondary to lens swelling",
       "Acute inflammation blocking the pupil"
@@ -3947,7 +3947,7 @@
     "id": null,
     "text": "Which side effect is most associated with prostaglandin analogs?",
     "choices": [
-      "Increased eyelash growth and iris darkening",
+      "Increased eyelash growth",
       "Corneal thinning",
       "Ptosis",
       "Ocular surface hypopigmentation"
@@ -4067,10 +4067,10 @@
     "id": null,
     "text": "Pilocarpine is contraindicated in patients with:",
     "choices": [
-      "Retinal detachment risk or active uveitis",
+      "Uveitis",
       "Blepharitis",
       "Dry eye",
-      "Astigmatism"
+      "Herpes Zoster"
     ],
     "correct": 0,
     "discipline": "B. Pharmacology / Ocular Disease",
@@ -4082,7 +4082,7 @@
     "id": null,
     "text": "Rho kinase inhibitors such as netarsudil work by:",
     "choices": [
-      "Relaxing trabecular meshwork cells to increase outflow",
+      "Relaxing trabecular meshwork cells",
       "Decreasing aqueous production",
       "Contracting the ciliary body",
       "Increasing vitreous osmolarity"
