@@ -1445,7 +1445,7 @@
     "choices": [
       "The deviating eye adopts a new retinal point to correspond with the fixating fovea",
       "Both foveas perceive the same object simultaneously but vision is double",
-      "Suppression scotoma expands to both eyes",
+      "A nonfoveal retinal point is used for fixation under monocular conditions",
       "No sensory fusion occurs at all due to abnormal binocular fixation"
     ],
     "correct": 0,
@@ -1488,7 +1488,7 @@
     "id": null,
     "text": "Bagolini striated lenses are used primarily to evaluate:",
     "choices": [
-      "Fusion and suppression under natural viewing",
+      "Fusion and suppression",
       "Amplitude of accommodation",
       "Vergence range limits",
       "Color vision defects"
@@ -1505,8 +1505,8 @@
     "choices": [
       "Fixation disparity",
       "Microtropia",
-      "Heterotropia",
-      "Esophoria"
+      "Eccentric Fixation",
+      "Eccentric Viewing"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1519,9 +1519,9 @@
     "text": "Loss of stereopsis in amblyopia and strabismus occurs primarily because:",
     "choices": [
       "Binocular fusion is disrupted by suppression",
-      "Optic nerve fibers are damaged",
-      "Accommodation fails at near",
-      "Eye movements are restricted"
+      "Optic nerve fibers have limited cortical connections",
+      "Binocular fusion ois disrupted by fixation disparity",
+      "Eye movements are restricted to regions of scotoma"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1534,9 +1534,9 @@
     "text": "Which statement best defines color vision?",
     "choices": [
       "The ability to distinguish wavelengths of light based on cone photopigment absorption",
-      "The ability to perceive brightness differences only",
-      "The sensitivity of rods to dim illumination",
-      "The ability to adapt to darkness after bright light exposure"
+      "The ability to distinguish wavelengths of light based on rod photopigment absorption",
+       "The ability to distinguish wavelengths of light based on cone photopigment unbleaching",
+      "The ability to distinguish wavelengths of light based on rod photopigment unbleaching"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1551,7 +1551,7 @@
       "S-cone",
       "M-cone",
       "L-cone",
-      "Rod photopigment (rhodopsin)"
+      "Rhodopsin"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1564,9 +1564,9 @@
     "text": "Which photoreceptor type contains rhodopsin?",
     "choices": [
       "Rods",
-      "S-cones",
-      "M-cones",
-      "L-cones"
+      "Cones",
+      "Retinal Pigment Epithelium",
+      "Amacrine"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1624,9 +1624,9 @@
     "text": "Inherited red-green color vision deficiencies are typically:",
     "choices": [
       "X-linked and affect males more often",
-      "Autosomal dominant and affect females primarily",
-      "Acquired and progressive",
-      "Unilateral and temporary"
+      "X-linked and affect females more often",
+      "Autosomal Recessive and affect males more often",
+      "Autosomal Recessive and affect females more often"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1656,7 +1656,7 @@
       "Anomaloscope",
       "Ishihara plates",
       "Farnsworth D15",
-      "HRR test"
+      "HRR-PIP plates"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1668,9 +1668,9 @@
     "id": null,
     "text": "Which lighting condition is preferred for color vision testing?",
     "choices": [
-      "Standard Illuminant C or incandescent light",
+      "Standard Illuminant C lighting",
       "Fluorescent lighting",
-      "Blue-filtered light",
+      "Blue-filtered lighting",
       "UV-enhanced lighting"
     ],
     "correct": 0,
@@ -1685,8 +1685,8 @@
     "choices": [
       "Long-pass filter that enhances red perception",
       "Short-pass filter that enhances blue perception",
-      "Neutral density filter for glare control",
-      "Polarizing filter to reduce reflections"
+      "Neutral density filter that enhances all color perception",
+      "Polarizing filter that enhances all color perception"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1699,7 +1699,7 @@
     "text": "EnChroma lenses are designed to:",
     "choices": [
       "Enhance color discrimination by separating overlapping spectral responses",
-      "Block UV light to prevent retinal phototoxicity",
+      "Block UV light to prevent retinal phototoxicity and cataract formation",
       "Correct for chromatic aberration in refractive error",
       "Treat contrast sensitivity loss in cataract patients"
     ],
@@ -1715,8 +1715,8 @@
     "choices": [
       "The ability to detect luminance differences across space",
       "The capacity to distinguish temporal flicker frequencies",
-      "The perception of stereoscopic depth only",
-      "The cortical interpretation of motion over time"
+      "The binocular ability to perceive stereoscopic depth",
+      "The cortical interpretation of temporal motion over time"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1760,8 +1760,8 @@
     "choices": [
       "The time when visual experience most influences long-term neural connections",
       "The final stage of ocular growth before emmetropia",
-      "The period when accommodation first appears",
-      "A stage of retinal photoreceptor migration"
+      "The time where neural connections have the least plasticity",
+      "A stage of retinal photoreceptor migration during childhood development"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1789,9 +1789,9 @@
     "text": "Emmetropization describes:",
     "choices": [
       "The process by which refractive error decreases toward emmetropia during growth",
-      "The development of accommodation with age",
-      "The adaptation to presbyopic blur",
-      "The change in pupil size with illumination"
+      "The time when visual experience most influences long-term neural connections",
+      "The time when which refractive error correction drives vision toward emmetropia",
+      "The process by which binocular disparity contributes to stereopsis"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1805,8 +1805,8 @@
     "choices": [
       "Teller acuity cards",
       "Snellen chart",
-      "Ishihara plates",
-      "Farnsworth D-15"
+      "Stereofly",
+      "Visual Evoked Potentials"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1819,9 +1819,9 @@
     "text": "The visual evoked potential (VEP) measures:",
     "choices": [
       "Electrical cortical responses to visual stimuli",
-      "Eye muscle strength",
-      "Retinal pigment regeneration",
-      "Lens accommodation amplitude"
+      "Extraocular muscle strength",
+      "Retinal pigment regeneration after bleaching",
+      "Macular photoreceptor responses to visual stimuli"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1894,9 +1894,9 @@
     "text": "Müller’s (superior tarsal) muscle contributes to lid position by:",
     "choices": [
       "Sympathetic tone that adds a small amount of lid retraction",
-      "Voluntary elevation controlled by CN III",
-      "Closing the eyelids during blink",
-      "Rotating the globe upward in Bell’s reflex"
+      "Parasympathetic voluntary elevation of the lid",
+      "Parasympathetic closing the eyelids during blink",
+      "Sympathetic rotating the globe upward in Bell’s reflex"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -1924,7 +1924,7 @@
     "text": "Weakness of orbicularis oculi from facial nerve palsy most directly leads to:",
     "choices": [
       "Lagophthalmos and exposure keratopathy",
-      "Ptosis with intact closure",
+      "Ptosis with miosis",
       "Miosis and tearing",
       "Diplopia in upgaze"
     ],
@@ -1954,9 +1954,9 @@
     "text": "Which correctly lists the lacrimal drainage pathway in order?",
     "choices": [
       "Puncta → canaliculi → common canaliculus → lacrimal sac → nasolacrimal duct → valve of Hasner",
-      "Lacrimal sac → puncta → canaliculi → nasolacrimal duct → valve of Hasner",
-      "Canaliculi → puncta → sac → valve of Hasner → nasolacrimal duct",
-      "Puncta → sac → canaliculi → nasolacrimal duct → valve of Hasner"
+      "Lacrimal sac → puncta → common canaliculus → canaliculi → nasolacrimal duct → valve of Hasner",
+      "Canaliculi → common canaliculus → puncta → lacrimal sac → valve of Hasner → nasolacrimal duct",
+      "Puncta → lacrimal sac → common canaliculus → canaliculi → nasolacrimal duct → valve of Hasner"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -1998,9 +1998,9 @@
     "id": null,
     "text": "Which structure primarily produces the aqueous layer of the tear film?",
     "choices": [
-      "Main lacrimal gland (with accessory glands)",
+      "Lacrimal gland",
       "Meibomian glands",
-      "Goblet cells of conjunctiva",
+      "Goblet cells",
       "Zeis glands"
     ],
     "correct": 0,
@@ -2016,7 +2016,7 @@
       "Lacrimal nerve, frontal nerve, trochlear nerve (CN IV)",
       "Nasociliary nerve and abducens nerve (CN VI)",
       "Superior and inferior divisions of CN III",
-      "Optic nerve and ophthalmic artery"
+      "Optic nerve (CN II) and ophthalmic artery"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2045,8 +2045,8 @@
     "choices": [
       "Superior ophthalmic vein",
       "Infraorbital vein",
-      "Angular vein only",
-      "Facial vein directly"
+      "Angular vein",
+      "Facial vein"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2088,10 +2088,10 @@
     "id": null,
     "text": "An external hordeolum (stye) most commonly originates from infection of:",
     "choices": [
-      "Zeis or Moll glands at the lash follicle",
-      "Meibomian glands within the tarsus",
+      "Zeis or Moll glands",
+      "Meibomian glands",
       "Krause accessory glands",
-      "Lacrimal gland ductules"
+      "Lacrimal gland"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2104,9 +2104,9 @@
     "text": "A chalazion is best described as:",
     "choices": [
       "A sterile, granulomatous inflammation of a meibomian gland",
-      "An acute bacterial infection of lash follicles",
-      "A viral lesion of the lid margin",
-      "A dermoid cyst of the orbit"
+      "An acute bacterial infection with inflaamation of lash follicles",
+      "A viral lesion of the lid margin with a pedunculated center",
+      "A dermoid cyst of the orbit in the dermal skin layer"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2118,10 +2118,10 @@
     "id": null,
     "text": "Which initial management is most appropriate for exposure keratopathy due to facial nerve palsy?",
     "choices": [
-      "Aggressive lubrication and eyelid protection",
-      "Topical anesthetics PRN",
+      "Aggressive lubrication of the cornea",
+      "Topical anesthetics as needed",
       "Immediate systemic steroids",
-      "High-dose isotretinoin"
+      "Topical soft steroids"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2133,10 +2133,10 @@
     "id": null,
     "text": "Trichiasis is defined as:",
     "choices": [
-      "Posteriorly misdirected lashes touching the cornea",
+      "Posteriorly misdirected lashes",
       "Anterior displacement of lash roots",
-      "Loss of lashes at the lateral canthus only",
-      "Congenital absence of lashes"
+      "Loss of lashes",
+      "Additional row of lashes"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2149,9 +2149,9 @@
     "text": "Which finding best separates blepharitis from an external hordeolum?",
     "choices": [
       "Diffuse lid margin inflammation and debris vs. a focal, tender nodule",
-      "Presence of purulent canalicular discharge",
-      "Medial canthal swelling over lacrimal sac",
-      "Proptosis and pain with eye movements"
+      "Presence of purulent canalicular discharge vs. lid lesion with muco-expression",
+      "Medial canthal swelling over lacrimal sac vs a focal, painless nodule",
+      "Lid erythema with infestation-based debris vs a a lid lesion with pearly borders"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2164,9 +2164,9 @@
     "text": "Which statement about the tear film is correct?",
     "choices": [
       "The mucin layer from conjunctival goblet cells promotes wetting of the corneal epithelium",
-      "The mucin layer is produced by lacrimal acini",
-      "The lipid layer is secreted by the main lacrimal gland",
-      "The aqueous layer is secreted by meibomian glands"
+      "The mucin layer from lacrimal acini promotes wetting of the corneal epithelium",
+      "The lipid layer is secreted by the main lacrimal gland prevents tear evaporation",
+      "The aqueous layer is secreted by the main lacrimal gland prevents tear film evaporation"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2208,7 +2208,7 @@
     "id": null,
     "text": "Which statement about the valve of Hasner is correct?",
     "choices": [
-      "It guards the distal nasolacrimal duct opening beneath the inferior turbinate",
+      "It guards the distal nasolacrimal duct opening",
       "It regulates aqueous tear secretion",
       "It is located at the common canaliculus entrance",
       "It connects the lacrimal sac to the frontal sinus"
@@ -2239,8 +2239,8 @@
     "text": "Papillae on the palpebral conjunctiva are most associated with which condition?",
     "choices": [
       "Bacterial conjunctivitis",
-      "Viral conjunctivitis",
-      "Follicular reaction from adenovirus",
+      "Herpetic conjunctivitis",
+      "Adenoviral conjuctivitis",
       "Subconjunctival hemorrhage"
     ],
     "correct": 0,
@@ -2268,8 +2268,8 @@
     "id": null,
     "text": "Subconjunctival hemorrhage is most often caused by:",
     "choices": [
-      "Rupture of conjunctival vessels from Valsalva or trauma",
-      "Severe bacterial infection",
+      "Valsalva or trauma",
+      "Bacterial or viral infection",
       "Anterior uveitis",
       "Chronic glaucoma"
     ],
@@ -2331,7 +2331,7 @@
       "Reis-Bücklers dystrophy",
       "Map-dot-fingerprint dystrophy",
       "Fuchs’ endothelial dystrophy",
-      "Keratoconus"
+      "Meesmann's dystrophy"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
