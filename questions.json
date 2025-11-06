@@ -874,9 +874,9 @@
     "text": "A contact lens with high specific gravity will generally:",
     "choices": [
       "Show reduced movement with blink",
-      "Move excessively with each blink",
+      "Show excessive movemvent with blink",
       "Have increased tear exchange",
-      "Be contraindicated for dry eye"
+      "Have reduced tear exchange"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -905,7 +905,7 @@
     "choices": [
       "Bitoric",
       "Spherical",
-      "Aspheric",
+      "Toric",
       "Hybrid"
     ],
     "correct": 0,
@@ -921,7 +921,7 @@
       "Subtract 10° from the original axis",
       "Add 10° to the original axis",
       "Leave the same axis",
-      "Double the rotation angle"
+      "Astigmatism requires a more precise fit"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -931,12 +931,12 @@
   },
   {
     "id": null,
-    "text": "A toric lens rotates 15° temporal in the left eye. According to the LARS rule, the new axis should:",
+    "text": "A toric lens rotates 15° temporal in the left eye. Accordingly, to determine the new axis thr optometrist should:",
     "choices": [
       "Add 15°",
       "Subtract 15°",
       "Remain unchanged",
-      "Rotate 30° opposite"
+      "Manually rotate"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -950,8 +950,8 @@
     "choices": [
       "Refractive anisometropia",
       "Axial anisometropia",
-      "Irregular astigmatism",
-      "Anisocoria"
+      "Corneal anisometropia",
+      "Lenticular anisometropia"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -964,9 +964,9 @@
     "text": "Why might an axial anisometrope experience more aniseikonia with contact lenses than spectacles?",
     "choices": [
       "Contact lenses remove the compensatory magnification from vertex distance",
-      "Contact lenses induce more chromatic aberration",
-      "Spectacles add unequal prism at near",
-      "Axial length changes with lens wear"
+      "Glasses induce a prismatic 'SILO/SOLI' effect at the increased working distance",
+      "Spectacles add undue pibcushion and barrel distortion",
+      "Lens thickness contributes to form factor in spectacles, but not in contacts"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -978,10 +978,10 @@
     "id": null,
     "text": "Monovision contact lens correction works by:",
     "choices": [
-      "Correcting one eye for distance and the other for near",
-      "Using different base curves for each meridian",
-      "Blending two prescriptions in one eye",
-      "Correcting both eyes for near tasks only"
+      "Correcting a patient's dominant eye for distance and non-dominant eye for near",
+      "Correcting a patient's dominant eye for near and non-dominant eye for distance",
+      "correcting both of the patient's eyes for either distance or near",
+      "Correcting both of the patient's eyes for distance and near"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -993,10 +993,10 @@
     "id": null,
     "text": "A disadvantage of monovision contact lens correction is:",
     "choices": [
-      "Reduced stereopsis and contrast sensitivity",
-      "Excessive convergence demand",
-      "Severe chromatic aberration",
-      "Poor tear film stability"
+      "Reduced stereopsis",
+      "Increased convergence demand",
+      "Increased chromatic aberration",
+      "Rediced vision at near"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1008,8 +1008,8 @@
     "id": null,
     "text": "Low vision is best defined as:",
     "choices": [
-      "Reduced visual acuity not correctable by standard lenses (e.g., 20/60 or worse)",
-      "Any vision loss correctable with spectacles",
+      "Reduced visual acuity not correctable by standard lenses",
+      "High levels of vision loss correctable with spectacles",
       "Temporary blur from uncorrected refractive error",
       "Reduced color perception under low illumination"
     ],
@@ -1024,9 +1024,9 @@
     "text": "The goal of low vision rehabilitation is to:",
     "choices": [
       "Maximize residual vision through magnification, lighting, and contrast",
-      "Restore emmetropia surgically",
-      "Reduce dependence on optical aids",
-      "Eliminate need for refraction"
+      "Restore emmetropia surgically or optically",
+      "Reduce dependence on optical aids by genetic therapy and surgery",
+      "Eliminate the need for refraction by utilizing retinoscopy"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1069,8 +1069,8 @@
     "text": "The formula relating MAR to Snellen acuity is:",
     "choices": [
       "MAR = Snellen denominator / Snellen numerator",
-      "MAR = Snellen numerator / denominator",
-      "MAR = 1 / Snellen fraction",
+      "MAR = Snellen numerator / Snellen denominator",
+      "MAR = 1 / Snellen fraction x 20 ",
       "MAR = 20 / Snellen denominator"
     ],
     "correct": 0,
@@ -1086,7 +1086,7 @@
       "Galilean",
       "Keplerian",
       "Compound",
-      "Reflex"
+      "Reverse"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1114,9 +1114,9 @@
     "text": "Accommodation is defined as:",
     "choices": [
       "A change in crystalline lens curvature to focus on near objects",
-      "A change in corneal curvature to focus distant objects",
-      "Constriction of pupils in dim light",
-      "Eye movements that maintain fixation"
+      "A change in retinal focus as a result of pinhole of slit effect",
+      "Constriction of pupils in bright light to produce a pinhole effect",
+      "Compensatory divergence or convergence of eyes due to phoric demand"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1144,9 +1144,9 @@
     "text": "The stimulus for accommodation is:",
     "choices": [
       "Retinal blur of a near target",
-      "Change in pupil size",
-      "Ocular torsion",
-      "Binocular disparity"
+      "Change in pupil size at near",
+      "Convergence demand of a near object",
+      "Binocular disparity at near"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1160,8 +1160,8 @@
     "choices": [
       "4.0 D",
       "2.5 D",
-      "3.5 D",
-      "1.0 D"
+      "40 D",
+      "25 D"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1190,8 +1190,8 @@
     "choices": [
       "Convergence insufficiency",
       "Convergence excess",
-      "Esophoria at near",
-      "Normal NPC"
+      "Divergence Excess",
+      "Acoommodative Excess"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1205,8 +1205,8 @@
     "choices": [
       "Increase accommodation with minus lenses",
       "Relax accommodation with plus lenses",
-      "Maintain fusion while reducing convergence",
-      "Increase pupil diameter under illumination"
+      "Relax accommodation with minus lenses",
+      "Increase accommodation with plus lenses"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1219,9 +1219,9 @@
     "text": "Negative relative accommodation (NRA) evaluates the ability to:",
     "choices": [
       "Relax accommodation using plus lenses",
-      "Increase convergence at near",
-      "Maintain accommodation during divergence",
-      "Adapt to unequal stimuli"
+      "Increase accommodation with minus lenses",
+      "Increase accommodation with plus lenses",
+      "Relax accommodation with minus lenses",
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1250,7 +1250,7 @@
     "choices": [
       "Convergence insufficiency",
       "Convergence excess",
-      "Basic esophoria",
+      "Basic exophoria",
       "Divergence excess"
     ],
     "correct": 0,
@@ -1265,8 +1265,8 @@
     "choices": [
       "Esophoria greater at near with high AC/A",
       "Exophoria greater at near with low AC/A",
-      "Normal AC/A and NPC",
-      "Reduced PRA only"
+      "Reduced NPC with high AC/A",
+      "Reduced NPC with low AC/A"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1306,12 +1306,12 @@
   },
   {
     "id": null,
-    "text": "When one eye’s image is chronically suppressed due to misalignment, the condition is called:",
+    "text": "When one eye’s image is chronically ignored cortically due to misalignment, the condition is called:",
     "choices": [
-      "Binocular suppression",
-      "Aniseikonia",
+      "Suppression",
+      "Confusion",
       "Diplopia",
-      "Ocular rivalry"
+      "Rivalry"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1324,9 +1324,9 @@
     "text": "Binocular summation refers to:",
     "choices": [
       "Improved visual performance using both eyes together",
-      "Increased convergence tone",
-      "Reduced pupil size at near",
-      "Image disparity leading to diplopia"
+      "Improved visual performance with corrective lenses",
+      "Improved visual performance under monocular conditions",
+      "Sufficient image disparity leading to diplopia"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1354,9 +1354,9 @@
     "text": "The most common cause of amblyopia is:",
     "choices": [
       "Strabismus during the critical period",
-      "Macular degeneration",
-      "Corneal ulceration",
-      "Retinal detachment"
+      "Starghart's Disease during the critical period",
+      "Coat's Disease during the critical period",
+      "Retinopathy of Prematurity (ROP) during the critical"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1369,9 +1369,9 @@
     "text": "Anisometropic amblyopia develops due to:",
     "choices": [
       "Unequal refractive errors between the two eyes",
-      "Congenital cataract",
-      "Retinal dystrophy",
-      "Macular hypoplasia"
+      "High refractive errors in each eye",
+      "Constant stabismus in one eye",
+      "Ocular pathology in one eye "
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1385,8 +1385,8 @@
     "choices": [
       "Congenital ptosis covering one eye",
       "High hyperopia in both eyes",
-      "Transient corneal edema",
-      "Intermittent exotropia"
+      "Transient corneal edema in one eye",
+      "Intermittent alternating exotropia"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1414,9 +1414,9 @@
     "text": "A patient with long-standing esotropia and suppression in one eye is at risk for:",
     "choices": [
       "Amblyopia in the suppressed eye",
-      "Alternating fixation",
-      "Improved fusion at near",
-      "Reduced accommodative lag"
+      "Alternating fixation in both eyes",
+      "Improved fusion at near in both eyes",
+      "Reduced stereopsis in the suppressed eye"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1429,8 +1429,8 @@
     "text": "Normal retinal correspondence (NRC) means:",
     "choices": [
       "Foveas of both eyes correspond to the same visual direction",
-      "Each fovea projects to opposite hemispheres",
-      "Retinal images never align",
+      "Each fovea projects to opposite hemispheres in visual,space",
+      "The eyes have a phoropter tilts away from the patient",
       "Fusion is not possible under binocular viewing"
     ],
     "correct": 0,
@@ -1444,9 +1444,9 @@
     "text": "Abnormal retinal correspondence (ARC) occurs when:",
     "choices": [
       "The deviating eye adopts a new retinal point to correspond with the fixating fovea",
-      "Both foveas perceive the same object simultaneously",
+      "Both foveas perceive the same object simultaneously but vision is double",
       "Suppression scotoma expands to both eyes",
-      "No sensory fusion occurs at all"
+      "No sensory fusion occurs at all due to abnormal binocular fixation"
     ],
     "correct": 0,
     "discipline": "D. Optics",
@@ -1471,10 +1471,10 @@
   },
   {
     "id": null,
-    "text": "A patient perceives 3 green and 1 red light on Worth 4 Dot testing. This indicates:",
+    "text": "A patient perceives 3 green and no red light on Worth 4 Dot testing. This indicates:",
     "choices": [
-      "Left eye suppression",
       "Right eye suppression",
+      "Left eye suppression",
       "Normal fusion",
       "Alternating suppression"
     ],
