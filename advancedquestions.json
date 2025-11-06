@@ -232,9 +232,9 @@
     "sub": "Vertex Distance",
     "rationale": "Moving the correction toward the cornea changes effective vergence; high absolute powers require vertex compensation.",
     "choices": [
-      "Effective power changes with vertex distance, especially at high powers",
+      "Effective power changes with vertex distance",
       "Accommodation is eliminated with contacts",
-      "Corneal curvature is permanently altered by glasses",
+      "Corneal curvature is no accounted for by glasses",
       "Pupil size controls effective power at distance"
     ],
     "correct": 0
@@ -250,7 +250,7 @@
       "F2 = F1 / (1 − d·F1)",
       "F2 = F1 + d",
       "F2 = F1 × d",
-      "F2 = F1 − d/F1"
+      F2 = F1 / (1 + d·F1)"
     ],
     "correct": 0
   },
@@ -308,9 +308,9 @@
     "rationale": "Excimer ablation in the optical zone flattens corneal curvature, decreasing refractive power.",
     "choices": [
       "Flattening of the central cornea to reduce corneal power",
-      "Steepening of the cornea to increase power",
-      "Shortening of axial length",
-      "Replacement of the crystalline lens"
+      "Steepening of the central cornea to increase power",
+      "Flattening of the central cornea to increase corneal power",
+      "Steepening of the central cornea to reduce corneal power"
     ],
     "correct": 0
   },
@@ -323,9 +323,9 @@
     "rationale": "CK tightens the peripheral cornea with thermal spots, producing central steepening and a plus shift.",
     "choices": [
       "Peripheral steepening that increases central corneal power",
-      "Central flattening to reduce corneal power",
-      "Intralenticular lens extraction",
-      "Inducing irregular astigmatism for monovision"
+      "Central steepening that increases central corneal power",
+      "Peripheral steepening that decreases central corneal power",
+      "Central steepening that decreases central corneal powen"
     ],
     "correct": 0
   },
@@ -337,7 +337,7 @@
     "sub": "Refractive Surgery",
     "rationale": "SMILE is flapless (small incision), potentially preserving more corneal nerves and minimizing surface disruption.",
     "choices": [
-      "SMILE removes an intrastromal lenticule without creating a corneal flap",
+      "SMILE removes an intrastromal lenticule",
       "SMILE uses a larger flap to preserve nerves",
       "SMILE is only indicated for hyperopia",
       "SMILE replaces the natural lens with an IOL"
@@ -352,10 +352,10 @@
     "sub": "Refractive Surgery",
     "rationale": "ICLs correct high myopia by adding a posterior chamber phakic lens, avoiding corneal tissue removal.",
     "choices": [
-      "Implantable collamer lens (ICL)",
+      "Implantable collamer lens",
       "Conductive keratoplasty",
       "Monovision soft lenses",
-      "Clear lens extraction for presbyopia only"
+      "Clear lens extraction"
     ],
     "correct": 0
   },
@@ -368,9 +368,9 @@
     "rationale": "RLE replaces the crystalline lens with an IOL and is often considered for high hyperopia/presbyopia when corneal procedures are less ideal.",
     "choices": [
       "High hyperopia and presbyopia with desire for IOL-based correction",
-      "Low myopia without cataract",
-      "Regular astigmatism under 1.00 D",
-      "Anisometropia only with thick corneas"
+      "Low myopia without cataract and thick pachymetry readings",
+      "Regular astigmatism under 1.00 D with thick pachymetry",
+      "Anisometropia only with thick corneas with history of past contact lens wear"
     ],
     "correct": 0
   },
@@ -383,9 +383,9 @@
     "rationale": "Presbyopia arises primarily from lenticular sclerosis and reduced elasticity, limiting accommodative amplitude.",
     "choices": [
       "Loss of lens elasticity reducing accommodative ability",
-      "Ciliary muscle paralysis",
-      "Corneal steepening at the visual axis",
-      "Retinal fatigue causing reduced sensitivity"
+      "Ciliary muscle paralysis reducing accommodative ability",
+      "Corneal steepening at the visual axis resutling in myopia",
+      "Ocular sufrace disease creating a rough refractive surface"
     ],
     "correct": 0
   },
@@ -395,12 +395,12 @@
     "discipline": "Optics",
     "condition": "Ametropia",
     "sub": "Presbyopia",
-    "rationale": "A common approach is half the difference between demand (1/0.40 = 2.50 D) and amplitude.",
+    "rationale": "A common approach is for a patient to use half of their amplitude and apply the remaining demand to an ADD.",
     "choices": [
-      "Add = (Accommodative demand − Amplitude)/2",
-      "Add = Amplitude × 2",
-      "Add = Demand − 0.50 D",
-      "Add = (1/WD) × 2"
+      "Add = (Accommodative demand) − Amplitude/2 = +1.00D ",
+      "Add = (Accommodative demand − Amplitude)/2 = -0.50D ",
+      "Add = Accommodative demand − Amplitude" = +1.50D,
+      "Add = Accommodative demand at working distance = 3.00D
     ],
     "correct": 0
   },
