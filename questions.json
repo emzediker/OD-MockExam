@@ -393,8 +393,8 @@
     "id": null,
     "text": "The add power for near vision is calculated by:",
     "choices": [
+      "Accommodative Demand − (Amplitude of Accommodation/2)",
       "(Accommodative Demand − Amplitude of Accommodation)/2",
-      "Amplitude of Accommodation × 2",
       "(Amplitude of Accommodation − Accommodative Demand)/2",
       "(1/Object Distance) / 2"
     ],
@@ -402,7 +402,7 @@
     "discipline": "D. Optics",
     "condition": "Ametropia",
     "sub": "Presbyopia",
-    "rationale": "Add = (Accommodative Demand − Amplitude of Accommodation)/2 determines balanced near correction."
+    "rationale": "Add = Accommodative Demand − (Amplitude of Accommodation/2) determines balanced near correction."
   },
   {
     "id": null,
