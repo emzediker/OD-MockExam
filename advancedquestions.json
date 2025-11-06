@@ -406,31 +406,31 @@
   },
   {
     "id": null,
-    "text": "A college student removes her −2.00 D glasses to read at 40 cm. Compared to an emmetrope, how does her accommodative demand change?",
+    "text": "A college student removes her −2.00 D glasses to read at 40 cm. Compared to an emmetrope, how does her accommodative response change?",
     "discipline": "Optics",
     "condition": "Ametropia",
     "sub": "Accommodation",
     "rationale": "Residual myopia reduces the accommodation required for a given near distance.",
     "choices": [
-      "Lower demand because her far point is closer than the target",
-      "Higher demand due to residual hyperopic defocus",
-      "Identical demand at 40 cm",
-      "No accommodation possible without correction"
+      "Lower response because her far point is closer than the target",
+      "Higher response due to residual hyperopic defocus without glasses",
+      "Identical response to demand at 40 cm because the object is at the near point",
+      "No accommodation is possible without correction because the object is at the near point"
     ],
     "correct": 0
   },
   {
     "id": null,
-    "text": "A −3.00 D myope is accidentally over-minused by 0.75 D in new spectacles. At distance, how will the eye behave optically?",
+    "text": "A 10 year old −3.00 D myope is accidentally over-minused by 0.75 D in new spectacles. At distance, how will the eye behave optically?",
     "discipline": "Optics",
     "condition": "Ametropia",
     "sub": "Accommodation",
     "rationale": "Over-minusing creates a hyperopic shift at distance, increasing accommodative demand.",
     "choices": [
-      "Like a hyperope, requiring extra accommodation for distance",
-      "Like an emmetrope with reduced accommodation",
-      "Like a presbyope with no accommodation",
-      "Like an astigmat with meridional blur only"
+      "Like a hyperope, requiring accommodation for distance",
+      "Like an emmetrope with reduced accommodation at near",
+      "Like a presbyope with no accommodation at near",
+      "Like an myope still, but with blur at distance and near"
     ],
     "correct": 0
   },
@@ -444,8 +444,8 @@
     "choices": [
       "She requires less accommodative effort at 40 cm",
       "She requires more accommodative effort at 40 cm",
-      "Her demand is identical",
-      "She cannot accommodate at 40 cm"
+      "Her accommodative demand and effort is identical at 40 cm",
+      "She requires identical accommodative effort at 66cm"
     ],
     "correct": 0
   },
@@ -457,10 +457,10 @@
     "sub": "Accommodation",
     "rationale": "With proper correction, accommodative demand equals that of an emmetrope at the same distance.",
     "choices": [
-      "Like an emmetrope",
-      "Less than an emmetrope",
-      "More than a hyperope",
-      "She cannot accommodate at all"
+      "Like an emmetrope: 3D",
+      "Less than an emmetrope: 0.5D",
+      "More than a hyperope: 3.5D",
+      "She cannot accommodate at all: 0D"
     ],
     "correct": 0
   },
@@ -517,7 +517,7 @@
     "sub": "Astigmatism",
     "rationale": "Fogging places the circle of least confusion nearer the retina, stabilizing endpoint for cylinder refinement.",
     "choices": [
-      "Shifting the circle of least confusion toward the retina before refining cylinder",
+      "Shifting the circle of least confusion toward the retina",
       "Inducing spherical aberration to sharpen the image",
       "Reducing chromatic aberration via blue light",
       "Changing axial length by accommodation"
@@ -532,10 +532,10 @@
     "sub": "Vertex Distance",
     "rationale": "For high minus, moving the lens away from the eye (spectacle plane) increases the effective minus power.",
     "choices": [
-      "Vertex distance increases the effective minus power of spectacles compared to the corneal plane",
-      "Accommodation is disabled by spectacles",
-      "Spectacles increase corneal refractive index",
-      "Contacts add plus power at distance"
+      "Vertex distance increases the effective minus power of spectacles",
+      "Accommodative demand is highter in spectacles",
+      "Images are inherently minified in contact lenses",
+      "Contacts add plus power at distance due to being at the corneal plane"
     ],
     "correct": 0
   },
@@ -547,9 +547,9 @@
     "sub": "Clinical Optics",
     "rationale": "Low luminance reduces depth of focus; larger pupils expose more peripheral aberrations, increasing halos and myopic shift.",
     "choices": [
-      "Accommodation overshoot and higher-order aberrations with larger pupils",
-      "Spectacle magnification in dim light",
-      "Reduced Abbe number at night",
+      "Accommodation overshoot and higher-order aberrations",
+      "Spectacle magnification and increased difraction",
+      "Rod mediated control of scotopic vision",
       "Anterior shift of the retina in darkness"
     ],
     "correct": 0
@@ -563,24 +563,24 @@
     "rationale": "An equivalent index estimates total corneal power from the anterior radius alone by implicitly modeling posterior power.",
     "choices": [
       "It approximates total corneal power without directly measuring the posterior surface",
-      "It corrects for chromatic aberration in green light",
-      "It standardizes vertex distance assumptions",
-      "It eliminates the need for axial length measurement"
+      "It corrects for errors inherent in Javal's rule of keratometry",
+      "It standardizes vertex distance assumptions to account for effective power",
+      "It eliminates the need for axial length measurement at the corneal plane"
     ],
     "correct": 0
   },
   {
     "id": null,
-    "text": "A 74-year-old with GA from dry AMD reports that brighter task lighting and a yellow-tinted reading lamp make newspaper headlines easier to see, but small print is still difficult. What is the primary goal of low vision rehabilitation you should emphasize when counseling her plan?",
+    "text": "A 74-year-old with geographic atrophy from dry AMD reports that brighter task lighting and a yellow-tinted reading lamp make newspaper headlines easier to see, but small print is still difficult. What is the primary goal of low vision rehabilitation you should emphasize when counseling her plan?",
     "discipline": "Optics",
     "condition": "Low Vision",
     "sub": "Rehabilitation Goals",
     "rationale": "Low vision rehab focuses on leveraging remaining vision-through magnification, lighting, and contrast-rather than restoring normal acuity.",
     "choices": [
       "Maximize residual visual function using magnification, optimized illumination, and contrast enhancements",
-      "Restore emmetropia surgically to eliminate optical devices",
+      "Restore emmetropia surgically and with anti-VEGF injections to eliminate optical devices",
       "Eliminate the need for refraction by relying on non-optical strategies only",
-      "Reduce dependence on magnifiers by prescribing stronger distance glasses"
+      "Reduce dependence on magnifiers by prescribing stronger distance glasses with BO prism for closer viewing"
     ],
     "correct": 0
   },
@@ -607,7 +607,7 @@
     "sub": "Magnification Strategies",
     "rationale": "Working distance (m) ≈ 1/F. At 25 cm, F ≈ +4.00 D. This provides a reasonable starting point with minimal posture strain.",
     "choices": [
-      "+4.00 D readers with good task lighting",
+      "+4.00 D readers at 25 cm",
       "+2.50 D readers at 40 cm",
       "+6.00 D readers at 16-17 cm",
       "+10.00 D microscope at 10 cm"
@@ -639,8 +639,8 @@
     "choices": [
       "Galilean telescope with a plus objective and minus ocular",
       "Keplerian telescope with two plus lenses and erecting prisms",
-      "Compound monocular with Porro prisms",
-      "Keplerian telescope without any erecting system"
+      "Galilean reverse telecope with a plus onjective and minus ocular",
+      "Keplerian telescope without any erecting prisms"
     ],
     "correct": 0
   },
