@@ -4097,7 +4097,7 @@
     "id": null,
     "text": "Hyperosmotic agents such as mannitol lower IOP by:",
     "choices": [
-      "Creating an osmotic gradient that draws fluid out of the eye",
+      "Creating an osmotic gradient",
       "Inhibiting aqueous production",
       "Increasing uveoscleral flow",
       "Reducing episcleral venous pressure"
@@ -4114,7 +4114,7 @@
     "choices": [
       "Pigment dispersion syndrome",
       "Pseudo-exfoliation glaucoma",
-      "UGH syndrome",
+      "Uveitis-Glaucoma-Hyphema syndrome",
       "Phacolytic glaucoma"
     ],
     "correct": 0,
@@ -4127,7 +4127,7 @@
     "id": null,
     "text": "Pseudo-exfoliation glaucoma is associated with deposition of material in the:",
     "choices": [
-      "Trabecular meshwork and anterior lens capsule",
+      "Trabecular meshwork",
       "Optic nerve head",
       "Corneal endothelium",
       "Retinal pigment epithelium"
@@ -4159,7 +4159,7 @@
     "choices": [
       "Sympathetic ophthalmia",
       "Endophthalmitis",
-      "TASS",
+      "Toxic anterior segment syndrome",
       "Traumatic glaucoma"
     ],
     "correct": 0,
@@ -4188,9 +4188,9 @@
     "text": "Which post-surgical emergency presents with pain, decreased vision, and hypopyon within 72 hours of surgery?",
     "choices": [
       "Endophthalmitis",
-      "Toxic Anterior Segment Syndrome (TASS)",
+      "Toxic Anterior Segment Syndrome",
       "Sympathetic ophthalmia",
-      "UGH syndrome"
+      "Uveitis-Glaucoma-Hyphema Syndrome"
     ],
     "correct": 0,
     "discipline": "C. Ocular Disease",
@@ -4235,7 +4235,7 @@
       "Traumatic glaucoma",
       "UGH syndrome",
       "Sympathetic ophthalmia",
-      "TASS"
+      "Toxic Anterior Segment Syndrome"
     ],
     "correct": 0,
     "discipline": "C. Ocular Disease",
@@ -4250,7 +4250,7 @@
       "Malpositioned intraocular lens rubbing the iris",
       "Orbital fracture impinging on the ciliary body",
       "Corneal foreign body retention",
-      "Endothelial dystrophy"
+      "Endothelial dystrophy with corneal edema"
     ],
     "correct": 0,
     "discipline": "C. Ocular Disease",
@@ -4280,7 +4280,7 @@
       "Irrigate the eye copiously with sterile saline",
       "Measure intraocular pressure",
       "Apply cycloplegic drops",
-      "Perform fluorescein staining first"
+      "Perform fluorescein staining"
     ],
     "correct": 0,
     "discipline": "C. Ocular Disease",
@@ -4310,7 +4310,7 @@
       "Choriocapillaris",
       "Central retinal artery",
       "Short posterior ciliary arteries",
-      "Long posterior ciliary nerves"
+      "Long posterior ciliary arteries"
     ],
     "correct": 0,
     "discipline": "E. Systemic Health",
@@ -4322,7 +4322,7 @@
     "id": null,
     "text": "Which laboratory value increases in response to systemic inflammation?",
     "choices": [
-      "Erythrocyte sedimentation rate (ESR)",
+      "Erythrocyte sedimentation rate",
       "Serum albumin",
       "Serum calcium",
       "Hematocrit"
@@ -4352,7 +4352,7 @@
     "id": null,
     "text": "Which hormone from the posterior pituitary increases water reabsorption in the kidneys?",
     "choices": [
-      "Antidiuretic hormone (ADH)",
+      "Antidiuretic hormone",
       "Aldosterone",
       "Cortisol",
       "Thyroxine"
@@ -4412,8 +4412,8 @@
     "id": null,
     "text": "Insulin facilitates glucose uptake primarily in which tissues?",
     "choices": [
-      "Muscle and adipose tissue",
-      "Liver only",
+      "Muscle and adipose",
+      "Liver and brain",
       "Kidney and brain",
       "Retina and cornea"
     ],
@@ -4472,10 +4472,10 @@
     "id": null,
     "text": "Which structure filters blood to remove metabolic waste and regulates fluid balance?",
     "choices": [
-      "Nephron",
-      "Liver lobule",
+      "Kidney",
+      "Liver",
       "Spleen",
-      "Pancreatic acinus"
+      "Pancreas"
     ],
     "correct": 0,
     "discipline": "E. Systemic Health",
@@ -4490,7 +4490,7 @@
       "Epinephrine and norepinephrine",
       "Dopamine and serotonin",
       "Aldosterone and cortisol",
-      "ADH and oxytocin"
+      "Antidiuretic horkone and oxytocin"
     ],
     "correct": 0,
     "discipline": "E. Systemic Health",
@@ -4505,7 +4505,7 @@
       "Hypothalamus",
       "Cerebellum",
       "Medulla oblongata",
-      "Parietal lobe"
+      "Inferior colliculus"
     ],
     "correct": 0,
     "discipline": "E. Systemic Health",
@@ -4532,7 +4532,7 @@
     "id": null,
     "text": "Which hormone increases calcium resorption from bone and raises serum calcium levels?",
     "choices": [
-      "Parathyroid hormone (PTH)",
+      "Parathyroid hormone",
       "Calcitonin",
       "Aldosterone",
       "Thyroxine"
@@ -4713,7 +4713,7 @@
     "text": "Which condition causes transient vision loss with papilledema due to elevated intracranial pressure?",
     "choices": [
       "Idiopathic intracranial hypertension",
-      "Optic neuritis",
+      "Non-Arteritic Anterior Ischemic Optic Neuropathy",
       "Myasthenia gravis",
       "Stroke"
     ],
@@ -4728,8 +4728,8 @@
     "text": "Myasthenia gravis is caused by antibodies directed against:",
     "choices": [
       "Acetylcholine receptors at the neuromuscular junction",
-      "Voltage-gated calcium channels",
-      "Myelin basic protein",
+      "Voltage-gated calcium channels at cardiac tissue",
+      "Myelin basic protein on neural axons",
       "Nicotinic ganglionic receptors"
     ],
     "correct": 0,
@@ -4757,7 +4757,7 @@
     "id": null,
     "text": "Thyroid eye disease primarily results from autoimmune activation of:",
     "choices": [
-      "Orbital fibroblasts and extraocular muscles",
+      "Orbital fibroblasts",
       "Ciliary body epithelium",
       "Corneal keratocytes",
       "Choroidal melanocytes"
@@ -4772,7 +4772,7 @@
     "id": null,
     "text": "Diabetic retinopathy develops due to damage to which retinal structures?",
     "choices": [
-      "Capillary endothelial cells and pericytes",
+      "Capillary pericytes",
       "Rods and cones",
       "Müller cells",
       "Choroidal melanocytes"
@@ -4804,7 +4804,7 @@
     "choices": [
       "Behçet’s disease",
       "Sjögren’s syndrome",
-      "SLE",
+      "Reiter's syndrome",
       "Wegener’s granulomatosis"
     ],
     "correct": 0,
@@ -4817,9 +4817,9 @@
     "id": null,
     "text": "Which autoimmune vasculitis is associated with c-ANCA positivity and necrotizing granulomas?",
     "choices": [
-      "Wegener’s granulomatosis (Granulomatosis with polyangiitis)",
+      "Wegener’s granulomatosis",
       "Sarcoidosis",
-      "SLE",
+      "Giant cell arteritis",
       "Rheumatoid arthritis"
     ],
     "correct": 0,
@@ -4849,7 +4849,7 @@
     "choices": [
       "Sarcoidosis",
       "Rheumatoid arthritis",
-      "SLE",
+      "Adenovirus",
       "Tuberculosis"
     ],
     "correct": 0,
@@ -4997,7 +4997,7 @@
     "id": null,
     "text": "Isotretinoin (Accutane) therapy is most associated with which ocular side effect?",
     "choices": [
-      "Dry eye and night-vision disturbance",
+      "Dry eye",
       "Optic neuritis",
       "Iritis",
       "Lens opacity"
@@ -5027,7 +5027,7 @@
     "id": null,
     "text": "Fluoroquinolone antibiotics act by inhibiting which bacterial enzyme?",
     "choices": [
-      "DNA gyrase (topoisomerase II)",
+      "DNA gyrase",
       "Transpeptidase",
       "Ribosomal 50S subunit",
       "RNA polymerase"
@@ -5058,9 +5058,9 @@
     "text": "Acyclovir’s mechanism of action involves inhibition of:",
     "choices": [
       "Viral DNA polymerase",
-      "Reverse transcriptase",
-      "Neuraminidase",
-      "Integrase"
+      "Virasl Reverse transcriptase",
+      "Viral Neuraminidase",
+      "Viral Integrase"
     ],
     "correct": 0,
     "discipline": "E. Systemic Health",
@@ -5102,7 +5102,7 @@
     "id": null,
     "text": "Adalimumab (Humira) exerts its anti-inflammatory effect by binding to:",
     "choices": [
-      "Tumor necrosis factor-alpha (TNF-α)",
+      "Tumor necrosis factor-alpha",
       "Interleukin-2",
       "CD20 receptor",
       "Cyclooxygenase-2"
@@ -5147,7 +5147,7 @@
     "id": null,
     "text": "Mannitol reduces intraocular pressure by which mechanism?",
     "choices": [
-      "Creating an osmotic gradient that draws water from the vitreous",
+      "Drawing water from the vitreous",
       "Inhibiting aqueous humor production",
       "Increasing uveoscleral outflow",
       "Blocking sodium channels in the ciliary body"
