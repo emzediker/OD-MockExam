@@ -2358,10 +2358,10 @@
     "id": null,
     "text": "Which test maps anterior and posterior corneal curvature for keratoconus detection?",
     "choices": [
-      "Corneal topography/tomography",
+      "Corneal topography",
       "Specular microscopy",
       "Pachymetry",
-      "Schirmer’s test"
+      "Optical coherence tomography "
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2375,8 +2375,8 @@
     "choices": [
       "Topical corticosteroids",
       "Topical antivirals",
-      "Lubricants",
-      "Cycloplegics"
+      "Topical Cycloplegics",
+      "Topical NSAIDs"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2405,8 +2405,8 @@
     "choices": [
       "Topical anesthetics",
       "Artificial tears",
-      "Topical lubricants",
-      "Cold compresses"
+      "Warm compresses",
+      "Topical steroids"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2463,10 +2463,10 @@
     "id": null,
     "text": "Post-LASIK ectasia is most likely to occur in patients with:",
     "choices": [
-      "Pre-existing keratoconus or thin corneas",
+      "Pre-existing thin corneas",
       "High hyperopia",
       "Intact corneal nerves",
-      "Thick residual stromal beds"
+      "Thick stromal beds"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2478,10 +2478,10 @@
     "id": null,
     "text": "Which postoperative complication involves interface inflammation after LASIK?",
     "choices": [
-      "Diffuse lamellar keratitis (DLK)",
+      "Diffuse lamellar keratitis",
       "Epithelial ingrowth",
       "Infectious keratitis",
-      "Recurrent erosion syndrome"
+      "Recurrent corneal erosion"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2495,8 +2495,8 @@
     "choices": [
       "Topical corticosteroids",
       "Topical antivirals",
-      "Oral antibiotics",
-      "Cycloplegic drops only"
+      "Topical antibiotics",
+      "Topical Cycloplegic"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2524,7 +2524,7 @@
     "text": "Which conjunctival region contains the highest density of goblet cells?",
     "choices": [
       "Inferior nasal fornix",
-      "Temporal bulbar conjunctiva",
+      "Inferios temporal conjunctiva",
       "Caruncle",
       "Upper tarsal conjunctiva"
     ],
@@ -2566,7 +2566,7 @@
   },
   {
     "id": null,
-    "text": "Which corneal layer does not regenerate following injury?",
+    "text": "Which superior corneal layer does not regenerate following injury?",
     "choices": [
       "Bowman’s layer",
       "Epithelium",
@@ -2583,7 +2583,7 @@
     "id": null,
     "text": "The corneal endothelium maintains transparency primarily through:",
     "choices": [
-      "Active Na⁺/K⁺ ATPase pump function",
+      "Na⁺/K⁺ ATPase pump function",
       "Tear film mucin secretion",
       "Pigmentation absorption",
       "Collagen crosslinking"
@@ -2600,7 +2600,7 @@
     "choices": [
       "Rose bengal",
       "Fluorescein",
-      "Lissamine green",
+      "Tryptan blue",
       "Indocyanine green"
     ],
     "correct": 0,
@@ -2613,10 +2613,10 @@
     "id": null,
     "text": "Which topical antiviral is most effective against epithelial herpes simplex keratitis?",
     "choices": [
-      "Trifluridine 1% (Viroptic)",
-      "Acyclovir ointment",
-      "Ganciclovir gel",
-      "Idoxuridine solution"
+      "Trifluridine",
+      "Erythromycin",
+      "Natamycin",
+      "Idoxuridine"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2658,10 +2658,10 @@
     "id": null,
     "text": "Which antifungal medication is most appropriate for filamentous fungal keratitis?",
     "choices": [
-      "Natamycin 5%",
-      "Voriconazole 1%",
-      "Amphotericin B 0.15%",
-      "Fluconazole 0.2%"
+      "Natamycin",
+      "Moxifloxacin",
+      "Trifluridine",
+      "Azithromycin"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2673,7 +2673,7 @@
     "id": null,
     "text": "Which preservative is most toxic to the corneal epithelium with chronic use?",
     "choices": [
-      "Benzalkonium chloride (BAK)",
+      "Benzalkonium chloride",
       "EDTA",
       "Thimerosal",
       "Chlorobutanol"
@@ -2689,8 +2689,8 @@
     "text": "Which medication can cause corneal whorl (vortex) keratopathy with chronic use?",
     "choices": [
       "Amiodarone",
-      "Chloroquine",
-      "Hydroxychloroquine",
+      "Ethambutol",
+      "Proparacaine",
       "Tamoxifen"
     ],
     "correct": 0,
@@ -2750,7 +2750,7 @@
     "choices": [
       "DALK (Deep Anterior Lamellar Keratoplasty)",
       "PK (Penetrating Keratoplasty)",
-      "DMEK",
+      "DMEK (Descemet Membrane Endothelial Keratoplasty)",
       "Epikeratoplasty"
     ],
     "correct": 0,
@@ -2766,7 +2766,7 @@
       "To strengthen stromal collagen and halt progression",
       "To reshape the cornea and improve refraction",
       "To thin the cornea for lens fitting",
-      "To dissolve stromal opacities"
+      "To dissolve stromal opacities and increase clarity"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2778,7 +2778,7 @@
     "id": null,
     "text": "Which layer is primarily altered during PRK and LASEK procedures?",
     "choices": [
-      "Anterior stroma after epithelial removal",
+      "Anterior stroma",
       "Entire corneal stroma",
       "Endothelium only",
       "Descemet’s membrane"
@@ -2793,10 +2793,10 @@
     "id": null,
     "text": "In SMILE refractive surgery, corneal tissue is removed in what form?",
     "choices": [
-      "A lenticule created and extracted through a small incision",
-      "A surface ablation pattern",
-      "A large lamellar flap",
-      "A full-thickness disc"
+      "A lenticule via a small incision",
+      "A surface ablation pattern via a laser",
+      "A large lamellar flap via a microtome",
+      "A full-thickness disc via stromal ablation"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2811,7 +2811,7 @@
       "PRK",
       "RK",
       "SMILE",
-      "Conductive keratoplasty"
+      "CK"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2826,7 +2826,7 @@
       "Lipid layer",
       "Aqueous layer",
       "Mucin layer",
-      "Intermediate electrolyte layer"
+      "Electrolyte layer"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2856,7 +2856,7 @@
       "Myopia",
       "Hyperopia",
       "Astigmatism",
-      "Presbyopia only"
+      "Presbyopia"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2928,7 +2928,7 @@
     "id": null,
     "text": "Uveitis-glaucoma-hyphema (UGH) syndrome results from:",
     "choices": [
-      "Malpositioned intraocular lens irritating the iris and ciliary body",
+      "Malpositioned intraocular lens",
       "Endothelial decompensation after surgery",
       "Retained cortical material",
       "Steroid-induced pressure elevation"
@@ -2943,10 +2943,10 @@
     "id": null,
     "text": "Which pharmacologic regimen is routinely prescribed immediately after cataract surgery to control inflammation and infection?",
     "choices": [
-      "Topical corticosteroid and broad-spectrum antibiotic",
-      "Topical antiviral and NSAID",
-      "Oral steroid taper and miotic",
-      "Intravitreal antifungal only"
+      "Topical corticosteroid, NSAID and broad-spectrum antibiotic",
+      "Topical antiviral, corticosteroid and NSAID",
+      "Oral steroid taper, broad-spectrum antibiotic and cycloplegic",
+      "Intravitreal antifungal, topical sterids and NSAID"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
@@ -2973,10 +2973,10 @@
     "id": null,
     "text": "Which pharmacologic agent is contraindicated immediately after cataract surgery due to risk of wound leak and iris prolapse?",
     "choices": [
-      "Miotics (e.g., Pilocarpine)",
-      "Topical corticosteroids",
+      "Miotics",
+      "Corticosteroids",
       "Cycloplegics",
-      "Topical antibiotics"
+      "Antibiotics"
     ],
     "correct": 0,
     "discipline": "A. Anatomy & Physiology",
