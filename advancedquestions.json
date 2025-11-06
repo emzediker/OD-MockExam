@@ -250,7 +250,7 @@
       "F2 = F1 / (1 − d·F1)",
       "F2 = F1 + d",
       "F2 = F1 × d",
-      F2 = F1 / (1 + d·F1)"
+      "F2 = F1 / (1 + d·F1)"
     ],
     "correct": 0
   },
@@ -399,8 +399,8 @@
     "choices": [
       "Add = (Accommodative demand) − Amplitude/2 = +1.00D ",
       "Add = (Accommodative demand − Amplitude)/2 = -0.50D ",
-      "Add = Accommodative demand − Amplitude" = +1.50D,
-      "Add = Accommodative demand at working distance = 3.00D
+      "Add = Accommodative demand − Amplitude" = +1.50D",
+      "Add = Accommodative demand at working distance = 3.00D"
     ],
     "correct": 0
   },
