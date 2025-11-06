@@ -22,7 +22,7 @@
     "sub": "Myopia",
     "rationale": "Far point = 1/|Rx| (meters). For −5.00 D, far point is 0.20 m (20 cm) in front of the eye.",
     "choices": [
-      "~20 cm in front of the eye (at the far point)",
+      "~20 cm in front of the eye",
       "~50 cm in front of the eye",
       "~1 m behind the eye",
       "At optical infinity"
@@ -38,9 +38,9 @@
     "rationale": "Minus lenses move the image plane posteriorly onto the retina by providing diverging vergence.",
     "choices": [
       "Minus lenses diverge incident light, effectively reducing the eye's power",
-      "Minus lenses decrease corneal radius of curvature",
-      "Cylinder lenses neutralize only internal astigmatism",
-      "Plano lenses restore accommodation"
+      "Minus lenses diverge incident light, effectively increasing the eye's power",
+      "Minus lenses converge incident light, effectively reducing the eye's power",
+      "Minus lenses converge incident light, effectively reducing the eye's power"
     ],
     "correct": 0
   },
@@ -53,9 +53,9 @@
     "rationale": "Axial elongation places the retina behind the focal point for the existing optical power.",
     "choices": [
       "Retina positioned posterior to the focal point due to increased axial length",
-      "Reduced axial length moving the retina anteriorly",
-      "Flattened cornea reducing ocular power",
-      "Lens losing refractive power with age"
+      "Reduced axial length moving the retina anterior to the focal point of the eye",
+      "Steepened cornea focusing light anterior to the retina with a typical axial length",
+      "Natural lens focusing light anterior to the retina with a typical axial length"
     ],
     "correct": 0
   },
@@ -98,9 +98,9 @@
     "rationale": "Axial hyperopia is caused by a short eye in relation to its optical power.",
     "choices": [
       "Axial hyperopia",
-      "Index myopia",
-      "Corneal myopia",
-      "Accommodative spasm"
+      "Axial myopia",
+      "Refractive myopia",
+      "Refractive hyperopia"
     ],
     "correct": 0
   },
@@ -113,9 +113,9 @@
     "rationale": "Hyperopes have a virtual far point located behind the eye; plus lenses shift the focus onto the retina.",
     "choices": [
       "A virtual point behind the eye",
-      "20 cm in front of the eye",
-      "At optical infinity",
-      "At the anterior focal point of the cornea"
+      "A virtual point in front of the eye",
+      "A real point behind the eye",
+      "A real ppoint in front of the eye"
     ],
     "correct": 0
   },
@@ -128,9 +128,9 @@
     "rationale": "At distance, an uncorrected hyperope must accommodate an amount equal to the uncorrected error.",
     "choices": [
       "She must accommodate an amount equal to her hyperopia",
-      "No accommodation is required",
+      "No accommodation is required to see at distance",
       "She must accommodate half her refractive error",
-      "She must add 2.00 D over her prescription"
+      "In hyperopic patients, accommodation does not help with distance vision"
     ],
     "correct": 0
   },
@@ -157,7 +157,7 @@
     "sub": "Astigmatism",
     "rationale": "Astigmatism arises from different powers in orthogonal meridians, creating two focal lines.",
     "choices": [
-      "Astigmatism: unequal curvature between principal meridians producing two focal lines",
+      "Astigmatism: unequal curvature between principal meridians",
       "Anisometropia: unequal refractive error between the eyes",
       "Presbyopia: loss of accommodative ability with age",
       "Aniseikonia: unequal image sizes between the eyes"
@@ -174,8 +174,8 @@
     "choices": [
       "The interval of Sturm",
       "The nodal interval",
-      "The principal section",
-      "The entrance pupil space"
+      "The lead of accommodation",
+      "The lag of accommodation"
     ],
     "correct": 0
   },
@@ -187,7 +187,7 @@
     "sub": "Astigmatism",
     "rationale": "The circle of least confusion corresponds to the spherical-equivalent focus.",
     "choices": [
-      "At the spherical-equivalent focus (midpoint between focal lines)",
+      "At the midpoint between focal lines",
       "At the anterior focal line",
       "Behind both focal lines",
       "At the posterior focal line"
@@ -211,7 +211,7 @@
   },
   {
     "id": null,
-    "text": "You must transpose +2.00 −3.50 × 010 to minus cylinder form for ordering. What is the correct result?",
+    "text": "You must transpose +2.00 −3.50 × 010 to plus cylinder form for ordering. What is the correct result?",
     "discipline": "Optics",
     "condition": "Ametropia",
     "sub": "Astigmatism",
