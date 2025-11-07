@@ -1525,7 +1525,7 @@
       "Reduced brightness",
       "Increased brightness",
       "No difference",
-      "Varies with illumination"
+      "Varies with illuminance"
     ],
     "correct": 0
   },
@@ -1568,9 +1568,9 @@
     "rationale": "Loss of high-frequency sensitivity indicates reduced fine detail resolution, possibly from optical blur or early macular changes.",
     "choices": [
       "Mild loss of fine spatial resolution",
-      "Normal spatial vision",
-      "Severe retinal disease",
-      "High contrast adaptation"
+      "Mild loss of fine temporal resolution",
+      "Mild loss of course temporal resolution",
+      "Mild loss of course spatial resolution"
     ],
     "correct": 0
   },
@@ -1585,7 +1585,7 @@
       "Spatial integration and cortical processing",
       "Optical resolution at the retina",
       "Contrast sensitivity",
-      "Accommodation"
+      "Accommodation and convergence"
     ],
     "correct": 0
   },
@@ -1595,7 +1595,7 @@
     "discipline": "Immunology / Microbiology / Pathology",
     "condition": "Perceptual Function / Color Vision",
     "sub": "Acquired Defects",
-    "rationale": "Acquired optic neuropathies often produce diffuse, nonspecific hue discrimination loss on arrangement tests.",
+    "rationale": "Acquired severe optic neuropathies often produce diffuse, nonspecific hue discrimination loss on arrangement tests.",
     "choices": [
       "Diffuse acquired dyschromatopsia",
       "Protanopia",
@@ -1702,7 +1702,7 @@
     "sub": "Amblyopia Prevention",
     "rationale": "Alternating occlusion encourages use of both eyes, preventing cortical suppression and deprivation amblyopia.",
     "choices": [
-      "To prevent suppression and amblyopia in the non-preferred eye",
+      "To prevent suppression and amblyopia",
       "To stimulate tear production",
       "To strengthen accommodation",
       "To enhance saccadic accuracy"
@@ -1734,8 +1734,8 @@
     "choices": [
       "Parasympathetic fibers from the Edinger-Westphal nucleus",
       "Sympathetic fibers from the superior cervical ganglion",
-      "Magnocellular efferents from LGN",
-      "Trigeminal sensory reflex"
+      "Magnocellular efferents from the lateral geniculate nucleus",
+      "Trigeminal sensory reflex from the Pons"
     ],
     "correct": 0
   },
@@ -1749,8 +1749,8 @@
     "choices": [
       "Visual processing and perceptual integration",
       "Refractive accommodation",
-      "Retinal summation",
-      "Oculomotor fixation"
+      "Cortical magnification",
+      "Pursuits and saccades system"
     ],
     "correct": 0
   },
@@ -1765,7 +1765,7 @@
       "Normal development for age",
       "Delayed development",
       "Amblyopia",
-      "Optic nerve hypoplasia"
+      "Refractive error"
     ],
     "correct": 0
   },
@@ -1792,7 +1792,7 @@
     "sub": "Physiology-Sympathetic",
     "rationale": "Apraclonidine stimulates α-adrenergic receptors of Müller's muscle causing ~1-2 mm lid lift.",
     "choices": [
-      "Müller's (superior tarsal) muscle",
+      "Müller's tarsal muscle",
       "Levator palpebrae superioris",
       "Orbicularis oculi",
       "Frontalis muscle"
@@ -1825,7 +1825,7 @@
       "Puncta → canaliculi → common canaliculus → lacrimal sac → nasolacrimal duct → valve of Hasner",
       "Canaliculi → puncta → lacrimal sac → nasolacrimal duct → valve of Rosenmüller",
       "Puncta → nasolacrimal duct → lacrimal sac → common canaliculus → nose",
-      "Caruncle → puncta → canaliculi → nasolacrimal duct → sac"
+      "Caruncle → puncta → canaliculi → common canaliculis → nasolacrimal duct → lacrimal sac"
     ],
     "correct": 0
   },
@@ -1838,9 +1838,9 @@
     "rationale": "Painful EOM restriction and/or proptosis implies post-septal (orbital) involvement requiring urgent imaging and IV antibiotics.",
     "choices": [
       "Painful limitation of extraocular movements and proptosis",
-      "Eyelid erythema and edema",
-      "History of sinus infection",
-      "Low-grade fever alone"
+      "Eyelid erythema, conjunctival hemorrhage and edema",
+      "History of sinus infection and comorbid blow-out fracture",
+      "Low-grade fever with dendritic corneal ulcer and dermal rash"
     ],
     "correct": 0
   },
@@ -1853,7 +1853,7 @@
     "rationale": "Chalazion is a chronic lipogranuloma; initial conservative care, then steroid injection or incision/curettage if refractory.",
     "choices": [
       "Warm compresses and consider intralesional steroid or I&D if persistent",
-      "Immediate broad-spectrum oral antibiotics",
+      "Immediate broad-spectrum oral antibiotics with 2 werk follow-up",
       "CT orbit and urgent ENT consult",
       "Start high-potency topical steroid for 4 weeks without follow-up"
     ],
@@ -1867,10 +1867,10 @@
     "sub": "Disease-CNLDO",
     "rationale": "Congenital NLD obstruction is common; most resolve by 6-12 months with massage; treat superinfection as needed.",
     "choices": [
-      "Crigler (sac) massage and lid hygiene; consider topical antibiotic if secondary conjunctivitis",
-      "Immediate NLD probing in the OR",
-      "Oral antibiotics for presumed dacryocystitis",
-      "No treatment; this is normal"
+      "Crigler (sac) massage and lid hygiene; consider topical antibiotic",
+      "Immediate naso-lacrimal probing in the OR",
+      "Oral antibiotics for presumed bacterial dacryocystitis",
+      "No treatment; reassure this is normal"
     ],
     "correct": 0
   },
@@ -1882,7 +1882,7 @@
     "sub": "Physiology-TBUT",
     "rationale": "TBUT <10 seconds is typically abnormal and consistent with evaporative dry eye from MGD.",
     "choices": [
-      "Abnormal tear film stability (likely evaporative DED)",
+      "Abnormal tear film stability",
       "Normal stability",
       "Aqueous deficiency exclusively",
       "Measurement error-repeat only once"
@@ -1900,7 +1900,7 @@
       "Aqueous tear deficiency",
       "Normal tearing",
       "Reflex tearing only",
-      "Evaporative dry eye exclusively"
+      "Evaporative dry eye"
     ],
     "correct": 0
   },
@@ -1914,7 +1914,7 @@
     "choices": [
       "Common canalicular obstruction",
       "Patent system into the nose",
-      "Complete NLD obstruction only",
+      "Complete NLD obstruction",
       "Completely normal test"
     ],
     "correct": 0
@@ -1930,7 +1930,7 @@
       "Trichiasis",
       "Distichiasis",
       "Entropion",
-      "Ectropion"
+      "Madarosis"
     ],
     "correct": 0
   },
@@ -1943,9 +1943,9 @@
     "rationale": "Ectropion causes punctal malposition and exposure; lubricants/taping help, but definitive care is surgical.",
     "choices": [
       "Lubrication and taping; oculoplastics referral for ectropion repair",
-      "High-dose topical steroid alone",
+      "High-dose topical steroid with Morgan lens",
       "Immediate dacryocystorhinostomy",
-      "Oral antivirals"
+      "Oral antivirals and scleral lens fitting"
     ],
     "correct": 0
   },
@@ -1957,7 +1957,7 @@
     "sub": "Disease-Lacrimal Gland",
     "rationale": "Lacrimal gland inflammation can be viral, bacterial, or autoimmune; targeted therapy depends on etiology.",
     "choices": [
-      "Rule out infection vs inflammatory (mumps, EBV, bacterial); consider systemic antibiotics if bacterial suspected",
+      "Rule out infection vs inflammatory etiology",
       "Immediate NLD probing",
       "High-dose IV steroids without labs",
       "Emergent canthotomy"
@@ -1987,7 +1987,7 @@
     "sub": "Quantitative-Exophthalmometry",
     "rationale": "Normal adult values are ~12-21 mm; >2 mm asymmetry is abnormal and suggests unilateral proptosis.",
     "choices": [
-      "OD proptosis; interocular asymmetry >2 mm is abnormal",
+      "OD proptosis",
       "Normal symmetry and magnitude",
       "Physiologic asymmetry only",
       "Both eyes are markedly enophthalmic"
@@ -2003,7 +2003,7 @@
     "rationale": "Sebaceous carcinoma often mimics chronic chalazia with madarosis and ulceration; biopsy is essential.",
     "choices": [
       "Sebaceous gland carcinoma",
-      "Basal cell carcinoma only",
+      "Basal cell carcinoma",
       "Actinic keratosis",
       "Papilloma"
     ],
@@ -2017,10 +2017,10 @@
     "sub": "Treatment-Infection",
     "rationale": "Uncomplicated preseptal cellulitis is treated with oral antibiotics and monitoring for orbital signs.",
     "choices": [
-      "Oral antibiotics active against staphylococci/streptococci and close follow-up",
-      "Topical antibiotic only",
-      "Immediate IV broad-spectrum therapy for all cases",
-      "Systemic steroids alone"
+      "Oral antibiotics and close follow-up",
+      "Topical antibiotic and close follow-up",
+      "Immediate IV broad-spectrum therapy and urgent referral",
+      "Systemic steroids and urgent referral"
     ],
     "correct": 0
   },
@@ -2032,10 +2032,10 @@
     "sub": "Management-Functional Surgery",
     "rationale": "Objective superior field improvement with taping supports medical necessity for blepharoplasty.",
     "choices": [
-      "Taped vs untaped Humphrey or Goldmann perimetry showing superior field improvement",
-      "Normal Schirmer",
-      "Normal TBUT",
-      "Normal Hertel values"
+      "Taped vs untaped perimetry",
+      "Ice Pack Test",
+      "MRD1 of +2",
+      "Hertel exophthalmous"
     ],
     "correct": 0
   },
@@ -2071,7 +2071,7 @@
   },
   {
     "id": null,
-    "text": "Which lash-associated gland primarily produces a holocrine secretion at the follicle margin, contributing to the tear film lipid layer locally?",
+    "text": "Which lash-associated gland primarily produces a holocrine secretion at the follicle margin, contributing to the tear film locally?",
     "discipline": "Biochemistry / Physiology",
     "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
     "sub": "Anatomy-Glands",
@@ -2094,8 +2094,8 @@
     "choices": [
       "Corneal epithelium with tight junctions",
       "Stroma with collagen lamellae",
-      "Descemet's membrane",
-      "Endothelium with leaky junctions"
+      "Descemet's membrane with desmosomes",
+      "Endothelium with gap junctions"
     ],
     "correct": 0
   },
@@ -2110,7 +2110,7 @@
       "Palisades of Vogt",
       "Caruncle",
       "Plica semilunaris",
-      "Inferior fornix only"
+      "Inferior fornix"
     ],
     "correct": 0
   },
@@ -2138,9 +2138,9 @@
     "rationale": "Adult endothelial cells rarely divide; they spread to cover loss and actively pump fluid out to keep the cornea dehydrated.",
     "choices": [
       "Limited proliferative capacity; maintains deturgescence via pump-leak mechanism",
-      "Rapid proliferation to replace lost cells",
+      "Rapid proliferation to replace lost cells after injury",
       "Primary barrier to tears via tight junctions",
-      "Producer of mucins for the glycocalyx"
+      "Producer of mucins for the glycocalyx on the epithelium"
     ],
     "correct": 0
   },
@@ -2152,7 +2152,7 @@
     "sub": "Innervation",
     "rationale": "Long ciliary nerves from the nasociliary branch of the ophthalmic division of CN V provide stromal and subbasal plexus innervation.",
     "choices": [
-      "Nasociliary branch of V1 (long ciliary nerves)",
+      "Nasociliary branch of V1",
       "Maxillary division V2",
       "Facial nerve (CN VII)",
       "Greater petrosal nerve"
@@ -2167,7 +2167,7 @@
     "sub": "Tear Physiology",
     "rationale": "Conjunctival goblet cells secrete MUC5AC that stabilizes the aqueous layer and promotes wettability.",
     "choices": [
-      "Gel-forming mucin (e.g., MUC5AC)",
+      "Gel-forming mucin",
       "Lipid layer",
       "Aqueous layer",
       "Electrolyte buffer only"
@@ -2199,7 +2199,7 @@
     "choices": [
       "true dendrite with terminal bulbs and central ulceration",
       "Pseudodendrite without terminal bulbs",
-      "Ring infiltrate",
+      "Ring infiltrate with satellite keratic precipitates",
       "Feathery borders with satellite lesions"
     ],
     "correct": 0
@@ -2213,7 +2213,7 @@
     "rationale": "Severe pain out of proportion, ring infiltrate, and perineural infiltrates are classic; often contact lens related.",
     "choices": [
       "Disproportionate pain, ring infiltrate, perineural (radial) keratoneuritis",
-      "Dendritic ulcer with bulbs",
+      "Dendritic ulcer with bulbs and trabeculitis",
       "Worsening on steroids but rapid response to antibiotics",
       "Mucopurulent discharge and papillae"
     ],
@@ -2229,8 +2229,8 @@
     "choices": [
       "Mucin/aqueous interface stability",
       "Lipid evaporation barrier",
-      "Electrolyte buffering only",
-      "Reflex tearing only"
+      "Electrolyte buffering",
+      "Reflex tearing"
     ],
     "correct": 0
   },
@@ -2274,7 +2274,7 @@
     "choices": [
       "Terrien marginal degeneration",
       "Salzmann nodular degeneration",
-      "Pellucid marginal degeneration (inferior)",
+      "Pellucid marginal degeneration",
       "Arcus senilis"
     ],
     "correct": 0
@@ -2320,20 +2320,20 @@
       "UV-induced elastotic degeneration and limbal stem cell dysfunction",
       "Autoimmune destruction of endothelium",
       "Herpetic infection of Bowman's layer",
-      "Iron deposition from tears"
+      "Iron deposition and calcification from tears"
     ],
     "correct": 0
   },
   {
     "id": null,
-    "text": "Which is the most appropriate first-line therapy for moderate allergic conjunctivitis with itching?",
+    "text": "Which is the most appropriate first-line longterm therapy for moderate allergic conjunctivitis with itching?",
     "discipline": "Immunology / Microbiology / Pathology",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
     "sub": "Treatment-Allergy",
     "rationale": "Dual-action agents (e.g., olopatadine) provide rapid relief and prophylaxis; topical anesthetics are contraindicated for home use.",
     "choices": [
-      "Topical dual-action antihistamine/mast-cell stabilizer",
-      "Topical aminoglycoside q1h",
+      "Topical antihistamine/mast-cell stabilizer",
+      "Topical aminoglycoside",
       "Oral corticosteroids",
       "Topical anesthetic PRN at home"
     ],
@@ -2347,10 +2347,10 @@
     "sub": "Treatment-Bacterial",
     "rationale": "Fourth-generation fluoroquinolone monotherapy is an accepted empiric choice for many community bacterial ulcers.",
     "choices": [
-      "Broad-spectrum topical fluoroquinolone monotherapy",
-      "Topical steroid alone",
-      "Lubricants only",
-      "Topical anesthetic q2h"
+      "Topical fluoroquinolone monotherapy",
+      "Topical steroid monotherapy",
+      "Lubricants monotherapy",
+      "Topical anesthetic monotherapy"
     ],
     "correct": 0
   },
@@ -2439,7 +2439,7 @@
     "choices": [
       "Follicular response with palpable preauricular node",
       "Giant papillae on upper tarsus only",
-      "Membranous pseudomembranes with diphtheria",
+      "Membranous pseudomembranes with conjuctival follicles",
       "Dendrites with terminal bulbs"
     ],
     "correct": 0
@@ -2470,7 +2470,7 @@
       "Regular collagen spacing and stromal dehydration minimize light scatter",
       "High water content maximizes transparency",
       "Irregular fibril spacing improves refraction",
-      "Myofibroblast activation decreases haze"
+      "Myofibroblast activation decreases haze by replacing old keratocytes"
     ],
     "correct": 0
   },
@@ -2484,8 +2484,8 @@
     "choices": [
       "Epithelial basement membrane dystrophy",
       "Fuchs endothelial dystrophy",
-      "Meesmann epithelial dystrophy only",
-      "Reis-Bücklers dystrophy exclusively"
+      "Meesmann epithelial dystrophy",
+      "Reis-Bücklers dystrophy"
     ],
     "correct": 0
   },
@@ -2512,9 +2512,9 @@
     "sub": "HSV Treatment",
     "rationale": "Topical steroids may worsen active epithelial HSV; they are used cautiously for stromal disease with antiviral cover.",
     "choices": [
-      "Topical corticosteroid without antiviral coverage",
+      "Topical prednisolone acetate",
       "Topical trifluridine",
-      "Oral acyclovir",
+      "Topical ketorolac",
       "Topical ganciclovir gel"
     ],
     "correct": 0
@@ -2527,7 +2527,7 @@
     "sub": "Degenerations",
     "rationale": "Salzmann presents as bluish subepithelial nodules, often post-inflammatory (e.g., chronic keratitis).",
     "choices": [
-      "Blue-white elevated subepithelial nodules often in chronically inflamed eyes",
+      "Blue-white elevated subepithelial nodules",
       "Peripheral superior thinning with lipid",
       "Central map-dot changes",
       "Gelatinous limbal lesion with feeder vessels"
@@ -2557,10 +2557,10 @@
     "sub": "Inflammatory Keratitis",
     "rationale": "Staph hypersensitivity at the limbus responds to blepharitis control with short anti-inflammatory/antibiotic therapy.",
     "choices": [
-      "Lid hygiene, warm compresses, topical antibiotic/steroid combo short course",
+      "Lid hygiene, warm compresses, topical antibiotic/steroid combo",
       "Topical antiviral therapy",
       "Systemic antifungal therapy",
-      "Observation only"
+      "Lid hygiene and tea treed oil or Xdemvy"
     ],
     "correct": 0
   },
@@ -2572,7 +2572,7 @@
     "sub": "Photokeratitis",
     "rationale": "UV injury causes diffuse PEK and severe photophobia after latent period; typically heals within 24-72 hours.",
     "choices": [
-      "UV keratitis (photokeratitis)",
+      "Photokeratitis",
       "Herpetic epithelial keratitis",
       "Adenoviral keratoconjunctivitis",
       "Acanthamoeba keratitis"
@@ -2588,9 +2588,9 @@
     "rationale": "Goblet cells cluster in the inferonasal fornix and caruncle, contributing to mucin layer production.",
     "choices": [
       "Inferonasal bulbar/fornical conjunctiva and caruncle",
-      "Temporal bulbar conjunctiva",
-      "Upper tarsal conjunctiva",
-      "Limbus only"
+      "Temporal and superior palpebral conjunctiva",
+      "Upper tarsal conjunctiva superficial to the tarsal plate",
+      "Limbus only where stem cells are activated"
     ],
     "correct": 0
   },
