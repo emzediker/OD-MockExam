@@ -781,16 +781,16 @@
   },
   {
     "id": null,
-    "text": "A 10Δ base-out Fresnel prism is placed before an eye with PD 65 mm for 6 m distance target. What lateral deviation in cm does this produce on the retinal plane?",
+    "text": "A 10Δ base-out Fresnel prism is placed before an eye with PD 65 mm for 6 m distance target. What lateral deviation in cm does this produce?",
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Prism",
-    "rationale": "1Δ = 1 cm deviation at 1 m. At 6 m, 10Δ → 10 cm at 6 m = ~0.6 cm deviation at the eye.",
+    "rationale": "1Δ = 1 cm deviation at 1 m. At 10m, 10Δ → 10 cm. 6 m is 6x further therefore deviation is 60 cm.",
     "choices": [
-      "0.6 cm deviation",
+      "60 cm deviation",
       "6 cm deviation",
-      "0.1 cm deviation",
-      "1 cm deviation"
+      "6 mm deviation",
+      "60 mm deviation"
     ],
     "correct": 0
   },
@@ -819,8 +819,8 @@
     "choices": [
       "Barrel distortion from high-minus lenses",
       "Pincushion distortion from high-minus lenses",
-      "Chromatic aberration from Abbe value",
-      "Oblique astigmatism from aspheric design"
+      "Sherical aberration from high-minus lenses",
+      "Coma from high-minus lenses"
     ],
     "correct": 0
   },
@@ -833,9 +833,9 @@
     "rationale": "High-plus spectacles magnify and narrow the field; contact lenses remove this magnification and base-out prism, expanding the field.",
     "choices": [
       "Elimination of spectacle magnification and prismatic base-out effect",
-      "Decrease in effective power due to tear film",
-      "Reduction in oblique astigmatism",
-      "Loss of peripheral refraction"
+      "Decrease in effective power due to change in vertex distance",
+      "Reduction in oblique astigmatism at the corneal plane",
+      "Loss of peripheral refraction due to high powered lens center"
     ],
     "correct": 0
   },
@@ -850,7 +850,7 @@
       "Low Abbe value increases chromatic aberration",
       "Spherical aberration at the optical center",
       "Oblique astigmatism due to lens tilt",
-      "Decentration of lens PD"
+      "Decentration of lens pupillary distance"
     ],
     "correct": 0
   },
@@ -878,9 +878,9 @@
     "rationale": "Peripheral areas of progressives contain surface astigmatism; clear vision requires looking through the narrow central corridor.",
     "choices": [
       "Progressive lenses have peripheral astigmatism outside the corridor",
-      "Lens tilt changes add power",
-      "Material index reduces field of view",
-      "Pantoscopic tilt induces prism"
+      "Progressive lenses need to be perfectly centered and the PD is wrong",
+      "Progressives lenses will only have peripheral blur if looking through the bottom at distance",
+      "Progressive lenses will not have peripheral blur if he looks through the top at distance"
     ],
     "correct": 0
   },
@@ -892,7 +892,7 @@
     "sub": "Field Effects",
     "rationale": "High-plus lenses produce base-out prism peripherally, creating a ring scotoma where overlapping fields are lost.",
     "choices": [
-      "Ring scotoma from base-out prismatic effect",
+      "Ring scotoma from prismatic effect",
       "Oblique astigmatism at the edge",
       "Increased depth of field",
       "Chromatic spread at the edge"
@@ -905,12 +905,12 @@
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Lens Tilt",
-    "rationale": "Tilting a spherical lens induces minus cylinder 90° from the axis of tilt; 10° tilt on a −4.00 D lens ≈ −0.25 D at 90°.",
+    "rationale": "Pantoscopic tilt of a spherical lens induces minus cylinder axis 180° ; 10° tilt on a −4.00 D lens ≈ −0.25 D at 180°.",
     "choices": [
       "~−0.25 D cyl at 180°",
       "~−0.25 D cyl at 90°",
-      "~−0.50 D cyl at 180°",
-      "~−0.50 D cyl at 90°"
+      "~+0.25 D cyl at 180°",
+      "~+0.50 D cyl at 90°"
     ],
     "correct": 1
   },
@@ -923,9 +923,9 @@
     "rationale": "Power error increases with tilt; minimizing tilt or using aspheric lenses controls induced aberration.",
     "choices": [
       "Reduce pantoscopic tilt or use an aspheric design",
-      "Switch to high-index material",
-      "Increase base curve curvature",
-      "Add +0.25 D to compensate"
+      "Switch to high-index material or decrease vertex distance",
+      "Increase base curve curvature or use an aspheric design",
+      "Add -0.25 D to compensate especially if the lens in wrapped"
     ],
     "correct": 0
   },
@@ -937,7 +937,7 @@
     "sub": "Bifocal Design",
     "rationale": "Round-top and executive designs position the segment optical center closer to the dividing line, minimizing image jump.",
     "choices": [
-      "Round-top or executive design",
+      "Executive design",
       "Flat-top 28",
       "Ultex design",
       "Trifocal with intermediate power"
@@ -984,8 +984,8 @@
     "choices": [
       "Daily disposable silicone hydrogel lenses",
       "High-water ionic monthly lenses",
-      "Extended-wear low-Dk hydrogel",
-      "Rigid PMMA lenses"
+      "Extended-wear low-Dk hydrogel lenses",
+      "Rigid PMMA lenses with silicone skirt"
     ],
     "correct": 0
   },
@@ -1014,8 +1014,8 @@
     "choices": [
       "Lens fits tighter with reduced movement",
       "Lens fits looser with increased movement",
-      "No change in fit",
-      "Central pooling decreases"
+      "Lens fits tighter with increased movement",
+      "Lens fits looser with reduced movement"
     ],
     "correct": 0
   },
@@ -1027,7 +1027,7 @@
     "sub": "Toric Lens Design",
     "rationale": "Additional prism ballast or stabilization zones increase vertical stability and minimize rotation.",
     "choices": [
-      "Increase prism ballast or thickness differential",
+      "Increase prism ballast",
       "Flatten the base curve further",
       "Use a higher water content material",
       "Switch to a spherical lens"
@@ -1130,12 +1130,12 @@
     "discipline": "Optics",
     "condition": "Accommodation / Vergence / Oculomotor",
     "sub": "AC/A Ratio",
-    "rationale": "Change in phoria = 6 − 2 = 4Δ over 4 D stimulus → AC/A = 4/4 = 1 Δ/D.",
+    "rationale": "Change in phoria = 6 − 2 = 4Δ over 2.5 D stimulus → AC/A = 4/2.5 = 1.6 Δ/D.",
     "choices": [
-      "1.0 Δ/D",
-      "2.0 Δ/D",
+      "1.6 Δ/D",
+      "2.5 Δ/D",
       "4.0 Δ/D",
-      "8.0 Δ/D"
+      "3.2 Δ/D"
     ],
     "correct": 1
   },
@@ -1195,7 +1195,7 @@
       "Excess accommodation driving excess convergence",
       "Poor fusional divergence ability",
       "Weak AC/A ratio",
-      "Unstable tear film causing blur"
+      "Emerging presbyopia influencing the red reflex"
     ],
     "correct": 0
   },
@@ -1208,9 +1208,9 @@
     "rationale": "High base-out ranges indicate strong fusional convergence; typically base-out break >20Δ is adequate.",
     "choices": [
       "Good fusional convergence with adequate reserves",
-      "Poor fusional divergence",
-      "Excess divergence reserve",
-      "Insufficient accommodation"
+      "Poor fusional divergence with adequate reserves",
+      "Excess divergence reserve die to high AC/A",
+      "Insufficient vergence to maintain haplopia"
     ],
     "correct": 0
   },
@@ -1224,8 +1224,8 @@
     "choices": [
       "Smooth pursuit oculomotor system",
       "Saccadic system",
-      "Vestibulo-ocular reflex",
-      "Optokinetic response"
+      "Vestibulo-ocular reflex system",
+      "Optokinetic response system"
     ],
     "correct": 0
   },
@@ -1246,7 +1246,7 @@
   },
   {
     "id": null,
-    "text": "A 6-year-old presents with best-corrected VA of 20/40 OD and 20/20 OS despite full optical correction. No pathology is seen. What type of amblyopia is most likely?",
+    "text": "A 6-year-old presents with best-corrected VA of 20/40 OD and 20/20 OS despite full optical correction with +10.00 D OD and -0.50 D OS. No pathology is seen. What type of amblyopia is most likely?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Anisometropia",
@@ -1267,16 +1267,16 @@
     "sub": "Suppression",
     "rationale": "Suppression eliminates diplopia by ignoring the image from the deviating eye within the region of binocular overlap.",
     "choices": [
-      "Suppression scotoma in the deviating eye",
+      "Suppression scotoma",
       "Anomalous retinal correspondence",
-      "Torsional adaptation",
-      "Central fusion disruption"
+      "Eccentric fixation",
+      "Eccentric viewing"
     ],
     "correct": 0
   },
   {
     "id": null,
-    "text": "During cover testing, a 4-year-old shows refixation only when the right eye is covered, indicating a left eye deviation. What type of deviation is this?",
+    "text": "During cover testing, a 4-year-old shows refixation from a nasal position only when the right eye is covered, indicating a left eye deviation. What type of deviation is this?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Cover Test",
@@ -1291,7 +1291,7 @@
   },
   {
     "id": null,
-    "text": "A child with uncorrected +5.00 D hyperopia presents with 20Δ esotropia that decreases with near target viewing. Which mechanism explains this?",
+    "text": "A child with uncorrected +5.00 D hyperopia presents with 20Δ esotropia that decreases with distance target viewing. Which mechanism explains this?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Accommodative Esotropia",
@@ -1300,7 +1300,7 @@
       "High accommodative convergence from uncorrected hyperopia",
       "Poor fusional divergence at near",
       "Mechanical restriction of lateral rectus",
-      "Sensory exotropia adaptation"
+      "Sensory esotropia adaptation"
     ],
     "correct": 0
   },
@@ -1336,14 +1336,14 @@
   },
   {
     "id": null,
-    "text": "A 4-year-old with right esotropia is treated with alternate patching 2 hr/day for 6 months. Visual acuity equalizes OU but deviation persists. What is the next management step?",
+    "text": "A 4-year-old with a constant right esotropia is treated with left eye patching 2 hr/day for 6 months. Visual acuity equalizes OU but deviation persists. What is the next management step?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Treatment",
     "rationale": "Once amblyopia resolves but alignment remains abnormal, surgical alignment is considered to restore binocularity.",
     "choices": [
       "Maintain optical correction and consider strabismus surgery",
-      "Stop patching completely",
+      "Maintain optical correction, and stop patching completely",
       "Prescribe additional plus lenses",
       "Add base-out prism to stimulate fusion"
     ],
@@ -1366,14 +1366,14 @@
   },
   {
     "id": null,
-    "text": "During prism alternate cover testing, a patient neutralizes motion with 12Δ BO OD and 14Δ BO OS. What is the angle of deviation?",
+    "text": "During prism alternate cover testing, a patient neutralizes motion with 12Δ BO OD. Then the test is repeated and the patient neutralizes motion with 12Δ BO OS.What is the angle of deviation?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Prism Cover Test",
     "rationale": "Both eyes require base-out prism to neutralize-indicating esotropia. The average of 12 and 14 = 13Δ esotropia.",
     "choices": [
-      "13Δ esotropia",
-      "13Δ exotropia",
+      "12Δ esotropia",
+      "12Δ exotropia",
       "26Δ esotropia",
       "26Δ exotropia"
     ],
@@ -1402,7 +1402,7 @@
     "sub": "Control / Fusion",
     "rationale": "Loss of fusion after brief alignment indicates intermittent exotropia with weak fusional convergence control.",
     "choices": [
-      "Decompensated control with loss of fusional convergence",
+      "Loss of fusional convergence",
       "Constant exotropia",
       "High AC/A esotropia",
       "Latent nystagmus"
@@ -1411,22 +1411,22 @@
   },
   {
     "id": null,
-    "text": "You measure a deviation of 20Δ on cover test. What power of Fresnel prism would you apply to achieve neutralization at 1 m (approximately)?",
+    "text": "You measure a deviation of 20Δ on cover test at 6 meters. What power of Fresnel prism would you apply to achieve neutralization at 1 m (approximately)?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Prism Therapy",
-    "rationale": "One prism diopter deflects light 1 cm per meter. A 20Δ deviation requires ~20Δ prism to neutralize at 1 m.",
+    "rationale": "One prism diopter deflects light 1 cm per meter. A 20Δ deviation requires ~20Δ prism to neutralize at 1 m. 6 m is 6x's further away",
     "choices": [
+      "3.33Δ prism",
       "20Δ prism",
-      "10Δ prism",
-      "5Δ prism",
+      "6.66Δ prism",
       "40Δ prism"
     ],
     "correct": 0
   },
   {
     "id": null,
-    "text": "A child with deprivation amblyopia from congenital cataract is left untreated until age 4. Despite surgery, visual improvement is limited. Why?",
+    "text": "A child with deprivation amblyopia from congenital cataract is left untreated until age 8. Despite surgery, visual improvement is limited. Why?",
     "discipline": "Anatomy",
     "condition": "Amblyopia / Strabismus",
     "sub": "Deprivation Amblyopia",
@@ -1448,7 +1448,7 @@
     "rationale": "Deuteranopia results in poor green discrimination with normal blue-yellow perception.",
     "choices": [
       "Deuteranopia",
-      "Protanopia",
+      "Achromatopsia",
       "Tritanopia",
       "Monochromatism"
     ],
@@ -1471,11 +1471,11 @@
   },
   {
     "id": null,
-    "text": "An anomaloscope match requires more red in the mixture field to match yellow. Which type of color defect does this indicate?",
+    "text": "An anomaloscope match requires more green in the mixture field to match yellow. Which type of color defect does this indicate?",
     "discipline": "Anatomy",
     "condition": "Perceptual Function / Color Vision",
     "sub": "Anomaloscope",
-    "rationale": "Deuteranomalous observers have reduced green sensitivity, requiring more red to match the mixture field.",
+    "rationale": "Deuternomalous observers have reduced green sensitivity, requiring more greem to match the mixture field.",
     "choices": [
       "Deuteranomaly",
       "Protanomaly",
@@ -1492,10 +1492,10 @@
     "sub": "Screening Comparison",
     "rationale": "HRR plates test blue-yellow discrimination; normal HRR with failed Ishihara suggests tritan or blue defect.",
     "choices": [
-      "A blue-yellow (tritan) defect",
+      "A blue-yellow defect",
       "A malingering case",
       "Monocular color blindness",
-      "Severe red-green anomaly"
+      "A red-green defect"
     ],
     "correct": 0
   },
