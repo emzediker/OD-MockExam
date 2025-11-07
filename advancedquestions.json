@@ -2635,7 +2635,7 @@
       "Pseudophakic bullous keratopathy from endothelial decompensation",
       "Autoimmune epithelial attack",
       "Acute angle-closure glaucoma only",
-      "Mucin deficiency"
+      "Fuch's endothelial dystrophy"
     ],
     "correct": 0
   },
@@ -2647,10 +2647,10 @@
     "sub": "Neurotrophic",
     "rationale": "Cenegermin promotes corneal nerve and epithelial healing; anesthetics are contraindicated for home use.",
     "choices": [
-      "Cenegermin (recombinant NGF)",
-      "High-dose topical steroid",
-      "Topical anesthetic PRN",
-      "Only hypertonic saline"
+      "Cenegermin",
+      "Prednisolone acetate",
+      "Proparacaine",
+      "Muro-128"
     ],
     "correct": 0
   },
@@ -2663,9 +2663,9 @@
     "rationale": "EOM pain/limitation and proptosis indicate post-septal spread; requires urgent imaging and IV antibiotics.",
     "choices": [
       "Painful EOM restriction and/or proptosis indicates orbital cellulitis",
-      "Lid edema alone indicates orbital involvement",
-      "Conjunctival injection alone indicates orbit",
-      "Fever is required for orbital disease"
+      "Lid edema alone indicates orbital cellulitis",
+      "Conjunctival injection and hemorrhage indicates orbital cellulitis",
+      "Fever and diplopia indicates preseptal involvement"
     ],
     "correct": 0
   },
@@ -2701,16 +2701,16 @@
   },
   {
     "id": null,
-    "text": "Which is the BEST initial management for epithelial basement membrane dystrophy presenting with recurrent erosions?",
+    "text": "Which is the BEST initial management for epithelial basement membrane dystrophy presenting with history of recurrent erosions?",
     "discipline": "Anatomy",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
     "sub": "RCE Treatment",
     "rationale": "Hypertonic agents reduce epithelial edema; bandage CL can promote adherence; refractory cases may need debridement/PTK.",
     "choices": [
-      "Hypertonic ointment at bedtime and lubricants; consider bandage CL",
+      "Hypertonic ointment at bedtime and lubricants",
       "Topical steroid hourly for one week",
       "Oral antivirals for 14 days",
-      "Nocturnal patching only"
+      "Nocturnal patching anf lubrication nightly"
     ],
     "correct": 0
   },
@@ -2737,10 +2737,10 @@
     "sub": "Refractive-Risk",
     "rationale": "Low RSB and abnormal topography (forme fruste keratoconus) are major ectasia risk factors.",
     "choices": [
-      "Thin residual stromal bed and suspicious topography",
-      "Older age with thick cornea",
-      "Low myopic correction with PRK",
-      "Treating low hyperopia"
+      "Thin residual stromal bed and atypical topography",
+      "Older age with thick cornea and low endothelial count",
+      "History of recurrent corneal erosions and gutatta",
+      "Treating low hyperopia and myopia"
     ],
     "correct": 0
   },
@@ -2752,10 +2752,10 @@
     "sub": "Pinguecula",
     "rationale": "Conservative care with surface lubrication and UV control is typical; surgery is for cosmesis or recurrent pterygium-like growth.",
     "choices": [
-      "Lubricants and UV protection; short course of topical NSAID/steroid if symptomatic",
-      "Topical antiviral",
-      "Oral antifungal",
-      "Immediate surgical excision"
+      "Lubricants and UV protection and topical NSAID/steroid if symptomatic",
+      "Topical antiviral until proven otherwise",
+      "Oral antifungal with Mitomycin C",
+      "Immediate surgical excision with thermal ablation to prevent recurrence"
     ],
     "correct": 0
   },
@@ -2767,10 +2767,10 @@
     "sub": "Endothelium",
     "rationale": "Cell density and morphology (polymegathism, pleomorphism) reflect pump reserve; low counts risk decompensation.",
     "choices": [
-      "Endothelial cell density (cells/mm²)",
-      "Central corneal thickness alone",
-      "Best-corrected visual acuity",
-      "Keratometry values"
+      "Endothelial cell density",
+      "Central corneal thickness",
+      "Endothelial cell count",
+      "Peripheral corneal thickness"
     ],
     "correct": 0
   },
@@ -2783,9 +2783,9 @@
     "rationale": "LASIK flap creation disrupts more subbasal nerves acutely than PRK; sensation recovers over months.",
     "choices": [
       "LASIK transects more subbasal nerves initially, often causing greater early dry eye than PRK",
-      "PRK causes more persistent nerve loss than LASIK",
+      "PRK causes more persistent nerve loss than LASIK due to lack of a protective flap",
       "Neither affects corneal sensation",
-      "Dry eye is unrelated to corneal innervation"
+      "Dry eye is unrelated to corneal innervation so corneal refracrive procedures are indicated"
     ],
     "correct": 0
   },
@@ -2797,7 +2797,7 @@
     "sub": "VKC Treatment",
     "rationale": "Control inflammation and allergic response; treat corneal complications like shield ulcers appropriately.",
     "choices": [
-      "Dual-acting antihistamine/mast-cell stabilizer ± short steroid pulse; treat shield ulcers if present",
+      "Dual-acting antihistamine/mast-cell stabilizer ± short steroid pulse",
       "Topical antibiotic q1h",
       "Oral acyclovir",
       "Only artificial tears"
@@ -2812,10 +2812,10 @@
     "sub": "Band Keratopathy",
     "rationale": "Band keratopathy is calcific deposition in Bowman's/anterior stroma interpalpebrally; chelation may be used.",
     "choices": [
-      "Calcium deposition in Bowman's layer and anterior stroma at the interpalpebral zone",
+      "Calcium deposition in Bowman's layer and anterior stroma",
       "Iron deposition at cone base",
       "Amyloid deposition in mid-stroma",
-      "GAG accumulation throughout stroma"
+      "GAG and lipid cholesterol accumulation throughout stroma"
     ],
     "correct": 0
   },
@@ -2842,7 +2842,7 @@
     "sub": "Biomechanics",
     "rationale": "The stromal collagen lamellae provide most biomechanical strength; excessive stromal removal risks ectasia.",
     "choices": [
-      "Stroma (collagen lamellae)",
+      "Stroma",
       "Epithelium",
       "Descemet's membrane",
       "Endothelium"
@@ -2857,7 +2857,7 @@
     "sub": "Cataract-Phenotype",
     "rationale": "PSC scatters light at the nodal point and is highly symptomatic for glare and near vision, often in younger patients or steroid users.",
     "choices": [
-      "Posterior subcapsular cataract (PSC)",
+      "Posterior subcapsular cataract",
       "Nuclear sclerotic cataract",
       "Cortical spoke cataract",
       "Anterior polar cataract"
@@ -2887,7 +2887,7 @@
     "sub": "Preop-Biometry",
     "rationale": "Contact lenses alter corneal shape/tear film; discontinuation reduces keratometry error prior to IOL calculations.",
     "choices": [
-      "Discontinue soft contact lenses (≥1 week) before measurements",
+      "Discontinue soft contact lenses for at least 1 week",
       "Avoid caffeine for 24 hours",
       "Stop artificial tears for 48 hours",
       "Stop antihistamines for 72 hours"
@@ -2902,7 +2902,7 @@
     "sub": "Anatomy/Physiology-Short Eyes",
     "rationale": "Short axial length eyes with shallow ACs are at higher risk of aqueous misdirection postoperatively.",
     "choices": [
-      "Malignant glaucoma (aqueous misdirection)",
+      "Malignant glaucoma",
       "Rhegmatogenous retinal detachment",
       "Cystoid macular edema",
       "Toxic anterior segment syndrome"
@@ -2919,7 +2919,7 @@
     "choices": [
       "Intraoperative floppy iris syndrome with billowing iris and progressive miosis",
       "Posterior polar cataract with pre-existing posterior capsular defect",
-      "Zonulopathy from pseudoexfoliation only",
+      "Zonulopathy from pseudoexfoliation and possible risk for glaucoma",
       "Toxic anterior segment syndrome"
     ],
     "correct": 0
@@ -2948,8 +2948,8 @@
     "rationale": "Pseudoexfoliation weakens zonules; CTRs and gentle hydrodissection reduce capsular instability risk.",
     "choices": [
       "Zonular weakness requiring possible capsular tension ring",
-      "Thick posterior capsule risk",
-      "High risk of retinal dialysis",
+      "Thick posterior capsule risk and IOP spike",
+      "High risk of retinal dialysis and detachment",
       "Increased risk of IFIS from α1 blockade"
     ],
     "correct": 0
@@ -2964,7 +2964,7 @@
     "choices": [
       "4-8 weeks post-op",
       "24-48 hours post-op",
-      "6-12 months post-op only",
+      "6-12 months post-op",
       "Immediately intraoperative"
     ],
     "correct": 0
@@ -2978,7 +2978,7 @@
     "rationale": "Long myopic eyes benefit from formulas optimized for long AL; slight myopic target is acceptable, and attention to higher RD risk is prudent.",
     "choices": [
       "Target slight myopia (e.g., −0.25 to −0.50 D) with monofocal IOL and careful peripheral retinal exam pre/post-op",
-      "Target +0.50 D hyperopia with multifocal IOL",
+      "Target +0.50 D hyperopia with multifocal IOL and careful peripheral retinal exam pre/post-o",
       "Place a piggyback high-plus IOL",
       "Avoid biometry adjustment because long eyes are predictable"
     ],
@@ -3008,9 +3008,9 @@
     "rationale": "Unlike the cornea, scleral collagen has irregular spacing and orientation, increasing scatter and causing opacity.",
     "choices": [
       "Irregular collagen fiber arrangement and variable hydration",
-      "High melanin content",
-      "Tight epithelial junctions",
-      "Uniform lamellar spacing as in cornea"
+      "High melanin content, decreasing clarity",
+      "Tight epithelial junctions preventing fluid retention",
+      "Uniform lamellar spacing as in cornea but lack of endothelium"
     ],
     "correct": 0
   },
@@ -3022,7 +3022,7 @@
     "sub": "Disease-Differential",
     "rationale": "Scleritis causes deep, severe pain and tenderness of extraocular muscles; episcleritis is usually milder and blanches.",
     "choices": [
-      "Severe, boring eye pain radiating to temple/jaw and pain with eye movement",
+      "Severe, boring eye pain radiating to temple/jaw",
       "Sectoral redness with minimal tenderness",
       "Blanching with phenylephrine",
       "Self-limited course without systemic association"
@@ -3067,10 +3067,10 @@
     "sub": "Pathophysiology-Granulomatous",
     "rationale": "Granulomatous AU features large greasy KPs composed of macrophages/epithelioid cells (e.g., sarcoid, TB).",
     "choices": [
-      "Epithelioid histiocytes and macrophages",
-      "Neutrophils only",
+      "Histiocytes and macrophages",
+      "Neutrophils and basophils",
       "Eosinophils",
-      "Mast cells"
+      "Mast cells and reticulocytes"
     ],
     "correct": 0
   },
@@ -3082,10 +3082,10 @@
     "sub": "Disease-Phenotypes",
     "rationale": "Nongranulomatous AU often presents acutely with pain/photophobia and small, fine KPs (e.g., HLA-B27).",
     "choices": [
-      "Fine stellate KPs and acute onset pain/photophobia",
-      "Mutton-fat KPs and iris nodules",
-      "Busacca/Koeppe nodules",
-      "Vitritis predominance"
+      "Fine stellate KPs and acute onset",
+      "Mutton-fat KPs and iris nodules and chronic history",
+      "Busacca/Koeppe nodules and acute onset",
+      "Vitritis predominance and chronic history"
     ],
     "correct": 0
   },
@@ -3097,7 +3097,7 @@
     "sub": "Disease-HLA-B27",
     "rationale": "HLA-B27 AU is classically acute, nongranulomatous, often unilateral and recurrent, sometimes with fibrin/hypopyon.",
     "choices": [
-      "Acute, unilateral, recurrent nongranulomatous iridocyclitis with fibrin and hypopyon possible",
+      "Acute, unilateral, recurrent nongranulomatous uveitis",
       "Chronic, bilateral granulomatous uveitis with iris nodules",
       "Insidious bilateral intermediate uveitis only",
       "Posterior uveitis with choroidal granulomas"
@@ -3113,9 +3113,9 @@
     "rationale": "Inflammatory fibrin and pigment can cause the iris to stick to the anterior lens capsule, creating posterior synechiae.",
     "choices": [
       "Iris posterior surface and anterior lens capsule",
-      "Iris root and ciliary body",
-      "Corneal endothelium and iris",
-      "Lens and corneal endothelium"
+      "Iris root and anterior chamber angle",
+      "Corneal endothelium and anterior iris",
+      "Anterior lens and corneal endothelium"
     ],
     "correct": 0
   },
@@ -3127,10 +3127,10 @@
     "sub": "Pathophysiology-Angle Closure",
     "rationale": "Seclusion pupillae (ring synechiae) prevents aqueous from moving to the anterior chamber, bowing the iris forward.",
     "choices": [
-      "360° posterior synechiae blocking pupillary flow",
-      "Peripheral anterior synechiae only",
-      "Trabecular meshwork hypoplasia",
-      "Lens subluxation"
+      "Posterior synechiae blocking pupillary flow",
+      "Peripheral anterior synechiae blocking trabecular",
+      "Trabecular meshwork hypoplasia and cicatricial changes",
+      "Lens subluxation and resultant pupillary block"
     ],
     "correct": 0
   },
@@ -3142,10 +3142,10 @@
     "sub": "Treatment-AAU",
     "rationale": "Cycloplegics relieve ciliary spasm and reduce synechiae; steroids control intraocular inflammation.",
     "choices": [
-      "Cycloplegic/mydriatic (e.g., homatropine) plus topical corticosteroid",
-      "Topical beta-blocker only",
+      "Topical cycloplegic/mydriatic",
+      "Topical beta-blocker",
       "Topical antibiotic",
-      "Hypertonic saline"
+      "Topical Hypertonic saline"
     ],
     "correct": 0
   },
@@ -3157,8 +3157,8 @@
     "sub": "Disease-Fuchs",
     "rationale": "Fuchs is chronic, mild, often unilateral with diffuse stellate KPs and iris stromal atrophy; cataract and glaucoma are common.",
     "choices": [
-      "Low-grade unilateral AU, stellate KPs, iris atrophy, cataract, and angle neovascularization risk (Amsler sign)",
-      "Severe pain with hypopyon",
+      "Low-grade unilateral AU, stellate KPs, iris atrophy, cataract, and angle neovascularization risk",
+      "Severe pain with hypopyon and risk for acute lymphocytic lymphoma",
       "Bilateral granulomatous uveitis with sarcoid nodes",
       "Alternating AU with back pain in HLA-B27"
     ],
@@ -3173,9 +3173,9 @@
     "rationale": "JIA AU is frequently asymptomatic but chronic, risking complications; regular screening is critical.",
     "choices": [
       "Chronic, often bilateral, quiet AU with risk of band keratopathy and cataract",
-      "Acute painful unilateral AU with hypopyon",
-      "Intermediate uveitis only",
-      "Posterior choroiditis"
+      "Acute painful unilateral AU with hypopyona and severe vision loss",
+      "Intermediate uveitis only with mild spillover to the anterior chamber",
+      "Posterior choroiditis with lisch nodules and cafe-o'latte spots"
     ],
     "correct": 0
   },
@@ -3187,9 +3187,9 @@
     "sub": "Physiology-Iris",
     "rationale": "The iris sphincter receives parasympathetic input through EW nucleus → ciliary ganglion → short ciliary nerves.",
     "choices": [
-      "Iris sphincter via parasympathetic fibers (CN III-Edinger-Westphal)",
+      "Iris sphincter via parasympathetic fiber",
       "Iris dilator via sympathetic fibers",
-      "Ciliary muscle via sympathetic fibers",
+      "Ciliary muscle via parasympathetic fibers",
       "Levator via sympathetic fibers"
     ],
     "correct": 0
@@ -3202,10 +3202,10 @@
     "sub": "Physiology-Ciliary Body",
     "rationale": "Active secretion by the NPE/PE ciliary epithelium (CA-dependent) is the dominant mechanism for aqueous production.",
     "choices": [
-      "Active secretion (carbonic anhydrase-dependent) with secondary ultrafiltration and diffusion",
+      "Active secretion with secondary ultrafiltration and diffusion",
       "Simple diffusion only",
       "Pinocytosis exclusively",
-      "Transudation from iris stroma alone"
+      "Transudation from iris stroma alone via endothelial pumps"
     ],
     "correct": 0
   },
@@ -3217,7 +3217,7 @@
     "sub": "Exam-Blanching",
     "rationale": "Deep scleral vessels are not affected by topical vasoconstrictors; color remains violaceous and tender.",
     "choices": [
-      "Deep violaceous hue that does not blanch with phenylephrine",
+      "Deep violaceous hue that does not blanch",
       "Rapid blanching of involved vessels",
       "Sectoral redness only",
       "No tenderness on palpation"
@@ -3234,7 +3234,7 @@
     "choices": [
       "Reduced aqueous production from ciliary body inflammation",
       "Enhanced outflow through trabecular meshwork",
-      "Increased EVP only",
+      "Increased episcleral venous pressure only",
       "Leakage through corneal epithelium"
     ],
     "correct": 0
@@ -3247,10 +3247,10 @@
     "sub": "Work-up",
     "rationale": "Granulomatous AU raises suspicion for sarcoid/TB; targeted systemic evaluation is appropriate with history-based tailoring.",
     "choices": [
-      "Chest imaging and serum ACE/lysozyme for sarcoid ± TB testing based on risk",
-      "Immediate HLA-B27 typing only",
+      "Chest imaging and serum ACE/lysozyme for sarcoid ± TB",
+      "Sacroiliac X-ray HLA-B27 typing",
       "Brain MRI in all cases",
-      "ANA only"
+      "ANA with CBC/ESR/CRP and temporal artery biopsy"
     ],
     "correct": 0
   },
@@ -3262,10 +3262,10 @@
     "sub": "Treatment-Caution",
     "rationale": "Steroids alone can worsen infectious uveitis; they must be paired with appropriate antimicrobial therapy when infection is present.",
     "choices": [
-      "Topical corticosteroid without antimicrobial coverage",
+      "Topical corticosteroid",
       "Cycloplegic agent",
-      "Topical antibiotic when bacterial etiology suspected",
-      "Antitubercular therapy in confirmed TB"
+      "Topical cycloplegic",
+      "Topical NSAID"
     ],
     "correct": 0
   },
@@ -3292,9 +3292,9 @@
     "sub": "Diagnosis-Posterior Scleritis",
     "rationale": "Posterior scleritis shows sub-Tenon fluid (T-sign) on B-scan; MRI can assess scleral thickening/edema if needed.",
     "choices": [
-      "Enhanced depth imaging OCT or orbital ultrasound corroboration; consider MRI to assess posterior coats",
-      "Specular microscopy",
-      "Fluorescein angiography only",
+      "Enhanced depth imaging OCT or orbital ultrasound",
+      "Specular microscopy with pachymetry",
+      "Fluorescein angiography with contrast",
       "Pentacam tomography alone"
     ],
     "correct": 0
@@ -3307,10 +3307,10 @@
     "sub": "Vitreous Physiology",
     "rationale": "Hyaluronic acid binds water and maintains the spacing of collagen fibrils, giving the vitreous its viscoelastic gel structure.",
     "choices": [
-      "Hyaluronic acid within the collagen fibril network",
-      "Albumin within the aqueous phase",
-      "Sodium chloride gradient",
-      "Phospholipid micelles"
+      "Hyaluronic acid",
+      "Albumin",
+      "Sodium chloride",
+      "Phospholipid"
     ],
     "correct": 0
   },
@@ -3368,7 +3368,7 @@
     "rationale": "The choriocapillaris supplies oxygen and nutrients to the outer retina and RPE, while inner layers are supplied by central retinal vessels.",
     "choices": [
       "Outer retina including photoreceptors and RPE",
-      "Inner nuclear and ganglion layers",
+      "Inner retina including bipolar and ganglion layers",
       "Vitreous base",
       "Entire retina uniformly"
     ],
@@ -3382,7 +3382,7 @@
     "sub": "Neurophysiology",
     "rationale": "All retinal neurons except ganglion cells produce graded potentials; ganglion cells generate action potentials transmitted via CN II.",
     "choices": [
-      "Ganglion cell",
+      "Amacrine cell",
       "Photoreceptor",
       "Bipolar cell",
       "Horizontal cell"
@@ -3397,8 +3397,8 @@
     "sub": "Photochemistry",
     "rationale": "Vitamin A is converted to 11-cis-retinal, which recombines with opsin to regenerate rhodopsin after bleaching.",
     "choices": [
-      "Vitamin A (retinol)",
-      "Vitamin B2 (riboflavin)",
+      "Vitamin A",
+      "Vitamin B2",
       "Vitamin E",
       "Vitamin K"
     ],
@@ -3428,9 +3428,9 @@
     "rationale": "New flashes and floaters raise concern for retinal tear; a thorough dilated peripheral exam is essential to rule out breaks.",
     "choices": [
       "Dilated peripheral retinal exam with scleral depression",
-      "OCT of macula only",
-      "Visual field screening",
-      "Fluorescein angiography"
+      "OCT of macula and 10-2 visual field",
+      "Visual field screening with retinal photos",
+      "Fluorescein angiography with contrast"
     ],
     "correct": 0
   },
@@ -3472,7 +3472,7 @@
     "sub": "Anatomy-Bruch's",
     "rationale": "Bruch's membrane consists of five layers between RPE and choroid and thickens with age, impairing diffusion.",
     "choices": [
-      "Five-layered barrier between RPE and choriocapillaris",
+      "Barrier between RPE and choriocapillaris",
       "Single-cell RPE basement membrane",
       "Elastic lamina of sclera",
       "Inner limiting membrane of retina"
@@ -3481,7 +3481,7 @@
   },
   {
     "id": null,
-    "text": "Which inherited macular dystrophy is associated with abnormal accumulation of lipofuscin within the RPE?",
+    "text": "Which inherited macular dystrophy is associated with abnormal accumulation of lipofuscin within the RPE and a beaten-bronze appearance?",
     "discipline": "Anatomy",
     "condition": "Vitreous / Retina / Choroid",
     "sub": "Inherited Retinal Disease",
