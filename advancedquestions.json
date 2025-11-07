@@ -676,7 +676,7 @@
   },
   {
     "id": null,
-    "text": "A −8.00 D spectacle lens is moved from 12 mm to 15 mm from the cornea. Using the effective power formula, what is the new effective power at the spectacle plane? (Assume d in meters)",
+    "text": "A −8.00 D spectacle lens is moved from 12 mm to 15 mm from the cornea. Using the effective power formula, what is the new effective power at the spectacle plane?",
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Vertex Distance",
@@ -691,7 +691,7 @@
   },
   {
     "id": null,
-    "text": "A −5.00 D patient's eyes move 5 mm away from the optical center horizontally. Calculate the induced prism using Prentice's Rule.",
+    "text": "A −5.00 D patient's eye moves 5 mm nasally from the optical center of one lens. Calculate the induced prism using Prentice's Rule.",
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Prentice's Rule",
@@ -730,7 +730,7 @@
       "1.04×",
       "1.06×",
       "1.10×",
-      "1.00×"
+      "0.96×"
     ],
     "correct": 0
   },
@@ -755,12 +755,12 @@
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Prism Effects",
-    "rationale": "Δ = c·F = 0.4 cm × 3.00 = 1.2Δ. Viewing through a point above the optical center of a plus lens induces base-down prism.",
+    "rationale": "Δ = c·F = 0.4 cm × 3.00 = 1.2Δ. Viewing through a point below the optical center of a plus lens induces base-up prism.",
     "choices": [
-      "1.2Δ base-down",
       "1.2Δ base-up",
+      "1.2Δ base-down",
       "0.6Δ base-up",
-      "No effect"
+      "0.6Δ base-down"
     ],
     "correct": 0
   },
