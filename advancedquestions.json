@@ -3502,8 +3502,8 @@
     "sub": "Choroidal Perfusion",
     "rationale": "The choroidal circulation supplies the highly metabolically active outer retina and photoreceptors.",
     "choices": [
-      "Choroid via choriocapillaris",
-      "Retinal arteries alone",
+      "Choriocapillaris",
+      "Retinal arteries",
       "Vitreous diffusion",
       "Ciliary body vessels"
     ],
@@ -3518,9 +3518,9 @@
     "rationale": "Wet AMD features choroidal neovascular membranes breaching Bruch's membrane, causing subretinal fluid/bleeding.",
     "choices": [
       "Subretinal fluid or hemorrhage beneath the RPE or neurosensory retina",
-      "Cotton-wool spots around the arcades",
-      "Venous beading and microaneurysms",
-      "Silver-wiring of arterioles"
+      "Cotton-wool spots around the arcades in the posterior pole",
+      "Venous beading and microaneurysms with macular edema",
+      "Silver-wiring of arterioles and a macular scar"
     ],
     "correct": 0
   },
@@ -3532,10 +3532,10 @@
     "sub": "Retinal Detachment",
     "rationale": "Pigment granules in the anterior vitreous (Shafer's sign) indicate RPE cells released from a retinal break.",
     "choices": [
-      "Retinal tear or detachment",
-      "Vitreous syneresis only",
+      "Retinal tear",
+      "Vitreous syneresis",
       "Macular hole",
-      "Optic disc drusen"
+      "Asteroid hyalosis"
     ],
     "correct": 0
   },
@@ -3547,7 +3547,7 @@
     "sub": "Retinitis Pigmentosa",
     "rationale": "Rod photoreceptors degenerate first in RP, causing nyctalopia and peripheral visual field loss before cone involvement.",
     "choices": [
-      "Photoreceptor outer segments of rod cells",
+      "Photoreceptor cell layer",
       "Inner nuclear layer",
       "Ganglion cell layer",
       "RPE basal lamina"
@@ -3562,7 +3562,7 @@
     "sub": "Optic Disc Circulation",
     "rationale": "The prelaminar and laminar optic nerve head receive blood from branches of the short posterior ciliary arteries forming the circle of Zinn-Haller.",
     "choices": [
-      "Branches of the short posterior ciliary arteries forming the circle of Zinn-Haller",
+      "Short posterior ciliary arteries forming",
       "Central retinal artery capillaries",
       "Vortex veins",
       "Anterior ciliary arteries alone"
@@ -3670,7 +3670,7 @@
       "Thalamus",
       "Midbrain",
       "Occipital lobe",
-      "Temporal lobe"
+      "Hypothalmus"
     ],
     "correct": 0
   },
@@ -3744,7 +3744,7 @@
     "choices": [
       "Visual evoked potential (VEP)",
       "Electroretinogram (ERG)",
-      "Fluorescein angiography",
+      "Fluorescein angiography (FA)",
       "Pupillometry"
     ],
     "correct": 0
@@ -3757,7 +3757,7 @@
     "sub": "Inherited Neuropathy",
     "rationale": "LHON involves mitochondrial dysfunction leading to ganglion cell death, particularly in papillomacular fibers.",
     "choices": [
-      "Retinal ganglion cell axons at the papillomacular bundle",
+      "Retinal ganglion cell axons",
       "Photoreceptor outer segments",
       "RPE cells in the macula",
       "Choroidal vessels only"
@@ -3773,9 +3773,9 @@
     "rationale": "A junctional scotoma arises from a lesion at the optic chiasm compressing inferior nasal fibers crossing to the contralateral eye.",
     "choices": [
       "Optic chiasm involving the decussating inferior nasal fibers",
-      "Optic tract",
-      "LGN",
-      "Occipital cortex"
+      "Optic chiasm involving the decussating inferior temporal fibers",
+      "Optic radiations involving the decussating inferior nasal fibers",
+      "Optic radiations involving the decussating inferior temporal fibers"
     ],
     "correct": 0
   },
@@ -3789,7 +3789,7 @@
     "choices": [
       "Glutamate",
       "Dopamine",
-      "GABA",
+      "Epinephrine",
       "Acetylcholine"
     ],
     "correct": 0
@@ -3803,7 +3803,7 @@
     "rationale": "Chronic atrophy following edema reflects axonal loss and gliosis within the optic nerve head.",
     "choices": [
       "Loss of retinal ganglion cell axons and gliosis",
-      "Persistent axoplasmic stasis",
+      "Persistent axoplasmic stasis and scar formation",
       "Increased vascular permeability",
       "Regeneration of optic nerve fibers"
     ],
@@ -3817,7 +3817,7 @@
     "sub": "Outflow Anatomy",
     "rationale": "Most outflow resistance occurs within the juxtacanalicular portion of the trabecular meshwork before entry into Schlemm's canal.",
     "choices": [
-      "Juxtacanalicular connective tissue of the trabecular meshwork",
+      "Juxtacanalicular connective tissue",
       "Uveoscleral pathway",
       "Anterior chamber angle recess",
       "Schlemm's canal endothelium alone"
@@ -3832,7 +3832,7 @@
     "sub": "Aqueous Dynamics",
     "rationale": "Aqueous drains via the pressure-dependent trabecular route and the pressure-independent uveoscleral pathway.",
     "choices": [
-      "Trabecular (conventional) and uveoscleral (unconventional) pathways",
+      "Trabecular and uveoscleral pathways",
       "Retinal and choroidal circulation",
       "Canal of Petit and Canal of Hannover",
       "Ciliary body secretion and diffusion"
@@ -3863,7 +3863,7 @@
     "rationale": "Mechanical and vascular stress at the lamina cribrosa impedes axoplasmic transport and perfusion, leading to ganglion cell loss.",
     "choices": [
       "Axoplasmic flow obstruction and laminar deformation",
-      "RPE detachment",
+      "Retinal pigment epithelium detachment",
       "Photoreceptor apoptosis from light exposure",
       "Inflammatory demyelination"
     ],
@@ -3895,7 +3895,7 @@
       "Open, normal-appearing angle with elevated IOP and optic neuropathy",
       "Intermittent shallowing of anterior chamber with normal IOP",
       "Sudden painful vision loss with mid-dilated pupil",
-      "Congenital corneal edema and tearing"
+      "Congenital corneal edema and tearing in the absence of infection"
     ],
     "correct": 0
   },
@@ -3907,7 +3907,7 @@
     "sub": "Visual Fields",
     "rationale": "Glaucomatous defects correspond to arcuate fiber bundles and typically respect the horizontal meridian early on.",
     "choices": [
-      "Nasal step or paracentral scotoma respecting the horizontal meridian",
+      "Nasal step or paracentral scotoma",
       "Central island loss",
       "Bitemporal hemianopia",
       "Generalized constriction without pattern"
@@ -3925,7 +3925,7 @@
       "Vascular dysregulation or reduced optic nerve perfusion pressure",
       "Elevated episcleral venous pressure",
       "Ciliary body hypersecretion",
-      "Iris bombe formation"
+      "Iris bombe formation and increased. IOP"
     ],
     "correct": 0
   },
@@ -3938,8 +3938,8 @@
     "rationale": "Short eyes with crowded anterior segments facilitate pupillary block and appositional angle closure.",
     "choices": [
       "Shallow anterior chamber and narrow angle due to short axial length",
-      "Deep chamber with flat iris plane",
-      "Large anterior chamber volume",
+      "Deep chamber with flat iris plane and hyperopic prescription",
+      "Large anterior chamber volume and neovascularizati0m of the angle",
       "Thin cornea and long axial length"
     ],
     "correct": 0
@@ -3952,7 +3952,7 @@
     "sub": "Imaging",
     "rationale": "OCT provides objective measurement of RNFL and ganglion cell complex thickness, detecting early glaucomatous damage.",
     "choices": [
-      "Optical coherence tomography (OCT)",
+      "Optical coherence tomography",
       "Ultrasound biomicroscopy",
       "Fluorescein angiography",
       "Fundus autofluorescence"
@@ -3985,7 +3985,7 @@
       "Prostaglandin analogs",
       "Beta-blockers",
       "Carbonic anhydrase inhibitors",
-      "Alpha-agonists only"
+      "Beta-agonists"
     ],
     "correct": 0
   },
@@ -3998,9 +3998,9 @@
     "rationale": "Acute angle-closure causes rapid IOP elevation with corneal edema, blurred vision, and a mid-dilated nonreactive pupil.",
     "choices": [
       "Severe ocular pain, halos, mid-dilated fixed pupil, corneal edema",
-      "Bilateral gradual visual field loss",
-      "Photophobia and tearing",
-      "Painless unilateral vision loss"
+      "Bilateral gradual visual field loss despite lack of pain",
+      "Photophobia and tearing with lack of infection",
+      "Painless, transient, unilateral vision loss"
     ],
     "correct": 0
   },
@@ -4014,8 +4014,8 @@
     "choices": [
       "Flaky material on lens capsule and trabecular pigmentation",
       "Posterior synechiae formation",
-      "Krukenberg spindle on endothelium only",
-      "Peripheral anterior synechiae 360°"
+      "Krukenberg spindle on endothelium",
+      "Peripheral anterior synechiae"
     ],
     "correct": 0
   },
@@ -4057,7 +4057,7 @@
     "sub": "Optic Nerve Evaluation",
     "rationale": "Glaucoma causes localized rim loss that violates the ISNT rule (Inferior > Superior > Nasal > Temporal rim thickness).",
     "choices": [
-      "Notching of the neuroretinal rim violating the ISNT rule",
+      "Notching of the neuroretinal rim",
       "Large but symmetric cup in both eyes",
       "Pink neuroretinal rim with small cup",
       "Tilted disc with oblique insertion"
@@ -4087,9 +4087,9 @@
     "sub": "Globe Rupture",
     "rationale": "A positive Seidel test confirms aqueous leakage from a full-thickness defect consistent with an open globe.",
     "choices": [
-      "Positive Seidel sign with leaking aqueous",
-      "Localized subconjunctival hemorrhage",
-      "Conjunctival laceration only",
+      "Positive Seidel sign",
+      "Subconjunctival hemorrhage",
+      "Conjunctival laceration",
       "Intact anterior chamber depth"
     ],
     "correct": 0
@@ -4100,7 +4100,7 @@
     "discipline": "Anatomy",
     "condition": "Emergencies / Trauma",
     "sub": "Orbital Anatomy",
-    "rationale": "The inferior rectus lies adjacent to the thin orbital floor and can become trapped, causing limitation of upgaze and diplopia.",
+    "rationale": "The inferior rectus lies adjacent to the weak orbital floor and can become trapped, causing limitation of upgaze and diplopia.",
     "choices": [
       "Inferior rectus",
       "Superior oblique",
@@ -4194,8 +4194,8 @@
     "choices": [
       "Loss of orbital volume due to herniation of fat into maxillary sinus",
       "Superior wall collapse into frontal sinus",
-      "Medial wall fracture into ethmoid cells",
-      "Zygomatic arch fracture alone"
+      "Medial wall fracture into ethmoid cells allowing comorbid infection to spread",
+      "Zygomatic arch fracture alone resulting in total globe destabilization"
     ],
     "correct": 0
   },
@@ -4207,10 +4207,10 @@
     "sub": "Optic Nerve Trauma",
     "rationale": "Optic nerve avulsion causes immediate, irreversible vision loss with absent APD and a normal-appearing anterior segment.",
     "choices": [
-      "Profound vision loss with absent afferent pupillary response but normal-appearing globe",
+      "Profound vision loss with absent afferent pupillary response",
       "Subconjunctival hemorrhage and chemosis only",
       "Optic disc swelling with pain on movement",
-      "Mild field defect with normal vision"
+      "Mild field defect and optic nerve pallor with normal vision"
     ],
     "correct": 0
   },
@@ -4237,7 +4237,7 @@
     "sub": "Physiology",
     "rationale": "11-cis-retinal (vitamin A derivative) recombines with opsin to form rhodopsin.",
     "choices": [
-      "Vitamin A (retinol)",
+      "Vitamin A",
       "Vitamin C",
       "Vitamin D",
       "Vitamin K"
@@ -4269,7 +4269,7 @@
     "choices": [
       "Bilateral cecocentral scotomas and red-green dyschromatopsia",
       "Arcuate field loss with normal color vision",
-      "Blue-yellow defect only",
+      "Blue-yellow defect with Bull's Eye maculopathy",
       "Peripheral ring scotoma without dyschromatopsia"
     ],
     "correct": 0
@@ -4312,10 +4312,10 @@
     "sub": "Drug Toxicity",
     "rationale": "Long-term tamoxifen can cause crystalline deposits and macular edema.",
     "choices": [
-      "Crystalline maculopathy with possible CME",
-      "Classic vortex keratopathy only",
+      "Crystalline maculopathy",
+      "Vortex keratopathy",
       "Blue-yellow color defect",
-      "Rapid NAION in all users"
+      "Rapid NAION"
     ],
     "correct": 0
   },
@@ -4357,7 +4357,7 @@
     "sub": "Pathophysiology",
     "rationale": "Autoimmune inflammation targets EOMs, especially the inferior rectus.",
     "choices": [
-      "Thyroid eye disease (Graves orbitopathy)",
+      "Thyroid eye disease",
       "Cushing disease",
       "Addison disease",
       "Hyperparathyroidism"
@@ -4374,7 +4374,7 @@
     "choices": [
       "Breakdown of inner blood-retinal barrier with capillary leakage",
       "Autoimmune attack on photoreceptors",
-      "RPE pump failure only",
+      "Retinal pigment epithelium pump failure",
       "Increased episcleral venous pressure"
     ],
     "correct": 0
@@ -4387,10 +4387,10 @@
     "sub": "AION",
     "rationale": "Arteritic AION results from PCA involvement; urgent steroids are vision-saving.",
     "choices": [
-      "Posterior ciliary arteries supplying the optic nerve head",
+      "Posterior ciliary arteries",
       "Central retinal vein",
       "Short posterior ciliary nerves",
-      "Lacrimal artery only"
+      "Lacrimal artery"
     ],
     "correct": 0
   },
@@ -4417,9 +4417,9 @@
     "sub": "Ocular Opportunists",
     "rationale": "CMV causes fulminant necrotizing retinitis in advanced immunosuppression.",
     "choices": [
-      "CMV retinitis",
+      "Cytomegalovirus retinitis",
       "Toxoplasma chorioretinitis",
-      "PJP",
+      "Herpes Zoster retinitis",
       "Adenoviral retinitis"
     ],
     "correct": 0
@@ -4433,9 +4433,9 @@
     "rationale": "CYP inhibition by macrolides/azoles elevates warfarin effect.",
     "choices": [
       "Macrolide or azole antifungal co-administration",
-      "Coenzyme Q10",
+      "Coenzyme Q10 and aspirin",
       "Calcium supplements",
-      "Levothyroxine alone"
+      "Levothyroxine"
     ],
     "correct": 0
   },
@@ -4479,7 +4479,7 @@
     "choices": [
       "Multiple sclerosis",
       "Parkinson disease",
-      "ALS",
+      "Grave's disease",
       "Myasthenia gravis"
     ],
     "correct": 0
@@ -4492,10 +4492,10 @@
     "sub": "Diagnostics",
     "rationale": "CSF VDRL supports neurosyphilis; treat with IV penicillin.",
     "choices": [
-      "CSF VDRL (with lumbar puncture)",
-      "ANA titer",
-      "Serum ACE",
-      "Lyme ELISA only"
+      "CSF VDRL with lumbar puncture",
+      "ANA titer with sacroiliac joint X-ray",
+      "Serum ACE with chest X-ray",
+      "Lyme ELISA"
     ],
     "correct": 0
   },
@@ -4522,7 +4522,7 @@
     "sub": "Toxicity",
     "rationale": "Digoxin toxicity produces color vision changes including yellow tinges.",
     "choices": [
-      "Cardiac glycosides (e.g., digoxin)",
+      "Cardiac glycosides",
       "ACE inhibitors",
       "ARBs",
       "Thiazides"
@@ -4567,7 +4567,7 @@
     "sub": "Safety",
     "rationale": "β2 blockade provokes bronchospasm; β-blockers also blunt hypoglycemic symptoms.",
     "choices": [
-      "Nonselective β-blockers (e.g., propranolol)",
+      "Nonselective β-blockers",
       "ACE inhibitors",
       "ARBs",
       "Dihydropyridine CCBs"
@@ -4597,7 +4597,7 @@
     "sub": "Drug Toxicity",
     "rationale": "Microvascular ischemia manifests with CWS and hemorrhages.",
     "choices": [
-      "Cotton-wool spots and retinal hemorrhages (interferon retinopathy)",
+      "Cotton-wool spots and retinal hemorrhages",
       "Bull's-eye maculopathy",
       "Elschnig spots",
       "Cherry-red spot"
@@ -4612,7 +4612,7 @@
     "sub": "Adverse Effects",
     "rationale": "Mitochondrial toxicity can lead to optic neuropathy after weeks of therapy.",
     "choices": [
-      "Optic neuropathy with color vision loss",
+      "Optic neuropathy",
       "Central serous chorioretinopathy",
       "Papilledema from IIH",
       "Night blindness"
@@ -4642,10 +4642,10 @@
     "sub": "Anatomy / Sign",
     "rationale": "Copper deposits at Descemet's periphery produce a golden-brown ring.",
     "choices": [
-      "Kayser-Fleischer ring at Descemet's",
+      "Kayser-Fleischer ring",
       "Hudson-Stähli line",
       "Stocker line",
-      "Fleischer ring at cone base"
+      "Fleischer ring"
     ],
     "correct": 0
   },
@@ -4674,8 +4674,8 @@
     "choices": [
       "Vitamin A excess",
       "Vitamin C excess",
-      "Vitamin D excess only",
-      "Vitamin E excess only"
+      "Vitamin D excess",
+      "Vitamin E excess"
     ],
     "correct": 0
   },
@@ -4687,7 +4687,7 @@
     "sub": "Visual Pathway",
     "rationale": "Pituitary macroadenomas compress decussating nasal fibers at the chiasm.",
     "choices": [
-      "Pituitary adenoma (hyperprolactinemia common)",
+      "Pituitary adenoma",
       "Primary hyperparathyroidism",
       "Adrenal insufficiency",
       "Thyroid storm"
@@ -4734,8 +4734,8 @@
     "choices": [
       "Factor V Leiden thrombophilia",
       "Iron deficiency anemia",
-      "Hemophilia A only",
-      "Polycythemia absence"
+      "Hemophilia A",
+      "Cushing's syndrome"
     ],
     "correct": 0
   },
@@ -4780,7 +4780,7 @@
       "Familial hypercholesterolemia",
       "Familial combined hyperlipidemia",
       "Hypolipidemia",
-      "Tangier disease only"
+      "Tangier disease"
     ],
     "correct": 0
   },
@@ -4792,10 +4792,10 @@
     "sub": "Therapy",
     "rationale": "Standard therapy combines folate antagonists plus leucovorin rescue.",
     "choices": [
-      "Pyrimethamine + sulfadiazine (with leucovorin)",
+      "Pyrimethamine + sulfadiazine",
       "Acyclovir + valacyclovir",
       "Ciprofloxacin + metronidazole",
-      "Azithromycin + doxycycline only"
+      "Azithromycin + doxycycline"
     ],
     "correct": 0
   },
@@ -4852,7 +4852,7 @@
     "sub": "Ocular Surface",
     "rationale": "Topical PGAs commonly cause redness, lash growth, and periorbitopathy.",
     "choices": [
-      "Prostaglandin analogs (class effect noted topically)",
+      "Prostaglandin analogs",
       "ACE inhibitors systemically",
       "ARBs systemically",
       "Thiazides systemically"
@@ -4882,7 +4882,7 @@
     "sub": "Physiology",
     "rationale": "Excess thyroid hormone increases sympathetic tone causing lid retraction/lag.",
     "choices": [
-      "Excess levothyroxine causing thyrotoxicosis",
+      "Levothyroxine excess",
       "Methimazole excess",
       "Propylthiouracil excess",
       "Iodide deficiency"
@@ -4913,8 +4913,8 @@
     "rationale": "Fibrillin-1 defects lead to ectopia lentis (superotemporal).",
     "choices": [
       "Marfan syndrome",
-      "Ehlers-Danlos only",
-      "Osteogenesis imperfecta only",
+      "Ehlers-Danlos",
+      "Osteogenesis imperfecta",
       "Ankylosing spondylitis"
     ],
     "correct": 0
@@ -4957,7 +4957,7 @@
     "sub": "Mechanism",
     "rationale": "Glaucoma therapy relies on topical PGAs to remodel ciliary muscle ECM.",
     "choices": [
-      "Topical prostaglandin analogs (latanoprost/travoprost/bimatoprost)",
+      "Topical prostaglandin analogs",
       "Systemic prostaglandins",
       "Oral β-blockers",
       "Oral carbonic anhydrase inhibitors only"
@@ -5003,7 +5003,7 @@
     "rationale": "NF1 shows café-au-lait macules, neurofibromas, iris hamartomas.",
     "choices": [
       "Neurofibromatosis type 1",
-      "NF2",
+      "Neurofibromatosis type 2",
       "Tuberous sclerosis",
       "Sturge-Weber"
     ],
@@ -5035,7 +5035,7 @@
       "Systemic and inhaled corticosteroids",
       "β2-agonists",
       "Leukotriene antagonists",
-      "Anticholinergics alone"
+      "Anticholinergics"
     ],
     "correct": 0
   },
@@ -5048,7 +5048,7 @@
     "rationale": "Chronic HTN causes arteriolar narrowing, CWS, and hemorrhages.",
     "choices": [
       "Hypertensive retinopathy from chronic kidney disease",
-      "Nephrotic syndrome only",
+      "Nephrotic syndrome",
       "Renal colic",
       "Polycystic kidney disease never shows this"
     ],
@@ -5122,7 +5122,7 @@
     "sub": "Retinal Degeneration",
     "rationale": "RP features rod dysfunction first with nyctalopia and mid-peripheral scotomas.",
     "choices": [
-      "Retinitis pigmentosa (many genetic causes)",
+      "Retinitis pigmentosa",
       "Best disease",
       "Stargardt disease",
       "Leber congenital amaurosis only"
@@ -5152,7 +5152,7 @@
     "sub": "Rare Toxicity",
     "rationale": "Tamoxifen has multiple ocular toxicities beyond crystalline maculopathy.",
     "choices": [
-      "Tamoxifen (rare ON-like toxicity)",
+      "Tamoxifen",
       "Insulin",
       "Levothyroxine",
       "Hydrocortisone"
@@ -5182,7 +5182,7 @@
     "sub": "Immune-Related AEs",
     "rationale": "Immune checkpoint inhibitors can cause ocular irAEs including uveitis and CSR-like changes.",
     "choices": [
-      "Checkpoint inhibitors (e.g., anti-PD-1/PD-L1)",
+      "Checkpoint inhibitors",
       "TNF-α inhibitors never do",
       "Interleukin-2 never does",
       "IVIG only"
@@ -5257,10 +5257,10 @@
     "sub": "Angle Closure Risk",
     "rationale": "Anticholinergic/antihistaminic agents may dilate pupils and precipitate closure in susceptible angles.",
     "choices": [
-      "High-dose first-generation antihistamine combinations",
+      "Antihistamines",
       "Acetaminophen",
       "NSAIDs",
-      "Opioids alone"
+      "Opioids"
     ],
     "correct": 0
   },
@@ -5287,10 +5287,10 @@
     "sub": "Vascular Fragility",
     "rationale": "Ascorbate is needed for collagen crosslinking; deficiency weakens vessels.",
     "choices": [
-      "Vitamin C deficiency (scurvy)",
+      "Vitamin C deficiency",
       "Vitamin D deficiency",
       "Vitamin E deficiency",
-      "Vitamin K deficiency only"
+      "Vitamin K deficiency"
     ],
     "correct": 0
   },
@@ -5302,7 +5302,7 @@
     "sub": "Glaucoma Risk",
     "rationale": "Steroid responders develop outflow resistance at the TM.",
     "choices": [
-      "Systemic corticosteroids",
+      "Prednisone",
       "Insulin",
       "Levothyroxine",
       "Metformin"
@@ -5350,7 +5350,7 @@
       "Amoxicillin-clavulanate",
       "Doxycycline",
       "Levofloxacin",
-      "Trimethoprim-sulfamethoxazole (1st trimester)"
+      "Trimethoprim-sulfamethoxazole"
     ],
     "correct": 0
   },
@@ -5380,7 +5380,7 @@
       "Lung carcinoma",
       "Prostate carcinoma",
       "Colon carcinoma",
-      "Renal cell carcinoma only"
+      "Renal cell carcinoma"
     ],
     "correct": 0
   },
@@ -5393,7 +5393,7 @@
     "rationale": "LHON affects papillomacular bundle due to mitochondrial mutations.",
     "choices": [
       "Leber hereditary optic neuropathy",
-      "Dominant optic atrophy only",
+      "Dominant optic atrophy",
       "Friedreich ataxia",
       "MELAS without optic features"
     ],
@@ -5422,7 +5422,7 @@
     "sub": "Angle Closure",
     "rationale": "Mydriasis in narrow angles can obstruct trabecular outflow.",
     "choices": [
-      "Anticholinergic and adrenergic agonists",
+      "Anticholinergic agonists",
       "ACE inhibitors",
       "Statins",
       "Metformin"
@@ -5437,7 +5437,7 @@
     "sub": "Conjunctiva",
     "rationale": "Autoantibodies to basement membrane cause cicatrization.",
     "choices": [
-      "Mucous membrane pemphigoid (ocular cicatricial pemphigoid)",
+      "Ocular cicatricial pemphigoid",
       "Pemphigus vulgaris only",
       "Atopic dermatitis",
       "Psoriasis"
@@ -5483,9 +5483,9 @@
     "rationale": "RA-associated vasculitis at the periphery can cause PUK and melt.",
     "choices": [
       "Rheumatoid arthritis (PUK)",
-      "Sjögren syndrome only",
+      "Sjögren syndrome",
       "Hashimoto",
-      "Sarcoid without corneal melt"
+      "Sarcoidosis"
     ],
     "correct": 0
   },
@@ -5515,7 +5515,7 @@
       "Tetracyclines (drug, not supplement) and high vitamin A; high B6 causes neuropathy instead",
       "High vitamin C",
       "High vitamin E",
-      "Omega-3 only"
+      "Omega-3"
     ],
     "correct": 0
   },
@@ -5527,7 +5527,7 @@
     "sub": "Corneal Sign",
     "rationale": "Fabry produces whorl keratopathy and systemic vasculopathy.",
     "choices": [
-      "Fabry disease (α-galactosidase A deficiency)",
+      "Fabry disease",
       "Gaucher disease",
       "Pompe disease",
       "Hunter syndrome"
