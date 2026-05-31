@@ -148,9 +148,7 @@
 “Posterior staphyloma”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “Keratometry reveals K readings of 42.00 @ 180 and 46.00 @ 090. What is the magnitude of corneal astigmatism present?”,
@@ -300,9 +298,7 @@
 “38.0 D”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A patient undergoes LASIK to correct −8.00 D of myopia. Which corneal change is primarily responsible for the refractive effect?”,
@@ -452,9 +448,7 @@
 “No difference”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A fully corrected −4.00 D myope and an emmetrope both view a target at 33 cm. Assuming normal binocular vision and accommodation, how much accommodation is required by the myope?”,
@@ -604,9 +598,7 @@
 “5×”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A patient wishes to read comfortably at 20 cm using a high-plus near device. Ignoring accommodation, which spectacle add would most closely correspond to this working distance?”,
@@ -756,9 +748,7 @@
 “4Δ base-out”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A +4.00 D spectacle lens is positioned 5 mm above the patient’s line of sight. What prism is induced in primary gaze?”,
@@ -908,9 +898,7 @@
 “Pincushion distortion”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A −6.00 D spectacle lens is adjusted from 0° to 12° of pantoscopic tilt. Which optical effect is expected?”,
@@ -1060,9 +1048,7 @@
 “Daily disposable hydrogel lens”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “An RGP lens is fit 0.10 mm flatter than the flat K meridian. Assuming the SAM-FAP rule, what tear lens power is created?”,
@@ -1212,9 +1198,7 @@
 “Latent hyperopia”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A patient demonstrates a near phoria of 10Δ exophoria. Base-out vergence ranges at near are 12/16/10. Which conclusion is most appropriate?”,
@@ -1364,9 +1348,7 @@
 “Prescribe additional plus power”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A 10-year-old with intermittent exotropia undergoes office-based vergence therapy. Which binocular skill is the primary target of treatment?”,
@@ -1516,9 +1498,7 @@
 “Color vision is definitely normal”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A color-normal male marries a woman whose father was affected with deuteranopia and whose mother was unaffected. Assuming the woman is an obligate carrier, what is the probability that their first child will be an affected son?”,
@@ -1668,9 +1648,7 @@
 “Color discrimination develops before motion perception”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A 6-month-old infant demonstrates normal fixation and following but fails age-appropriate stereopsis testing. Which additional finding would be most concerning for abnormal binocular development?”,
@@ -1820,9 +1798,7 @@
 “Frontalis muscle”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A patient with severe evaporative dry eye demonstrates meibography showing truncation and dropout of multiple central lower-lid glands. Which structure is primarily responsible for producing the tear-film layer most affected in this patient?”,
@@ -1972,9 +1948,7 @@
 “Long-term bandage contact lens wear”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A 32-year-old presents with acute painful superotemporal orbital swelling, S-shaped ptosis, and tenderness over the lacrimal gland. MRI demonstrates isolated enlargement of the lacrimal gland without abscess formation. What is the most appropriate initial management approach?”,
@@ -2124,9 +2098,7 @@
 “Corneal endothelium”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A patient develops partial limbal stem cell deficiency after a chemical burn. Which anatomic structure contains the stem cell population responsible for long-term corneal epithelial regeneration?”,
@@ -2276,9 +2248,7 @@
 “Subconjunctival hemorrhage”
 ],
 “correct”: 0
-}
-]
-[
+},
 {
 “id”: null,
 “text”: “A 13-year-old with severe vernal keratoconjunctivitis develops decreased vision and photophobia despite topical antihistamine therapy. Slit lamp examination reveals a superior corneal epithelial defect with an adherent plaque. Which corneal complication is most characteristic of advanced VKC?”,
@@ -2428,9 +2398,7 @@
 “PRK is contraindicated in patients with thinner corneas”
 ],
 “correct”: 0
-}
-]
-[
+},
   {
     "id": null,
     "text": "Corneal cross-linking for progressive keratoconus strengthens the cornea by which mechanism?",
@@ -2580,9 +2548,7 @@
       "Elevated tear osmolarity ruling out dry eye disease"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which is the most appropriate initial approach to recurrent marginal keratitis associated with staphylococcal blepharitis?",
@@ -2732,9 +2698,7 @@
       "Moraxella catarrhalis"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which is the most appropriate initial approach for epithelial basement membrane dystrophy with recurrent corneal erosions?",
@@ -2884,9 +2848,7 @@
       "Endothelium"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which cataract type most commonly causes disproportionate glare disability and decreased near vision in relatively younger patients?",
@@ -3036,9 +2998,7 @@
       "Suprachoroidal space"
     ],
     "correct": 0
-  }
-]
-[
+},
   {
     "id": null,
     "text": "The sclera derives its opaque appearance primarily from which property?",
@@ -3188,9 +3148,7 @@
       "Topical hypertonic saline"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Fuchs heterochromic iridocyclitis is characterized by which classic constellation of findings?",
@@ -3340,9 +3298,7 @@
       "Corneal tomography"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which component of the vitreous is primarily responsible for maintaining its gel-like consistency?",
@@ -3492,9 +3448,7 @@
       "Subretinal fluid and hard exudates"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which mechanism underlies diabetic macular edema?",
@@ -3644,9 +3598,7 @@
       "Retinal pigment epithelium and Bruch's membrane"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which portion of the optic nerve is most vulnerable to ischemia in anterior ischemic optic neuropathy (AION)?",
@@ -3796,9 +3748,7 @@
       "Pupillometry"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "In Leber hereditary optic neuropathy (LHON), which structure is primarily affected?",
@@ -3948,9 +3898,7 @@
       "Congenital corneal edema and tearing in the absence of infection"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which diagnostic finding is MOST characteristic of early glaucomatous visual field loss?",
@@ -4100,9 +4048,7 @@
       "Canaloplasty"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which optic nerve head feature is most specific for glaucomatous damage rather than physiologic cupping?",
@@ -4252,9 +4198,7 @@
       "Zygomatic arch fracture alone resulting in total globe destabilization"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which finding indicates optic nerve avulsion following severe blunt ocular trauma?",
@@ -4404,9 +4348,7 @@
       "Fluoroquinolone"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which endocrine disease leads to fluctuating diplopia, lid retraction, and restrictive strabismus due to extraocular muscle fibrosis?",
@@ -4556,9 +4498,7 @@
       "Lyme ELISA"
     ],
     "correct": 0
-  }
-]
-[
+  },
   {
     "id": null,
     "text": "Which systemic drug is a strong risk factor for IFIS (intraoperative floppy iris syndrome)?",
@@ -4708,8 +4648,7 @@
       "Fleischer ring"
     ],
     "correct": 0
-  }
-]
+  },
 {
   "id": null,
   "text": "Which systemic medication can exacerbate dry eye by reducing aqueous secretion through anticholinergic effects?",
@@ -4859,7 +4798,7 @@
     "Azithromycin + doxycycline"
   ],
   "correct": 0
-}
+},
 {
 “id”: null,
 “text”: “Which systemic medication commonly causes whorl keratopathy besides amiodarone?”,
