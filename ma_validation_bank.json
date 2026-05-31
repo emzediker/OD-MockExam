@@ -1,0 +1,94 @@
+[
+  {
+    "type":"SA",
+    "condition":"Ametropia",
+    "sub":"Validation",
+    "text":"What is 2 + 2?",
+    "choices":["1","2","3","4"],
+    "correct":[3],
+    "rationale":"2 + 2 = 4."
+  },
+  {
+    "type":"SA",
+    "condition":"Ametropia",
+    "sub":"Validation",
+    "text":"Which color is the sky on a clear day?",
+    "choices":["Blue","Green","Red","Yellow"],
+    "correct":[0],
+    "rationale":"The sky appears blue."
+  },
+  {
+    "type":"SA",
+    "condition":"Ametropia",
+    "sub":"Validation",
+    "text":"How many days are in a week?",
+    "choices":["5","6","7","8"],
+    "correct":[2],
+    "rationale":"There are 7 days in a week."
+  },
+  {
+    "type":"SA",
+    "condition":"Ametropia",
+    "sub":"Validation",
+    "text":"Which number is largest?",
+    "choices":["2","5","8","12"],
+    "correct":[3],
+    "rationale":"12 is the largest."
+  },
+
+  {
+    "type":"MA",
+    "condition":"Contact Lenses",
+    "sub":"Validation",
+    "text":"Select TWO even numbers.",
+    "choices":["1","2","3","4","5"],
+    "correct":[1,3],
+    "rationale":"2 and 4 are even."
+  },
+  {
+    "type":"MA",
+    "condition":"Contact Lenses",
+    "sub":"Validation",
+    "text":"Select TWO vowels.",
+    "choices":["A","B","C","E","F"],
+    "correct":[0,3],
+    "rationale":"A and E are vowels."
+  },
+  {
+    "type":"MA",
+    "condition":"Contact Lenses",
+    "sub":"Validation",
+    "text":"Select TWO mammals.",
+    "choices":["Dog","Shark","Cat","Trout","Salmon"],
+    "correct":[0,2],
+    "rationale":"Dog and Cat are mammals."
+  },
+
+  {
+    "type":"MA",
+    "condition":"Low Vision",
+    "sub":"Validation",
+    "text":"Select THREE primary colors.",
+    "choices":["Red","Blue","Green","Yellow","Purple"],
+    "correct":[0,1,3],
+    "rationale":"Red, Blue, and Yellow."
+  },
+  {
+    "type":"MA",
+    "condition":"Low Vision",
+    "sub":"Validation",
+    "text":"Select THREE fruits.",
+    "choices":["Apple","Carrot","Banana","Orange","Potato"],
+    "correct":[0,2,3],
+    "rationale":"Apple, Banana, and Orange."
+  },
+  {
+    "type":"MA",
+    "condition":"Low Vision",
+    "sub":"Validation",
+    "text":"Select THREE states of matter.",
+    "choices":["Solid","Liquid","Gas","Energy","Gravity"],
+    "correct":[0,1,2],
+    "rationale":"Solid, liquid, and gas."
+  }
+]
