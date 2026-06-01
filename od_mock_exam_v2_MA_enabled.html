@@ -275,15 +275,24 @@ async function loadQuestions(){
   const r=await fetch(QUESTIONS_URL,{cache:'no-store'});
   if(!r.ok)throw new Error('Failed to load questions.json');
   const bank=await r.json();
-  bank.forEach((q,i)=>{
-    if(typeof q.id!=='number')q.id=i+1;
-    if(!Array.isArray(q.choices))q.choices=[];
-    if(typeof q.correct!=='number')q.correct=0;
-    if(typeof q.text!=='string')q.text='';
-    if(typeof q.rationale!=='string')q.rationale='';
-    if(typeof q.condition!=='string')q.condition='';
-    if(typeof q.sub!=='string')q.sub='';
-  });
+bank.forEach((q,i)=>{
+  if(typeof q.id!=='number')q.id=i+1;
+  if(!Array.isArray(q.choices))q.choices=[];
+
+  if(
+    typeof q.correct !== 'number' &&
+    !Array.isArray(q.correct)
+  ){
+    q.correct = 0;
+  }
+
+  q.type = Array.isArray(q.correct) ? "MA" : "SA";
+
+  if(typeof q.text!=='string')q.text='';
+  if(typeof q.rationale!=='string')q.rationale='';
+  if(typeof q.condition!=='string')q.condition='';
+  if(typeof q.sub!=='string')q.sub='';
+});
   QUESTIONS=bank;
 }
 
