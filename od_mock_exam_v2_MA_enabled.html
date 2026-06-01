@@ -177,9 +177,17 @@ function scoreExam(){
   let correctTotal=0;
 
   SHUFFLED.forEach((q,i)=>{
-    const picked=document.querySelector(`input[name='q${i}']:checked`);
-    const chosenIdx=picked?parseInt(picked.value,10):-1;
-    const ok=q.correctIndicesAfterShuffle.includes(chosenIdx);
+const picked=[
+  ...document.querySelectorAll(`input[name='q${i}']:checked`)
+];
+
+const chosenIdxs=picked.map(el=>parseInt(el.value,10)).sort((a,b)=>a-b);
+
+const correctIdxs=[...q.correctIndicesAfterShuffle].sort((a,b)=>a-b);
+
+const ok=
+  chosenIdxs.length===correctIdxs.length &&
+  chosenIdxs.every((v,idx)=>v===correctIdxs[idx]);
     if(ok) correctTotal++;
 
     const cond=normCond(q.condition);
