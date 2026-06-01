@@ -179,7 +179,7 @@ function scoreExam(){
   SHUFFLED.forEach((q,i)=>{
     const picked=document.querySelector(`input[name='q${i}']:checked`);
     const chosenIdx=picked?parseInt(picked.value,10):-1;
-    const ok=(chosenIdx===q.correctIndexAfterShuffle);
+    const ok=q.correctIndicesAfterShuffle.includes(chosenIdx);
     if(ok) correctTotal++;
 
     const cond=normCond(q.condition);
@@ -192,7 +192,11 @@ function scoreExam(){
 
     const rat=document.getElementById('rat'+i);
     rat.classList.remove('hide');
-    rat.innerHTML=(ok?'✅':'❌')+" <b>Correct:</b> "+q.choices[q.correctIndexAfterShuffle]+(q.rationale?("<br>"+q.rationale):"");
+    rat.innerHTML=
+(ok?'✅':'❌')+
+" <b>Correct:</b> "+
+q.correctIndicesAfterShuffle.map(idx=>q.choices[idx]).join(", ")+
+(q.rationale?("<br>"+q.rationale):"");
   });
 
   const pct=Math.round(100*correctTotal/SHUFFLED.length);
