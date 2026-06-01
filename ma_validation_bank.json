@@ -14,21 +14,6 @@
 ],
 "correct": 0
 },
-  {
-  "id": null,
-  "text": "Select the primary colors.",
-  "discipline": "Test",
-  "condition": "Ametropia",
-  "sub": "Test",
-  "rationale": "Red, blue, and yellow are traditionally considered primary colors.",
-  "choices": [
-    "Red",
-    "Green",
-    "Blue",
-    "Yellow"
-  ],
-  "correct": [0,2]
-},
 {
 "id": null,
 "text": "A -5.00 D uncorrected myope views a target located 40 cm from the eye. Assuming accommodation is completely relaxed, where will the image be focused relative to the retina?",
