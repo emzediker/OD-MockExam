@@ -16,26 +16,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with diabetic retinopathy?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Myopia",
-    "rationale": "A -5.00 D myope has a far point at 20 cm. A target at 40 cm produces insufficient vergence to focus on the retina without accommodation.",
-    "choices": [
-      "Microaneurysms",
-      "Retinal hemorrhages",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "A patient has a manifest refraction of -2.50 DS. A spectacle lens is prescribed at a 12 mm vertex distance. What vergence exits the back surface of the lens when viewing a target at optical infinity?",
     "discipline": "Optics",
     "condition": "Ametropia",
@@ -48,26 +28,6 @@
       "+1.25 D"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Myopia",
-    "rationale": "Excessive axial length causes the retina to lie posterior to the focal plane, resulting in axial myopia.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -171,46 +131,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Astigmatism",
-    "rationale": "Corneal astigmatism equals the difference between the principal meridians: 46.00 - 42.00 = 4.00 D.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with diabetic retinopathy?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Astigmatism",
-    "rationale": "The interval of Sturm is the dioptric distance between the two focal lines: 6.00 - 2.00 = 4.00 D.",
-    "choices": [
-      "Microaneurysms",
-      "Retinal hemorrhages",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "An astigmatic eye has focal lines located at +2.00 D and +6.00 D. Where is the circle of least confusion located?",
     "discipline": "Optics",
     "condition": "Ametropia",
@@ -291,26 +211,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Formulas",
-    "rationale": "F = (1.3375 - 1.000)/0.0078 \u2248 43.3 D.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Select the characteristics of myopic LASIK.",
     "discipline": "Optics",
     "condition": "Ametropia",
@@ -361,26 +261,6 @@
       "Reduced corneal nerve disruption",
       "Larger corneal flap",
       "Greater excimer ablation depth"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Refractive Surgery",
-    "rationale": "An implantable collamer lens corrects high myopia while maintaining the natural crystalline lens and accommodation.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
     ],
     "correct": [
       0,
@@ -496,26 +376,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Formulas",
-    "rationale": "L' = F + L = +43.00 + (-0.50) = +42.50 D.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "A patient's refraction is -3.00 +2.00 x 180. What is the spherical equivalent?",
     "discipline": "Optics",
     "condition": "Ametropia",
@@ -528,26 +388,6 @@
       "-4.00 D"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with diabetic retinopathy?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Accommodation",
-    "rationale": "A -3.00 D myope has a far point at 33 cm. A target at 50 cm lies beyond the far point and will focus in front of the retina without accommodation.",
-    "choices": [
-      "Microaneurysms",
-      "Retinal hemorrhages",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -598,26 +438,6 @@
       "Increased rod photoreceptor density in the fovea"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are associated with keratoconus?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Formulas",
-    "rationale": "The keratometric index compensates for the unmeasured posterior corneal surface when estimating total corneal power.",
-    "choices": [
-      "Irregular astigmatism",
-      "Corneal thinning",
-      "Retinal tear",
-      "Angle closure"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -1836,26 +1656,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with dry eye disease?",
-    "discipline": "Biochemistry / Physiology",
-    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
-    "sub": "Physiology-Tear Film",
-    "rationale": "Meibomian glands secrete the majority of the tear-film lipid layer, reducing evaporation and stabilizing the air-tear interface.",
-    "choices": [
-      "Ocular irritation",
-      "Tear film instability",
-      "Retinal hemorrhages",
-      "Papilledema"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "A patient undergoes dacryocystography for chronic epiphora. Contrast passes through the puncta and canaliculi but fails to enter the nose. Which sequence correctly describes the normal drainage pathway that should have been visualized?",
     "discipline": "Immunology / Microbiology / Pathology",
     "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
@@ -1958,26 +1758,6 @@
       "Functional epiphora only"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with microbial keratitis?",
-    "discipline": "Immunology / Microbiology / Pathology",
-    "condition": "Lids / Lashes / Lacrimal / Adnexa / Orbit",
-    "sub": "Disease-Lashes",
-    "rationale": "Trichiasis refers to misdirected lashes arising from normal follicles that contact the globe.",
-    "choices": [
-      "Pain",
-      "Corneal infiltrate",
-      "Normal epithelium",
-      "Improved vision"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -2136,26 +1916,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with microbial keratitis?",
-    "discipline": "Biochemistry / Physiology",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Corneal Anatomy",
-    "rationale": "Tight junctions between superficial epithelial cells provide the primary barrier to tear-film fluid penetration.",
-    "choices": [
-      "Pain",
-      "Corneal infiltrate",
-      "Normal epithelium",
-      "Improved vision"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Management priorities for a chemical eye injury include which TWO?",
     "discipline": "Anatomy",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
@@ -2166,66 +1926,6 @@
       "pH normalization",
       "Cycloplegic avoidance",
       "Delay treatment"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with microbial keratitis?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Wound Healing",
-    "rationale": "Bowman's layer is acellular and does not regenerate; injury is replaced by stromal scar tissue rather than restoration of normal architecture.",
-    "choices": [
-      "Pain",
-      "Corneal infiltrate",
-      "Normal epithelium",
-      "Improved vision"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with microbial keratitis?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Endothelial Physiology",
-    "rationale": "Adult endothelial cells have minimal mitotic capability and maintain corneal deturgescence through an active pump-leak mechanism.",
-    "choices": [
-      "Pain",
-      "Corneal infiltrate",
-      "Normal epithelium",
-      "Improved vision"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with microbial keratitis?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Innervation",
-    "rationale": "Corneal sensation is provided primarily by long ciliary nerves derived from the nasociliary branch of the ophthalmic division of CN V.",
-    "choices": [
-      "Pain",
-      "Corneal infiltrate",
-      "Normal epithelium",
-      "Improved vision"
     ],
     "correct": [
       0,
@@ -2551,26 +2251,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with blunt ocular trauma?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "RCE",
-    "rationale": "Epithelial basement membrane dystrophy causes abnormal hemidesmosomal attachment, predisposing patients to recurrent corneal erosions.",
-    "choices": [
-      "Hyphema",
-      "Angle recession",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Which sign best indicates OSSN (ocular surface squamous neoplasia) at the limbus?",
     "discipline": "Anatomy",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
@@ -2613,26 +2293,6 @@
       "Gelatinous limbal lesion with feeder vessels"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with dry eye disease?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "DED Testing",
-    "rationale": "A shortened TBUT with a normal Schirmer test suggests tear-film instability from evaporative dry eye, most commonly due to meibomian gland dysfunction.",
-    "choices": [
-      "Ocular irritation",
-      "Tear film instability",
-      "Retinal hemorrhages",
-      "Papilledema"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -2771,26 +2431,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with blunt ocular trauma?",
-    "discipline": "Immunology / Microbiology / Pathology",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Fungal",
-    "rationale": "Filamentous fungi, particularly Fusarium species, are common causes of fungal keratitis following vegetative trauma.",
-    "choices": [
-      "Hyphema",
-      "Angle recession",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Which is the most appropriate initial approach for epithelial basement membrane dystrophy with recurrent corneal erosions?",
     "discipline": "Anatomy",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
@@ -2866,26 +2506,6 @@
   },
   {
     "id": null,
-    "text": "Which findings are commonly associated with dry eye disease?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "Refractive-Nerves",
-    "rationale": "LASIK flap creation severs more corneal subbasal nerves initially, often resulting in greater early postoperative dry eye symptoms than PRK.",
-    "choices": [
-      "Ocular irritation",
-      "Tear film instability",
-      "Retinal hemorrhages",
-      "Papilledema"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Which treatment strategy is most appropriate during a seasonal flare of vernal keratoconjunctivitis?",
     "discipline": "Anatomy",
     "condition": "Conjunctiva / Cornea / Refractive Surgery",
@@ -2913,26 +2533,6 @@
       "Glycosaminoglycan accumulation throughout the cornea"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with dry eye disease?",
-    "discipline": "Anatomy",
-    "condition": "Conjunctiva / Cornea / Refractive Surgery",
-    "sub": "DED Management",
-    "rationale": "Once significant inflammation is controlled, punctal occlusion can increase tear retention and improve symptoms.",
-    "choices": [
-      "Ocular irritation",
-      "Tear film instability",
-      "Retinal hemorrhages",
-      "Papilledema"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
@@ -3921,111 +3521,6 @@
   },
   {
     "id": null,
-    "text": "Select THREE findings commonly associated with glaucoma.",
-    "discipline": "Anatomy",
-    "condition": "Glaucoma",
-    "sub": "Outflow Anatomy",
-    "rationale": "Most aqueous outflow resistance is located within the juxtacanalicular connective tissue adjacent to Schlemm's canal.",
-    "choices": [
-      "Optic nerve cupping",
-      "RNFL loss",
-      "Visual field defects",
-      "Macular hole"
-    ],
-    "correct": [
-      0,
-      1,
-      2
-    ],
-    "questionType": "MA",
-    "select": 3
-  },
-  {
-    "id": null,
-    "text": "Select THREE findings commonly associated with glaucoma.",
-    "discipline": "Biochemistry / Physiology",
-    "condition": "Glaucoma",
-    "sub": "Aqueous Dynamics",
-    "rationale": "The trabecular pathway accounts for most aqueous drainage, while the uveoscleral pathway provides an alternative route.",
-    "choices": [
-      "Optic nerve cupping",
-      "RNFL loss",
-      "Visual field defects",
-      "Macular hole"
-    ],
-    "correct": [
-      0,
-      1,
-      2
-    ],
-    "questionType": "MA",
-    "select": 3
-  },
-  {
-    "id": null,
-    "text": "Select THREE findings commonly associated with glaucoma.",
-    "discipline": "Anatomy",
-    "condition": "Glaucoma",
-    "sub": "Optic Nerve Anatomy",
-    "rationale": "The lamina cribrosa is the primary site of axonal injury and remodeling in glaucomatous optic neuropathy.",
-    "choices": [
-      "Optic nerve cupping",
-      "RNFL loss",
-      "Visual field defects",
-      "Macular hole"
-    ],
-    "correct": [
-      0,
-      1,
-      2
-    ],
-    "questionType": "MA",
-    "select": 3
-  },
-  {
-    "id": null,
-    "text": "Select THREE findings commonly associated with glaucoma.",
-    "discipline": "Anatomy",
-    "condition": "Glaucoma",
-    "sub": "Pathogenesis",
-    "rationale": "Mechanical deformation of the lamina cribrosa and impaired axoplasmic transport contribute to retinal ganglion cell death.",
-    "choices": [
-      "Optic nerve cupping",
-      "RNFL loss",
-      "Visual field defects",
-      "Macular hole"
-    ],
-    "correct": [
-      0,
-      1,
-      2
-    ],
-    "questionType": "MA",
-    "select": 3
-  },
-  {
-    "id": null,
-    "text": "Select THREE findings commonly associated with glaucoma.",
-    "discipline": "Anatomy",
-    "condition": "Glaucoma",
-    "sub": "Physiology-IOP",
-    "rationale": "Many individuals demonstrate their highest IOP measurements during the early morning hours.",
-    "choices": [
-      "Optic nerve cupping",
-      "RNFL loss",
-      "Visual field defects",
-      "Macular hole"
-    ],
-    "correct": [
-      0,
-      1,
-      2
-    ],
-    "questionType": "MA",
-    "select": 3
-  },
-  {
-    "id": null,
     "text": "Which finding best distinguishes primary open-angle glaucoma from angle-closure glaucoma?",
     "discipline": "Immunology / Microbiology / Pathology",
     "condition": "Glaucoma",
@@ -4203,46 +3698,6 @@
       "Tilted disc with oblique insertion"
     ],
     "correct": 0
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with blunt ocular trauma?",
-    "discipline": "Anatomy",
-    "condition": "Emergencies / Trauma",
-    "sub": "Intraocular Foreign Body",
-    "rationale": "CT of the orbits without contrast is the preferred imaging study for suspected metallic intraocular foreign bodies. MRI is contraindicated when a metallic foreign body is possible.",
-    "choices": [
-      "Hyphema",
-      "Angle recession",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which findings are commonly associated with blunt ocular trauma?",
-    "discipline": "Anatomy",
-    "condition": "Emergencies / Trauma",
-    "sub": "Globe Rupture",
-    "rationale": "A positive Seidel test demonstrates aqueous leakage through a full-thickness corneal or scleral wound, confirming an open globe.",
-    "choices": [
-      "Hyphema",
-      "Angle recession",
-      "Optic disc drusen",
-      "Retinitis pigmentosa"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
   },
   {
     "id": null,
