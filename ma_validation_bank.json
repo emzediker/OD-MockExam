@@ -5138,5 +5138,587 @@
       "Hunter syndrome"
     ],
     "correct": 0
-  }
+  },
+  {
+  "id": null,
+  "text": "A patient has a far point located 25 cm in front of the eye. Assuming no accommodation is present, what is the refractive error?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Myopia",
+  "rationale": "Refractive error equals the reciprocal of the far point distance in meters. 1/0.25 = 4.00 D.",
+  "choices": [
+    "-4.00 D myopia",
+    "-2.50 D myopia",
+    "+4.00 D hyperopia",
+    "Emmetropia"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with pathologic myopia?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Myopia",
+  "rationale": "Pathologic myopia is associated with progressive elongation of the globe and degenerative retinal changes.",
+  "choices": [
+    "Posterior staphyloma",
+    "Chorioretinal atrophy",
+    "Angle closure",
+    "Nanophthalmos"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A patient's corneal powers are 44.00 D @ 180 and 48.00 D @ 090. What amount of corneal astigmatism is present?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Astigmatism",
+  "rationale": "Corneal astigmatism equals the difference between principal meridians. 48.00 - 44.00 = 4.00 D.",
+  "choices": [
+    "4.00 D",
+    "2.00 D",
+    "44.00 D",
+    "48.00 D"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which characteristics are associated with irregular astigmatism?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Astigmatism",
+  "rationale": "Irregular astigmatism cannot be fully corrected with sphero-cylindrical spectacle lenses.",
+  "choices": [
+    "Unequal principal meridians",
+    "Reduced spectacle-corrected acuity",
+    "Perfect correction with spectacles",
+    "Uniform toric curvature"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A -10.00 D spectacle prescription is converted to the corneal plane. What change in power is expected?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Vertex Distance",
+  "rationale": "High-minus prescriptions require less minus power when moved closer to the eye.",
+  "choices": [
+    "Less minus power is required",
+    "More minus power is required",
+    "No power change occurs",
+    "Cylinder power doubles"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which factors determine the magnitude of vertex compensation?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Vertex Distance",
+  "rationale": "Vertex compensation depends primarily on lens power and the amount of vertex distance change.",
+  "choices": [
+    "Lens power",
+    "Amount of vertex distance change",
+    "Pupil size",
+    "Corneal diameter"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A cornea has a radius of curvature of 7.50 mm. What is the approximate keratometric power?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Formulas",
+  "rationale": "K = (1.3375 − 1.000)/0.0075 ≈ 45.00 D.",
+  "choices": [
+    "45.00 D",
+    "40.00 D",
+    "50.00 D",
+    "42.00 D"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "An object vergence of -2.00 D enters an optical system with +50.00 D power. What is the exiting vergence?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Formulas",
+  "rationale": "L' = F + L = +50.00 + (-2.00) = +48.00 D.",
+  "choices": [
+    "+48.00 D",
+    "+52.00 D",
+    "-48.00 D",
+    "+50.00 D"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "What is the approximate focal length of a +5.00 D lens?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Formulas",
+  "rationale": "Focal length = 1/F = 1/5 = 0.20 m.",
+  "choices": [
+    "20 cm",
+    "50 cm",
+    "10 cm",
+    "5 cm"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "An emmetropic eye requires approximately how much total optical power to focus parallel rays on the retina?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Formulas",
+  "rationale": "The average emmetropic eye possesses approximately +60.00 D of optical power.",
+  "choices": [
+    "+60.00 D",
+    "+40.00 D",
+    "+80.00 D",
+    "+20.00 D"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which characteristics are associated with implantable collamer lenses (ICLs)?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Refractive Surgery",
+  "rationale": "ICLs preserve the cornea and maintain accommodation because the natural crystalline lens remains in place.",
+  "choices": [
+    "Preservation of the cornea",
+    "Maintenance of accommodation",
+    "Removal of the crystalline lens",
+    "Corneal flap creation"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with accommodative lag?",
+  "discipline": "Optics",
+  "condition": "Ametropia",
+  "sub": "Accommodation",
+  "rationale": "Accommodative lag occurs when the accommodative response is less than the accommodative demand.",
+  "choices": [
+    "Lead of focus behind the target",
+    "Reduced accommodative response",
+    "Excess accommodative response",
+    "Distance pseudomyopia"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with contact lens deposits?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Deposits / Dryness",
+  "rationale": "Protein and lipid deposits reduce lens wettability and may increase discomfort.",
+  "choices": [
+    "Reduced lens wettability",
+    "Fluctuating vision",
+    "Improved oxygen transmission",
+    "Increased tear breakup time"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A patient wears a spectacle prescription of -9.00 D. Which contact lens power would most likely be required after vertex compensation?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Vertex Conversion",
+  "rationale": "High minus prescriptions require less minus power when moved to the corneal plane.",
+  "choices": [
+    "-8.25 D",
+    "-9.75 D",
+    "-10.00 D",
+    "-11.00 D"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which findings suggest a contact lens fit that is excessively steep?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Lens Fit",
+  "rationale": "Steep lenses often demonstrate reduced movement and excessive central pooling.",
+  "choices": [
+    "Minimal lens movement",
+    "Excessive central pooling",
+    "Lens edge stand-off",
+    "Excessive decentration"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which design features improve rotational stability in soft toric contact lenses?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Toric Lens Design",
+  "rationale": "Prism ballast and dynamic stabilization are commonly used to improve toric lens orientation.",
+  "choices": [
+    "Prism ballast",
+    "Dynamic stabilization",
+    "Increased center thickness only",
+    "Higher water content"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "An RGP lens is fit 0.20 mm steeper than the flattest K reading. What type of tear lens is created?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Tear Lens Power",
+  "rationale": "Steeper RGP fits create plus-powered tear lenses.",
+  "choices": [
+    "Plus tear lens",
+    "Minus tear lens",
+    "Plano tear lens",
+    "Prism tear lens"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which characteristics are advantages of scleral contact lenses?",
+  "discipline": "Optics",
+  "condition": "Contact Lenses",
+  "sub": "Scleral Fit",
+  "rationale": "Scleral lenses vault the cornea and provide a fluid reservoir that improves comfort and optics.",
+  "choices": [
+    "Corneal vaulting",
+    "Continuous fluid reservoir",
+    "Direct corneal bearing",
+    "Elimination of oxygen transmission"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with contact lenses compared with high-plus aphakic spectacles?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Field Effects",
+  "rationale": "Contact lenses reduce spectacle magnification effects and largely eliminate ring scotomas.",
+  "choices": [
+    "Reduced ring scotoma",
+    "Wider visual field",
+    "Increased pincushion distortion",
+    "Greater image jump"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are characteristic of pincushion distortion?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Aberrations",
+  "rationale": "High-plus lenses magnify the periphery more than the center, producing pincushion distortion.",
+  "choices": [
+    "Straight lines appear bowed outward",
+    "Associated with high-plus lenses",
+    "Straight lines appear bowed inward",
+    "Associated with high-minus lenses"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A patient looks 8 mm below the optical center of a +5.00 D lens. How much prism is induced?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Prism Effects",
+  "rationale": "Prentice's Rule: Δ = cF = 0.8 cm × 5.00 D = 4Δ.",
+  "choices": [
+    "4Δ",
+    "2Δ",
+    "5Δ",
+    "8Δ"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which lens material characteristic primarily determines chromatic aberration?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Chromatic Aberration",
+  "rationale": "Chromatic aberration is inversely related to the Abbe value.",
+  "choices": [
+    "Abbe value",
+    "Lens diameter",
+    "Pantoscopic tilt",
+    "Frame size"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which factors contribute to spectacle magnification?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Magnification",
+  "rationale": "Spectacle magnification is determined by both shape factor and power factor.",
+  "choices": [
+    "Shape factor",
+    "Power factor",
+    "Pupil size",
+    "Accommodation amplitude"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Increasing pantoscopic tilt primarily induces what optical change in a spherical lens?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Lens Tilt",
+  "rationale": "Lens tilt induces both sphere and cylinder power.",
+  "choices": [
+    "Induced cylinder power",
+    "Induced sphere power",
+    "No optical change",
+    "Reduced vertex distance"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which bifocal design produces the greatest image jump?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Bifocal Design",
+  "rationale": "Round-segment bifocals typically produce greater image jump than executive designs.",
+  "choices": [
+    "Round-top bifocal",
+    "Executive bifocal",
+    "Progressive addition lens",
+    "Single vision lens"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "A patient with significant anisometropia develops unequal retinal image sizes after spectacle correction. What condition is present?",
+  "discipline": "Optics",
+  "condition": "Ophthalmic Optics / Spectacles",
+  "sub": "Aniseikonia",
+  "rationale": "Aniseikonia refers to a difference in perceived image size between the eyes.",
+  "choices": [
+    "Aniseikonia",
+    "Anisocoria",
+    "Anisophoria",
+    "Amblyopia"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with evaporative dry eye disease?",
+  "discipline": "Anterior Segment",
+  "condition": "Dry Eye Disease",
+  "sub": "Evaporative Dry Eye",
+  "rationale": "Meibomian gland dysfunction leads to tear film instability and increased evaporation.",
+  "choices": [
+    "Rapid tear breakup time",
+    "Meibomian gland dysfunction",
+    "Corneal hydrops",
+    "Retinal hemorrhages"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with aqueous-deficient dry eye?",
+  "discipline": "Anterior Segment",
+  "condition": "Dry Eye Disease",
+  "sub": "Aqueous Deficiency",
+  "rationale": "Reduced lacrimal gland secretion results in decreased tear volume.",
+  "choices": [
+    "Low Schirmer test values",
+    "Reduced tear meniscus height",
+    "Corneal ectasia",
+    "Hyphema"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are most suggestive of bacterial keratitis?",
+  "discipline": "Anterior Segment",
+  "condition": "Microbial Keratitis",
+  "sub": "Bacterial Keratitis",
+  "rationale": "Bacterial corneal ulcers commonly present with stromal infiltrates and epithelial defects.",
+  "choices": [
+    "Corneal infiltrate",
+    "Overlying epithelial defect",
+    "Cherry-red spot",
+    "Posterior vitreous detachment"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which risk factors increase the likelihood of microbial keratitis in contact lens wearers?",
+  "discipline": "Anterior Segment",
+  "condition": "Microbial Keratitis",
+  "sub": "Risk Factors",
+  "rationale": "Poor hygiene and overnight wear significantly increase infection risk.",
+  "choices": [
+    "Overnight lens wear",
+    "Poor lens hygiene",
+    "Daily disposable replacement",
+    "Appropriate disinfection"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are considered major risk factors for primary open-angle glaucoma?",
+  "discipline": "Glaucoma",
+  "condition": "Primary Open-Angle Glaucoma",
+  "sub": "Risk Factors",
+  "rationale": "Elevated IOP and positive family history are among the strongest risk factors.",
+  "choices": [
+    "Elevated intraocular pressure",
+    "Positive family history",
+    "Keratoconus",
+    "Retinal detachment"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are characteristic of glaucomatous optic neuropathy?",
+  "discipline": "Glaucoma",
+  "condition": "Primary Open-Angle Glaucoma",
+  "sub": "Optic Nerve Findings",
+  "rationale": "Loss of neuroretinal rim tissue and RNFL defects are classic glaucomatous findings.",
+  "choices": [
+    "Retinal nerve fiber layer defects",
+    "Neuroretinal rim thinning",
+    "Optic disc edema",
+    "Macular hole"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Which findings are commonly associated with blunt ocular trauma?",
+  "discipline": "Anterior Segment",
+  "condition": "Ocular Trauma",
+  "sub": "Blunt Trauma",
+  "rationale": "Blunt trauma may cause hyphema and angle recession.",
+  "choices": [
+    "Hyphema",
+    "Angle recession",
+    "Keratoconus",
+    "Optic disc drusen"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "A patient is struck in the eye by a baseball and develops markedly elevated IOP months later. Which prior traumatic finding most likely explains this?",
+  "discipline": "Anterior Segment",
+  "condition": "Ocular Trauma",
+  "sub": "Angle Recession",
+  "rationale": "Angle recession can lead to delayed secondary glaucoma.",
+  "choices": [
+    "Angle recession",
+    "Corneal abrasion",
+    "Subconjunctival hemorrhage",
+    "Pinguecula"
+  ],
+  "correct": 0
+},
+{
+  "id": null,
+  "text": "Which findings are most concerning for deprivation amblyopia in childhood?",
+  "discipline": "Anatomy",
+  "condition": "Amblyopia / Strabismus",
+  "sub": "Deprivation Amblyopia",
+  "rationale": "Visual deprivation during the critical period can profoundly impair visual development.",
+  "choices": [
+    "Congenital cataract",
+    "Dense unilateral ptosis",
+    "Mild hyperopia",
+    "Small exophoria"
+  ],
+  "correct": [0,1],
+  "questionType": "MA",
+  "select": 2
+},
+{
+  "id": null,
+  "text": "Frequency doubling technology (FDT) perimetry primarily evaluates which visual pathway?",
+  "discipline": "Immunology / Microbiology / Pathology",
+  "condition": "Perceptual Function / Color Vision",
+  "sub": "Contrast Sensitivity",
+  "rationale": "FDT preferentially assesses magnocellular ganglion cell function.",
+  "choices": [
+    "Magnocellular pathway",
+    "Parvocellular pathway",
+    "Retinohypothalamic pathway",
+    "Pupillary pathway"
+  ],
+  "correct": 0
+}
 ]
