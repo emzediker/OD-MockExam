@@ -406,11 +406,11 @@
   },
   {
     "id": null,
-    "text": "Select the best explanations for why a -8.00 D spectacle lens may feel stronger than a -8.00 D contact lens.",
+    "text": "Select the best explanations for why a -8.00 D contact lens may feel stronger than a -8.00 D spectacle.",
     "discipline": "Optics",
     "condition": "Ametropia",
     "sub": "Vertex Distance",
-    "rationale": "Minus lenses become effectively stronger as they are moved farther from the eye. Spectacles therefore provide more effective minus power than the same nominal contact lens power.",
+    "rationale": "Minus lenses become effectively stronger as they are moved closer to the eye. Contacts therefore provide more effective minus power than the same nominal spectacle power.",
     "choices": [
       "Spectacle vertex distance increases effective minus power",
       "Contact lenses sit at the corneal plane",
