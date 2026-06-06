@@ -550,12 +550,12 @@
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
     "sub": "Vertex Distance",
-    "rationale": "Increasing vertex distance increases the effective minus power of high-minus lenses.",
+    "rationale": "Increasing vertex distance decreases the effective minus power of high-minus lenses.",
     "choices": [
-      "Effective minus power increases",
       "Effective minus power decreases",
+      "Effective minus power increases",
       "No change occurs",
-      "The lens behaves as a plus lens"
+      "The lens behaves as a cylindrical lens"
     ],
     "correct": 0
   },
