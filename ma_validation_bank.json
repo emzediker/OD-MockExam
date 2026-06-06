@@ -276,46 +276,6 @@
   },
   {
     "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Vertex Distance",
-    "rationale": "Moving a minus lens away from the eye requires additional minus power at the spectacle plane.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Ametropia",
-    "sub": "Vertex Distance",
-    "rationale": "Using vertex compensation, the equivalent spectacle power is approximately -11.75 D.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "An eye has an actual optical power of +58.00 D. Emmetropia would require +60.00 D. What refractive error is present?",
     "discipline": "Optics",
     "condition": "Ametropia",
@@ -921,26 +881,6 @@
   },
   {
     "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Ophthalmic Optics / Spectacles",
-    "sub": "Field Effects",
-    "rationale": "Contact lenses eliminate much of the spectacle magnification and peripheral prism associated with high-plus spectacle lenses.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "A patient wearing polycarbonate lenses reports colored fringes around headlights at night. Which lens property is most responsible?",
     "discipline": "Optics",
     "condition": "Ophthalmic Optics / Spectacles",
@@ -1066,26 +1006,6 @@
   },
   {
     "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Deposits / Dryness",
-    "rationale": "Protein and lipid deposition disrupt lens wettability and contribute to fluctuating vision and dryness.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Daily disposable lenses help reduce allergy-related contact lens complications for which reasons?",
     "discipline": "Optics",
     "condition": "Contact Lenses",
@@ -1106,66 +1026,6 @@
   },
   {
     "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Vertex Conversion",
-    "rationale": "High minus powers require less minus when moved to the corneal plane. The compensated power is approximately -7.25 D.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Lens Fit",
-    "rationale": "A steeper base curve increases sagittal depth, producing a tighter fitting lens with less movement.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Toric Lens Design",
-    "rationale": "Increasing prism ballast or stabilization features generally improves rotational control.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
     "text": "Why are RGP lenses often used in keratoconus?",
     "discipline": "Optics",
     "condition": "Contact Lenses",
@@ -1176,46 +1036,6 @@
       "Improve visual acuity",
       "Increase corneal edema",
       "Eliminate ectasia progression"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Tear Lens Power",
-    "rationale": "A lens fit 0.10 mm flatter than K creates approximately -0.50 D of tear lens power.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
-    ],
-    "correct": [
-      0,
-      1
-    ],
-    "questionType": "MA",
-    "select": 2
-  },
-  {
-    "id": null,
-    "text": "Which factors increase the risk of contact lens complications?",
-    "discipline": "Optics",
-    "condition": "Contact Lenses",
-    "sub": "Scleral Fit",
-    "rationale": "Loss = (350-200)/350 = 42.9%.",
-    "choices": [
-      "Overnight wear",
-      "Poor lens hygiene",
-      "Daily replacement",
-      "Appropriate disinfection"
     ],
     "correct": [
       0,
