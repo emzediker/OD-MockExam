@@ -412,7 +412,7 @@
     "sub": "Vertex Distance",
     "rationale": "Minus lenses become effectively stronger as they are moved closer to the eye. Contacts therefore provide more effective minus power than the same nominal spectacle power.",
     "choices": [
-      "Spectacle vertex distance increases effective minus power",
+      "Spectacle vertex distance decreases effective minus power",
       "Contact lenses sit at the corneal plane",
       "Accommodation is reduced when contact lenses are worn",
       "The cornea adds plus power"
